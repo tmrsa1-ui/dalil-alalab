@@ -132,7 +132,8 @@ export function PlatformTabs({
                 <SourceLink
                   url={platform.officialGuideUrl}
                   label={ar.setup.officialGuideFor(platform.nameAr)}
-                  verifiedAt={platform.verifiedAt}
+                  verifiedAt={platform.verifiedAt ?? platform.linkCheckedAt}
+                  quote={platform.guideQuote}
                 />
                 {!platform.verifiedAt ? (
                   <p className="text-xs text-muted">

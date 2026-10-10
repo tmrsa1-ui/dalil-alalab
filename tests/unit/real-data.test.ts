@@ -71,10 +71,12 @@ describe("القيم المستوردة (ملف البحث + المصادر ال
       expect(t.reviewStatus).not.toBe("human_reviewed");
       for (const k of RATING_KEYS) expect(t.ratings[k].confidence).not.toBe("human");
       for (const k of POINT_KEYS) expect(t.attentionPoints[k].confidence).not.toBe("human");
-      // التصنيف السعودي فقط لو ظهرت شارة Gmedia في Google Play السعودي.
+      // التصنيف السعودي فقط لو ظهر صراحة في متجر سعودي رسمي (Gmedia/GCAM/GAMR).
       if (t.ratings.gcam.value !== null) {
-        expect(t.ratings.gcam.shownOn).toBe("Google Play (السعودية)");
-        expect(t.ratings.gcam.quote).toMatch(/^Gmedia_/);
+        expect(["Google Play (السعودية)", "PlayStation (السعودية)", "Xbox (السعودية)"]).toContain(
+          t.ratings.gcam.shownOn,
+        );
+        expect(t.ratings.gcam.quote).toMatch(/Gmedia|GCAM|GMEDIA|GAMR/i);
       }
     }
   });

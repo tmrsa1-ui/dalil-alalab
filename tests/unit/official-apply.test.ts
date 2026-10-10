@@ -125,3 +125,118 @@ describe("applyOfficial (App Store / Google Play)", () => {
     expect(title.ratings.appStore.value).toBe("12+");
   });
 });
+
+describe("applyOfficial (PlayStation / Xbox السعودية)", () => {
+  const PS = "https://www.playstation.com/en-sa/games/game/";
+  const XB = "https://www.xbox.com/ar-SA/games/store/_/ABC";
+  const base = (over: Partial<SnapshotEntry>): SnapshotEntry => ({
+    expect: "Game",
+    appStore: null,
+    googlePlay: null,
+    ...over,
+  });
+
+  it("PlayStation authority GCAM ⇐ التصنيف السعودي مع «يعرضه» واقتباس حرفي", () => {
+    const { title } = applyOfficial(
+      emptyTitle("game", "لعبة", "Game"),
+      base({
+        playstation: {
+          url: PS,
+          fetchedAt: "2026-10-10",
+          status: 200,
+          pageTitle: "Game - PS4 Games | PlayStation (Saudi Arabia)",
+          authority: "GCAM",
+          ratingName: "GCAM_12",
+          ratingDescription: "GMEDIA 12",
+          descriptors: [],
+          interactive: ["Users Interact"],
+        },
+      }),
+    );
+    expect(title.ratings.gcam).toMatchObject({
+      value: "12",
+      quote: "GMEDIA 12",
+      shownOn: "PlayStation (السعودية)",
+      confidence: "auto",
+    });
+    expect(title.attentionPoints.strangerChat.sources[0]).toMatchObject({
+      url: PS,
+      quote: "Users Interact",
+    });
+    expect(titleSchema.safeParse(title).success).toBe(true);
+  });
+
+  it("Xbox: GAMR ⇐ سعودي (لو ما فيه PlayStation)، PEGI ⇐ PEGI بواصفات عربية حرفية", () => {
+    const gamr = applyOfficial(
+      emptyTitle("game", "لعبة", "Game"),
+      base({
+        xbox: {
+          url: XB,
+          fetchedAt: "2026-10-10",
+          status: 200,
+          pageTitle: "Game",
+          boardName: "GAMR",
+          rating: "7",
+          ratingDescription: "مناسب لعمر 7 فما فوق",
+        },
+      }),
+    ).title;
+    expect(gamr.ratings.gcam).toMatchObject({
+      value: "7",
+      shownOn: "Xbox (السعودية)",
+      quote: "GAMR 7 — مناسب لعمر 7 فما فوق",
+    });
+
+    const pegi = applyOfficial(
+      emptyTitle("game", "لعبة", "Game"),
+      base({
+        xbox: {
+          url: XB,
+          fetchedAt: "2026-10-10",
+          status: 200,
+          pageTitle: "Game",
+          boardName: "PEGI",
+          rating: "PEGI 12",
+          ratingDescription: "للأعمار من 12 عاماً فأكبر",
+          descriptors: ["عنف متوسط"],
+          interactive: ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"],
+        },
+      }),
+    ).title;
+    expect(pegi.ratings.pegi).toMatchObject({
+      value: "12",
+      descriptors: ["عنف متوسط"],
+      shownOn: "Xbox (السعودية)",
+    });
+    expect(pegi.ratings.gcam.value).toBeNull();
+    expect(pegi.attentionPoints.purchases.status).toBe("present");
+    expect(pegi.familyLens.gambling.sources[0]!.quote).toContain("عناصر عشوائية");
+  });
+
+  it("تصنيف IARC العام في PlayStation ما يُكتب في أي خانة، وصفحة ما تطابق الاسم تُتجاهل", () => {
+    const { title, decisions } = applyOfficial(
+      emptyTitle("game", "لعبة", "Game"),
+      base({
+        playstation: {
+          url: PS,
+          fetchedAt: "2026-10-10",
+          status: 200,
+          pageTitle: "Game | PlayStation",
+          authority: "Generic",
+          ratingName: "GENERIC_12",
+          ratingDescription: "IARC 12+",
+        },
+        xbox: {
+          url: XB,
+          fetchedAt: "2026-10-10",
+          status: 200,
+          pageTitle: "Other",
+          boardName: "PEGI",
+          rating: "PEGI 3",
+        },
+      }),
+    );
+    expect(Object.values(title.ratings).every((r) => r.value === null)).toBe(true);
+    expect(decisions.some((d) => d.field === "xbox" && d.action === "skip")).toBe(true);
+  });
+});

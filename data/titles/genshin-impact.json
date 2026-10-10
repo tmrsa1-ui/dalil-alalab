@@ -29,9 +29,16 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "12",
+      "descriptors": [
+        "عنف متوسط"
+      ],
+      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
+      "verifiedAt": "2026-10-10",
+      "quote": "PEGI 12 — للأعمار من 12 عاماً فأكبر",
+      "edition": "Genshin Impact",
+      "shownOn": "Xbox (السعودية)",
+      "confidence": "auto"
     },
     "appStore": {
       "value": "13+",
@@ -54,12 +61,24 @@
   "attentionPoints": {
     "strangerChat": {
       "status": "present",
-      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: App Store، Google Play.",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: App Store، PlayStation، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "Messaging and Chat",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
+          "title": "PlayStation (السعودية): Genshin",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
+          "title": "Xbox (السعودية): Genshin Impact",
+          "quote": "تفاعل المستخدمين",
           "verifiedAt": "2026-10-10"
         },
         {
@@ -73,7 +92,7 @@
     },
     "purchases": {
       "status": "present",
-      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، PlayStation، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://apps.apple.com/sa/app/id1517783697",
@@ -88,6 +107,18 @@
           "verifiedAt": "2026-10-10"
         },
         {
+          "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
+          "title": "PlayStation (السعودية): Genshin",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
+          "title": "Xbox (السعودية): Genshin Impact",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
           "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
           "title": "Google Play (السعودية): Genshin",
           "quote": "In-Game Purchases (Includes Random Items)",
@@ -98,12 +129,24 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store، Google Play.",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store، PlayStation، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "Infrequent: Cartoon or Fantasy Violence, Infrequent: Sexual Content or Nudity, Infrequent: Guns or Other Weapons",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
+          "title": "PlayStation (السعودية): Genshin",
+          "quote": "Moderate Violence",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
+          "title": "Xbox (السعودية): Genshin Impact",
+          "quote": "عنف متوسط",
           "verifiedAt": "2026-10-10"
         },
         {
@@ -145,6 +188,18 @@
           "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
           "title": "Google Play (السعودية): Genshin",
           "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
+          "title": "PlayStation (السعودية): Genshin",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
+          "title": "Xbox (السعودية): Genshin Impact",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
           "verifiedAt": "2026-10-10"
         }
       ]

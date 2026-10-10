@@ -30,12 +30,37 @@
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/roblox/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Roblox - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
+        "authority": "Generic",
+        "ratingDescription": "IARC 12+",
+        "ratingName": "GENERIC_12",
+        "descriptors": ["Parental Guidance Recommended"],
+        "interactive": ["In-Game Purchases (Includes Random Items)", "Users Interact"]
+      },
+      "psExpect": "Roblox",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Roblox - Xbox",
+        "boardName": "PEGI",
+        "rating": "الإرشاد الأبوي المستحسن",
+        "ratingDescription": "الإرشاد الأبوي المستحسن",
+        "descriptors": ["الإرشاد الأبوي المستحسن"],
+        "interactive": ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+      },
+      "xboxExpect": "Roblox - Xbox",
       "guides": [
         {
           "url": "https://about.roblox.com/parental-controls",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://about.roblox.com/parental-controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -45,6 +70,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -72,19 +98,41 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
         "ratedFor": "Rated for 7+",
-        "ratingLines": [
-          "Mild Violence",
-          "Users Interact, In-Game Purchases"
-        ],
+        "ratingLines": ["Mild Violence", "Users Interact, In-Game Purchases"],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/minecraft/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Minecraft - PS4 Games | PlayStation (Saudi Arabia)",
+        "authority": "GCAM",
+        "ratingDescription": "GCAM 7",
+        "ratingName": "GCAM_7",
+        "descriptors": [],
+        "interactive": []
+      },
+      "psExpect": "Minecraft",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/9MVXMVT8ZKWC",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Minecraft",
+        "boardName": "GAMR",
+        "rating": "7",
+        "ratingDescription": "مناسب لعمر 7 فما فوق",
+        "descriptors": [],
+        "interactive": []
+      },
+      "xboxExpect": "Minecraft",
       "guides": [
         {
           "url": "https://www.minecraft.net/en-us/article/parental-controls",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://www.minecraft.net/en-us/article/parental-controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -94,6 +142,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://help.minecraft.net/en-us/article/parental-controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -101,11 +150,12 @@
         {
           "url": "https://www.xbox.com/en-US/family-hub",
           "fetchedAt": "2026-10-10",
-          "status": 0,
+          "status": 200,
           "finalUrl": "https://www.xbox.com/en-US/family-hub",
+          "metaDescription": "Help make gaming safe and enjoyable for your family. Define what’s okay for your family with privacy, safety, and more XBOX family settings.",
           "finalAllowed": true,
-          "pageTitle": "",
-          "mentionsParental": false
+          "pageTitle": "XBOX family settings: peace of mind for parents | XBOX",
+          "mentionsParental": true
         }
       ]
     },
@@ -137,12 +187,37 @@
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/fortnite/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Fortnite - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
+        "authority": "GCAM",
+        "ratingDescription": "GMEDIA 12",
+        "ratingName": "GCAM_12",
+        "descriptors": [],
+        "interactive": []
+      },
+      "psExpect": "Fortnite",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Fortnite",
+        "boardName": "PEGI",
+        "rating": "الإرشاد الأبوي المستحسن",
+        "ratingDescription": "الإرشاد الأبوي المستحسن",
+        "descriptors": ["الإرشاد الأبوي المستحسن"],
+        "interactive": ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+      },
+      "xboxExpect": "Fortnite",
       "guides": [
         {
           "url": "https://www.epicgames.com/site/en-US/parental-controls",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://www.epicgames.com/site/en-US/parental-controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -152,6 +227,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://safety.epicgames.com/parental-controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -161,6 +237,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://www.epicgames.com/fortnite/en-US/parental-controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -188,13 +265,34 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
         "ratedFor": "Rated for 7+",
-        "ratingLines": [
-          "Mild Violence",
-          "Users Interact, Digital Purchases"
-        ],
+        "ratingLines": ["Mild Violence", "Users Interact, Digital Purchases"],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/among-us/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Among Us - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
+        "authority": "GCAM",
+        "ratingDescription": "GCAM 12",
+        "ratingName": "GCAM_12",
+        "descriptors": [],
+        "interactive": []
+      },
+      "psExpect": "Among Us",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/9NG07QJNK38J",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Among Us",
+        "boardName": "GAMR",
+        "rating": "12",
+        "ratingDescription": "مناسب لعمر 12 فما فوق",
+        "descriptors": [],
+        "interactive": []
+      },
+      "xboxExpect": "Among Us",
       "guides": []
     },
     "pubg-mobile": {
@@ -218,12 +316,14 @@
         "ratingBody": "Gmedia",
         "badgeSrc": "https://play-apps-features.googleusercontent.com/png/Gmedia_12_272.png",
         "ratedFor": "12",
-        "ratingLines": [
-          "Users Interact"
-        ],
+        "ratingLines": ["Users Interact"],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "PUBG",
+      "xbox": null,
+      "xboxExpect": "PUBG",
       "guides": []
     },
     "free-fire": {
@@ -254,6 +354,10 @@
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Free Fire",
+      "xbox": null,
+      "xboxExpect": "Free Fire",
       "guides": []
     },
     "brawl-stars": {
@@ -281,12 +385,17 @@
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Brawl Stars",
+      "xbox": null,
+      "xboxExpect": "Brawl Stars",
       "guides": [
         {
           "url": "https://supercell.com/en/parents/",
           "fetchedAt": "2026-10-10",
           "status": 200,
           "finalUrl": "https://supercell.com/en/parents/",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "Parent&#x27;s Guide × Supercell",
           "mentionsParental": true
@@ -314,18 +423,21 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
         "ratedFor": "Rated for 16+",
-        "ratingLines": [
-          "Users Interact, In-Game Purchases (Includes Random Items)"
-        ],
+        "ratingLines": ["Users Interact, In-Game Purchases (Includes Random Items)"],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Clash Royale",
+      "xbox": null,
+      "xboxExpect": "Clash Royale",
       "guides": [
         {
           "url": "https://supercell.com/en/parents/",
           "fetchedAt": "2026-10-10",
           "status": 200,
           "finalUrl": "https://supercell.com/en/parents/",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "Parent&#x27;s Guide × Supercell",
           "mentionsParental": true
@@ -360,12 +472,17 @@
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "TikTok",
+      "xbox": null,
+      "xboxExpect": "TikTok",
       "guides": [
         {
           "url": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -375,6 +492,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -409,12 +527,17 @@
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Snapchat",
+      "xbox": null,
+      "xboxExpect": "Snapchat",
       "guides": [
         {
           "url": "https://values.snap.com/safety/family-center",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://values.snap.com/safety/family-center",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -424,6 +547,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://parents.snapchat.com/family-center",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -455,12 +579,17 @@
         "containsAds": true,
         "inAppPurchasesLabel": false
       },
+      "playstation": null,
+      "psExpect": "YouTube Kids",
+      "xbox": null,
+      "xboxExpect": "YouTube Kids",
       "guides": [
         {
           "url": "https://support.google.com/youtubekids/?hl=ar",
           "fetchedAt": "2026-10-10",
           "status": 200,
           "finalUrl": "https://support.google.com/youtubekids/?hl=ar",
+          "metaDescription": "مركز مساعدة المساعدة بشأن \"YouTube للعائلات\" الرسمي حيث يمكنك العثور على نصائح وبرامج تعليمية حول استخدام المنتج وأجوبة أخرى للأسئلة الشائعة.",
           "finalAllowed": true,
           "pageTitle": "المساعدة بشأن \"YouTube للعائلات\"",
           "mentionsParental": true
@@ -470,6 +599,7 @@
           "fetchedAt": "2026-10-10",
           "status": 200,
           "finalUrl": "https://support.google.com/youtubekids/answer/6172308?hl=en",
+          "metaDescription": "YouTube Kids offer a safer and simpler experience for kids. There are various controls and settings for you to guide their viewing journey.",
           "finalAllowed": true,
           "pageTitle": "Parental controls for YouTube Kids profiles - Computer - YouTube For Families Help",
           "mentionsParental": true
@@ -497,12 +627,14 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
         "ratedFor": "Rated for 16+",
-        "ratingLines": [
-          "Shares Location, In-Game Purchases (Includes Random Items)"
-        ],
+        "ratingLines": ["Shares Location, In-Game Purchases (Includes Random Items)"],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Pokémon GO",
+      "xbox": null,
+      "xboxExpect": "Pokémon GO",
       "guides": []
     },
     "ea-sports-fc": {
@@ -526,18 +658,41 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
         "ratedFor": "Rated for 16+",
-        "ratingLines": [
-          "Users Interact, In-Game Purchases (Includes Random Items)"
-        ],
+        "ratingLines": ["Users Interact, In-Game Purchases (Includes Random Items)"],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/ea-sports-fc-26/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "EA SPORTS™ FC 26 - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
+        "authority": "GCAM",
+        "ratingDescription": "GMEDIA 3",
+        "ratingName": "GCAM_3",
+        "descriptors": [],
+        "interactive": []
+      },
+      "psExpect": "FC 26",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/9NJ2N85T2ZGS",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "EA SPORTS FC™ 27 XBOX Series X|S",
+        "boardName": "GAMR",
+        "rating": "3",
+        "ratingDescription": "مناسب لعمر 3 فما فوق",
+        "descriptors": [],
+        "interactive": []
+      },
+      "xboxExpect": "EA SPORTS FC™ 27 XBOX Series X|S",
       "guides": [
         {
           "url": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -547,6 +702,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -581,6 +737,10 @@
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Call of Duty",
+      "xbox": null,
+      "xboxExpect": "Call of Duty",
       "guides": []
     },
     "subway-surfers": {
@@ -604,13 +764,14 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
         "ratedFor": "Rated for 7+",
-        "ratingLines": [
-          "Mild Violence",
-          "In-Game Purchases (Includes Random Items)"
-        ],
+        "ratingLines": ["Mild Violence", "In-Game Purchases (Includes Random Items)"],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Subway Surfers",
+      "xbox": null,
+      "xboxExpect": "Subway Surfers",
       "guides": []
     },
     "genshin-impact": {
@@ -641,6 +802,30 @@
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Genshin Impact - PS5 Games | PlayStation (Saudi Arabia)",
+        "authority": "Generic",
+        "ratingDescription": "IARC 12+",
+        "ratingName": "GENERIC_12",
+        "descriptors": ["Moderate Violence"],
+        "interactive": ["In-Game Purchases (Includes Random Items)", "Users Interact"]
+      },
+      "psExpect": "Genshin",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Genshin Impact",
+        "boardName": "PEGI",
+        "rating": "PEGI 12",
+        "ratingDescription": "للأعمار من 12 عاماً فأكبر",
+        "descriptors": ["عنف متوسط"],
+        "interactive": ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+      },
+      "xboxExpect": "Genshin Impact",
       "guides": []
     },
     "stumble-guys": {
@@ -664,12 +849,24 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/_re6mcALPaqotePA0WkgYeOQ6TighHRUS62FRmREPEhyZPdGM3QmRjcSpiMt6Pz1O-WZyvEIy4mtGHj9zw=s38",
         "ratedFor": "Rated for 3+",
-        "ratingLines": [
-          "In-Game Purchases (Includes Random Items)"
-        ],
+        "ratingLines": ["In-Game Purchases (Includes Random Items)"],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Stumble Guys",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/9N9L211HC9LQ",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Stumble Guys",
+        "boardName": "PEGI",
+        "rating": "PEGI 3",
+        "ratingDescription": "للأعمار من 3 أعوام فأكبر",
+        "descriptors": [],
+        "interactive": ["عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+      },
+      "xboxExpect": "Stumble Guys",
       "guides": []
     },
     "discord": {
@@ -693,19 +890,21 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
         "ratedFor": "Rated for 12+",
-        "ratingLines": [
-          "Parental Guidance Recommended",
-          "Users Interact, In-App Purchases"
-        ],
+        "ratingLines": ["Parental Guidance Recommended", "Users Interact, In-App Purchases"],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Discord",
+      "xbox": null,
+      "xboxExpect": "Discord",
       "guides": [
         {
           "url": "https://discord.com/safety-family-center",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://discord.com/safety-family-center",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -715,6 +914,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -749,12 +949,17 @@
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
+      "playstation": null,
+      "psExpect": "Instagram",
+      "xbox": null,
+      "xboxExpect": "Instagram",
       "guides": [
         {
           "url": "https://help.instagram.com/995996839195964",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://help.instagram.com/995996839195964",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -764,6 +969,7 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://familycenter.meta.com/",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -774,12 +980,37 @@
       "expect": "Rocket League",
       "appStore": null,
       "googlePlay": null,
+      "playstation": {
+        "url": "https://www.playstation.com/en-sa/games/rocket-league/",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Rocket League - PS4 Games | PlayStation (Saudi Arabia)",
+        "authority": "PEGI",
+        "ratingDescription": "PEGI 3",
+        "ratingName": "PEGI_3",
+        "descriptors": ["Online"],
+        "interactive": []
+      },
+      "psExpect": "Rocket League",
+      "xbox": {
+        "url": "https://www.xbox.com/ar-SA/games/store/_/C125W9BG2K0V",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Rocket League®",
+        "boardName": "PEGI",
+        "rating": "PEGI 3",
+        "ratingDescription": "للأعمار من 3 أعوام فأكبر",
+        "descriptors": [],
+        "interactive": []
+      },
+      "xboxExpect": "Rocket League®",
       "guides": [
         {
           "url": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
@@ -789,11 +1020,74 @@
           "fetchedAt": "2026-10-10",
           "status": 0,
           "finalUrl": "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031",
+          "metaDescription": null,
           "finalAllowed": true,
           "pageTitle": "",
           "mentionsParental": false
         }
       ]
+    }
+  },
+  "platformGuides": {
+    "playstation": {
+      "url": "https://www.playstation.com/en-sa/parental-controls/",
+      "fetchedAt": "2026-10-10",
+      "status": 200,
+      "finalUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "metaDescription": "Stay informed about and involved in your child's gameplay by managing playtime, spending, messaging and more with the free PlayStation Family app. Keep track of your child's gaming at-a-glance with intuitive activity reports, simple parental controls and real-time info direct to your phone.",
+      "finalAllowed": true,
+      "pageTitle": "PlayStation Family App | Manage children's play time, spending, messaging and more (Saudi Arabia)",
+      "mentionsParental": true
+    },
+    "xbox": {
+      "url": "https://www.xbox.com/ar-SA/family-hub",
+      "fetchedAt": "2026-10-10",
+      "status": 200,
+      "finalUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "metaDescription": "Help make gaming safe and enjoyable for your family. Define what’s okay for your family with privacy, safety and more XBOX family settings.",
+      "finalAllowed": true,
+      "pageTitle": "XBOX family settings: peace of mind for parents | XBOX",
+      "mentionsParental": true
+    },
+    "pc": {
+      "url": "https://store.steampowered.com/families",
+      "fetchedAt": "2026-10-10",
+      "status": 200,
+      "finalUrl": "https://store.steampowered.com/news/app/593110/view/4605582245626919823",
+      "metaDescription": null,
+      "finalAllowed": true,
+      "pageTitle": "Steam News - Steam Families is here - Steam News",
+      "mentionsParental": false
+    },
+    "switch": {
+      "url": "https://www.nintendo.com/us/switch/parental-controls/",
+      "fetchedAt": "2026-10-10",
+      "status": 0,
+      "finalUrl": "https://www.nintendo.com/us/switch/parental-controls/",
+      "metaDescription": null,
+      "finalAllowed": true,
+      "pageTitle": "",
+      "mentionsParental": false
+    },
+    "ios": {
+      "url": "https://support.apple.com/ar-sa/105121",
+      "fetchedAt": "2026-10-10",
+      "status": 200,
+      "finalUrl": "https://support.apple.com/ar-sa/105121",
+      "metaDescription": "تأتي ميزة \"مدة استخدام الجهاز\" مزودةً بإشراف عائلي يمكن أن يساعدك في إدارة التطبيقات ومواقع الويب التي يمكن لطفلك الوصول إليها، والأشخاص الذين يتواصل معهم، ومتى يستخدم أجهزته، وغير ذلك الكثير.",
+      "finalAllowed": true,
+      "pageTitle": "إعداد الإشراف العائلي لإدارة iPhone أو iPad الخاص بطفلك - Apple دعم (SA)",
+      "mentionsParental": false
+    },
+    "android": {
+      "url": "https://families.google/familylink/",
+      "fetchedAt": "2026-10-10",
+      "status": 200,
+      "finalUrl": "https://families.google/familylink/",
+      "metaDescription": "Family Link gives parents the tools they need to create a safer online experience for their kids and empower them to build healthy digital habits together.",
+      "finalAllowed": true,
+      "pageTitle": "Family Link from Google - Family Safety & Parental Control Tools",
+      "mentionsParental": true
     }
   }
 }

@@ -11,7 +11,7 @@
   "platforms": [],
   "publisher": null,
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -25,9 +25,13 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "3",
+      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/C125W9BG2K0V",
+      "verifiedAt": "2026-10-10",
+      "quote": "PEGI 3 — للأعمار من 3 أعوام فأكبر",
+      "edition": "Rocket League®",
+      "shownOn": "Xbox (السعودية)",
+      "confidence": "auto"
     },
     "appStore": {
       "value": null,
@@ -54,10 +58,17 @@
       "confidence": "none"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: PlayStation.",
+      "sources": [
+        {
+          "url": "https://www.playstation.com/en-sa/games/rocket-league/",
+          "title": "PlayStation (السعودية): Rocket League",
+          "quote": "Online",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
       "status": "unknown",

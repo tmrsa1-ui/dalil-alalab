@@ -4,10 +4,11 @@
   "nameAr": "بلايستيشن",
   "nameEn": "PlayStation",
   "toolNameEn": "PlayStation Family Management",
-  "officialGuideUrl": "https://www.playstation.com/en-us/parental-controls/",
-  "officialGuideTitle": "PlayStation: Parental controls",
+  "officialGuideUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+  "officialGuideTitle": "PlayStation Family App | Manage children's play time, spending, messaging and more (Saudi Arabia)",
   "verifiedAt": null,
-  "linkCheckedAt": null,
+  "linkCheckedAt": "2026-10-10",
+  "guideQuote": "Stay informed about and involved in your child's gameplay by managing playtime, spending, messaging and more with the free PlayStation Family app. Keep track of your child's gaming at-a-glance with intuitive activity reports, simple parental controls and real-time info direct to your phone.",
   "steps": [
     {
       "id": "playstation-strangerchat-1",

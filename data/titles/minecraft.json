@@ -20,9 +20,12 @@
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "7",
+      "sourceUrl": "https://www.playstation.com/en-sa/games/minecraft/",
+      "verifiedAt": "2026-10-10",
+      "quote": "GCAM 7",
+      "shownOn": "PlayStation (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": "Everyone 10+",

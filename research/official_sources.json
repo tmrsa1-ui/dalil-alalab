@@ -1,25 +1,186 @@
 {
-  "_note": "معرّفات المتاجر الرسمية وروابط الرقابة الأبوية المرشّحة لكل عنوان. يستخدمها scripts/fetch-official.ts لجلب الصفحات الرسمية وحفظ مقتطفات حرفية في research/official_snapshot.json. المعرّفات مأخوذة من ملف البحث، ومن Apple Search API (country=sa)، ومن research/candidate_sources.json، وكل واحد يُتأكد منه باسم التطبيق والمزوّد في الصفحة نفسها.",
+  "_note": "معرّفات المتاجر الرسمية وروابط الرقابة الأبوية المرشّحة لكل عنوان. يستخدمها scripts/fetch-official.ts لجلب الصفحات الرسمية وحفظ مقتطفات حرفية في research/official_snapshot.json. المعرّفات مأخوذة من ملف البحث، ومن Apple Search API (country=sa)، ومن research/candidate_sources.json، وكل واحد يُتأكد منه باسم التطبيق والمزوّد في الصفحة نفسها. ومعرّفات Xbox (متجر السعودية) وصفحات PlayStation (السعودية) للألعاب المتوفرة على الأجهزة المنزلية، وروابط أدلة الأجهزة.",
   "titles": {
-    "roblox": { "appStoreId": "431946152", "playPackage": "com.roblox.client", "expect": "Roblox", "guides": ["https://about.roblox.com/parental-controls", "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ"] },
-    "minecraft": { "appStoreId": "479516143", "playPackage": "com.mojang.minecraftpe", "expect": "Minecraft", "guides": ["https://www.minecraft.net/en-us/article/parental-controls", "https://help.minecraft.net/en-us/article/parental-controls", "https://www.xbox.com/en-US/family-hub"] },
-    "fortnite": { "appStoreId": "6483539426", "playPackage": "com.epicgames.fortnite", "expect": "Fortnite", "guides": ["https://www.epicgames.com/site/en-US/parental-controls", "https://safety.epicgames.com/parental-controls", "https://www.epicgames.com/fortnite/en-US/parental-controls"] },
-    "among-us": { "appStoreId": "1351168404", "playPackage": "com.innersloth.spacemafia", "expect": "Among Us", "guides": [] },
-    "pubg-mobile": { "appStoreId": "1330123889", "playPackage": "com.tencent.ig", "expect": "PUBG", "guides": [] },
-    "free-fire": { "appStoreId": "1300146617", "playPackage": "com.dts.freefireth", "expect": "Free Fire", "guides": [] },
-    "brawl-stars": { "appStoreId": "1229016807", "playPackage": "com.supercell.brawlstars", "expect": "Brawl Stars", "guides": ["https://supercell.com/en/parents/"] },
-    "clash-royale": { "appStoreId": "1053012308", "playPackage": "com.supercell.clashroyale", "expect": "Clash Royale", "guides": ["https://supercell.com/en/parents/"] },
-    "tiktok": { "appStoreId": "835599320", "playPackage": "com.zhiliaoapp.musically", "expect": "TikTok", "guides": ["https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing", "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide"] },
-    "snapchat": { "appStoreId": "447188370", "playPackage": "com.snapchat.android", "expect": "Snapchat", "guides": ["https://values.snap.com/safety/family-center", "https://parents.snapchat.com/family-center"] },
-    "youtube-kids": { "appStoreId": "936971630", "playPackage": "com.google.android.apps.youtube.kids", "expect": "YouTube Kids", "guides": ["https://support.google.com/youtubekids/?hl=ar", "https://support.google.com/youtubekids/answer/6172308?hl=en"] },
-    "pokemon-go": { "appStoreId": "1094591345", "playPackage": "com.nianticlabs.pokemongo", "expect": "Pokémon GO", "guides": [] },
-    "ea-sports-fc": { "appStoreId": "1094930513", "playPackage": "com.ea.gp.fifamobile", "expect": "FC", "guides": ["https://www.ea.com/commitments/positive-play/player-and-parental-tools", "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/"] },
-    "call-of-duty-mobile": { "appStoreId": "1287282214", "playPackage": "com.activision.callofduty.shooter", "expect": "Call of Duty", "guides": [] },
-    "subway-surfers": { "appStoreId": "512939461", "playPackage": "com.kiloo.subwaysurf", "expect": "Subway Surfers", "guides": [] },
-    "genshin-impact": { "appStoreId": "1517783697", "playPackage": "com.miHoYo.GenshinImpact", "expect": "Genshin", "guides": [] },
-    "stumble-guys": { "appStoreId": "1541153375", "playPackage": "com.kitkagames.fallbuddies", "expect": "Stumble Guys", "guides": [] },
-    "discord": { "appStoreId": "985746746", "playPackage": "com.discord", "expect": "Discord", "guides": ["https://discord.com/safety-family-center", "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians"] },
-    "instagram": { "appStoreId": "389801252", "playPackage": "com.instagram.android", "expect": "Instagram", "guides": ["https://help.instagram.com/995996839195964", "https://familycenter.meta.com/"] },
-    "rocket-league": { "appStoreId": null, "playPackage": null, "expect": "Rocket League", "guides": ["https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls", "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031"] }
+    "roblox": {
+      "appStoreId": "431946152",
+      "playPackage": "com.roblox.client",
+      "expect": "Roblox",
+      "guides": [
+        "https://about.roblox.com/parental-controls",
+        "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ"
+      ],
+      "psGameSlug": "roblox",
+      "xboxProductId": "BQ1TN1T79V9K",
+      "xboxExpect": "Roblox - Xbox"
+    },
+    "minecraft": {
+      "appStoreId": "479516143",
+      "playPackage": "com.mojang.minecraftpe",
+      "expect": "Minecraft",
+      "guides": [
+        "https://www.minecraft.net/en-us/article/parental-controls",
+        "https://help.minecraft.net/en-us/article/parental-controls",
+        "https://www.xbox.com/en-US/family-hub"
+      ],
+      "psGameSlug": "minecraft",
+      "xboxProductId": "9MVXMVT8ZKWC",
+      "xboxExpect": "Minecraft"
+    },
+    "fortnite": {
+      "appStoreId": "6483539426",
+      "playPackage": "com.epicgames.fortnite",
+      "expect": "Fortnite",
+      "guides": [
+        "https://www.epicgames.com/site/en-US/parental-controls",
+        "https://safety.epicgames.com/parental-controls",
+        "https://www.epicgames.com/fortnite/en-US/parental-controls"
+      ],
+      "psGameSlug": "fortnite",
+      "xboxProductId": "BT5P2X999VH2",
+      "xboxExpect": "Fortnite"
+    },
+    "among-us": {
+      "appStoreId": "1351168404",
+      "playPackage": "com.innersloth.spacemafia",
+      "expect": "Among Us",
+      "guides": [],
+      "psGameSlug": "among-us",
+      "xboxProductId": "9NG07QJNK38J",
+      "xboxExpect": "Among Us"
+    },
+    "pubg-mobile": {
+      "appStoreId": "1330123889",
+      "playPackage": "com.tencent.ig",
+      "expect": "PUBG",
+      "guides": []
+    },
+    "free-fire": {
+      "appStoreId": "1300146617",
+      "playPackage": "com.dts.freefireth",
+      "expect": "Free Fire",
+      "guides": []
+    },
+    "brawl-stars": {
+      "appStoreId": "1229016807",
+      "playPackage": "com.supercell.brawlstars",
+      "expect": "Brawl Stars",
+      "guides": ["https://supercell.com/en/parents/"]
+    },
+    "clash-royale": {
+      "appStoreId": "1053012308",
+      "playPackage": "com.supercell.clashroyale",
+      "expect": "Clash Royale",
+      "guides": ["https://supercell.com/en/parents/"]
+    },
+    "tiktok": {
+      "appStoreId": "835599320",
+      "playPackage": "com.zhiliaoapp.musically",
+      "expect": "TikTok",
+      "guides": [
+        "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
+        "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide"
+      ]
+    },
+    "snapchat": {
+      "appStoreId": "447188370",
+      "playPackage": "com.snapchat.android",
+      "expect": "Snapchat",
+      "guides": [
+        "https://values.snap.com/safety/family-center",
+        "https://parents.snapchat.com/family-center"
+      ]
+    },
+    "youtube-kids": {
+      "appStoreId": "936971630",
+      "playPackage": "com.google.android.apps.youtube.kids",
+      "expect": "YouTube Kids",
+      "guides": [
+        "https://support.google.com/youtubekids/?hl=ar",
+        "https://support.google.com/youtubekids/answer/6172308?hl=en"
+      ]
+    },
+    "pokemon-go": {
+      "appStoreId": "1094591345",
+      "playPackage": "com.nianticlabs.pokemongo",
+      "expect": "Pokémon GO",
+      "guides": []
+    },
+    "ea-sports-fc": {
+      "appStoreId": "1094930513",
+      "playPackage": "com.ea.gp.fifamobile",
+      "expect": "FC",
+      "guides": [
+        "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
+        "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/"
+      ],
+      "psGameSlug": "ea-sports-fc-26",
+      "psExpect": "FC 26",
+      "xboxProductId": "9NJ2N85T2ZGS",
+      "xboxExpect": "EA SPORTS FC™ 27 XBOX Series X|S"
+    },
+    "call-of-duty-mobile": {
+      "appStoreId": "1287282214",
+      "playPackage": "com.activision.callofduty.shooter",
+      "expect": "Call of Duty",
+      "guides": []
+    },
+    "subway-surfers": {
+      "appStoreId": "512939461",
+      "playPackage": "com.kiloo.subwaysurf",
+      "expect": "Subway Surfers",
+      "guides": []
+    },
+    "genshin-impact": {
+      "appStoreId": "1517783697",
+      "playPackage": "com.miHoYo.GenshinImpact",
+      "expect": "Genshin",
+      "guides": [],
+      "psGameSlug": "genshin-impact",
+      "xboxProductId": "9N7TFFRRZCC9",
+      "xboxExpect": "Genshin Impact"
+    },
+    "stumble-guys": {
+      "appStoreId": "1541153375",
+      "playPackage": "com.kitkagames.fallbuddies",
+      "expect": "Stumble Guys",
+      "guides": [],
+      "xboxProductId": "9N9L211HC9LQ",
+      "xboxExpect": "Stumble Guys"
+    },
+    "discord": {
+      "appStoreId": "985746746",
+      "playPackage": "com.discord",
+      "expect": "Discord",
+      "guides": [
+        "https://discord.com/safety-family-center",
+        "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians"
+      ]
+    },
+    "instagram": {
+      "appStoreId": "389801252",
+      "playPackage": "com.instagram.android",
+      "expect": "Instagram",
+      "guides": ["https://help.instagram.com/995996839195964", "https://familycenter.meta.com/"]
+    },
+    "rocket-league": {
+      "appStoreId": null,
+      "playPackage": null,
+      "expect": "Rocket League",
+      "guides": [
+        "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
+        "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031"
+      ],
+      "psGameSlug": "rocket-league",
+      "xboxProductId": "C125W9BG2K0V",
+      "xboxExpect": "Rocket League®"
+    }
+  },
+  "platformGuides": {
+    "playstation": "https://www.playstation.com/en-sa/parental-controls/",
+    "xbox": "https://www.xbox.com/ar-SA/family-hub",
+    "pc": "https://store.steampowered.com/families",
+    "switch": "https://www.nintendo.com/us/switch/parental-controls/",
+    "ios": "https://support.apple.com/ar-sa/105121",
+    "android": "https://families.google/familylink/"
   }
 }

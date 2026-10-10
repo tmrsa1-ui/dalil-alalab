@@ -21,9 +21,12 @@
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "12",
+      "sourceUrl": "https://www.playstation.com/en-sa/games/among-us/",
+      "verifiedAt": "2026-10-10",
+      "quote": "GCAM 12",
+      "shownOn": "PlayStation (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": "Everyone 10+",

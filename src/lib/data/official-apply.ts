@@ -23,10 +23,30 @@ export type StoreSnapshot = {
   containsAds?: boolean;
 };
 
+export type ConsoleSnapshot = {
+  url: string;
+  fetchedAt: string;
+  status?: number;
+  pageTitle?: string | null;
+  /** PlayStation: GCAM / PEGI / Generic */
+  authority?: string | null;
+  ratingName?: string | null;
+  /** Xbox: GAMR / PEGI */
+  boardName?: string | null;
+  rating?: string | null;
+  ratingDescription?: string | null;
+  descriptors?: string[];
+  interactive?: string[];
+};
+
 export type SnapshotEntry = {
   expect: string;
   appStore: StoreSnapshot | null;
   googlePlay: StoreSnapshot | null;
+  playstation?: ConsoleSnapshot | null;
+  psExpect?: string;
+  xbox?: ConsoleSnapshot | null;
+  xboxExpect?: string;
 };
 
 export type OfficialDecision = {
@@ -60,6 +80,15 @@ export function parseAppleDetails(raw: string | null | undefined): {
     else content.push(`${section}: ${line}`);
   }
   return { content, contains };
+}
+
+function okConsole(s: ConsoleSnapshot | null | undefined, expect: string): s is ConsoleSnapshot {
+  return (
+    !!s &&
+    s.status === 200 &&
+    !!s.pageTitle &&
+    s.pageTitle.toLowerCase().includes(expect.toLowerCase())
+  );
 }
 
 function ok(s: StoreSnapshot | null, expect: string): s is StoreSnapshot {
@@ -159,6 +188,87 @@ export function applyOfficial(
     );
   }
 
+  // الأجهزة المنزلية: PlayStation (السعودية) وXbox (السعودية).
+  const psExpect = e.psExpect ?? e.expect;
+  const xbExpect = e.xboxExpect ?? e.expect;
+  const ps = okConsole(e.playstation, psExpect) ? e.playstation : null;
+  const xb = okConsole(e.xbox, xbExpect) ? e.xbox : null;
+  if (e.playstation && !ps)
+    log("playstation", "skip", `الصفحة ما انجلبت أو ما تطابق «${psExpect}»`);
+  if (e.xbox && !xb) log("xbox", "skip", `الصفحة ما انجلبت أو ما تطابق «${xbExpect}»`);
+  const psEdition =
+    ps && psExpect !== e.expect ? (ps.pageTitle ?? "").split(" - ")[0]!.trim() : undefined;
+  const xbEdition = xb && xbExpect !== e.expect ? (xb.pageTitle ?? undefined) : undefined;
+  const num = (name: string | null | undefined) => name?.match(/(\d+)$/)?.[1] ?? null;
+
+  const psGcam = ps && ps.authority === "GCAM" ? num(ps.ratingName) : null;
+  const xbGamr = xb && xb.boardName === "GAMR" ? xb.rating : null;
+  if (psGcam && ps) {
+    setRating("gcam", {
+      value: psGcam,
+      ...(ps.descriptors?.length ? { descriptors: ps.descriptors } : {}),
+      sourceUrl: ps.url,
+      verifiedAt: ps.fetchedAt,
+      quote: ps.ratingDescription ?? `GCAM ${psGcam}`,
+      shownOn: "PlayStation (السعودية)",
+      ...(psEdition ? { edition: psEdition } : {}),
+      confidence: "auto",
+    });
+  } else if (xbGamr && xb) {
+    setRating("gcam", {
+      value: xbGamr,
+      sourceUrl: xb.url,
+      verifiedAt: xb.fetchedAt,
+      quote: `GAMR ${xbGamr} — ${xb.ratingDescription ?? ""}`.trim(),
+      shownOn: "Xbox (السعودية)",
+      ...(xbEdition ? { edition: xbEdition } : {}),
+      confidence: "auto",
+    });
+  }
+  if (psGcam && xbGamr && psGcam !== xbGamr) {
+    log(
+      "ratings.gcam",
+      "skip",
+      `PlayStation ${psGcam} ≠ Xbox ${xbGamr} (نسخ مختلفة؛ أخذنا PlayStation)`,
+    );
+  }
+
+  if (xb && xb.boardName === "PEGI" && xb.rating) {
+    const value = xb.rating.replace(/^PEGI\s+/, "").trim();
+    const desc =
+      xb.ratingDescription && xb.ratingDescription !== xb.rating
+        ? ` — ${xb.ratingDescription}`
+        : "";
+    setRating("pegi", {
+      value,
+      ...(xb.descriptors?.length ? { descriptors: xb.descriptors } : {}),
+      sourceUrl: xb.url,
+      verifiedAt: xb.fetchedAt,
+      quote: `${xb.rating}${desc}`,
+      shownOn: "Xbox (السعودية)",
+      ...(xbEdition ? { edition: xbEdition } : {}),
+      confidence: "auto",
+    });
+  } else if (ps && ps.authority === "PEGI" && num(ps.ratingName)) {
+    setRating("pegi", {
+      value: num(ps.ratingName)!,
+      ...(ps.descriptors?.length ? { descriptors: ps.descriptors } : {}),
+      sourceUrl: ps.url,
+      verifiedAt: ps.fetchedAt,
+      quote: ps.ratingDescription ?? `PEGI ${num(ps.ratingName)}`,
+      shownOn: "PlayStation (السعودية)",
+      ...(psEdition ? { edition: psEdition } : {}),
+      confidence: "auto",
+    });
+  }
+  if (ps && ps.authority === "Generic") {
+    log(
+      "ratings",
+      "skip",
+      `PlayStation يعرض تصنيف IARC عام («${ps.ratingDescription}») — ما له خانة من الجهات الخمس`,
+    );
+  }
+
   const apple = parseAppleDetails(as?.ageRatingDetails);
   const items: Record<Exclude<PointKey, "sessionPause">, Item[]> = {
     strangerChat: [],
@@ -190,6 +300,36 @@ export function applyOfficial(
       items.purchases.push(fromAS("App Store", "Loot Boxes"));
     if (apple.contains.includes("Advertising")) items.ads.push(fromAS("App Store", "Advertising"));
     if (apple.content.length) items.content.push(fromAS("App Store", apple.content.join(", ")));
+  }
+  const fromConsole = (
+    src: ConsoleSnapshot,
+    label: string,
+    expect: string,
+    quote: string,
+  ): Item => ({
+    url: src.url,
+    title: `${label} (السعودية): ${expect}`,
+    quote,
+    verifiedAt: src.fetchedAt,
+    label,
+  });
+  if (ps) {
+    const ia = ps.interactive ?? [];
+    if (ia.includes("Users Interact"))
+      items.strangerChat.push(fromConsole(ps, "PlayStation", psExpect, "Users Interact"));
+    const p = ia.find((x) => /Purchases/i.test(x));
+    if (p) items.purchases.push(fromConsole(ps, "PlayStation", psExpect, p));
+    if (ps.descriptors?.length)
+      items.content.push(fromConsole(ps, "PlayStation", psExpect, ps.descriptors.join(", ")));
+  }
+  if (xb) {
+    const ia = xb.interactive ?? [];
+    if (ia.includes("تفاعل المستخدمين"))
+      items.strangerChat.push(fromConsole(xb, "Xbox", xbExpect, "تفاعل المستخدمين"));
+    const p = ia.find((x) => /شراء/.test(x));
+    if (p) items.purchases.push(fromConsole(xb, "Xbox", xbExpect, p));
+    if (xb.descriptors?.length)
+      items.content.push(fromConsole(xb, "Xbox", xbExpect, xb.descriptors.join("، ")));
   }
   if (gp) {
     if (gpInteractive.includes("Users Interact"))
@@ -236,13 +376,27 @@ export function applyOfficial(
   }
   const randomItems = gpInteractive.find((x) => /Includes Random Items/i.test(x));
   if (gp && randomItems) lens.push(fromGP("Google Play", randomItems));
-  if (lens.length && t.familyLens.gambling.status === "unknown") {
+  const psRandom = ps?.interactive?.find((x) => /Includes Random Items/i.test(x));
+  if (ps && psRandom) lens.push(fromConsole(ps, "PlayStation", psExpect, psRandom));
+  const xbRandom = xb?.interactive?.find((x) => /عناصر عشوائية/.test(x));
+  if (xb && xbRandom) lens.push(fromConsole(xb, "Xbox", xbExpect, xbRandom));
+  if (lens.length) {
+    const prev = t.familyLens.gambling.sources.filter(
+      (s) => !lens.some((i) => i.url === s.url && i.quote === s.quote),
+    );
     t.familyLens.gambling = {
       status: "present",
       noteAr: "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
-      sources: lens.map(({ url, title, quote, verifiedAt }) => ({ url, title, quote, verifiedAt })),
+      sources: [
+        ...prev,
+        ...lens.map(({ url, title, quote, verifiedAt }) => ({ url, title, quote, verifiedAt })),
+      ],
     };
-    log("familyLens.gambling", "set", lens.map((i) => `${i.label}: ${i.quote}`).join(" | "));
+    log(
+      "familyLens.gambling",
+      prev.length ? "replace" : "set",
+      lens.map((i) => `${i.label}: ${i.quote}`).join(" | "),
+    );
   }
 
   if (!t.publisher && as?.provider) {

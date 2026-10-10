@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.4.0 — 2026-10-10 (الأجهزة المنزلية)
+
+- PlayStation (السعودية) وXbox (السعودية): التصنيف السعودي GCAM/GAMR لـMinecraft (7) وFortnite (12) وAmong Us (12) وEA SPORTS FC 26 (3)، وPEGI لـRoblox وFortnite وGenshin Impact وStumble Guys وRocket League — كلها باقتباس ورابط وتاريخ وحالة «بحاجة مراجعة بشرية».
+- عناصر التفاعل والواصفات من المتجرين أُضيفت كمصادر لنقاط الانتباه وعدسة الأسرة (صناديق الحظ).
+- أدلة الرقابة الأبوية لـPlayStation وXbox (عربي) وSteam فُحصت ومعها اقتباس وتاريخ؛ الاقتباس يظهر تحت الرابط في «اضبط».
+- Rocket League صار عنده تصنيف PEGI 3.
+- فاحص الكلمات الإنجليزية يشمل `safer/safest`.
+
 ## 0.3.0 — 2026-10-10 (التحقق من المصادر الرسمية)
 
 - دمج ملف البحث المرفق (`research/seed_titles_verified.json`) عبر `import:verified`: 33 قيمة مقبولة، 2 مرفوضة (تقرير: `research/import-report.md`).

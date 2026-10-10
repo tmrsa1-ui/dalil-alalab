@@ -4,10 +4,11 @@
   "nameAr": "إكس بوكس",
   "nameEn": "Xbox",
   "toolNameEn": "Xbox Family Settings",
-  "officialGuideUrl": "https://www.xbox.com/en-US/family-hub",
-  "officialGuideTitle": "Xbox Family Hub",
+  "officialGuideUrl": "https://www.xbox.com/ar-SA/family-hub",
+  "officialGuideTitle": "XBOX family settings: peace of mind for parents | XBOX",
   "verifiedAt": null,
-  "linkCheckedAt": null,
+  "linkCheckedAt": "2026-10-10",
+  "guideQuote": "XBOX family settings: peace of mind for parents | XBOX",
   "steps": [
     {
       "id": "xbox-strangerchat-1",

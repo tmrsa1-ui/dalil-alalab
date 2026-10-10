@@ -22,9 +22,13 @@
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "3",
+      "sourceUrl": "https://www.playstation.com/en-sa/games/ea-sports-fc-26/",
+      "verifiedAt": "2026-10-10",
+      "quote": "GMEDIA 3",
+      "edition": "EA SPORTS™ FC 26",
+      "shownOn": "PlayStation (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": null,

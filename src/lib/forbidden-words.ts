@@ -21,7 +21,7 @@ const FORBIDDEN_STEMS = new Set<string>(FORBIDDEN_LIST);
 
 const PREFIXES = ["وبال", "فبال", "وال", "فال", "بال", "كال", "لل", "ال", "و", "ف", "ب", "ل", "ك"];
 
-const ENGLISH = /\b(un)?safe(ty|ly)?\b/i;
+const ENGLISH = /\b(un)?safe(r|st|ty|ly)?\b/i;
 
 function stripPrefixes(token: string): string[] {
   const out = [token];

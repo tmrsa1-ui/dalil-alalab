@@ -29,9 +29,16 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "الإرشاد الأبوي المستحسن",
+      "descriptors": [
+        "الإرشاد الأبوي المستحسن"
+      ],
+      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+      "verifiedAt": "2026-10-10",
+      "quote": "الإرشاد الأبوي المستحسن",
+      "edition": "Roblox - Xbox",
+      "shownOn": "Xbox (السعودية)",
+      "confidence": "auto"
     },
     "appStore": {
       "value": "13+",
@@ -54,8 +61,20 @@
   "attentionPoints": {
     "strangerChat": {
       "status": "present",
-      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: Google Play.",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: PlayStation، Xbox، Google Play.",
       "sources": [
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "تفاعل المستخدمين",
+          "verifiedAt": "2026-10-10"
+        },
         {
           "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
           "title": "Google Play (السعودية): Roblox",
@@ -67,12 +86,24 @@
     },
     "purchases": {
       "status": "present",
-      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، PlayStation، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://apps.apple.com/sa/app/id431946152",
           "title": "App Store (السعودية): Roblox",
           "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
           "verifiedAt": "2026-10-10"
         },
         {
@@ -86,8 +117,20 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: Google Play.",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: PlayStation، Xbox، Google Play.",
       "sources": [
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "Parental Guidance Recommended",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "الإرشاد الأبوي المستحسن",
+          "verifiedAt": "2026-10-10"
+        },
         {
           "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
           "title": "Google Play (السعودية): Roblox",
@@ -121,6 +164,18 @@
           "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
           "title": "Google Play (السعودية): Roblox",
           "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
           "verifiedAt": "2026-10-10"
         }
       ]

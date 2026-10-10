@@ -92,9 +92,9 @@ public/          manifest.webmanifest, icons/, sw.js
 
 ## الحالة الحالية (2026-10-10)
 
-- كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 105 unit/component · build · 58 e2e (موبايل + ديسكتوب، axe) كلها تمر.
+- كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 127 unit/component · build · 68 e2e (موبايل + ديسكتوب، axe) كلها تمر.
 - Lighthouse محلي: الأداء 90–97، الوصولية 100.
-- `data/titles`: 20 عنوان حقيقي. القيم من App Store السعودي وGoogle Play (السعودية) وESRB (من ملف البحث)، كلها `confidence: auto` = «بحاجة مراجعة بشرية». الناقص «غير متوفر/ما لقيت». البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا، فـminecraft/fortnite/roblox/pubg-mobile/tiktok في الـe2e تجريبية).
-- الشبكة: App Store وGoogle Play مفتوحة؛ `www.esrb.org` و`pegi.info` و`gcam.gov.sa` ومواقع أغلب الناشرين مرفوضة من البوابة. Node يحتاج `NODE_USE_ENV_PROXY=1` (مضبوط في `fetch:official`).
-- المطلوب بشريًا: مراجعة القيم وتحويلها لـ`human`، PEGI وموقع GCAM، روابط PlayStation/Xbox/Nintendo/Steam، ورابط Epic.
+- `data/titles`: 20 عنوان حقيقي. القيم من App Store السعودي وGoogle Play وPlayStation وXbox (كلها نسخ السعودية) وESRB (من ملف البحث)، كلها `confidence: auto` = «بحاجة مراجعة بشرية». الناقص «غير متوفر/ما لقيت». البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا، فـminecraft/fortnite/roblox/pubg-mobile/tiktok في الـe2e تجريبية).
+- الشبكة: App Store وGoogle Play وplaystation.com وxbox.com وsteampowered.com مفتوحة؛ `www.esrb.org` و`pegi.info` و`gcam.gov.sa` و`www.nintendo.com` ومواقع أغلب الناشرين مرفوضة من البوابة. Node يحتاج `NODE_USE_ENV_PROXY=1` (مضبوط في `fetch:official`).
+- المطلوب بشريًا: مراجعة القيم وتحويلها لـ`human`، موقع PEGI وموقع GCAM، دليل Nintendo، ورابط Epic.
 - ملاحظة بيئة: `pkill -f next-server` يقتل الـshell نفسه في هذه البيئة؛ استخدم `ps aux | grep -E "next-serve[r]" | awk '{print $2}' | xargs -r kill`.

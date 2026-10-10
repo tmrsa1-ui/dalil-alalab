@@ -18,9 +18,12 @@
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "12",
+      "sourceUrl": "https://www.playstation.com/en-sa/games/fortnite/",
+      "verifiedAt": "2026-10-10",
+      "quote": "GMEDIA 12",
+      "shownOn": "PlayStation (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": "Teen",
@@ -35,9 +38,15 @@
       "confidence": "auto"
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "الإرشاد الأبوي المستحسن",
+      "descriptors": [
+        "الإرشاد الأبوي المستحسن"
+      ],
+      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
+      "verifiedAt": "2026-10-10",
+      "quote": "الإرشاد الأبوي المستحسن",
+      "shownOn": "Xbox (السعودية)",
+      "confidence": "auto"
     },
     "appStore": {
       "value": "13+",
@@ -60,12 +69,18 @@
   "attentionPoints": {
     "strangerChat": {
       "status": "present",
-      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: ESRB، Google Play.",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: ESRB، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite",
           "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
+          "title": "Xbox (السعودية): Fortnite",
+          "quote": "تفاعل المستخدمين",
           "verifiedAt": "2026-10-10"
         },
         {
@@ -79,7 +94,7 @@
     },
     "purchases": {
       "status": "present",
-      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: ESRB، App Store، Google Play.",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: ESRB، App Store، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
@@ -94,6 +109,12 @@
           "verifiedAt": "2026-10-10"
         },
         {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
+          "title": "Xbox (السعودية): Fortnite",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
           "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
           "title": "Google Play (السعودية): Fortnite",
           "quote": "In-Game Purchases (Includes Random Items)",
@@ -104,12 +125,18 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: ESRB، Google Play.",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: ESRB، Xbox، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite",
           "quote": "Violence, Suggestive Themes, Lyrics",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
+          "title": "Xbox (السعودية): Fortnite",
+          "quote": "الإرشاد الأبوي المستحسن",
           "verifiedAt": "2026-10-10"
         },
         {
@@ -145,6 +172,12 @@
           "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
           "title": "Google Play (السعودية): Fortnite",
           "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
+          "title": "Xbox (السعودية): Fortnite",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
           "verifiedAt": "2026-10-10"
         }
       ]

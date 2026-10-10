@@ -44,6 +44,8 @@ export const platformSchema = z
     verifiedAt: isoDate.nullable(),
     /** آخر مرة تأكدنا آليًا إن الرابط يفتح (بدون قراءة محتواه). */
     linkCheckedAt: isoDate.nullable(),
+    /** اقتباس حرفي من صفحة الدليل (عنوانها أو وصفها) وقت الفحص. */
+    guideQuote: z.string().min(1).optional(),
     steps: z.array(platformStepSchema),
   })
   .strict()

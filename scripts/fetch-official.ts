@@ -12,8 +12,18 @@ import { isAllowedUrl } from "../src/lib/agent/allowlist";
 type Cfg = {
   titles: Record<
     string,
-    { appStoreId: string | null; playPackage: string | null; expect: string; guides: string[] }
+    {
+      appStoreId: string | null;
+      playPackage: string | null;
+      expect: string;
+      guides: string[];
+      psGameSlug?: string;
+      psExpect?: string;
+      xboxProductId?: string;
+      xboxExpect?: string;
+    }
   >;
+  platformGuides?: Record<string, string>;
 };
 
 const UA =
@@ -120,15 +130,98 @@ async function googlePlay(pkg: string) {
   };
 }
 
+/** صفحة اللعبة في PlayStation (السعودية): تصنيف «المفهوم» الظاهر في الصفحة. */
+async function playstation(slug: string) {
+  const url = `https://www.playstation.com/en-sa/games/${slug}/`;
+  const r = await get(url);
+  if (r.status !== 200) return { url, fetchedAt: today, status: r.status };
+  const pageTitle = strip(r.body.match(/<title[^>]*>([\s\S]*?)<\/title>/)?.[1] ?? "");
+  const m = r.body.match(
+    /"Concept:\d+":\{"id":"\d+","__typename":"Concept","contentRating":(\{.*?\})(?=,"defaultProduct"|\})/,
+  );
+  let cr: {
+    authority?: string;
+    description?: string;
+    name?: string;
+    descriptors?: Array<{ description: string }>;
+    interactiveElements?: Array<{ description: string }>;
+  } | null = null;
+  try {
+    cr = m ? JSON.parse(m[1]!) : null;
+  } catch {
+    cr = null;
+  }
+  return {
+    url,
+    fetchedAt: today,
+    status: r.status,
+    pageTitle,
+    authority: cr?.authority ?? null,
+    ratingDescription: cr?.description ?? null,
+    ratingName: cr?.name ?? null,
+    descriptors: (cr?.descriptors ?? []).map((d) => d.description),
+    interactive: (cr?.interactiveElements ?? []).map((d) => d.description),
+  };
+}
+
+/** صفحة المنتج في متجر Xbox (السعودية): بيانات المنتج من الحالة المحمّلة مسبقًا. */
+async function xbox(productId: string) {
+  const url = `https://www.xbox.com/ar-SA/games/store/_/${productId}`;
+  const r = await get(url);
+  if (r.status !== 200) return { url, fetchedAt: today, status: r.status };
+  try {
+    const i = r.body.indexOf("window.__PRELOADED_STATE__");
+    const j = r.body.indexOf("=", i) + 1;
+    const text = r.body.slice(j).trimStart();
+    // نقرأ أول كائن JSON كامل فقط.
+    let depth = 0;
+    let end = 0;
+    let inStr = false;
+    for (let k = 0; k < text.length; k++) {
+      const c = text[k];
+      if (inStr) {
+        if (c === "\\") k++;
+        else if (c === '"') inStr = false;
+      } else if (c === '"') inStr = true;
+      else if (c === "{") depth++;
+      else if (c === "}" && --depth === 0) {
+        end = k + 1;
+        break;
+      }
+    }
+    const state = JSON.parse(text.slice(0, end));
+    const p = state.core2.products.productSummaries[productId];
+    const cr = p?.contentRating ?? {};
+    return {
+      url,
+      fetchedAt: today,
+      status: r.status,
+      pageTitle: p?.title ?? null,
+      boardName: cr.boardName ?? null,
+      rating: cr.rating ?? null,
+      ratingDescription: cr.description ?? null,
+      descriptors: cr.descriptors ?? [],
+      interactive: cr.interactiveDescriptions ?? [],
+    };
+  } catch {
+    return { url, fetchedAt: today, status: -2 };
+  }
+}
+
 async function guide(url: string) {
   if (!isAllowedUrl(url)) return { url, status: -1, reason: "خارج النطاقات الرسمية" };
   const r = await get(url);
   const pageTitle = strip(r.body.match(/<title[^>]*>([\s\S]*?)<\/title>/)?.[1] ?? "").slice(0, 160);
+  const metaDesc =
+    r.body.match(/<meta[^>]+name="description"[^>]+content="([^"]*)"/)?.[1] ??
+    r.body.match(/<meta[^>]+content="([^"]*)"[^>]+name="description"/)?.[1] ??
+    null;
   return {
     url,
     fetchedAt: today,
     status: r.status,
     finalUrl: r.finalUrl,
+    metaDescription: metaDesc ? strip(metaDesc) : null,
     finalAllowed: isAllowedUrl(r.finalUrl),
     pageTitle,
     mentionsParental: /parent|family|guardian|teen account|child account/i.test(
@@ -160,18 +253,34 @@ async function main() {
         c.playPackage ? await googlePlay(c.playPackage) : null,
         prev[slug]?.googlePlay,
       ),
+      playstation: keep(
+        c.psGameSlug ? await playstation(c.psGameSlug) : null,
+        prev[slug]?.playstation,
+      ),
+      psExpect: c.psExpect ?? c.expect,
+      xbox: keep(c.xboxProductId ? await xbox(c.xboxProductId) : null, prev[slug]?.xbox),
+      xboxExpect: c.xboxExpect ?? c.expect,
       guides: [] as unknown[],
     };
     for (const g of c.guides) entry.guides.push(await guide(g));
     out[slug] = entry;
     console.log(
-      `${slug}: AS=${(entry.appStore as { ageRating?: string } | null)?.ageRating ?? "—"} GP=${(entry.googlePlay as { ratedFor?: string } | null)?.ratedFor ?? "—"} guides=${entry.guides.map((g) => (g as { status: number }).status).join(",")}`,
+      `${slug}: AS=${(entry.appStore as { ageRating?: string } | null)?.ageRating ?? "—"} GP=${(entry.googlePlay as { ratedFor?: string } | null)?.ratedFor ?? "—"} PS=${(entry.playstation as { ratingDescription?: string } | null)?.ratingDescription ?? "—"} XB=${(entry.xbox as { boardName?: string; rating?: string } | null)?.boardName ?? "—"}:${(entry.xbox as { rating?: string } | null)?.rating ?? ""} guides=${entry.guides.map((g) => (g as { status: number }).status).join(",")}`,
     );
     await sleep(800);
   }
+  const platformGuides: Record<string, unknown> = {};
+  for (const [id, url] of Object.entries(cfg.platformGuides ?? {})) {
+    platformGuides[id] = await guide(url);
+    console.log(`guide ${id}: ${(platformGuides[id] as { status: number }).status}`);
+  }
   fs.writeFileSync(
     path.resolve("research/official_snapshot.json"),
-    JSON.stringify({ fetchedAt: today, method: "fetch-official.ts", titles: out }, null, 2) + "\n",
+    JSON.stringify(
+      { fetchedAt: today, method: "fetch-official.ts", titles: out, platformGuides },
+      null,
+      2,
+    ) + "\n",
   );
   console.log("✓ fetch:official — research/official_snapshot.json");
 }
