@@ -29,7 +29,8 @@
     "apply:official": "tsx scripts/apply-official.ts",
     "audit:shots": "tsx scripts/audit-shots.ts",
     "fetch:guides": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/guides.ts fetch",
-    "apply:guides": "tsx scripts/guides.ts apply"
+    "apply:guides": "tsx scripts/guides.ts apply",
+    "demo:video": "tsx scripts/demo-video.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",

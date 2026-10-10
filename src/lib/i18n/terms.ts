@@ -93,3 +93,24 @@ export function translateList(quote: string): string[] | null {
   }
   return out.length ? out : null;
 }
+
+/** أسماء فئات ESRB الرسمية بالعربي (ترجمة للاسم فقط، بدون تحويل لجهة ثانية). */
+const ESRB_NAMES: Record<string, string> = {
+  Everyone: "للجميع",
+  "Everyone 10+": "للجميع من 10 سنوات فأكثر",
+  Teen: "للمراهقين",
+  "Mature 17+": "للبالغين من 17 سنة فأكثر",
+  "Adults Only 18+": "للبالغين فقط من 18 سنة",
+  "Rating Pending": "التصنيف قيد الانتظار",
+};
+
+const years = (n: number) => (n >= 3 && n <= 10 ? `${n} سنوات` : `${n} سنة`);
+
+/** شرح عربي قصير لقيمة التصنيف كما هي عند جهتها؛ null لو القيمة عربية أصلًا أو غير معروفة. */
+export function ratingGloss(value: string): string | null {
+  const v = value.trim();
+  if (ESRB_NAMES[v]) return ESRB_NAMES[v]!;
+  const m = v.match(/^(?:Rated for\s+)?(\d{1,2})\+?$/i);
+  if (m) return `من ${years(Number(m[1]))} فأكثر`;
+  return null;
+}

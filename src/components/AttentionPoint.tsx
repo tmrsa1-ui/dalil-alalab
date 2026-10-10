@@ -94,18 +94,18 @@ export function AttentionPoint({
                   {arabicTerms.join("، ")}
                 </p>
               ) : null}
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                <ConfidenceBadge level={point.confidence} isDemo={isDemo} />
-              </div>
               <details className="group mt-1 text-sm" data-testid="point-sources">
-                <summary className="inline-flex min-h-[44px] cursor-pointer items-center gap-1 font-semibold text-brand">
-                  <span
-                    aria-hidden="true"
-                    className="transition-transform group-open:rotate-90 motion-reduce:transition-none"
-                  >
-                    ‹
+                <summary className="flex min-h-[44px] cursor-pointer flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="font-semibold text-brand">
+                    <span
+                      aria-hidden="true"
+                      className="inline-block transition-transform group-open:rotate-90 motion-reduce:transition-none"
+                    >
+                      ‹
+                    </span>{" "}
+                    {ar.know.sourcesCount(point.sources.length)}
                   </span>
-                  {ar.know.sourcesCount(point.sources.length)}
+                  <ConfidenceBadge level={point.confidence} isDemo={isDemo} />
                 </summary>
                 <div className="mt-1 grid gap-1 border-s-2 border-line ps-3">
                   {point.sources.map((s) => (

@@ -1,4 +1,5 @@
-import { buildEvent, track } from "@/lib/events";
+import { track } from "@/lib/events";
+import { buildEvent } from "@/lib/event-build";
 import { eventSchema } from "@schemas/event";
 import { KEYS } from "@/lib/storage";
 
@@ -44,7 +45,7 @@ describe("events", () => {
       eventSchema.safeParse({ type: "search", requestedName: "x", ts: 1, sessionId: SID }).success,
     ).toBe(false);
   });
-  it("track ما يرسل شي بدون موافقة", () => {
+  it("track ما يرسل شي بدون موافقة", async () => {
     const fetchSpy = vi.fn(() => Promise.resolve(new Response(null)));
     vi.stubGlobal("fetch", fetchSpy);
     const beacon = vi.fn(() => true);
@@ -55,7 +56,7 @@ describe("events", () => {
     expect(fetchSpy).not.toHaveBeenCalled();
     expect(beacon).not.toHaveBeenCalled();
     localStorage.setItem(KEYS.consent, JSON.stringify("granted"));
-    expect(track({ type: "search", found: true })).toBe(true);
+    expect(await track({ type: "search", found: true })).toBe(true);
     expect(beacon).toHaveBeenCalledTimes(1);
     vi.unstubAllGlobals();
   });

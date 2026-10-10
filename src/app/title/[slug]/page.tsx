@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ar } from "@/lib/i18n/ar";
@@ -64,14 +63,12 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           </p>
         ) : null}
       </header>
-      <Suspense fallback={<p>{ar.loading}</p>}>
-        <TitleJourney
-          title={title}
-          platforms={getPlatforms()}
-          questions={getQuestions()}
-          agreement={getAgreement()}
-        />
-      </Suspense>
+      <TitleJourney
+        title={title}
+        platforms={getPlatforms()}
+        questions={getQuestions()}
+        agreement={getAgreement()}
+      />
     </article>
   );
 }

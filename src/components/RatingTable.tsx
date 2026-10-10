@@ -1,10 +1,19 @@
 "use client";
 import { ar } from "@/lib/i18n/ar";
 import { compareAge, type AgeComparison } from "@/lib/age";
-import { RATING_KEYS, type Title } from "@schemas/title";
+import { type Title } from "@schemas/title";
+import { RATING_KEYS } from "@schemas/keys";
 import { SourceLink } from "./SourceLink";
 import { ConfidenceBadge } from "./ConfidenceBadge";
-import { translateTerm } from "@/lib/i18n/terms";
+import { ratingGloss, translateTerm } from "@/lib/i18n/terms";
+
+const hostOf = (url: string) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+};
 
 const CMP_STYLE: Record<AgeComparison, string> = {
   above: "bg-warn-soft text-warn border-warn/40",
@@ -78,6 +87,11 @@ export function RatingTable({
                 )}
               </div>
             </div>
+            {available && r.value && ratingGloss(r.value) ? (
+              <p className="text-sm font-semibold" data-testid="rating-gloss">
+                {ratingGloss(r.value)}
+              </p>
+            ) : null}
             {available && r.descriptors?.length ? (
               <p className="text-sm text-muted">
                 {ar.know.descriptors}:{" "}
@@ -92,18 +106,39 @@ export function RatingTable({
                 ) : null}
               </p>
             ) : null}
-            {available && (r.shownOn || r.edition) ? (
-              <div className="text-xs text-muted" dir="auto">
-                {r.shownOn ? ar.know.shownOn(r.shownOn) : null}
-                {r.shownOn && r.edition ? " · " : null}
-                {r.edition ? ar.know.edition(r.edition) : null}
-              </div>
-            ) : null}
             {available && r.sourceUrl ? (
-              <div className="flex flex-wrap items-center gap-x-2">
-                <SourceLink url={r.sourceUrl} verifiedAt={r.verifiedAt} className="text-sm" />
-                {r.confidence ? <ConfidenceBadge level={r.confidence} /> : null}
-              </div>
+              <details className="group text-sm" data-testid="rating-source">
+                <summary className="flex min-h-[44px] cursor-pointer flex-wrap items-center gap-x-2 gap-y-1">
+                  <span className="font-semibold text-brand">
+                    <span
+                      aria-hidden="true"
+                      className="inline-block transition-transform group-open:rotate-90 motion-reduce:transition-none"
+                    >
+                      ‹
+                    </span>{" "}
+                    {ar.know.sourceOf(hostOf(r.sourceUrl))}
+                  </span>
+                  {r.shownOn ? (
+                    <span className="text-xs text-muted" dir="auto">
+                      {ar.know.shownOn(r.shownOn)}
+                    </span>
+                  ) : null}
+                  {r.confidence ? <ConfidenceBadge level={r.confidence} /> : null}
+                </summary>
+                <div className="mt-1 grid gap-1 border-s-2 border-line ps-3">
+                  {r.edition ? (
+                    <div className="text-xs text-muted" dir="auto">
+                      {ar.know.edition(r.edition)}
+                    </div>
+                  ) : null}
+                  <SourceLink
+                    url={r.sourceUrl}
+                    verifiedAt={r.verifiedAt}
+                    quote={r.quote}
+                    className="text-sm"
+                  />
+                </div>
+              </details>
             ) : null}
           </li>
         ))}

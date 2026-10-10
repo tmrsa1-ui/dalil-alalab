@@ -11,7 +11,9 @@ import {
 import { collectStrings, findForbiddenWord } from "../src/lib/forbidden-words";
 import { isAllowedUrl, isDemoUrl } from "../src/lib/agent/allowlist";
 
-export const RATING_KEYS = ["gcam", "esrb", "pegi", "appStore", "googlePlay"] as const;
+import { FAMILY_LENS_KEYS, RATING_KEYS } from "./keys";
+
+export { FAMILY_LENS_KEYS, RATING_KEYS };
 export type RatingKey = (typeof RATING_KEYS)[number];
 
 export const ratingSchema = z
@@ -78,13 +80,6 @@ export const sessionPausePointSchema = pointBase
   .superRefine(pointRules);
 export type AttentionPoint = z.infer<typeof attentionPointSchema>;
 
-export const FAMILY_LENS_KEYS = [
-  "gambling",
-  "mixedVoiceChat",
-  "magic",
-  "clothing",
-  "music",
-] as const;
 export type FamilyLensKey = (typeof FAMILY_LENS_KEYS)[number];
 
 export const familyLensItemSchema = z

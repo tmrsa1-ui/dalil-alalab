@@ -1,4 +1,4 @@
-import { translateList, translateTerm } from "@/lib/i18n/terms";
+import { ratingGloss, translateList, translateTerm } from "@/lib/i18n/terms";
 import { findForbiddenWord } from "@/lib/forbidden-words";
 import { readFileSync, readdirSync } from "node:fs";
 
@@ -36,5 +36,12 @@ describe("ترجمة المصطلحات الرسمية", () => {
     for (const q of quotes) {
       for (const tr of translateList(q) ?? []) expect(findForbiddenWord(tr)).toBeNull();
     }
+  });
+
+  it("شرح قيمة التصنيف بالعربي بدون تحويل", () => {
+    expect(ratingGloss("Everyone 10+")).toBe("للجميع من 10 سنوات فأكثر");
+    expect(ratingGloss("12+")).toBe("من 12 سنة فأكثر");
+    expect(ratingGloss("7")).toBe("من 7 سنوات فأكثر");
+    expect(ratingGloss("الإرشاد الأبوي المستحسن")).toBeNull();
   });
 });

@@ -95,6 +95,7 @@ export const ar = {
     descriptors: "واصفات المحتوى",
     edition: (e: string) => `النسخة: ${e}`,
     shownOn: (s: string) => `يعرضه: ${s}`,
+    sourceOf: (host: string) => `المصدر: ${host}`,
     systems: {
       gcam: { name: "الهيئة العامة لتنظيم الإعلام", short: "GCAM" },
       esrb: { name: "ESRB", short: "ESRB" },
@@ -124,6 +125,8 @@ export const ar = {
       allAuto:
         "كل القيم من مصادر رسمية وقُرئت آليًا، وما راجعها إنسان بعد. افتح أي مصدر وتأكد بنفسك.",
       details: "التفاصيل والمصادر تحت.",
+      coverage: (n: number, of: number) => `اكتمال البيانات: ${n} من ${of} خانات من مصادر رسمية`,
+      lastChecked: (d: string) => `آخر تحقق: ${d}`,
     },
     points: {
       strangerChat: { title: "محادثة الغرباء", hint: "نص أو صوت، وهل تقدر تقفلها" },

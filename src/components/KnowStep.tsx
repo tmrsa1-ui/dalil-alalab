@@ -1,5 +1,5 @@
 import { ar } from "@/lib/i18n/ar";
-import { POINT_KEYS } from "@schemas/common";
+import { POINT_KEYS } from "@schemas/keys";
 import type { Title } from "@schemas/title";
 import { RatingTable } from "./RatingTable";
 import { AttentionPoint } from "./AttentionPoint";

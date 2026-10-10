@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ar } from "@/lib/i18n/ar";
-import { CONTROL_KEYS, PLATFORM_IDS, type PlatformId } from "@schemas/common";
+import { type PlatformId } from "@schemas/common";
+import { CONTROL_KEYS, PLATFORM_IDS } from "@schemas/keys";
 import type { Platform } from "@schemas/platform";
 import type { Title } from "@schemas/title";
 import { getDoneSteps, setStepDone } from "@/lib/storage";

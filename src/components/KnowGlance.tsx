@@ -1,8 +1,9 @@
 "use client";
 import { ar } from "@/lib/i18n/ar";
 import { compareAge } from "@/lib/age";
-import { POINT_KEYS } from "@schemas/common";
-import { RATING_KEYS, type Title } from "@schemas/title";
+import { POINT_KEYS } from "@schemas/keys";
+import { type Title } from "@schemas/title";
+import { RATING_KEYS } from "@schemas/keys";
 
 /**
  * «الصورة باختصار»: سطرين فوق صفحة «اعرف» يلخصون الموجود فقط (بدون حكم ولا تحويل بين الجهات).
@@ -44,6 +45,14 @@ export function KnowGlance({
     rows.every((x) => !x.available || title.ratings[x.key].confidence !== "human") &&
     POINT_KEYS.every((k) => title.attentionPoints[k].confidence !== "human");
   const g = ar.know.glance;
+  // اكتمال البيانات: 5 تصنيفات + 5 نقاط، وآخر تاريخ تحقق من أي مصدر.
+  const filled =
+    rows.filter((x) => x.available).length + POINT_KEYS.filter((k) => !unknown.includes(k)).length;
+  const dates = [
+    ...RATING_KEYS.map((k) => title.ratings[k].verifiedAt),
+    ...POINT_KEYS.flatMap((k) => title.attentionPoints[k].sources.map((s) => s.verifiedAt)),
+  ].filter((d): d is string => !!d);
+  const lastChecked = dates.length && !title.isDemo ? dates.sort().at(-1)! : null;
   const name = (k: (typeof POINT_KEYS)[number]) => ar.know.points[k].title;
 
   return (
@@ -85,7 +94,7 @@ export function KnowGlance({
             {others.map((x, i) => (
               <span key={x.key}>
                 {i ? "، " : ""}
-                <bdi>
+                <bdi dir="ltr" className="whitespace-nowrap">
                   {ar.know.systems[x.key].short} {x.value}
                 </bdi>
               </span>
@@ -104,7 +113,13 @@ export function KnowGlance({
           </li>
         ) : null}
       </ul>
-      {allAuto ? <p className="mt-2 text-sm text-info">{g.allAuto}</p> : null}
+      <p className="mt-2 text-sm" data-testid="glance-coverage">
+        <span className="num">{g.coverage(filled, 10)}</span>
+        {lastChecked ? (
+          <span className="num text-muted"> · {g.lastChecked(lastChecked)}</span>
+        ) : null}
+      </p>
+      {allAuto ? <p className="mt-1 text-sm text-info">{g.allAuto}</p> : null}
       <p className="mt-1 text-sm text-muted">{g.details}</p>
     </section>
   );

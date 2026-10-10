@@ -1,5 +1,5 @@
 import type { AgeBand, PointKey } from "../../../schemas/common";
-import { POINT_KEYS } from "../../../schemas/common";
+import { POINT_KEYS } from "@schemas/keys";
 import type { ConversationQuestion } from "../../../schemas/questions";
 import type { Title } from "../../../schemas/title";
 import { hashString } from "../hash";

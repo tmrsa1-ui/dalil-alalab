@@ -1,7 +1,8 @@
 "use client";
 import { useId, useState } from "react";
 import { ar } from "@/lib/i18n/ar";
-import { FAMILY_LENS_KEYS, type Title } from "@schemas/title";
+import { type Title } from "@schemas/title";
+import { FAMILY_LENS_KEYS } from "@schemas/keys";
 import { SourceLink } from "./SourceLink";
 import { BidiText } from "./BidiText";
 import { Icon } from "./Icon";

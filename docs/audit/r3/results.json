@@ -1,0 +1,170 @@
+[
+  {
+    "shot": "01-home",
+    "url": "/",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "02-search",
+    "url": "/",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "03-know",
+    "url": "/title/minecraft?age=9",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "04-know-lens",
+    "url": "/title/minecraft?age=9",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "05-setup",
+    "url": "/title/minecraft?age=9&step=setup",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "06-talk",
+    "url": "/title/minecraft?age=9&step=talk",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "07-agree-parent",
+    "url": "/title/minecraft?age=9&step=agree",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "08-handoff",
+    "url": "/title/minecraft?age=9&step=agree",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "09-agree-child",
+    "url": "/title/minecraft?age=9&step=agree",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "10-agree-result",
+    "url": "/title/minecraft?age=9&step=agree",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "11-print",
+    "url": "/agreement/print?id=7fe0011a-d673-49ec-b681-c35612b37276",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "12-charter",
+    "url": "/charter",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "13-know-fortnite",
+    "url": "/title/fortnite?age=10",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "14-know-youtube-kids",
+    "url": "/title/youtube-kids?age=6",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "15-sources",
+    "url": "/sources",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "16-privacy",
+    "url": "/privacy",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "17-about",
+    "url": "/about",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "18-not-found",
+    "url": "/",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "19-360-genshin",
+    "url": "/title/genshin-impact?age=12",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "20-desktop-home",
+    "url": "/",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  },
+  {
+    "shot": "21-desktop-among-us",
+    "url": "/title/among-us?age=10",
+    "axe": {},
+    "axeIds": [],
+    "hScroll": false,
+    "smallTargets": 0
+  }
+]
