@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: var(--font-plex-ar), var(--font-plex-latin), system-ui, "Segoe UI", Tahoma, sans-serif;
+  --color-bg: #fbf8f3;
+  --color-surface: #ffffff;
+  --color-surface-2: #f3eee5;
+  --color-ink: #1d2422;
+  --color-muted: #4f5b57;
+  --color-line: #ddd5c7;
+  --color-brand: #0d5c52;
+  --color-brand-ink: #ffffff;
+  --color-brand-soft: #e0efeb;
+  --color-accent: #8a4b0f;
+  --color-accent-soft: #fbecd8;
+  --color-warn: #8c2f1b;
+  --color-warn-soft: #fbe5df;
+  --color-ok: #1f6136;
+  --color-ok-soft: #e1f2e6;
+  --color-info: #23497a;
+  --color-info-soft: #e3ecf8;
+  --color-demo: #6b2f8a;
+  --color-demo-soft: #f2e6f8;
+  --color-focus: #b45309;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --color-bg: #111715;
+    --color-surface: #18201e;
+    --color-surface-2: #212b28;
+    --color-ink: #eef2f0;
+    --color-muted: #b6c2bd;
+    --color-line: #34413d;
+    --color-brand: #5cc4b2;
+    --color-brand-ink: #0b1513;
+    --color-brand-soft: #1b3531;
+    --color-accent: #f2b56b;
+    --color-accent-soft: #3a2a17;
+    --color-warn: #f3a08c;
+    --color-warn-soft: #3d2019;
+    --color-ok: #8fd6a4;
+    --color-ok-soft: #173123;
+    --color-info: #a8c6f0;
+    --color-info-soft: #1b2a3e;
+    --color-demo: #dcb4f0;
+    --color-demo-soft: #2f2039;
+    --color-focus: #fbbf24;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 2px;
+    border-radius: 0.5rem;
+  }
+  a {
+    color: var(--color-brand);
+    text-underline-offset: 3px;
+  }
+  /* الأرقام بخط واضح وموحد العرض في الجداول */
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    min-width: 44px;
+    padding-inline: 1.1rem;
+    border-radius: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.15s, transform 0.1s;
+    cursor: pointer;
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn-primary {
+    background: var(--color-brand);
+    color: var(--color-brand-ink);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.08);
+  }
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-ink);
+    border: 1.5px solid var(--color-line);
+  }
+  .btn-secondary:hover {
+    background: var(--color-surface-2);
+  }
+  .btn-ghost {
+    color: var(--color-brand);
+  }
+  .btn-ghost:hover {
+    background: var(--color-brand-soft);
+  }
+  .btn[disabled],
+  .btn[aria-disabled="true"] {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .field {
+    width: 100%;
+    min-height: 48px;
+    padding-inline: 0.9rem;
+    border-radius: 0.9rem;
+    border: 1.5px solid var(--color-line);
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-size: 1rem;
+  }
+  .field:focus-visible {
+    border-color: var(--color-brand);
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border-radius: 999px;
+    padding: 0.15rem 0.65rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+  .prose-ar p + p {
+    margin-top: 0.75rem;
+  }
+  .prose-ar h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .prose-ar ul {
+    list-style: disc;
+    padding-inline-start: 1.25rem;
+  }
+  .prose-ar li + li {
+    margin-top: 0.35rem;
+  }
+}
