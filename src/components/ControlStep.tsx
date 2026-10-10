@@ -4,6 +4,7 @@ import { ar } from "@/lib/i18n/ar";
 import type { ControlKey } from "@schemas/common";
 import { SourceLink } from "./SourceLink";
 import { DemoBadge } from "./DemoBadge";
+import { ConfidenceBadge } from "./ConfidenceBadge";
 import { BidiText } from "./BidiText";
 import { splitStepPath } from "@/lib/step-path";
 
@@ -14,6 +15,8 @@ export function ControlStep({
   sourceUrl,
   verifiedAt,
   isDemo,
+  quote,
+  confidence,
   done,
   onToggle,
 }: {
@@ -23,6 +26,8 @@ export function ControlStep({
   sourceUrl: string;
   verifiedAt: string | null;
   isDemo: boolean;
+  quote?: string;
+  confidence?: "human" | "auto";
   done: boolean;
   onToggle: (done: boolean) => void;
 }) {
@@ -65,7 +70,10 @@ export function ControlStep({
               </p>
             ) : null}
           </div>
-          <SourceLink url={sourceUrl} verifiedAt={verifiedAt} className="text-sm" />
+          <div className="flex flex-wrap items-center gap-x-2">
+            <SourceLink url={sourceUrl} verifiedAt={verifiedAt} quote={quote} className="text-sm" />
+            {confidence ? <ConfidenceBadge level={confidence} /> : null}
+          </div>
           <label className="mt-1 inline-flex min-h-[44px] cursor-pointer items-center gap-2 font-bold">
             <input
               type="checkbox"

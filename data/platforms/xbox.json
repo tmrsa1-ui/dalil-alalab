@@ -13,42 +13,42 @@
     {
       "id": "xbox-strangerchat-1",
       "pointKey": "strangerChat",
-      "stepAr": "تطبيق Xbox Family Settings ← حساب الطفل ← Privacy & online: اضبط «Communicate with others» على «Friends» أو «Blocked».",
-      "sourceUrl": "https://example.org/demo/platforms/xbox/strangerChat",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Xbox Family Settings: اسمح أو امنع اللعب الجماعي وإضافة الأصدقاء والمحادثة.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "Allow or block your child’s ability to join multiplayer online games, create and join clubs, broadcast their gameplay, add friends and chat.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "xbox-purchases-2",
+      "id": "xbox-purchases-1",
       "pointKey": "purchases",
-      "stepAr": "Xbox Family Settings ← Spending: فعّل «Ask to buy» وحط رصيد محدد إن حبيت.",
-      "sourceUrl": "https://example.org/demo/platforms/xbox/purchases",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "فعّل «Ask a Parent» عشان يوصلك طلب قبل ما يشتري لعبة أو تطبيق.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "With Ask a Parent, you’ll receive an email when your kids want to purchase a game or app and need your help to fund the purchase.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "xbox-content-3",
+      "id": "xbox-content-1",
       "pointKey": "content",
-      "stepAr": "Xbox Family Settings ← Content restrictions: اختر الحد العمري للألعاب والتطبيقات.",
-      "sourceUrl": "https://example.org/demo/platforms/xbox/content",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Xbox Family Settings: فلتر الألعاب والتطبيقات حسب عمر طفلك.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "Parents can filter or allow games, apps and websites based on the age of their children",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "xbox-sessionpause-4",
+      "id": "xbox-sessionpause-1",
       "pointKey": "sessionPause",
-      "stepAr": "Xbox Family Settings ← Screen time: حدد الأيام والساعات.",
-      "sourceUrl": "https://example.org/demo/platforms/xbox/sessionPause",
-      "verifiedAt": null,
-      "isDemo": true
-    },
-    {
-      "id": "xbox-searchandstore-5",
-      "pointKey": "searchAndStore",
-      "stepAr": "Content restrictions ← Web filtering على Microsoft Edge.",
-      "sourceUrl": "https://example.org/demo/platforms/xbox/searchAndStore",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "حساب Microsoft العائلي: حدد وقت للعبة نفسها أو للجهاز كل يوم.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "Set a time limit for a specific game or app in your Microsoft family group account.",
+      "confidence": "auto",
+      "isDemo": false
     }
   ]
 }

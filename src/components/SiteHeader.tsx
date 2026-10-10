@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ar } from "@/lib/i18n/ar";
 import { ThemeToggle } from "./ThemeToggle";
+import { LogoMark } from "./Icon";
 
 export function SiteHeader() {
   return (
@@ -10,12 +11,7 @@ export function SiteHeader() {
           href="/"
           className="flex min-h-[44px] items-center gap-2 text-lg font-extrabold text-ink no-underline"
         >
-          <span
-            aria-hidden="true"
-            className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-brand-ink"
-          >
-            د
-          </span>
+          <LogoMark />
           {ar.app.name}
         </Link>
         <nav aria-label={ar.nav.menu} className="flex items-center gap-1">

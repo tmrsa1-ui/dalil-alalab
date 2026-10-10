@@ -20,6 +20,8 @@ type StepView = {
   sourceUrl: string;
   verifiedAt: string | null;
   isDemo: boolean;
+  quote?: string;
+  confidence?: "human" | "auto";
 };
 
 const byKey = (a: StepView, b: StepView) =>
@@ -75,7 +77,16 @@ export function PlatformTabs({
 
   const label = (t: TabId) => (t === "inGame" ? ar.setup.inGame : ar.setup.platforms[t]);
   const platform = active === "inGame" ? null : platforms.find((p) => p.id === active);
-  const steps = reviewed ? stepsFor(active) : [];
+  // خطوات الجهاز العامة من دليله الرسمي (مو خاصة بالعنوان) تظهر لكل العناوين.
+  // الخطوات الخاصة بالعنوان أو التجريبية تظهر بس للعناوين اللي راجعها إنسان.
+  const generic =
+    !reviewed && platform
+      ? platform.steps
+          .filter((s) => !s.isDemo)
+          .slice()
+          .sort(byKey)
+      : [];
+  const steps = reviewed ? stepsFor(active) : generic;
   const doneCount = steps.filter((s) => done.includes(s.id)).length;
 
   return (
@@ -165,7 +176,12 @@ export function PlatformTabs({
           </div>
         ) : null}
 
-        {reviewed ? (
+        {!reviewed && generic.length ? (
+          <p className="mb-2 text-sm text-muted" data-testid="generic-steps-note">
+            {ar.setup.genericSteps(platform!.nameAr)}
+          </p>
+        ) : null}
+        {reviewed || generic.length ? (
           steps.length ? (
             <>
               <p className="num mb-2 text-sm font-semibold" role="status" data-testid="done-count">

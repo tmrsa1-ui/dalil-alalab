@@ -13,50 +13,62 @@
     {
       "id": "ios-strangerchat-1",
       "pointKey": "strangerChat",
-      "stepAr": "الإعدادات ← Screen Time ← Content & Privacy Restrictions ← Game Center: اقفل «Multiplayer Games» أو خلّها مع الأصدقاء فقط.",
-      "sourceUrl": "https://example.org/demo/platforms/ios/strangerChat",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← التطبيقات ومواقع الويب ← القيود ← Game Center: خلّ «التواصل مع الأصدقاء» و«المراسلة الخاصة» على «محظور» أو «مسموح به» حسب اتفاقكم.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"القيود\"، ثم مرر لأسفل إلى قسم Game Center. اختر إعدادًا مثل \"التواصل مع الأصدقاء\" أو \"المراسلة الخاصة\". اختر \"مسموح به\" أو \"محظور\".",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "ios-purchases-2",
+      "id": "ios-purchases-1",
       "pointKey": "purchases",
-      "stepAr": "Screen Time ← Content & Privacy Restrictions ← iTunes & App Store Purchases ← In-app Purchases: اختر «Don't Allow»، وفعّل «Ask to Buy» من Family Sharing.",
-      "sourceUrl": "https://example.org/demo/platforms/ios/purchases",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← التطبيقات ومواقع الويب ← القيود ← الموافقة على الشراء: شغّل «طلب الموافقة على الشراء».",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"الموافقة على الشراء\"، ثم قم بتشغيل \"طلب الموافقة على الشراء\".",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "ios-content-3",
+      "id": "ios-content-1",
       "pointKey": "content",
-      "stepAr": "Content & Privacy Restrictions ← Content Restrictions ← Apps: اختر الحد العمري اللي يناسب طفلك.",
-      "sourceUrl": "https://example.org/demo/platforms/ios/content",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← قيود المحتوى والخصوصية: تحت «قيود المحتوى» اختر تصنيف عمري يناسب طفلك.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "حدد نوع المحتوى ضمن \"قيود المحتوى\"، ثم اختر إعدادًا مثل \"عدم السماح\" أو \"غير مصنف\" أو \"السماح بالكل\" أو تصنيف عمري محدد.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "ios-ads-4",
-      "pointKey": "ads",
-      "stepAr": "Settings ← Privacy ← Apple Advertising: أوقف «Personalized Ads»، وخلّ «Allow Apps to Request to Track» مقفل.",
-      "sourceUrl": "https://example.org/demo/platforms/ios/ads",
-      "verifiedAt": null,
-      "isDemo": true
-    },
-    {
-      "id": "ios-sessionpause-5",
+      "id": "ios-sessionpause-1",
       "pointKey": "sessionPause",
-      "stepAr": "Screen Time ← App Limits: حط حد يومي للعبة، وفعّل «Downtime» لأوقات النوم والدراسة.",
-      "sourceUrl": "https://example.org/demo/platforms/ios/sessionPause",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← مخصصات الوقت ← إضافة: حدد وقت يومي لفئة الألعاب.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"مخصصات الوقت\"، واضغط على زر \"إضافة\"، ثم اتبع التعليمات التي تظهر على الشاشة.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "ios-searchandstore-6",
+      "id": "ios-sessionpause-2",
+      "pointKey": "sessionPause",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← جدول مدة استخدام الجهاز: شغّل «الجدول» وأضف الأوقات اللي تبون فيها الجهاز يتوقف.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"جدول مدة استخدام الجهاز\"، ثم قم بتشغيل \"الجدول\". مرِّر لأسفل واضغط على \"إضافة جدول\".",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "ios-searchandstore-1",
       "pointKey": "searchAndStore",
-      "stepAr": "Content Restrictions ← Web Content: اختر «Limit Adult Websites»، واضبط الحد العمري في App Store.",
-      "sourceUrl": "https://example.org/demo/platforms/ios/searchAndStore",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← التطبيقات ومواقع الويب ← App Store: اختر «تثبيت التطبيقات» ثم «مسموح به» أو «محظور».",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على App Store، ثم اختر إعدادًا مثل \"تثبيت التطبيقات\" أو \"مقاطع التطبيقات\". اختر \"مسموح به\" أو \"محظور\".",
+      "confidence": "auto",
+      "isDemo": false
     }
   ]
 }

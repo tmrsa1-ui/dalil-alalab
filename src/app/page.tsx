@@ -3,6 +3,7 @@ import { ar } from "@/lib/i18n/ar";
 import { getIndex } from "@/lib/data/load";
 import { HomeForm } from "@/components/HomeForm";
 import { STEP_IDS } from "@/lib/steps";
+import { Icon } from "@/components/Icon";
 
 export default function HomePage() {
   const index = getIndex();
@@ -10,7 +11,6 @@ export default function HomePage() {
   const featured = [...index]
     .sort((a, b) => rank[a.reviewStatus] - rank[b.reviewStatus])
     .slice(0, 6);
-  const icons = { know: "🔎", setup: "⚙️", talk: "💬", agree: "🤝" } as const;
   return (
     <div className="grid gap-8">
       <section className="pt-2">
@@ -49,8 +49,8 @@ export default function HomePage() {
           {STEP_IDS.map((s, i) => (
             <li key={s} className="card p-3">
               <div className="flex items-center gap-2">
-                <span aria-hidden="true" className="text-2xl">
-                  {icons[s]}
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-soft text-brand">
+                  <Icon name={s} />
                 </span>
                 <span className="num text-sm font-bold text-muted">{i + 1}</span>
               </div>

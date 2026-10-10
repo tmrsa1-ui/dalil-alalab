@@ -1,6 +1,7 @@
 import { ar } from "@/lib/i18n/ar";
 import type { Title } from "@schemas/title";
 import { SourceLink } from "./SourceLink";
+import { Icon } from "./Icon";
 
 const STYLE = {
   pausable: "bg-ok-soft text-ok border-ok/40",
@@ -14,7 +15,7 @@ export function PrayerPause({ data }: { data: Title["prayerPause"] }) {
     <section className="card p-4" aria-labelledby="prayer-h" data-testid="prayer-pause">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h3 id="prayer-h" className="flex items-center gap-2 text-lg font-bold">
-          <span aria-hidden="true">🕌</span>
+          <Icon name="prayer" className="h-6 w-6 text-brand" />
           {ar.prayer.title}
         </h3>
         <span className={`chip border ${STYLE[unknown ? "unknown" : data.status]}`}>

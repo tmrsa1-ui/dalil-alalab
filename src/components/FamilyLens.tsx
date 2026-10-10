@@ -4,6 +4,7 @@ import { ar } from "@/lib/i18n/ar";
 import { FAMILY_LENS_KEYS, type Title } from "@schemas/title";
 import { SourceLink } from "./SourceLink";
 import { BidiText } from "./BidiText";
+import { Icon } from "./Icon";
 
 const STYLE = {
   present: "bg-accent-soft text-accent border-accent/40",
@@ -29,7 +30,7 @@ export function FamilyLens({ lens }: { lens: Title["familyLens"] }) {
           onClick={() => setOpen((v) => !v)}
         >
           <span className="flex items-center gap-2">
-            <span aria-hidden="true">🔍</span>
+            <Icon name="lens" className="h-6 w-6 text-brand" />
             {ar.lens.title}
           </span>
           <span aria-hidden="true" className={`transition-transform ${open ? "rotate-180" : ""}`}>

@@ -166,8 +166,15 @@ test("5) عنوان بلا بيانات ⇐ «غير متوفر/ما لقيت» 
     await expect(page.getByTestId(`lens-${k}`)).toContainText("ما لقيت");
   }
   await expect(page.getByTestId("prayer-pause")).toContainText("ما لقيت");
-  // «اضبط»: غير مراجع ⇐ روابط رسمية فقط بدون خطوات
+  // «اضبط»: غير مراجع ⇐ خطوات الجهاز العامة من دليله الرسمي فقط (كل خطوة باقتباس)، ولا خطوة خاصة بالعنوان
   await page.getByRole("button", { name: /التالي: اضبط/ }).click();
+  await expect(page.getByTestId("generic-steps-note")).toBeVisible();
+  const steps = page.getByTestId("control-step");
+  const n = await steps.count();
+  expect(n).toBeGreaterThan(0);
+  await expect(steps.getByTestId("source-quote")).toHaveCount(n);
+  await expect(page.locator('[data-testid="control-step"] a[href*="example.org"]')).toHaveCount(0);
+  await page.getByRole("tab", { name: "PC" }).click();
   await expect(page.getByTestId("not-reviewed-note")).toBeVisible();
   await expect(page.getByTestId("control-step")).toHaveCount(0);
 });

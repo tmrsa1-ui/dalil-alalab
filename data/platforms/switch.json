@@ -13,34 +13,42 @@
     {
       "id": "switch-strangerchat-1",
       "pointKey": "strangerChat",
-      "stepAr": "تطبيق Nintendo Switch Parental Controls ← Restriction Level ← Communicating with Others: اقفلها أو حددها لألعاب معينة.",
-      "sourceUrl": "https://example.org/demo/platforms/switch/strangerChat",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Nintendo Switch Parental Controls: قيّد «In-Game Communication with Others» لكل الألعاب أو للعبة معينة.",
+      "sourceUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
+      "verifiedAt": "2026-10-10",
+      "quote": "The In-Game Communication with Others parental control can be used to restrict in-game communication features as well as sharing and viewing of user-generated content, either on a per game basis or for all games.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "switch-purchases-2",
+      "id": "switch-purchases-1",
       "pointKey": "purchases",
-      "stepAr": "حساب Nintendo Account للعائلة ← Spending restrictions: امنع الشراء في eShop أو حدد مبلغ.",
-      "sourceUrl": "https://example.org/demo/platforms/switch/purchases",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "إعدادات Nintendo Account: قيّد الشراء من Nintendo eShop.",
+      "sourceUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
+      "verifiedAt": "2026-10-10",
+      "quote": "the purchase of products or services from Nintendo eShop can be restricted via Nintendo Account settings.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "switch-content-3",
+      "id": "switch-content-1",
       "pointKey": "content",
-      "stepAr": "Parental Controls ← Restriction Level: اختر مستوى العمر المناسب.",
-      "sourceUrl": "https://example.org/demo/platforms/switch/content",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Nintendo Switch Parental Controls: اختر فئة عمرية جاهزة أو خصّص الإعدادات حسب عمر طفلك.",
+      "sourceUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
+      "verifiedAt": "2026-10-10",
+      "quote": "When setting up your parental controls, you can choose from pre-set age categories for faster setup.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "switch-sessionpause-4",
+      "id": "switch-sessionpause-1",
       "pointKey": "sessionPause",
-      "stepAr": "Parental Controls ← Play-Time Limit: حدد الوقت، واختر «Suspend Software» لو تبي اللعبة تتوقف عند انتهاء الوقت.",
-      "sourceUrl": "https://example.org/demo/platforms/switch/sessionPause",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Nintendo Switch Parental Controls: حدد مدة اللعب اليومية، وتقدر تخلي اللعبة توقف تلقائيًا لما يخلص الوقت.",
+      "sourceUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
+      "verifiedAt": "2026-10-10",
+      "quote": "If needed, you can always set the system to automatically interrupt the game when the time’s up.",
+      "confidence": "auto",
+      "isDemo": false
     }
   ]
 }

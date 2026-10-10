@@ -10,52 +10,44 @@
   "linkCheckedAt": "2026-10-10",
   "steps": [
     {
-      "id": "android-strangerchat-1",
-      "pointKey": "strangerChat",
-      "stepAr": "المحادثة داخل اللعبة تُقفل من إعدادات اللعبة نفسها؛ Family Link يتحكم في التطبيقات والوقت والمشتريات.",
-      "sourceUrl": "https://example.org/demo/platforms/android/strangerChat",
-      "verifiedAt": null,
-      "isDemo": true
-    },
-    {
-      "id": "android-purchases-2",
-      "pointKey": "purchases",
-      "stepAr": "Family Link ← Controls ← Google Play ← Purchase approvals: اختر «All content» عشان كل شراء يحتاج موافقتك.",
-      "sourceUrl": "https://example.org/demo/platforms/android/purchases",
-      "verifiedAt": null,
-      "isDemo": true
-    },
-    {
-      "id": "android-content-3",
+      "id": "android-content-1",
       "pointKey": "content",
-      "stepAr": "Family Link ← Google Play ← Apps & games: اختر الحد العمري المناسب.",
-      "sourceUrl": "https://example.org/demo/platforms/android/content",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Family Link: فعّل رقابة الأهل على Play وYouTube وChrome و«بحث Google».",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "يمكنك إعداد أدوات رقابة الأهل على خدمات Google، مثل Chrome وPlay وYouTube و\"بحث Google\".",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "android-ads-4",
-      "pointKey": "ads",
-      "stepAr": "على جهاز الطفل: Settings ← Google ← Ads: احذف «Advertising ID» لتقليل الإعلانات الموجهة.",
-      "sourceUrl": "https://example.org/demo/platforms/android/ads",
-      "verifiedAt": null,
-      "isDemo": true
-    },
-    {
-      "id": "android-sessionpause-5",
+      "id": "android-sessionpause-1",
       "pointKey": "sessionPause",
-      "stepAr": "Family Link ← Screen time: حط حد يومي، و App limits للعبة، و Bedtime لوقت النوم.",
-      "sourceUrl": "https://example.org/demo/platforms/android/sessionPause",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Family Link: اضبط حد يومي، وحدد «دوام المدرسة» و«فترة التوقّف».",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "يتيح لك تطبيق Family Link ضبط حدود يومية، وتحديد \"دوام المدرسة\" و\"فترة التوقّف\"",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "android-searchandstore-6",
+      "id": "android-sessionpause-2",
+      "pointKey": "sessionPause",
+      "stepAr": "تطبيق Family Link: حدد مدة قصوى للعبة نفسها.",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "فيمكنك ضبط مدة قصوى لاستخدام كل تطبيق",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "android-searchandstore-1",
       "pointKey": "searchAndStore",
-      "stepAr": "Family Link ← Google Search: فعّل فلتر النتائج الصريحة، وفي Google Chrome اختر «Try to block explicit sites».",
-      "sourceUrl": "https://example.org/demo/platforms/android/searchAndStore",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق Family Link: خلّ تثبيت أي تطبيق جديد يحتاج موافقتك.",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "وفرض الحصول على الموافقة قبل تثبيت التطبيقات الجديدة",
+      "confidence": "auto",
+      "isDemo": false
     }
   ]
 }

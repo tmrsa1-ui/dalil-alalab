@@ -12,6 +12,7 @@ import type { AgreementFile, AgreementQuestion } from "@schemas/agreement";
 import type { Title } from "@schemas/title";
 import { HandoffScreen } from "./HandoffScreen";
 import { ParentCommitments } from "./ParentCommitments";
+import { Icon } from "@/components/Icon";
 
 function OptionGroup({
   q,
@@ -349,7 +350,7 @@ export function AgreementFlow({
 
       <p className="rounded-xl bg-surface-2 p-3 text-sm">{ar.agree.privacyNote}</p>
       <button type="button" className="btn btn-primary text-lg" onClick={save}>
-        <span aria-hidden="true">🖨️</span>
+        <Icon name="print" className="h-5 w-5" />
         {ar.agree.save}
       </button>
       <button type="button" className="btn btn-ghost" onClick={s.reset}>

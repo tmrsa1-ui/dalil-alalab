@@ -77,8 +77,16 @@ describe("validate:data", () => {
   });
 
   it("خطوة منصة تجريبية لازم رابطها example.org", () => {
+    const p = JSON.parse(fs.readFileSync(path.join(root, "data/platforms/pc.json"), "utf8"));
+    expect(p.steps[0].isDemo).toBe(true);
+    p.steps[0].sourceUrl = "https://store.steampowered.com/x";
+    expect(platformSchema.safeParse(p).success).toBe(false);
+  });
+
+  it("خطوة منصة آلية (من الدليل الرسمي) بدون اقتباس حرفي تنرفض", () => {
     const p = JSON.parse(fs.readFileSync(path.join(root, "data/platforms/ios.json"), "utf8"));
-    p.steps[0].sourceUrl = "https://support.apple.com/x";
+    expect(platformSchema.safeParse(p).success).toBe(true);
+    delete p.steps[0].quote;
     expect(platformSchema.safeParse(p).success).toBe(false);
   });
 });

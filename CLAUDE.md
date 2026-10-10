@@ -45,6 +45,7 @@ Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · Z
 | `npm run import:verified -- <file> [--dry]`                | دمج بيانات متحقق منها + تحقق كامل                               |
 | `npm run seed:real`                                        | قوالب العناوين الحقيقية العشرين                                 |
 | `npm run fetch:official` / `apply:official [-- --dry]`     | جلب App Store/Google Play الرسمية وتطبيقها (بحاجة مراجعة بشرية) |
+| `npm run fetch:guides` / `apply:guides [-- --dry]`         | خطوات الأجهزة من الأدلة الرسمية (تحقق حرفي من كل اقتباس)        |
 | `npm run eval:agent`                                       | تقييم الوكيل مقابل `data/eval/holdout.json`                     |
 | `npm run format`                                           | Prettier                                                        |
 
@@ -92,7 +93,7 @@ public/          manifest.webmanifest, icons/, sw.js
 
 ## الحالة الحالية (2026-10-10)
 
-- كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 129 unit/component · build · 68 e2e (موبايل + ديسكتوب، axe) كلها تمر.
+- كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 135 unit/component · build · 72 e2e (موبايل + ديسكتوب، axe) كلها تمر.
 - Lighthouse محلي: الأداء 90–97، الوصولية 100.
 - `data/titles`: 20 عنوان حقيقي. القيم من App Store السعودي وGoogle Play وPlayStation وXbox (كلها نسخ السعودية) وموقع ESRB وموقع PEGI، كلها `confidence: auto` = «بحاجة مراجعة بشرية». الناقص «غير متوفر/ما لقيت». البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا، فـminecraft/fortnite/roblox/pubg-mobile/tiktok في الـe2e تجريبية).
 - الشبكة: App Store وGoogle Play وplaystation.com وxbox.com وsteampowered.com و`www.esrb.org` و`pegi.info` (بترويسات متصفح) و`www.nintendo.com` مفتوحة؛ `gcam.gov.sa`/`gmedia.gov.sa` ترجع 502، ومواقع أغلب الناشرين مرفوضة. Node يحتاج `NODE_USE_ENV_PROXY=1` (مضبوط في `fetch:official`).

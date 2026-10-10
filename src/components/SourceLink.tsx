@@ -45,7 +45,7 @@ export function SourceLink({
       ) : null}
       {quote && !isDemo ? (
         <span className="w-full text-xs text-muted" data-testid="source-quote">
-          {ar.source.quote}: «<bdi dir="ltr">{quote}</bdi>»
+          {ar.source.quote}: «<bdi dir="auto">{quote}</bdi>»
           {translated ? (
             <span className="block" title={ar.know.translationNote}>
               {ar.know.inArabic}: {translated.join("، ")}

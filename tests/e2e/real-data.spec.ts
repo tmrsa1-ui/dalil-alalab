@@ -98,3 +98,25 @@ test("«الصورة باختصار» فوق «اعرف»، والمصادر م�
   await expect(page.getByTestId("rating-esrb")).toContainText("عنف خيالي");
   await expectNoSeriousA11y(page);
 });
+
+test("«اضبط» لعنوان حقيقي: خطوات الجهاز من دليله الرسمي باقتباس حرفي وحالة «بحاجة مراجعة بشرية»", async ({
+  page,
+}) => {
+  await page.goto("/title/among-us?age=10&step=setup");
+  await page.getByRole("tab", { name: "iPhone / iPad" }).click();
+  await expect(page.getByTestId("generic-steps-note")).toBeVisible();
+  const steps = page.getByTestId("control-step");
+  expect(await steps.count()).toBeGreaterThanOrEqual(5);
+  const purchase = steps.filter({ hasText: "طلب الموافقة على الشراء" }).first();
+  await expect(purchase.getByTestId("source-link")).toHaveAttribute(
+    "href",
+    "https://support.apple.com/ar-sa/105121",
+  );
+  await expect(purchase.getByTestId("source-quote")).toContainText("الموافقة على الشراء");
+  await expect(purchase).toContainText("بحاجة مراجعة بشرية");
+  await purchase.getByRole("checkbox", { name: "سويتها" }).check();
+  await expect(page.getByTestId("done-count")).toContainText("سويت 1 من");
+  await page.getByRole("tab", { name: "PC" }).click();
+  await expect(page.getByTestId("not-reviewed-note")).toBeVisible();
+  await expectNoSeriousA11y(page);
+});

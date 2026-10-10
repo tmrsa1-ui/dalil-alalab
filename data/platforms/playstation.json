@@ -13,42 +13,42 @@
     {
       "id": "playstation-strangerchat-1",
       "pointKey": "strangerChat",
-      "stepAr": "Family Management ← حساب الطفل ← Communication and User-Generated Content: اختر «Restrict».",
-      "sourceUrl": "https://example.org/demo/platforms/playstation/strangerChat",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق PlayStation Family: لما يطلب طفلك يستخدم المحادثة داخل اللعبة، توافق أو ترفض من جوالك.",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "When your child requests extra playtime, access to a restricted game, or permission to use in-game communication features, you can approve or decline directly from your phone.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "playstation-purchases-2",
+      "id": "playstation-purchases-1",
       "pointKey": "purchases",
-      "stepAr": "Family Management ← Monthly Spending Limit: حط حد شهري، أو صفر لمنع الشراء.",
-      "sourceUrl": "https://example.org/demo/platforms/playstation/purchases",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق PlayStation Family: حط حد شهري للصرف في PlayStation Store.",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "Manage spending activity by adding funds, viewing balances, and setting a monthly spending limit for a child to buy content from the PlayStation Store.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "playstation-content-3",
+      "id": "playstation-content-1",
       "pointKey": "content",
-      "stepAr": "Family Management ← Age Level for Games: اختر العمر المناسب.",
-      "sourceUrl": "https://example.org/demo/platforms/playstation/content",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق PlayStation Family: اختر إعدادات العمر الجاهزة أو خصّصها لطفلك.",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "Choose from presets that automatically apply recommended settings for different age groups or customise the settings to best suit each child.",
+      "confidence": "auto",
+      "isDemo": false
     },
     {
-      "id": "playstation-sessionpause-4",
+      "id": "playstation-sessionpause-1",
       "pointKey": "sessionPause",
-      "stepAr": "Family Management ← Play Time Settings: حدد مدة اللعب اليومية وتصرّف الجهاز عند انتهاء الوقت.",
-      "sourceUrl": "https://example.org/demo/platforms/playstation/sessionPause",
-      "verifiedAt": null,
-      "isDemo": true
-    },
-    {
-      "id": "playstation-searchandstore-5",
-      "pointKey": "searchAndStore",
-      "stepAr": "Family Management ← Web Browsing: اختر «Restrict».",
-      "sourceUrl": "https://example.org/demo/platforms/playstation/searchAndStore",
-      "verifiedAt": null,
-      "isDemo": true
+      "stepAr": "تطبيق PlayStation Family: حدد وقت اللعب، واختر وش يصير لما يخلص الوقت (تذكير أو إيقاف).",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "You can set when and for how long your child can play. You can also choose what happens when their playtime ends–either send them a reminder or block further play.",
+      "confidence": "auto",
+      "isDemo": false
     }
   ]
 }

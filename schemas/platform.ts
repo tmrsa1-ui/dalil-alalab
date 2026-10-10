@@ -10,6 +10,10 @@ export const platformStepSchema = z
     stepAr: z.string().min(1).max(220),
     sourceUrl: httpsUrl,
     verifiedAt: isoDate.nullable(),
+    /** نص حرفي من صفحة الدليل الرسمي يثبت الخطوة. */
+    quote: z.string().min(1).max(400).optional(),
+    /** auto = قُرئت آليًا من الدليل الرسمي وبحاجة مراجعة بشرية؛ human = راجعها إنسان. */
+    confidence: z.enum(["human", "auto"]).optional(),
     isDemo: z.boolean(),
   })
   .strict()
@@ -19,6 +23,13 @@ export const platformStepSchema = z
         code: "custom",
         message: "خطوة تجريبية لازم رابطها example.org",
         path: ["sourceUrl"],
+      });
+    }
+    if (!s.isDemo && s.confidence === "auto" && !s.quote) {
+      ctx.addIssue({
+        code: "custom",
+        message: "خطوة آلية لازم معها اقتباس حرفي من الدليل",
+        path: ["quote"],
       });
     }
     if (!s.isDemo && (!isAllowedUrl(s.sourceUrl) || !s.verifiedAt)) {

@@ -27,7 +27,9 @@
     "seed:real": "tsx scripts/seed-real-titles.ts",
     "fetch:official": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/fetch-official.ts",
     "apply:official": "tsx scripts/apply-official.ts",
-    "audit:shots": "tsx scripts/audit-shots.ts"
+    "audit:shots": "tsx scripts/audit-shots.ts",
+    "fetch:guides": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/guides.ts fetch",
+    "apply:guides": "tsx scripts/guides.ts apply"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",

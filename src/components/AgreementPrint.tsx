@@ -8,6 +8,7 @@ import { getCharter, type SavedAgreement } from "@/lib/storage";
 import { track } from "@/lib/events";
 import { DemoBadge } from "./DemoBadge";
 import { FeedbackForm } from "./FeedbackForm";
+import { Icon } from "./Icon";
 
 export function AgreementPrint({ id }: { id: string | null }) {
   const [a, setA] = useState<SavedAgreement | null | undefined>(undefined);
@@ -51,7 +52,7 @@ export function AgreementPrint({ id }: { id: string | null }) {
             window.print();
           }}
         >
-          <span aria-hidden="true">🖨️</span>
+          <Icon name="print" className="h-5 w-5" />
           {ar.print.print}
         </button>
         <Link href={`/title/${a.titleSlug}`} className="btn btn-secondary">
