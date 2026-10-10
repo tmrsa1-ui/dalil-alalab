@@ -1,0 +1,2 @@
+Multiplayer servers include a text chat that lets players talk with others. Parents can turn off chat in account settings.
+The Marketplace sells add-ons for Minecoins.
