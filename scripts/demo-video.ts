@@ -51,6 +51,8 @@ async function main() {
   await p.getByTestId("rating-gcam").getByTestId("rating-source").locator("summary").click();
   await pause(p, 1800);
   await scrollTo(p, "point-content");
+  await p.getByTestId("point-content").locator("summary").first().click();
+  await pause(p, 1200);
   await p.getByTestId("point-content").getByTestId("point-sources").locator("summary").click();
   await pause(p, 2200);
   await p.getByTestId("family-lens").getByRole("button").click();

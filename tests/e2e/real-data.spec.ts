@@ -90,6 +90,7 @@ test("«الصورة باختصار» فوق «اعرف»، والمصادر م�
   await expect(glance.getByTestId("glance-present")).toContainText("محادثة الغرباء");
   await expect(glance.getByTestId("glance-unknown")).toContainText("مدة الجلسة والتوقف");
   const content = page.getByTestId("point-content");
+  await content.locator("summary").first().click();
   await expect(content.getByTestId("point-terms")).toContainText("عنف خيالي");
   const sources = content.getByTestId("point-sources");
   await expect(sources.getByTestId("source-link").first()).toBeHidden();
@@ -136,4 +137,22 @@ test("خطوات «اضبط» المهمة لهذي اللعبة تطلع أول
   await expect(first.getByTestId("step-relevant")).toBeVisible();
   // App Store/المتجر ما هي نقطة انتباه ⇐ آخر خطوة بدون علامة
   await expect(page.getByTestId("control-step").last().getByTestId("step-relevant")).toHaveCount(0);
+});
+
+test("نقاط الانتباه مطوية بحالتها، وزر المشاركة ينسخ رابط بدون عمر الطفل", async ({
+  page,
+  context,
+}) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.addInitScript(() => Object.defineProperty(navigator, "share", { value: undefined }));
+  await page.goto("/title/among-us?age=10");
+  const chat = page.getByTestId("point-strangerChat");
+  await expect(chat).toContainText("موجود");
+  await expect(chat.getByTestId("source-link").first()).toBeHidden();
+  await chat.locator("summary").first().click();
+  await expect(chat).toContainText("فيه تواصل مع مستخدمين آخرين");
+  await page.getByTestId("share").click();
+  await expect(page.getByText("تم نسخ الرابط")).toBeVisible();
+  const copied = await page.evaluate(() => navigator.clipboard.readText());
+  expect(copied).toMatch(/\/title\/among-us$/);
 });

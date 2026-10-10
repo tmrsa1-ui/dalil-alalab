@@ -140,6 +140,9 @@ test.describe("9) معايير WCAG 2.2 اللي axe ما يغطيها", () => {
     page,
   }) => {
     await page.goto("/title/among-us?age=10");
+    const point = page.getByTestId("point-content").locator("summary").first();
+    await point.focus();
+    await page.keyboard.press("Enter");
     const summary = page
       .getByTestId("point-content")
       .getByTestId("point-sources")

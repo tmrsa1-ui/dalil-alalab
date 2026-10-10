@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main
           id="main"
-          className="mx-auto w-full max-w-3xl px-4 py-6 has-[[data-wide]]:lg:max-w-5xl"
+          className="mx-auto w-full max-w-3xl px-4 py-6 has-[>article[data-wide]]:lg:max-w-5xl"
         >
           {children}
         </main>

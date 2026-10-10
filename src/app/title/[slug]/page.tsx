@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ar } from "@/lib/i18n/ar";
 import { getAgreement, getIndex, getPlatforms, getTitle } from "@/lib/data/load";
+import { ShareButton } from "@/components/ShareButton";
 import { TitleJourney } from "@/components/TitleJourney";
 import { DemoBadge } from "@/components/DemoBadge";
 import { ConfidenceBadge } from "@/components/ConfidenceBadge";
@@ -48,6 +49,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
         <div className="mt-2 flex flex-wrap items-center gap-2">
           {title.isDemo ? <DemoBadge /> : null}
           <ConfidenceBadge level={statusLevel} isDemo={title.isDemo} />
+          <ShareButton slug={title.slug} name={title.nameAr} />
           {title.lastReviewedAt ? (
             <span className="num text-sm text-muted">
               {ar.title.lastReviewed(title.lastReviewedAt)}
