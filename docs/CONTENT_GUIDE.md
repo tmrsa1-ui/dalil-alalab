@@ -8,6 +8,16 @@ npm run new-title -- <slug> "<الاسم العربي>" "<English Name>"
 
 يطلع ملف `data/titles/<slug>.json` كل شي فيه «غير متوفر/ما لقيت». عبّ اللي تتحقق منه فقط، واترك الباقي.
 
+### أو: استيراد ملف بحث متحقق منه
+
+```bash
+npm run import:verified -- research/seed_titles_verified.json --dry
+npm run import:verified -- research/seed_titles_verified.json
+```
+
+الملف: `{ "titles": [ { "slug": "roblox", "ratings": {...}, "attentionPoints": {...}, ... } ] }` بنفس حقول هذا الدليل. أي عنوان يفشل التحقق ما يُكتب.
+روابط مرشّحة (غير متحقق منها) في `research/candidate_sources.json` — افتح كل رابط بنفسك قبل ما تستخدمه.
+
 ## 2. القواعد الذهبية
 
 - **لا تكتب شي ما شفته بعينك في مصدر رسمي.** الفراغ أحسن من التخمين.

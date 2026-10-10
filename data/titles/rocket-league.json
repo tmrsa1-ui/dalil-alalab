@@ -1,13 +1,16 @@
 {
   "$schema": "../../schemas/json/title.schema.json",
-  "slug": "no-data-demo",
-  "nameAr": "لعبة بلا بيانات (مثال)",
-  "nameEn": "No-Data Demo Game",
-  "aliases": ["لعبة بلا بيانات", "بلا بيانات"],
+  "slug": "rocket-league",
+  "nameAr": "روكيت ليق",
+  "nameEn": "Rocket League",
+  "aliases": [
+    "روكت ليق",
+    "روكيت ليج"
+  ],
   "kind": "game",
   "platforms": [],
   "publisher": null,
-  "isDemo": true,
+  "isDemo": false,
   "reviewStatus": "not_found",
   "lastReviewedAt": null,
   "ratings": {

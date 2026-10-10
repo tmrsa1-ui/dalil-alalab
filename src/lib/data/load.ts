@@ -13,20 +13,22 @@ import { questionsFileSchema, type ConversationQuestion } from "../../../schemas
 import { agreementFileSchema, type AgreementFile } from "../../../schemas/agreement";
 import { PLATFORM_IDS } from "../../../schemas/common";
 import { buildIndex } from "./index-builder";
+import { includeDemo, titleFileMap } from "./title-files";
 
 const DATA = path.join(process.cwd(), "data");
 const read = (p: string) => JSON.parse(fs.readFileSync(path.join(DATA, p), "utf8"));
 
 export const getIndex = cache((): TitleIndexEntry[] => {
   const file = path.join(DATA, "titles.index.json");
-  return fs.existsSync(file) ? titleIndexSchema.parse(read("titles.index.json")) : buildIndex(DATA);
+  if (includeDemo() || !fs.existsSync(file)) return buildIndex(DATA);
+  return titleIndexSchema.parse(read("titles.index.json"));
 });
 
 export const getTitle = cache((slug: string): Title | null => {
   if (!/^[a-z0-9-]+$/.test(slug)) return null;
-  const file = path.join(DATA, "titles", `${slug}.json`);
-  if (!fs.existsSync(file)) return null;
-  return titleSchema.parse(read(`titles/${slug}.json`));
+  const file = titleFileMap(DATA).get(slug);
+  if (!file) return null;
+  return titleSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
 });
 
 export const getPlatforms = cache((): Platform[] =>

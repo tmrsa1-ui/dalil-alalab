@@ -40,25 +40,40 @@ export function validateTitleFile(file: string): DataIssue[] {
 export function validateDataDir(dataDir: string): DataIssue[] {
   const issues: DataIssue[] = [];
   const titlesDir = path.join(dataDir, "titles");
-  const titleFiles = fs.existsSync(titlesDir)
+  const realFiles = fs.existsSync(titlesDir)
     ? fs.readdirSync(titlesDir).filter((f) => f.endsWith(".json"))
     : [];
-  if (titleFiles.length === 0) issues.push({ file: titlesDir, message: "ما فيه عناوين" });
+  if (realFiles.length === 0) issues.push({ file: titlesDir, message: "ما فيه عناوين" });
 
-  const keys = new Map<string, string>();
-  for (const f of titleFiles) {
-    const file = path.join(titlesDir, f);
-    const fileIssues = validateTitleFile(file);
-    issues.push(...fileIssues);
-    if (fileIssues.length) continue;
-    const t = titleSchema.parse(readJson(file));
-    for (const name of [t.nameAr, t.nameEn, ...t.aliases]) {
-      const k = compactKey(name);
-      const prev = keys.get(k);
-      if (prev && prev !== t.slug) {
-        issues.push({ file, message: `الاسم/المرادف «${name}» مكرر مع ${prev}` });
+  // كل مجموعة تُفحص لحالها: الحقيقية، والتجريبية (اللي تغطي الحقيقية في وضع العرض).
+  for (const [dir, mustBeDemo] of [
+    [titlesDir, false],
+    [path.join(dataDir, "demo", "titles"), true],
+  ] as const) {
+    if (!fs.existsSync(dir)) continue;
+    const keys = new Map<string, string>();
+    for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json"))) {
+      const file = path.join(dir, f);
+      const fileIssues = validateTitleFile(file);
+      issues.push(...fileIssues);
+      if (fileIssues.length) continue;
+      const t = titleSchema.parse(readJson(file));
+      if (t.isDemo !== mustBeDemo) {
+        issues.push({
+          file,
+          message: mustBeDemo
+            ? "ملفات data/demo لازم isDemo: true"
+            : "البيانات التجريبية مكانها data/demo/titles وليس data/titles",
+        });
       }
-      keys.set(k, t.slug);
+      for (const name of [t.nameAr, t.nameEn, ...t.aliases]) {
+        const k = compactKey(name);
+        const prev = keys.get(k);
+        if (prev && prev !== t.slug) {
+          issues.push({ file, message: `الاسم/المرادف «${name}» مكرر مع ${prev}` });
+        }
+        keys.set(k, t.slug);
+      }
     }
   }
 

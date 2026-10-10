@@ -1,6 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
-import minecraft from "@data/titles/minecraft.json";
-import nodata from "@data/titles/no-data-demo.json";
+import minecraft from "@data/demo/titles/minecraft.json";
+import nodata from "@data/demo/titles/no-data-demo.json";
 import { RatingTable } from "@/components/RatingTable";
 import { AttentionPoint } from "@/components/AttentionPoint";
 import { ConfidenceBadge } from "@/components/ConfidenceBadge";

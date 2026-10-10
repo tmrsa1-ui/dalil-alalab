@@ -3,7 +3,8 @@
 طبقة مرافقة عربية للأهالي فوق أدوات الرقابة الأبوية: **اعرف، اضبط، تحاور، اتفق.**
 مقدَّم لجائزة نورة الملاحي للابتكار الاجتماعي التقني، المسار الثاني (تعرّض الأطفال لمحتوى لا يناسب أعمارهم، وضعف فاعلية أدوات الحماية الأبوية الحالية).
 
-> **تنبيه:** كل العناوين الموجودة حاليًا في `data/titles/` **تجريبية** (`isDemo: true`) وتظهر بشارة «تجريبي». قيمها وروابطها أمثلة لعرض طريقة العمل، وليست معلومات موثّقة.
+> **حالة البيانات (2026-10-10):** `data/titles/` فيها **20 عنوان حقيقي** (Roblox، Minecraft، Fortnite، Among Us، PUBG MOBILE، Free Fire، Brawl Stars، Clash Royale، TikTok، Snapchat، YouTube Kids، Pokémon GO، EA SPORTS FC، Call of Duty: Mobile، Subway Surfers، Genshin Impact، Stumble Guys، Discord، Instagram، Rocket League) بدون شارة «تجريبي». **لكن ولا معلومة فيها متحقق منها بعد**: كل التصنيفات «غير متوفر» وكل النقاط «ما لقيت»، لأن المواقع الرسمية كانت محجوبة عن بيئة البناء. التعبئة تكون من مصادر رسمية فقط عبر `npm run import:verified` أو يدويًا (انظر `docs/CONTENT_GUIDE.md`).
+> البطاقات التجريبية انتقلت إلى `data/demo/titles/` ولا تظهر إلا مع `DALIL_DEMO=1` (للاختبارات والعرض التجريبي).
 
 ## المشكلة
 
@@ -51,6 +52,17 @@ npm run lint && npm run typecheck && npm run validate:data && npm run build
 ```
 
 المنتج يشتغل كامل **بدون أي متغيرات بيئة** (بدون LLM وبدون Supabase). المتغيرات الاختيارية في `.env.example`.
+للعرض بالبطاقات التجريبية: `DALIL_DEMO=1 npm run dev` (أو `DALIL_DEMO=1 npm run build`).
+
+## تعبئة البيانات المتحقق منها
+
+```bash
+npm run import:verified -- research/seed_titles_verified.json --dry   # تجربة بدون كتابة
+npm run import:verified -- research/seed_titles_verified.json         # دمج + تحقق كامل
+```
+
+أي عنوان فيه رابط خارج النطاقات الرسمية، أو تصنيف بدون مصدر وتاريخ، أو كلمة ممنوعة، يُرفض ولا يُكتب.
+`research/candidate_sources.json` فيه روابط **مرشّحة** من بحث عام مقيّد بالنطاقات الرسمية — غير متحقق منها ولا يستخدمها التطبيق.
 
 ## إضافة عنوان جديد ومراجعته
 

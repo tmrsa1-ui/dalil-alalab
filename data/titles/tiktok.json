@@ -3,15 +3,16 @@
   "slug": "tiktok",
   "nameAr": "تيك توك",
   "nameEn": "TikTok",
-  "aliases": ["تيكتوك", "تك توك", "تيك توك", "tik tok", "tiktok"],
+  "aliases": [
+    "تيكتوك",
+    "تك توك",
+    "tik tok"
+  ],
   "kind": "app",
-  "platforms": ["ios", "android"],
-  "publisher": {
-    "name": "TikTok",
-    "url": "https://example.org/demo/tiktok/publisher"
-  },
-  "isDemo": true,
-  "reviewStatus": "auto_sourced",
+  "platforms": [],
+  "publisher": null,
+  "isDemo": false,
+  "reviewStatus": "not_found",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -30,83 +31,48 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": "12+",
-      "sourceUrl": "https://example.org/demo/tiktok/rating-appStore",
-      "verifiedAt": "2026-10-10"
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
     },
     "googlePlay": {
-      "value": "Teen",
-      "sourceUrl": "https://example.org/demo/tiktok/rating-googlePlay",
-      "verifiedAt": "2026-10-10"
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
     }
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "configurable",
-      "summaryAr": "فيه رسائل خاصة وتعليقات، وتقدر تقيدها من «الاقتران العائلي».",
-      "sources": [
-        {
-          "url": "https://example.org/demo/tiktok/strangerChat",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "purchases": {
-      "status": "present",
-      "summaryAr": "فيه عملات وهدايا تُشترى وتُرسل في البث المباشر.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/tiktok/purchases",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "content": {
-      "status": "present",
-      "summaryAr": "محتوى يصنعه المستخدمون ويختلف كثيرًا، وفيه وضع لتقييد المحتوى.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/tiktok/content",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "ads": {
-      "status": "present",
-      "summaryAr": "فيه إعلانات بين المقاطع.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/tiktok/ads",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "sessionPause": {
-      "status": "present",
-      "summaryAr": "خلاصة مقترحة بالتمرير اللانهائي وتشغيل تلقائي للمقاطع.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/tiktok/sessionPause",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto",
-      "hasRecommendationFeed": true,
-      "autoplay": true
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
     }
   },
   "familyLens": {
@@ -131,33 +97,19 @@
       "sources": []
     },
     "music": {
-      "status": "present",
-      "noteAr": "الموسيقى جزء أساسي من أغلب المقاطع.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/tiktok/lens-music",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ]
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
     }
   },
   "prayerPause": {
-    "status": "pausable",
-    "noteAr": "يقدر يقفل التطبيق في أي لحظة بدون خسارة؛ التحدي هو الرجوع للتمرير.",
-    "sources": [
-      {
-        "url": "https://example.org/demo/tiktok/prayerPause",
-        "title": "مصدر تجريبي (مثال)",
-        "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-        "verifiedAt": "2026-10-10"
-      }
-    ]
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
   },
   "controls": {
     "inGame": [],
     "platformOverrides": {}
   },
-  "conversationTags": ["sessionPause", "strangerChat"]
+  "conversationTags": []
 }

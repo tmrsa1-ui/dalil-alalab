@@ -42,6 +42,8 @@ Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · Z
 | `npm run build:index`                                      | يولّد `data/titles.index.json`              |
 | `npm run export:schema`                                    | يصدّر JSON Schema إلى `schemas/json/`       |
 | `npm run new-title -- <slug> "<الاسم العربي>" "<English>"` | قالب عنوان فاضي للمراجع                     |
+| `npm run import:verified -- <file> [--dry]`                | دمج بيانات متحقق منها + تحقق كامل           |
+| `npm run seed:real`                                        | قوالب العناوين الحقيقية العشرين             |
 | `npm run eval:agent`                                       | تقييم الوكيل مقابل `data/eval/holdout.json` |
 | `npm run format`                                           | Prettier                                    |
 
@@ -52,7 +54,8 @@ Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · Z
 ```
 CLAUDE.md, README.md, CHANGELOG.md
 docs/            DECISIONS, PRIVACY, DEPLOY, DEMO_SCRIPT, EVALUATION, CONTENT_GUIDE
-data/            titles/<slug>.json · titles.index.json (مولّد) · platforms/<id>.json
+data/            titles/<slug>.json (حقيقية فقط) · demo/titles/ (تجريبية، DALIL_DEMO=1)
+                 titles.index.json (مولّد، حقيقية فقط) · platforms/<id>.json
                  questions.json · agreement.json · eval/holdout.json · review-queue/
 schemas/         Zod: title, platform, questions, agreement, event (+ json/ مُصدَّر)
 scripts/         validate-data, build-index, export-json-schema, eval-agent, new-title
@@ -90,5 +93,6 @@ public/          manifest.webmanifest, icons/, sw.js
 
 - كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 105 unit/component · build · 58 e2e (موبايل + ديسكتوب، axe) كلها تمر.
 - Lighthouse محلي: الأداء 90–97، الوصولية 100.
-- البيانات كلها تجريبية (`isDemo: true`). المطلوب بشريًا: تعبئة العناوين الحقيقية ومراجعتها، التحقق من روابط المنصات (`verifiedAt`)، ومصدر GCAM.
+- `data/titles`: 20 عنوان حقيقي، كل قيمها «غير متوفر/ما لقيت» (المواقع الرسمية محجوبة عن بيئة الجلسة). البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا).
+- المطلوب بشريًا: تعبئة العناوين من المصادر الرسمية (`import:verified`)، التحقق من روابط المنصات (`verifiedAt`)، ومصدر GCAM. روابط مرشّحة في `research/candidate_sources.json`.
 - ملاحظة بيئة: `pkill -f next-server` يقتل الـshell نفسه في هذه البيئة؛ استخدم `ps aux | grep -E "next-serve[r]" | awk '{print $2}' | xargs -r kill`.

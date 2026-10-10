@@ -1,7 +1,7 @@
 import bank from "@data/questions.json";
-import minecraft from "@data/titles/minecraft.json";
-import tiktok from "@data/titles/tiktok.json";
-import nodata from "@data/titles/no-data-demo.json";
+import minecraft from "@data/demo/titles/minecraft.json";
+import tiktok from "@data/demo/titles/tiktok.json";
+import nodata from "@data/demo/titles/no-data-demo.json";
 import { rankPoints, selectQuestions } from "@/lib/questions/select";
 import type { ConversationQuestion } from "@schemas/questions";
 import type { Title } from "@schemas/title";

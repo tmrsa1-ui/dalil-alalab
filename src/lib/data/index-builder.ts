@@ -1,14 +1,11 @@
 import fs from "node:fs";
-import path from "node:path";
 import { titleSchema, type TitleIndexEntry } from "../../../schemas/title";
+import { titleFileMap } from "./title-files";
 
-export function buildIndex(dataDir: string): TitleIndexEntry[] {
-  const dir = path.join(dataDir, "titles");
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .sort()
-    .map((f) => titleSchema.parse(JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"))))
+export function buildIndex(dataDir: string, demo?: boolean): TitleIndexEntry[] {
+  return [...titleFileMap(dataDir, demo).entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([, file]) => titleSchema.parse(JSON.parse(fs.readFileSync(file, "utf8"))))
     .map((t) => ({
       slug: t.slug,
       nameAr: t.nameAr,

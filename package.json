@@ -22,7 +22,9 @@
     "export:schema": "tsx scripts/export-json-schema.ts",
     "new-title": "tsx scripts/new-title.ts",
     "eval:agent": "tsx scripts/eval-agent.ts",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "import:verified": "tsx scripts/import-verified.ts",
+    "seed:real": "tsx scripts/seed-real-titles.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",

@@ -25,6 +25,8 @@ export default defineConfig({
     timeout: 240_000,
     // بدون أي متغيرات بيئة: المنتج لازم يشتغل كامل بدون LLM وبدون Supabase.
     env: {
+      // البطاقات التجريبية (data/demo) تُحمَّل في الاختبارات فقط، مو في نسخة الإنتاج.
+      DALIL_DEMO: "1",
       ENABLE_AI_CARDS: "false",
       ANTHROPIC_API_KEY: "",
       SUPABASE_URL: "",

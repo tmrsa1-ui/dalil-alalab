@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "subway-surfers",
+  "nameAr": "صب واي سيرفرس",
+  "nameEn": "Subway Surfers",
+  "aliases": [
+    "صب واي",
+    "سبواي",
+    "سب واي سيرفر"
+  ],
+  "kind": "game",
+  "platforms": [],
+  "publisher": null,
+  "isDemo": false,
+  "reviewStatus": "not_found",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "appStore": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "googlePlay": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "purchases": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "content": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "ads": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {}
+  },
+  "conversationTags": []
+}

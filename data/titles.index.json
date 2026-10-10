@@ -1,16 +1,126 @@
 [
   {
+    "slug": "among-us",
+    "nameAr": "أمونق أس",
+    "nameEn": "Among Us",
+    "aliases": [
+      "امونج اس",
+      "أمونغ أس",
+      "امنق اس",
+      "امونق اس"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "brawl-stars",
+    "nameAr": "براول ستارز",
+    "nameEn": "Brawl Stars",
+    "aliases": [
+      "براول",
+      "براول ستار",
+      "brawlstars"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "call-of-duty-mobile",
+    "nameAr": "كول أوف ديوتي موبايل",
+    "nameEn": "Call of Duty: Mobile",
+    "aliases": [
+      "كود موبايل",
+      "كول اوف ديوتي",
+      "cod mobile",
+      "codm"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "clash-royale",
+    "nameAr": "كلاش رويال",
+    "nameEn": "Clash Royale",
+    "aliases": [
+      "كلاش رويل",
+      "كلاش رويالي"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "discord",
+    "nameAr": "ديسكورد",
+    "nameEn": "Discord",
+    "aliases": [
+      "دسكورد",
+      "ديسكورد"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "ea-sports-fc",
+    "nameAr": "إي إيه سبورتس إف سي",
+    "nameEn": "EA SPORTS FC",
+    "aliases": [
+      "فيفا",
+      "فيفا موبايل",
+      "fifa",
+      "ea fc",
+      "fc mobile",
+      "اف سي"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
     "slug": "fortnite",
     "nameAr": "فورتنايت",
     "nameEn": "Fortnite",
     "aliases": [
       "فورت نايت",
-      "فورتنايت",
-      "فورت",
-      "fortnite battle royale"
+      "فورت"
     ],
-    "isDemo": true,
-    "reviewStatus": "auto_sourced"
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "free-fire",
+    "nameAr": "فري فاير",
+    "nameEn": "Free Fire",
+    "aliases": [
+      "فريفاير",
+      "garena free fire",
+      "freefire"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "genshin-impact",
+    "nameAr": "قنشن إمباكت",
+    "nameEn": "Genshin Impact",
+    "aliases": [
+      "قنشن",
+      "جنشن",
+      "genshin"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "instagram",
+    "nameAr": "إنستقرام",
+    "nameEn": "Instagram",
+    "aliases": [
+      "انستا",
+      "انستغرام",
+      "انستجرام",
+      "insta"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
   },
   {
     "slug": "minecraft",
@@ -18,40 +128,39 @@
     "nameEn": "Minecraft",
     "aliases": [
       "ماينكرافت",
-      "ماين كرافت",
       "ماين",
       "minecraft pe",
-      "minecraft bedrock",
       "mc"
     ],
-    "isDemo": true,
-    "reviewStatus": "human_reviewed"
+    "isDemo": false,
+    "reviewStatus": "not_found"
   },
   {
-    "slug": "no-data-demo",
-    "nameAr": "لعبة بلا بيانات (مثال)",
-    "nameEn": "No-Data Demo Game",
+    "slug": "pokemon-go",
+    "nameAr": "بوكيمون قو",
+    "nameEn": "Pokémon GO",
     "aliases": [
-      "لعبة بلا بيانات",
-      "بلا بيانات"
+      "بوكيمون جو",
+      "بوكيمون",
+      "pokemon go",
+      "pokemongo"
     ],
-    "isDemo": true,
+    "isDemo": false,
     "reviewStatus": "not_found"
   },
   {
     "slug": "pubg-mobile",
     "nameAr": "ببجي موبايل",
-    "nameEn": "PUBG Mobile",
+    "nameEn": "PUBG MOBILE",
     "aliases": [
       "ببجي",
       "ببجى",
+      "بابجي",
       "pubg",
-      "pubgm",
-      "ببجي موبايل",
-      "بابجي"
+      "pubgm"
     ],
-    "isDemo": true,
-    "reviewStatus": "auto_sourced"
+    "isDemo": false,
+    "reviewStatus": "not_found"
   },
   {
     "slug": "roblox",
@@ -59,12 +168,57 @@
     "nameEn": "Roblox",
     "aliases": [
       "روبلكس",
-      "روبلوكس",
       "روبلس",
       "roblox"
     ],
-    "isDemo": true,
-    "reviewStatus": "human_reviewed"
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "rocket-league",
+    "nameAr": "روكيت ليق",
+    "nameEn": "Rocket League",
+    "aliases": [
+      "روكت ليق",
+      "روكيت ليج"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "snapchat",
+    "nameAr": "سناب شات",
+    "nameEn": "Snapchat",
+    "aliases": [
+      "سناب",
+      "سنابشات",
+      "snap"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "stumble-guys",
+    "nameAr": "ستمبل قايز",
+    "nameEn": "Stumble Guys",
+    "aliases": [
+      "ستامبل قايز",
+      "ستمبل"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "subway-surfers",
+    "nameAr": "صب واي سيرفرس",
+    "nameEn": "Subway Surfers",
+    "aliases": [
+      "صب واي",
+      "سبواي",
+      "سب واي سيرفر"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
   },
   {
     "slug": "tiktok",
@@ -73,11 +227,21 @@
     "aliases": [
       "تيكتوك",
       "تك توك",
-      "تيك توك",
-      "tik tok",
-      "tiktok"
+      "tik tok"
     ],
-    "isDemo": true,
-    "reviewStatus": "auto_sourced"
+    "isDemo": false,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "youtube-kids",
+    "nameAr": "يوتيوب كيدز",
+    "nameEn": "YouTube Kids",
+    "aliases": [
+      "يوتيوب للأطفال",
+      "يوتيوب كيدز",
+      "youtubekids"
+    ],
+    "isDemo": false,
+    "reviewStatus": "not_found"
   }
 ]

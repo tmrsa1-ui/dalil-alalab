@@ -1,4 +1,4 @@
-import minecraft from "@data/titles/minecraft.json";
+import minecraft from "@data/demo/titles/minecraft.json";
 import { compareCards, summarize } from "@/lib/agent/eval";
 import { emptyTitle } from "@/lib/data/template";
 import type { Title } from "@schemas/title";

@@ -2,16 +2,19 @@
   "$schema": "../../schemas/json/title.schema.json",
   "slug": "pubg-mobile",
   "nameAr": "ببجي موبايل",
-  "nameEn": "PUBG Mobile",
-  "aliases": ["ببجي", "ببجى", "pubg", "pubgm", "ببجي موبايل", "بابجي"],
+  "nameEn": "PUBG MOBILE",
+  "aliases": [
+    "ببجي",
+    "ببجى",
+    "بابجي",
+    "pubg",
+    "pubgm"
+  ],
   "kind": "game",
-  "platforms": ["ios", "android"],
-  "publisher": {
-    "name": "Krafton / Level Infinite",
-    "url": "https://example.org/demo/pubg-mobile/publisher"
-  },
-  "isDemo": true,
-  "reviewStatus": "auto_sourced",
+  "platforms": [],
+  "publisher": null,
+  "isDemo": false,
+  "reviewStatus": "not_found",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -25,10 +28,9 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": "16",
-      "descriptors": ["Violence"],
-      "sourceUrl": "https://example.org/demo/pubg-mobile/rating-pegi",
-      "verifiedAt": "2026-10-10"
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
     },
     "appStore": {
       "value": null,
@@ -43,43 +45,22 @@
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "present",
-      "summaryAr": "فيه محادثة صوتية ونصية مع أعضاء الفريق، وفيهم غرباء في المباريات العشوائية.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/pubg-mobile/strangerChat",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "purchases": {
-      "status": "present",
-      "summaryAr": "فيه عملة افتراضية وصناديق بمكافآت عشوائية.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/pubg-mobile/purchases",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "content": {
-      "status": "present",
-      "summaryAr": "عنف بأسلحة واقعية.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/pubg-mobile/content",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "ads": {
       "status": "unknown",
@@ -88,45 +69,24 @@
       "confidence": "none"
     },
     "sessionPause": {
-      "status": "present",
-      "summaryAr": "المباريات أونلاين وما تتوقف بعد ما تبدأ.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/pubg-mobile/sessionPause",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto",
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
       "hasRecommendationFeed": null,
       "autoplay": null
     }
   },
   "familyLens": {
     "gambling": {
-      "status": "present",
-      "noteAr": "فيه صناديق بمكافآت عشوائية تُفتح بعملة تُشترى بفلوس حقيقية.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/pubg-mobile/lens-gambling",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ]
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
     },
     "mixedVoiceChat": {
-      "status": "present",
-      "noteAr": "المحادثة الصوتية مع لاعبين غرباء متاحة في المباريات العشوائية.",
-      "sources": [
-        {
-          "url": "https://example.org/demo/pubg-mobile/lens-mixedVoiceChat",
-          "title": "مصدر تجريبي (مثال)",
-          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-          "verifiedAt": "2026-10-10"
-        }
-      ]
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
     },
     "magic": {
       "status": "unknown",
@@ -145,20 +105,13 @@
     }
   },
   "prayerPause": {
-    "status": "not_pausable_in_match",
-    "noteAr": "المباراة ما تتوقف بعد ما تبدأ.",
-    "sources": [
-      {
-        "url": "https://example.org/demo/pubg-mobile/prayerPause",
-        "title": "مصدر تجريبي (مثال)",
-        "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
-        "verifiedAt": "2026-10-10"
-      }
-    ]
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
   },
   "controls": {
     "inGame": [],
     "platformOverrides": {}
   },
-  "conversationTags": ["strangerChat", "purchases", "content"]
+  "conversationTags": []
 }
