@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { ar } from "@/lib/i18n/ar";
 import { KEYS, writeJSON } from "@/lib/storage";
+import { Icon } from "./Icon";
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark" | null>(null);
@@ -21,7 +22,7 @@ export function ThemeToggle() {
         setTheme(nextTheme);
       }}
     >
-      <span aria-hidden="true">{theme === "dark" ? "☀️" : "🌙"}</span>
+      <Icon name={theme === "dark" ? "sun" : "moon"} className="h-6 w-6 text-brand" />
     </button>
   );
 }

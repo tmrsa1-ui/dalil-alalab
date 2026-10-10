@@ -1,7 +1,14 @@
 /* Service worker بسيط: يخزن الصفحات والبطاقات اللي فتحها الأب عشان تشتغل بدون إنترنت.
    لا يخزن أي طلبات API، ولا يرسل شي. */
-const VERSION = "dalil-v1";
-const CORE = ["/", "/charter", "/privacy", "/manifest.webmanifest", "/icons/icon.svg"];
+const VERSION = "dalil-v2";
+const CORE = [
+  "/",
+  "/charter",
+  "/privacy",
+  "/questions.json",
+  "/manifest.webmanifest",
+  "/icons/icon.svg",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -43,8 +50,12 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // الصفحات: network-first مع رجوع للنسخة المخزنة.
-  if (req.mode === "navigate" || req.headers.get("accept")?.includes("text/html")) {
+  // الصفحات وبنك الأسئلة: network-first مع رجوع للنسخة المخزنة.
+  if (
+    req.mode === "navigate" ||
+    url.pathname === "/questions.json" ||
+    req.headers.get("accept")?.includes("text/html")
+  ) {
     event.respondWith(
       fetch(req)
         .then((res) => {

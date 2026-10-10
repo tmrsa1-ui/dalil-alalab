@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { pick, searchAndStart } from "./helpers";
+import { pick, searchAndStart, setConsent } from "./helpers";
 
 test("7) بدون موافقة لا طلبات أحداث، وبعد الموافقة الحدث ما فيه شي عن الطفل", async ({ page }) => {
   const events: string[] = [];
@@ -94,4 +94,29 @@ test("اختيارات الطفل ما تنحفظ في التخزين المحل
   );
   expect(dump).not.toContain("when-3h");
   expect(dump).not.toContain("talk-known-text");
+});
+
+test("الرحلة كاملة بدون موافقة: كل الطلبات لنفس الموقع، ولا cookies، ولا أي حدث، ورؤوس الأمان موجودة", async ({
+  page,
+  context,
+}) => {
+  await setConsent(page, "denied");
+  const requests: string[] = [];
+  page.on("request", (r) => requests.push(r.url()));
+  const res = await page.goto("/title/among-us?age=10");
+  const h = res!.headers();
+  expect(h["content-security-policy"]).toContain("default-src 'self'");
+  expect(h["content-security-policy"]).toContain("connect-src 'self'");
+  expect(h["referrer-policy"]).toBe("no-referrer");
+  expect(h["x-frame-options"]).toBe("DENY");
+  await page.getByRole("button", { name: /التالي: اضبط/ }).click();
+  await page.getByRole("button", { name: /التالي: تحاور/ }).click();
+  await expect(page.getByTestId("conversation-card")).toHaveCount(3);
+  await page.getByRole("button", { name: /التالي: اتفق/ }).click();
+  await pick(page, "ساعة يوميًا بعد الواجبات");
+  await page.waitForLoadState("networkidle");
+  const origin = new URL(page.url()).origin;
+  expect(requests.filter((u) => !u.startsWith(origin) && !u.startsWith("data:"))).toEqual([]);
+  expect(requests.filter((u) => u.includes("/api/"))).toEqual([]);
+  expect(await context.cookies()).toEqual([]);
 });

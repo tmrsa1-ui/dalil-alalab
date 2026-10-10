@@ -1,7 +1,9 @@
 import { ar } from "@/lib/i18n/ar";
 import type { Title } from "@schemas/title";
+import type { Platform } from "@schemas/platform";
 import { SourceLink } from "./SourceLink";
 import { Icon } from "./Icon";
+import { BidiText } from "./BidiText";
 
 const STYLE = {
   pausable: "bg-ok-soft text-ok border-ok/40",
@@ -9,8 +11,24 @@ const STYLE = {
   unknown: "bg-surface-2 text-muted border-line",
 } as const;
 
-export function PrayerPause({ data }: { data: Title["prayerPause"] }) {
+/** خطوة «وقت التوقف/الجدول» لكل جهاز من دليله الرسمي (أفضّل اللي فيها جدول أو توقف). */
+function downtimeSteps(platforms: Platform[]) {
+  return platforms.flatMap((p) => {
+    const list = p.steps.filter((s) => !s.isDemo && s.pointKey === "sessionPause");
+    const best = list.find((s) => /جدول|التوقّف|توقف|إيقاف/.test(s.stepAr)) ?? list[0];
+    return best ? [{ platform: p, step: best }] : [];
+  });
+}
+
+export function PrayerPause({
+  data,
+  platforms = [],
+}: {
+  data: Title["prayerPause"];
+  platforms?: Platform[];
+}) {
   const unknown = data.status === "unknown" || data.sources.length === 0;
+  const tools = downtimeSteps(platforms);
   return (
     <section className="card p-4" aria-labelledby="prayer-h" data-testid="prayer-pause">
       <div className="flex flex-wrap items-center justify-between gap-2">
@@ -41,7 +59,36 @@ export function PrayerPause({ data }: { data: Title["prayerPause"] }) {
       ) : (
         <p className="mt-2 text-sm">{ar.know.notFound}.</p>
       )}
-      <p className="mt-3 rounded-xl bg-brand-soft p-3 text-sm">{ar.prayer.tip}</p>
+      <div className="mt-3 rounded-xl bg-brand-soft p-3 text-sm">
+        <p>{ar.prayer.tip}</p>
+        {tools.length ? (
+          <details className="group mt-1" data-testid="prayer-tools">
+            <summary className="flex min-h-[44px] cursor-pointer items-center gap-1 font-semibold text-brand">
+              <span
+                aria-hidden="true"
+                className="inline-block transition-transform group-open:rotate-90 motion-reduce:transition-none"
+              >
+                ‹
+              </span>
+              {ar.prayer.toolsTitle}
+            </summary>
+            <ul className="grid gap-2">
+              {tools.map(({ platform, step }) => (
+                <li key={step.id}>
+                  <strong>{platform.nameAr}: </strong>
+                  <BidiText text={step.stepAr} />
+                  <SourceLink
+                    url={step.sourceUrl}
+                    verifiedAt={step.verifiedAt}
+                    quote={step.quote}
+                    className="text-xs"
+                  />
+                </li>
+              ))}
+            </ul>
+          </details>
+        ) : null}
+      </div>
     </section>
   );
 }

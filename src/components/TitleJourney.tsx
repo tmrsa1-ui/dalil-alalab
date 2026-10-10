@@ -21,16 +21,32 @@ import { AgePicker } from "./AgePicker";
 export function TitleJourney({
   title,
   platforms,
-  questions,
   agreement,
 }: {
   title: Title;
   platforms: Platform[];
-  questions: ConversationQuestion[];
   agreement: AgreementFile;
 }) {
   const router = useRouter();
   // undefined = لسا ما قرينا الرابط (أول رسم من الخادم): نعرض البطاقة بدون مقارنة العمر.
+  // بنك الأسئلة ينحمل بعد ما تجهز الصفحة (وقت الفراغ)، ويتخزن للاستخدام بدون إنترنت.
+  const [bank, setBank] = useState<ConversationQuestion[] | null>(null);
+  useEffect(() => {
+    let alive = true;
+    const load = () =>
+      fetch("/questions.json")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((q: ConversationQuestion[] | null) => {
+          if (alive && q) setBank(q);
+        })
+        .catch(() => {});
+    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
+    if (w.requestIdleCallback) w.requestIdleCallback(load);
+    else setTimeout(load, 300);
+    return () => {
+      alive = false;
+    };
+  }, []);
   const [age, setAge] = useState<number | null | undefined>(undefined);
   const [pendingAge, setPendingAge] = useState<number | null>(null);
   const [step, setStep] = useState<StepId>("know");
@@ -154,26 +170,37 @@ export function TitleJourney({
 
         <div hidden={step !== "know"}>
           {step === "know" ? (
-            <KnowStep title={title} age={age ?? null} reserveSummary={age === undefined} />
+            <KnowStep
+              title={title}
+              age={age ?? null}
+              reserveSummary={age === undefined}
+              platforms={platforms}
+            />
           ) : null}
         </div>
-        <div hidden={step !== "setup"}>
+        <div className="lg:max-w-3xl" hidden={step !== "setup"}>
           {step === "setup" ? (
             <PlatformTabs title={title} platforms={platforms} ageBand={band} />
           ) : null}
         </div>
-        <div hidden={step !== "talk"}>
+        <div className="lg:max-w-3xl" hidden={step !== "talk"}>
           {step === "talk" && band ? (
-            <TalkStep title={title} bank={questions} ageBand={band} />
+            bank ? (
+              <TalkStep title={title} bank={bank} ageBand={band} />
+            ) : (
+              <p role="status" className="text-muted">
+                {ar.loading}
+              </p>
+            )
           ) : null}
         </div>
         {/* «اتفق» يبقى mounted عشان ما تضيع حالة التسليم لو تنقّل أحد بين الخطوات. */}
-        <div hidden={step !== "agree"}>
+        <div className="lg:max-w-3xl" hidden={step !== "agree"}>
           <AgreementFlow store={store} file={agreement} title={title} />
         </div>
       </section>
 
-      <div className="mt-6 flex gap-3">
+      <div className="mt-6 flex gap-3 lg:max-w-3xl">
         {prev ? (
           <button type="button" className="btn btn-secondary flex-1" onClick={() => go(prev)}>
             <span aria-hidden="true">→</span> {ar.steps.prev}: {ar.steps[prev].label}

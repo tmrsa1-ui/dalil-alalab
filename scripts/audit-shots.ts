@@ -155,6 +155,23 @@ async function main() {
   await d.goto(`${BASE}/title/among-us?age=10`);
   await audit(d, "21-desktop-among-us");
 
+  const dark = await browser.newContext({
+    ...devices["Pixel 7"],
+    locale: "ar-SA",
+    colorScheme: "dark",
+  });
+  await dark.addInitScript(() => {
+    if (!localStorage.getItem("dalil.consent"))
+      localStorage.setItem("dalil.consent", JSON.stringify("denied"));
+  });
+  const k = await dark.newPage();
+  await k.goto(`${BASE}/`);
+  await audit(k, "22-dark-home", false);
+  await k.goto(`${BASE}/title/among-us?age=10`);
+  await audit(k, "23-dark-among-us");
+  await k.goto(`${BASE}/title/among-us?age=10&step=setup`);
+  await audit(k, "24-dark-setup", false);
+
   writeFileSync(join(OUT, "results.json"), JSON.stringify(rows, null, 2) + "\n");
   await browser.close();
   console.log(`✓ audit-shots — ${rows.length} لقطة في ${OUT}`);

@@ -60,18 +60,20 @@ export function AttentionPoint({
             <h4 id={headingId} className="text-base font-bold">
               {meta.title}
             </h4>
-            <span className={`chip border ${STATUS_STYLE[unknown ? "unknown" : point.status]}`}>
-              {unknown ? ar.know.notFound : statusLabel}
-            </span>
+            {unknown ? (
+              <ConfidenceBadge level="none" />
+            ) : (
+              <span className={`chip border ${STATUS_STYLE[point.status]}`}>{statusLabel}</span>
+            )}
           </div>
-          <p className="text-sm text-muted">{meta.hint}</p>
 
           {unknown ? (
-            <p className="mt-2 text-sm" data-testid="not-found">
-              <strong>{ar.know.notFound}.</strong> {ar.know.notFoundHint}
+            <p className="text-sm text-muted" data-testid="not-found">
+              {ar.know.notFound}.
             </p>
           ) : (
             <>
+              <p className="text-sm text-muted">{meta.hint}</p>
               <p className="mt-2">
                 <BidiText text={point.summaryAr} />
               </p>
@@ -121,11 +123,6 @@ export function AttentionPoint({
               </details>
             </>
           )}
-          {unknown ? (
-            <div className="mt-2">
-              <ConfidenceBadge level="none" />
-            </div>
-          ) : null}
         </div>
       </div>
     </li>

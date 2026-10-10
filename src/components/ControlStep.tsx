@@ -17,6 +17,7 @@ export function ControlStep({
   isDemo,
   quote,
   confidence,
+  relevant = false,
   done,
   onToggle,
 }: {
@@ -28,6 +29,8 @@ export function ControlStep({
   isDemo: boolean;
   quote?: string;
   confidence?: "human" | "auto";
+  /** النقطة موجودة في هذا العنوان حسب «اعرف». */
+  relevant?: boolean;
   done: boolean;
   onToggle: (done: boolean) => void;
 }) {
@@ -48,6 +51,14 @@ export function ControlStep({
         <div className="min-w-0 flex-1">
           <div className="mb-1 flex flex-wrap items-center gap-2">
             <span className="chip bg-brand-soft text-brand">{ar.setup.controlKeys[pointKey]}</span>
+            {relevant ? (
+              <span
+                className="chip border border-accent/40 bg-accent-soft text-accent"
+                data-testid="step-relevant"
+              >
+                {ar.setup.relevant}
+              </span>
+            ) : null}
             {isDemo ? <DemoBadge /> : null}
           </div>
           <p id={`${id}-text`} className="sr-only">

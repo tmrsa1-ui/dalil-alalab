@@ -120,3 +120,20 @@ test("«اضبط» لعنوان حقيقي: خطوات الجهاز من دلي�
   await expect(page.getByTestId("not-reviewed-note")).toBeVisible();
   await expectNoSeriousA11y(page);
 });
+
+test("خطوات «اضبط» المهمة لهذي اللعبة تطلع أول، و«وقت الصلاة» يدل على أداة التوقف في كل جهاز", async ({
+  page,
+}) => {
+  await page.goto("/title/among-us?age=10");
+  const tools = page.getByTestId("prayer-tools");
+  await tools.locator("summary").click();
+  await expect(tools.locator("li")).toHaveCount(5);
+  await expect(tools).toContainText("جدول مدة استخدام الجهاز");
+  await expect(tools.getByTestId("source-quote").first()).toBeVisible();
+  await page.goto("/title/among-us?age=10&step=setup");
+  await page.getByRole("tab", { name: "iPhone / iPad" }).click();
+  const first = page.getByTestId("control-step").first();
+  await expect(first.getByTestId("step-relevant")).toBeVisible();
+  // App Store/المتجر ما هي نقطة انتباه ⇐ آخر خطوة بدون علامة
+  await expect(page.getByTestId("control-step").last().getByTestId("step-relevant")).toHaveCount(0);
+});

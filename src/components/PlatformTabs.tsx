@@ -80,12 +80,23 @@ export function PlatformTabs({
   const platform = active === "inGame" ? null : platforms.find((p) => p.id === active);
   // خطوات الجهاز العامة من دليله الرسمي (مو خاصة بالعنوان) تظهر لكل العناوين.
   // الخطوات الخاصة بالعنوان أو التجريبية تظهر بس للعناوين اللي راجعها إنسان.
+  // النقاط الموجودة في هذا العنوان (من «اعرف») ⇐ خطواتها تطلع أول ومعلّمة «مهم لهذي اللعبة».
+  const presentKeys = new Set<string>(
+    (Object.keys(title.attentionPoints) as Array<keyof Title["attentionPoints"]>).filter(
+      (k) =>
+        title.attentionPoints[k].sources.length > 0 &&
+        (title.attentionPoints[k].status === "present" ||
+          title.attentionPoints[k].status === "configurable"),
+    ),
+  );
+  const byRelevance = (a: StepView, b: StepView) =>
+    Number(presentKeys.has(b.pointKey)) - Number(presentKeys.has(a.pointKey)) || byKey(a, b);
   const generic =
     !reviewed && platform
       ? platform.steps
           .filter((s) => !s.isDemo)
           .slice()
-          .sort(byKey)
+          .sort(byRelevance)
       : [];
   const steps = reviewed ? stepsFor(active) : generic;
   const doneCount = steps.filter((s) => done.includes(s.id)).length;
@@ -194,6 +205,7 @@ export function PlatformTabs({
                     key={s.id}
                     n={i + 1}
                     {...s}
+                    relevant={!reviewed && presentKeys.has(s.pointKey)}
                     done={done.includes(s.id)}
                     onToggle={(v) => {
                       setDone(setStepDone(title.slug, s.id, v));

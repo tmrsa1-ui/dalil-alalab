@@ -7,7 +7,7 @@ export const plexArabic = localFont({
     { path: "../fonts/plex-arabic-700.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-plex-ar",
-  display: "swap",
+  display: "optional",
   preload: true,
 });
 
@@ -17,6 +17,6 @@ export const plexLatin = localFont({
     { path: "../fonts/plex-latin-700.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-plex-latin",
-  display: "swap",
+  display: "optional",
   preload: false,
 });

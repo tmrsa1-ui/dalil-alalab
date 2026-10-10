@@ -60,7 +60,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {ar.app.skipToContent}
         </a>
         <SiteHeader />
-        <main id="main" className="mx-auto w-full max-w-3xl px-4 py-6">
+        <main
+          id="main"
+          className="mx-auto w-full max-w-3xl px-4 py-6 has-[[data-wide]]:lg:max-w-5xl"
+        >
           {children}
         </main>
         <SiteFooter />

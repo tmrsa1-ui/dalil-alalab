@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ar } from "@/lib/i18n/ar";
-import { getAgreement, getIndex, getPlatforms, getQuestions, getTitle } from "@/lib/data/load";
+import { getAgreement, getIndex, getPlatforms, getTitle } from "@/lib/data/load";
 import { TitleJourney } from "@/components/TitleJourney";
 import { DemoBadge } from "@/components/DemoBadge";
 import { ConfidenceBadge } from "@/components/ConfidenceBadge";
@@ -34,7 +34,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
         : "none";
 
   return (
-    <article>
+    <article data-wide>
       <header className="mb-4">
         <p className="text-sm font-semibold text-muted">
           {title.kind === "app" ? ar.title.kindApp : ar.title.kindGame}
@@ -63,12 +63,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           </p>
         ) : null}
       </header>
-      <TitleJourney
-        title={title}
-        platforms={getPlatforms()}
-        questions={getQuestions()}
-        agreement={getAgreement()}
-      />
+      <TitleJourney title={title} platforms={getPlatforms()} agreement={getAgreement()} />
     </article>
   );
 }
