@@ -30,9 +30,39 @@ export const PLATFORM_DOMAINS = [
   "help.steampowered.com",
 ] as const;
 
+/** النطاقات الرسمية لناشري العناوين في الدليل (صفحات دعم ورقابة أبوية). */
+export const PUBLISHER_DOMAINS = [
+  "roblox.com",
+  "minecraft.net",
+  "epicgames.com",
+  "innersloth.com",
+  "supercell.com",
+  "tiktok.com",
+  "snap.com",
+  "snapchat.com",
+  "youtube.com",
+  "nianticlabs.com",
+  "pokemongolive.com",
+  "ea.com",
+  "callofduty.com",
+  "activision.com",
+  "pubgmobile.com",
+  "garena.com",
+  "ff.garena.com",
+  "sybogames.com",
+  "hoyoverse.com",
+  "scopely.com",
+  "discord.com",
+  "instagram.com",
+  "about.instagram.com",
+  "meta.com",
+  "rocketleague.com",
+] as const;
+
 export const ALLOWLIST: readonly string[] = [
   ...Object.values(RATING_AUTHORITIES).flat(),
   ...PLATFORM_DOMAINS,
+  ...PUBLISHER_DOMAINS,
 ];
 
 export function hostOf(url: string): string | null {

@@ -65,7 +65,7 @@ export const ar = {
     continue: "كمّل",
     reviewStatus: {
       human_reviewed: "راجعها إنسان",
-      auto_sourced: "آلية بمصادر",
+      auto_sourced: "بحاجة مراجعة بشرية",
       not_found: "ما لقينا معلومات كافية بعد",
     },
     lastReviewed: (d: string) => `آخر مراجعة: ${d}`,
@@ -93,6 +93,7 @@ export const ar = {
     summaryWithin: "عمر طفلك ضمن التصنيفات المتوفرة.",
     summaryNone: "لا يوجد تصنيف متوفر لهذا العنوان حاليًا.",
     descriptors: "واصفات المحتوى",
+    edition: (e: string) => `النسخة: ${e}`,
     systems: {
       gcam: { name: "الهيئة العامة لتنظيم الإعلام", short: "GCAM" },
       esrb: { name: "ESRB", short: "ESRB" },
@@ -135,12 +136,12 @@ export const ar = {
   },
   confidence: {
     human: "راجعها إنسان",
-    auto: "آلية بمصادر",
+    auto: "بحاجة مراجعة بشرية",
     none: "ما لقيت",
     demoSuffix: "مثال تجريبي",
     explain: {
       human: "راجع هذه المعلومة شخص من فريق الدليل وقارنها بالمصدر.",
-      auto: "جمعها نظام آلي من مصادر رسمية وتحقق إن الاقتباس موجود في المصدر، وبانتظار مراجعة بشرية.",
+      auto: "قُرئت آليًا من مصدر رسمي ولم يراجعها إنسان بعد. افتح المصدر وتأكد بنفسك.",
       none: "ما لقينا مصدرًا موثوقًا لهذه النقطة، فما كتبنا شي.",
     },
   },
@@ -185,9 +186,12 @@ export const ar = {
     officialGuide: "الدليل الرسمي",
     officialGuideFor: (name: string) => `الدليل الرسمي لـ ${name}`,
     guidePending: "رابط رسمي — بانتظار تحقق بشري من محتواه.",
+    guideLinkChecked: (d: string) =>
+      `رابط رسمي — فُحص آليًا في ${d}، وبانتظار تحقق بشري من محتواه.`,
+    publisherGuide: "صفحة الرقابة الأبوية الرسمية من الناشر:",
     guideUnavailable: "غير متوفر",
     noStepsReviewed:
-      "هذا العنوان ما راجعه إنسان بعد، فما نكتب خطوات من عندنا. افتح الدليل الرسمي للجهاز:",
+      "هذا العنوان ما راجعه إنسان بعد، فما نكتب خطوات من عندنا. افتح الدليل الرسمي فوق.",
     done: "سويتها",
     doneCount: (d: number, n: number) => `سويت ${d} من ${n}`,
     tool: "الأداة",

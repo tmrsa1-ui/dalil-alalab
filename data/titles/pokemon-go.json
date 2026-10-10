@@ -13,7 +13,7 @@
   "platforms": [],
   "publisher": null,
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -32,9 +32,10 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "9+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id1094591345",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
     },
     "googlePlay": {
       "value": null,

@@ -7,7 +7,9 @@ import { STEP_IDS } from "@/lib/steps";
 export default function HomePage() {
   const index = getIndex();
   const rank = { human_reviewed: 0, auto_sourced: 1, not_found: 2 } as const;
-  const featured = [...index].sort((a, b) => rank[a.reviewStatus] - rank[b.reviewStatus]).slice(0, 6);
+  const featured = [...index]
+    .sort((a, b) => rank[a.reviewStatus] - rank[b.reviewStatus])
+    .slice(0, 6);
   const icons = { know: "🔎", setup: "⚙️", talk: "💬", agree: "🤝" } as const;
   return (
     <div className="grid gap-8">

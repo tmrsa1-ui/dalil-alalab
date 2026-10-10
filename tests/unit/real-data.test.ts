@@ -13,9 +13,26 @@ const titles = fs
   .map((f) => titleSchema.parse(JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"))));
 
 const EXPECTED = [
-  "among-us", "brawl-stars", "call-of-duty-mobile", "clash-royale", "discord", "ea-sports-fc",
-  "fortnite", "free-fire", "genshin-impact", "instagram", "minecraft", "pokemon-go", "pubg-mobile",
-  "roblox", "rocket-league", "snapchat", "stumble-guys", "subway-surfers", "tiktok", "youtube-kids",
+  "among-us",
+  "brawl-stars",
+  "call-of-duty-mobile",
+  "clash-royale",
+  "discord",
+  "ea-sports-fc",
+  "fortnite",
+  "free-fire",
+  "genshin-impact",
+  "instagram",
+  "minecraft",
+  "pokemon-go",
+  "pubg-mobile",
+  "roblox",
+  "rocket-league",
+  "snapchat",
+  "stumble-guys",
+  "subway-surfers",
+  "tiktok",
+  "youtube-kids",
 ];
 
 describe("البيانات الحقيقية (data/titles)", () => {
@@ -25,7 +42,9 @@ describe("البيانات الحقيقية (data/titles)", () => {
   it("ولا عنوان تجريبي ولا رابط example.org", () => {
     for (const t of titles) {
       expect(t.isDemo).toBe(false);
-      const demoLinks = collectStrings(t).filter((s) => /^https?:/.test(s.text) && isDemoUrl(s.text));
+      const demoLinks = collectStrings(t).filter(
+        (s) => /^https?:/.test(s.text) && isDemoUrl(s.text),
+      );
       expect(demoLinks).toEqual([]);
     }
   });
@@ -42,6 +61,25 @@ describe("البيانات الحقيقية (data/titles)", () => {
         const p = t.attentionPoints[k];
         if (p.status !== "unknown") expect(p.sources.length, `${t.slug}.${k}`).toBeGreaterThan(0);
       }
+    }
+  });
+});
+
+describe("القيم المستوردة من ملف البحث", () => {
+  it("ولا قيمة معلّمة «راجعها إنسان» (الملف ما راجعه إنسان)", () => {
+    for (const t of titles) {
+      expect(t.reviewStatus).not.toBe("human_reviewed");
+      for (const k of RATING_KEYS) expect(t.ratings[k].confidence).not.toBe("human");
+      for (const k of POINT_KEYS) expect(t.attentionPoints[k].confidence).not.toBe("human");
+      expect(t.ratings.gcam.value).toBeNull(); // الملف نفسه يقول: ما لقيت
+    }
+  });
+  it("كل قيمة مقبولة معلّمة «بحاجة مراجعة بشرية» ومعها رابط وتاريخ", () => {
+    for (const t of titles) {
+      for (const k of RATING_KEYS) {
+        if (t.ratings[k].value) expect(t.ratings[k].confidence, `${t.slug}.${k}`).toBe("auto");
+      }
+      if (t.controls.officialGuide) expect(t.controls.officialGuide.confidence).toBe("auto");
     }
   });
 });

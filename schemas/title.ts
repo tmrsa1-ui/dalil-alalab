@@ -22,6 +22,10 @@ export const ratingSchema = z
     verifiedAt: isoDate.nullable(),
     /** اقتباس حرفي من صفحة الجهة المصنفة (إلزامي لبطاقات الوكيل). */
     quote: z.string().min(1).optional(),
+    /** النسخة اللي يخصها التصنيف لو تختلف (مثل «Battle Royale»). */
+    edition: z.string().min(1).optional(),
+    /** human = راجعها إنسان، auto = قُرئت آليًا وبحاجة مراجعة بشرية. */
+    confidence: z.enum(["human", "auto"]).optional(),
   })
   .strict()
   .superRefine((r, ctx) => {
@@ -175,6 +179,16 @@ export const titleSchema = z
       .object({
         inGame: z.array(controlStepSchema),
         platformOverrides,
+        /** رابط صفحة الرقابة الأبوية الرسمية من الناشر (رابط فقط، بدون خطوات مكتوبة). */
+        officialGuide: z
+          .object({
+            url: httpsUrl,
+            labelAr: z.string().min(1).max(160),
+            verifiedAt: isoDate,
+            confidence: z.enum(["human", "auto"]),
+          })
+          .strict()
+          .optional(),
       })
       .strict(),
     conversationTags: z.array(
@@ -185,7 +199,11 @@ export const titleSchema = z
   .superRefine((t, ctx) => {
     // ثقة «راجعها إنسان» تتطلب مراجعة بشرية للعنوان كله.
     const points = Object.values(t.attentionPoints);
-    if (points.some((p) => p.confidence === "human") && t.reviewStatus !== "human_reviewed") {
+    const anyHuman =
+      points.some((p) => p.confidence === "human") ||
+      Object.values(t.ratings).some((r) => r.confidence === "human") ||
+      t.controls.officialGuide?.confidence === "human";
+    if (anyHuman && t.reviewStatus !== "human_reviewed") {
       ctx.addIssue({
         code: "custom",
         message: "confidence: human يتطلب reviewStatus: human_reviewed",

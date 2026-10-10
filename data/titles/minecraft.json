@@ -13,7 +13,7 @@
   "platforms": [],
   "publisher": null,
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -22,9 +22,13 @@
       "verifiedAt": null
     },
     "esrb": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "Everyone 10+",
+      "descriptors": [
+        "Fantasy Violence"
+      ],
+      "sourceUrl": "https://www.esrb.org/ratings/39862/minecraft/",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
     },
     "pegi": {
       "value": null,
@@ -32,9 +36,10 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "9+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id479516143",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
     },
     "googlePlay": {
       "value": null,
@@ -44,22 +49,43 @@
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB تذكر «Users Interact»: اللاعبون يتواصلون مع بعض.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/39862/minecraft/",
+          "title": "ESRB: Minecraft",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB تذكر «In-Game Purchases»: فيها مشتريات داخل اللعبة.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/39862/minecraft/",
+          "title": "ESRB: Minecraft",
+          "quote": "In-Game Purchases",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB: «Fantasy Violence» عنف خيالي (ضرب الوحوش حتى تسقط).",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/39862/minecraft/",
+          "title": "ESRB: Minecraft",
+          "quote": "Fantasy Violence",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
       "status": "unknown",
@@ -110,7 +136,13 @@
   },
   "controls": {
     "inGame": [],
-    "platformOverrides": {}
+    "platformOverrides": {},
+    "officialGuide": {
+      "url": "https://www.xbox.com/en-US/family-hub",
+      "labelAr": "إعدادات العائلة في Xbox (حساب Microsoft) تتحكم في اللعب الجماعي والمشتريات",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
+    }
   },
   "conversationTags": []
 }

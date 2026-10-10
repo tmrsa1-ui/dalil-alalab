@@ -11,7 +11,7 @@
   "platforms": [],
   "publisher": null,
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -20,9 +20,16 @@
       "verifiedAt": null
     },
     "esrb": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "Teen",
+      "descriptors": [
+        "Violence",
+        "Suggestive Themes",
+        "Lyrics"
+      ],
+      "sourceUrl": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+      "verifiedAt": "2026-10-10",
+      "edition": "Battle Royale",
+      "confidence": "auto"
     },
     "pegi": {
       "value": null,
@@ -30,9 +37,10 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "13+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id6483539426",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
     },
     "googlePlay": {
       "value": null,
@@ -42,22 +50,43 @@
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB تذكر «Users Interact»: تواصل مع لاعبين آخرين.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+          "title": "ESRB: Fortnite",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB تذكر «In-Game Purchases».",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+          "title": "ESRB: Fortnite",
+          "quote": "In-Game Purchases",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB: «Violence, Suggestive Themes, Lyrics» أسلحة نارية، وشخصية نسائية بلبس كاشف، وكلمات أغاني فيها ألفاظ وإشارات للمخدرات.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+          "title": "ESRB: Fortnite",
+          "quote": "Violence, Suggestive Themes, Lyrics",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
       "status": "unknown",

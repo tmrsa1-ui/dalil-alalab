@@ -7,10 +7,11 @@
       "امونج اس",
       "أمونغ أس",
       "امنق اس",
-      "امونق اس"
+      "امونق اس",
+      "أمونج أس"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "brawl-stars",
@@ -22,7 +23,7 @@
       "brawlstars"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "call-of-duty-mobile",
@@ -46,7 +47,7 @@
       "كلاش رويالي"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "discord",
@@ -83,7 +84,7 @@
       "فورت"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "free-fire",
@@ -95,7 +96,7 @@
       "freefire"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "genshin-impact",
@@ -133,7 +134,7 @@
       "mc"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "pokemon-go",
@@ -146,7 +147,7 @@
       "pokemongo"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "pubg-mobile",
@@ -157,10 +158,11 @@
       "ببجى",
       "بابجي",
       "pubg",
-      "pubgm"
+      "pubgm",
+      "بوبجي"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "roblox",
@@ -172,7 +174,7 @@
       "roblox"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "rocket-league",
@@ -195,7 +197,7 @@
       "snap"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "stumble-guys",
@@ -230,7 +232,7 @@
       "tik tok"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   },
   {
     "slug": "youtube-kids",
@@ -238,10 +240,10 @@
     "nameEn": "YouTube Kids",
     "aliases": [
       "يوتيوب للأطفال",
-      "يوتيوب كيدز",
-      "youtubekids"
+      "youtubekids",
+      "يوتيوب اطفال"
     ],
     "isDemo": false,
-    "reviewStatus": "not_found"
+    "reviewStatus": "auto_sourced"
   }
 ]

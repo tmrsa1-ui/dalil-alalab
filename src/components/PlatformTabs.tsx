@@ -9,6 +9,7 @@ import { track } from "@/lib/events";
 import type { AgeBand } from "@schemas/common";
 import { ControlStep } from "./ControlStep";
 import { SourceLink } from "./SourceLink";
+import { ConfidenceBadge } from "./ConfidenceBadge";
 
 type TabId = PlatformId | "inGame";
 
@@ -36,7 +37,8 @@ export function PlatformTabs({
   const reviewed = title.reviewStatus === "human_reviewed";
   const tabs: TabId[] = useMemo(() => {
     const list: TabId[] = title.platforms.length ? [...title.platforms] : [...PLATFORM_IDS];
-    if (reviewed && title.controls.inGame.length) list.push("inGame");
+    if ((reviewed && title.controls.inGame.length) || title.controls.officialGuide)
+      list.push("inGame");
     return list;
   }, [title, reviewed]);
 
@@ -133,7 +135,11 @@ export function PlatformTabs({
                   verifiedAt={platform.verifiedAt}
                 />
                 {!platform.verifiedAt ? (
-                  <p className="text-xs text-muted">{ar.setup.guidePending}</p>
+                  <p className="text-xs text-muted">
+                    {platform.linkCheckedAt
+                      ? ar.setup.guideLinkChecked(platform.linkCheckedAt)
+                      : ar.setup.guidePending}
+                  </p>
                 ) : null}
               </>
             ) : (
@@ -141,6 +147,20 @@ export function PlatformTabs({
                 {ar.setup.officialGuide}: <strong>{ar.setup.guideUnavailable}</strong>
               </p>
             )}
+          </div>
+        ) : null}
+
+        {active === "inGame" && title.controls.officialGuide ? (
+          <div className="card mb-3 p-3" data-testid="publisher-guide">
+            <p className="text-sm text-muted">{ar.setup.publisherGuide}</p>
+            <SourceLink
+              url={title.controls.officialGuide.url}
+              label={title.controls.officialGuide.labelAr}
+              verifiedAt={title.controls.officialGuide.verifiedAt}
+            />
+            <div className="mt-1">
+              <ConfidenceBadge level={title.controls.officialGuide.confidence} />
+            </div>
           </div>
         ) : null}
 

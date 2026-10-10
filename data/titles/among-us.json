@@ -7,13 +7,14 @@
     "امونج اس",
     "أمونغ أس",
     "امنق اس",
-    "امونق اس"
+    "امونق اس",
+    "أمونج أس"
   ],
   "kind": "game",
   "platforms": [],
   "publisher": null,
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -22,9 +23,15 @@
       "verifiedAt": null
     },
     "esrb": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "Everyone 10+",
+      "descriptors": [
+        "Fantasy Violence",
+        "Mild Blood"
+      ],
+      "sourceUrl": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
+      "verifiedAt": "2026-10-10",
+      "edition": "Crewmate Edition – نسخة الأجهزة",
+      "confidence": "auto"
     },
     "pegi": {
       "value": null,
@@ -32,9 +39,10 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "9+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id1351168404",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
     },
     "googlePlay": {
       "value": null,
@@ -44,22 +52,43 @@
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB تذكر «Users Interact».",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
+          "title": "ESRB: Among Us",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB تذكر «In-Game Purchases».",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
+          "title": "ESRB: Among Us",
+          "quote": "In-Game Purchases",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "ESRB: «Fantasy Violence, Mild Blood» إقصاء الشخصيات بالطعن أو الإطلاق بشكل كرتوني.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
+          "title": "ESRB: Among Us",
+          "quote": "Fantasy Violence, Mild Blood",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
       "status": "unknown",

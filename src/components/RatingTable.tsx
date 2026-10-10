@@ -3,6 +3,7 @@ import { ar } from "@/lib/i18n/ar";
 import { compareAge, type AgeComparison } from "@/lib/age";
 import { RATING_KEYS, type Title } from "@schemas/title";
 import { SourceLink } from "./SourceLink";
+import { ConfidenceBadge } from "./ConfidenceBadge";
 
 const CMP_STYLE: Record<AgeComparison, string> = {
   above: "bg-warn-soft text-warn border-warn/40",
@@ -58,8 +59,18 @@ export function RatingTable({
           >
             <div className="min-w-0">
               <div className="font-bold">{ar.know.systems[key].name}</div>
+              {available && r.edition ? (
+                <div className="text-xs text-muted" dir="auto">
+                  {ar.know.edition(r.edition)}
+                </div>
+              ) : null}
               {available && r.sourceUrl ? (
                 <SourceLink url={r.sourceUrl} verifiedAt={r.verifiedAt} className="text-sm" />
+              ) : null}
+              {available && r.confidence ? (
+                <div>
+                  <ConfidenceBadge level={r.confidence} />
+                </div>
               ) : null}
             </div>
             <div className="flex flex-wrap items-center gap-2">

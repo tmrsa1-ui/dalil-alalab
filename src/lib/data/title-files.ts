@@ -19,7 +19,10 @@ export function titleDirs(dataDir: string, demo = includeDemo()): string[] {
 export function titleFileMap(dataDir: string, demo = includeDemo()): Map<string, string> {
   const map = new Map<string, string>();
   for (const dir of titleDirs(dataDir, demo)) {
-    for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json")).sort()) {
+    for (const f of fs
+      .readdirSync(dir)
+      .filter((x) => x.endsWith(".json"))
+      .sort()) {
       map.set(path.basename(f, ".json"), path.join(dir, f));
     }
   }

@@ -5,14 +5,14 @@
   "nameEn": "YouTube Kids",
   "aliases": [
     "يوتيوب للأطفال",
-    "يوتيوب كيدز",
-    "youtubekids"
+    "youtubekids",
+    "يوتيوب اطفال"
   ],
   "kind": "app",
   "platforms": [],
   "publisher": null,
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -31,9 +31,10 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "4+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id936971630",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
     },
     "googlePlay": {
       "value": null,
@@ -109,7 +110,13 @@
   },
   "controls": {
     "inGame": [],
-    "platformOverrides": {}
+    "platformOverrides": {},
+    "officialGuide": {
+      "url": "https://support.google.com/youtubekids/?hl=ar",
+      "labelAr": "مركز مساعدة YouTube Kids (عربي)",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
+    }
   },
   "conversationTags": []
 }
