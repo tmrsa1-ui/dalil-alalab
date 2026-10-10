@@ -1,0 +1,109 @@
+{
+  "home": {
+    "url": "/",
+    "lighthouse": "12.8.2",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "LCP": "2.7 s",
+    "TBT": "190 ms",
+    "CLS": "0",
+    "FCP": "1.2 s",
+    "failing": [
+      "largest-contentful-paint",
+      "max-potential-fid",
+      "largest-contentful-paint-element",
+      "render-blocking-resources",
+      "unminified-javascript",
+      "legacy-javascript",
+      "inspector-issues",
+      "legacy-javascript-insight",
+      "network-dependency-tree-insight",
+      "render-blocking-insight"
+    ]
+  },
+  "minecraft": {
+    "url": "/title/minecraft?age=9",
+    "lighthouse": "12.8.2",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 92,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "LCP": "3.3 s",
+    "TBT": "80 ms",
+    "CLS": "0.061",
+    "FCP": "1.4 s",
+    "failing": [
+      "largest-contentful-paint",
+      "largest-contentful-paint-element",
+      "label-content-name-mismatch",
+      "render-blocking-resources",
+      "unminified-javascript",
+      "legacy-javascript",
+      "inspector-issues",
+      "forced-reflow-insight",
+      "legacy-javascript-insight",
+      "network-dependency-tree-insight",
+      "render-blocking-insight"
+    ]
+  },
+  "fortnite": {
+    "url": "/title/fortnite?age=10",
+    "lighthouse": "12.8.2",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 91,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "LCP": "3.3 s",
+    "TBT": "90 ms",
+    "CLS": "0.061",
+    "FCP": "1.4 s",
+    "failing": [
+      "largest-contentful-paint",
+      "largest-contentful-paint-element",
+      "label-content-name-mismatch",
+      "render-blocking-resources",
+      "unminified-javascript",
+      "legacy-javascript",
+      "inspector-issues",
+      "forced-reflow-insight",
+      "network-dependency-tree-insight",
+      "render-blocking-insight"
+    ]
+  },
+  "sources": {
+    "url": "/sources",
+    "lighthouse": "12.8.2",
+    "formFactor": "mobile",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 96,
+      "seo": 100
+    },
+    "LCP": "3.2 s",
+    "TBT": "60 ms",
+    "CLS": "0",
+    "FCP": "1.2 s",
+    "failing": [
+      "largest-contentful-paint",
+      "max-potential-fid",
+      "largest-contentful-paint-element",
+      "render-blocking-resources",
+      "legacy-javascript",
+      "inspector-issues",
+      "network-dependency-tree-insight",
+      "render-blocking-insight"
+    ]
+  }
+}
