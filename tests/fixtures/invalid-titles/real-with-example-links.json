@@ -1,0 +1,222 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "real-with-example-links",
+  "nameAr": "ماين كرافت",
+  "nameEn": "Minecraft",
+  "aliases": [
+    "ماينكرافت",
+    "ماين كرافت",
+    "ماين",
+    "minecraft pe",
+    "minecraft bedrock",
+    "mc"
+  ],
+  "kind": "game",
+  "platforms": [
+    "ios",
+    "android",
+    "playstation",
+    "xbox",
+    "switch",
+    "pc"
+  ],
+  "publisher": {
+    "name": "Mojang Studios",
+    "url": "https://example.org/demo/minecraft/publisher"
+  },
+  "isDemo": false,
+  "reviewStatus": "human_reviewed",
+  "lastReviewedAt": "2026-10-10",
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": "E10+",
+      "descriptors": [
+        "Fantasy Violence"
+      ],
+      "sourceUrl": "https://example.org/demo/minecraft/rating-esrb",
+      "verifiedAt": "2026-10-10"
+    },
+    "pegi": {
+      "value": "7",
+      "descriptors": [
+        "Violence"
+      ],
+      "sourceUrl": "https://example.org/demo/minecraft/rating-pegi",
+      "verifiedAt": "2026-10-10"
+    },
+    "appStore": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "googlePlay": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "configurable",
+      "summaryAr": "اللعب على السيرفرات الجماعية فيه محادثة نصية مع لاعبين آخرين، وتقدر تقفلها من إعدادات حساب الطفل.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/strangerChat",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه متجر داخلي بعملة افتراضية لشراء إضافات وعوالم، ويمكن قفله من إعدادات المنصة.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/purchases",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "عنف كرتوني خفيف ضد مخلوقات اللعبة، بدون دم واقعي.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/content",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "ads": {
+      "status": "absent",
+      "summaryAr": "ما فيه إعلانات داخل اللعبة حسب المصدر.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/ads",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "sessionPause": {
+      "status": "absent",
+      "summaryAr": "في اللعب الفردي تقدر توقف وتحفظ في أي لحظة؛ السيرفرات الجماعية ما تتوقف.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/sessionPause",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human",
+      "hasRecommendationFeed": false,
+      "autoplay": false
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "absent",
+      "noteAr": "ما فيه صناديق حظ أو رهان داخل اللعبة حسب المصدر.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/lens-gambling",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "mixedVoiceChat": {
+      "status": "absent",
+      "noteAr": "ما فيه محادثة صوتية مدمجة في اللعبة نفسها.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/lens-mixedVoiceChat",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "magic": {
+      "status": "present",
+      "noteAr": "فيه عناصر خيالية مثل الجرعات والتعاويذ ضمن أسلوب اللعب.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/minecraft/lens-magic",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "pausable",
+    "noteAr": "في اللعب الفردي يقدر يوقف اللعبة ويرجع بدون خسارة.",
+    "sources": [
+      {
+        "url": "https://example.org/demo/minecraft/prayerPause",
+        "title": "مصدر تجريبي (مثال)",
+        "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+        "verifiedAt": "2026-10-10"
+      }
+    ]
+  },
+  "controls": {
+    "inGame": [
+      {
+        "id": "minecraft-chat",
+        "pointKey": "strangerChat",
+        "stepAr": "من إعدادات اللعبة ← Settings ← Multiplayer: اقفل «Multiplayer Game» للعب الفردي فقط.",
+        "sourceUrl": "https://example.org/demo/minecraft/controls/minecraft-chat",
+        "verifiedAt": "2026-10-10"
+      },
+      {
+        "id": "minecraft-chat-text",
+        "pointKey": "strangerChat",
+        "stepAr": "من Settings ← Accessibility أو Chat: خلّ المحادثة مخفية.",
+        "sourceUrl": "https://example.org/demo/minecraft/controls/minecraft-chat-text",
+        "verifiedAt": "2026-10-10"
+      },
+      {
+        "id": "minecraft-store",
+        "pointKey": "purchases",
+        "stepAr": "اقفل المشتريات من المنصة نفسها (تبويب جهازك فوق)، لأن متجر اللعبة يستخدم حساب المنصة.",
+        "sourceUrl": "https://example.org/demo/minecraft/controls/minecraft-store",
+        "verifiedAt": "2026-10-10"
+      }
+    ],
+    "platformOverrides": {}
+  },
+  "conversationTags": [
+    "strangerChat",
+    "purchases"
+  ]
+}

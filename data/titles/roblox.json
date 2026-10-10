@@ -1,0 +1,193 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "roblox",
+  "nameAr": "روبلوكس",
+  "nameEn": "Roblox",
+  "aliases": [
+    "روبلكس",
+    "روبلوكس",
+    "روبلس",
+    "roblox"
+  ],
+  "kind": "game",
+  "platforms": [
+    "ios",
+    "android",
+    "xbox",
+    "playstation",
+    "pc"
+  ],
+  "publisher": {
+    "name": "Roblox Corporation",
+    "url": "https://example.org/demo/roblox/publisher"
+  },
+  "isDemo": true,
+  "reviewStatus": "human_reviewed",
+  "lastReviewedAt": "2026-10-10",
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "appStore": {
+      "value": "12+",
+      "sourceUrl": "https://example.org/demo/roblox/rating-appStore",
+      "verifiedAt": "2026-10-10"
+    },
+    "googlePlay": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "configurable",
+      "summaryAr": "منصة ألعاب يصنعها المستخدمون، فيها محادثة مع لاعبين آخرين، ولولي الأمر أدوات لتقييدها.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/roblox/strangerChat",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه عملة افتراضية تُستخدم داخل التجارب المختلفة.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/roblox/purchases",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "content": {
+      "status": "configurable",
+      "summaryAr": "المحتوى يختلف من تجربة لثانية لأن المستخدمين يصنعونه، وفيه إعدادات لمستوى النضج.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/roblox/content",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "ads": {
+      "status": "present",
+      "summaryAr": "بعض التجارب فيها إعلانات أو منتجات ترويجية.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/roblox/ads",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "human"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "present",
+      "noteAr": "فيه محادثة صوتية لفئات عمرية معينة حسب إعدادات الحساب.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/roblox/lens-mixedVoiceChat",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [
+      {
+        "id": "roblox-parent-link",
+        "pointKey": "strangerChat",
+        "stepAr": "اربط حسابك بحساب طفلك من Settings ← Parental Controls، عشان تتحكم من جوالك.",
+        "sourceUrl": "https://example.org/demo/roblox/controls/roblox-parent-link",
+        "verifiedAt": "2026-10-10"
+      },
+      {
+        "id": "roblox-chat",
+        "pointKey": "strangerChat",
+        "stepAr": "Parental Controls ← Communication: اقفل المحادثة أو خلّها مع الأصدقاء فقط.",
+        "sourceUrl": "https://example.org/demo/roblox/controls/roblox-chat",
+        "verifiedAt": "2026-10-10"
+      },
+      {
+        "id": "roblox-spend",
+        "pointKey": "purchases",
+        "stepAr": "Parental Controls ← Spending: حط حد شهري للإنفاق أو صفر.",
+        "sourceUrl": "https://example.org/demo/roblox/controls/roblox-spend",
+        "verifiedAt": "2026-10-10"
+      },
+      {
+        "id": "roblox-maturity",
+        "pointKey": "content",
+        "stepAr": "Parental Controls ← Content Maturity: اختر مستوى المحتوى المناسب.",
+        "sourceUrl": "https://example.org/demo/roblox/controls/roblox-maturity",
+        "verifiedAt": "2026-10-10"
+      }
+    ],
+    "platformOverrides": {}
+  },
+  "conversationTags": [
+    "strangerChat",
+    "content",
+    "purchases"
+  ]
+}

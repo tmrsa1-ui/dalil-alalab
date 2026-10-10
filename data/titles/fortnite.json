@@ -1,0 +1,191 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "fortnite",
+  "nameAr": "فورتنايت",
+  "nameEn": "Fortnite",
+  "aliases": [
+    "فورت نايت",
+    "فورتنايت",
+    "فورت",
+    "fortnite battle royale"
+  ],
+  "kind": "game",
+  "platforms": [
+    "ios",
+    "android",
+    "playstation",
+    "xbox",
+    "switch",
+    "pc"
+  ],
+  "publisher": {
+    "name": "Epic Games",
+    "url": "https://example.org/demo/fortnite/publisher"
+  },
+  "isDemo": true,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": "T",
+      "descriptors": [
+        "Fantasy Violence"
+      ],
+      "sourceUrl": "https://example.org/demo/fortnite/rating-esrb",
+      "verifiedAt": "2026-10-10"
+    },
+    "pegi": {
+      "value": "12",
+      "descriptors": [
+        "Violence"
+      ],
+      "sourceUrl": "https://example.org/demo/fortnite/rating-pegi",
+      "verifiedAt": "2026-10-10"
+    },
+    "appStore": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "googlePlay": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "present",
+      "summaryAr": "فيه محادثة صوتية ونصية مع لاعبين في نفس الفريق، ويمكن تقييدها من إعدادات حساب الطفل.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/strangerChat",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه عملة افتراضية وأزياء ومتجر يتجدد يوميًا.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/purchases",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "عنف بأسلوب كرتوني بدون دم.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/content",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "ads": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "sessionPause": {
+      "status": "present",
+      "summaryAr": "المباريات أونلاين وما تتوقف بعد ما تبدأ.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/sessionPause",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "present",
+      "noteAr": "المحادثة الصوتية مع لاعبين غرباء متاحة ما لم تُقفل.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/lens-mixedVoiceChat",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "present",
+      "noteAr": "أزياء الشخصيات متنوعة، وبعضها قد لا يناسب ذوق الأسرة.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/lens-clothing",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "music": {
+      "status": "present",
+      "noteAr": "فيه موسيقى ورقصات ضمن العناصر التجميلية.",
+      "sources": [
+        {
+          "url": "https://example.org/demo/fortnite/lens-music",
+          "title": "مصدر تجريبي (مثال)",
+          "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    }
+  },
+  "prayerPause": {
+    "status": "not_pausable_in_match",
+    "noteAr": "المباراة ما تتوقف بعد ما تبدأ؛ الأفضل ما يبدأ مباراة جديدة قرب وقت الصلاة.",
+    "sources": [
+      {
+        "url": "https://example.org/demo/fortnite/prayerPause",
+        "title": "مصدر تجريبي (مثال)",
+        "quote": "نص مثال تجريبي — يُستبدل باقتباس حرفي من المصدر الرسمي.",
+        "verifiedAt": "2026-10-10"
+      }
+    ]
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {}
+  },
+  "conversationTags": [
+    "strangerChat",
+    "purchases"
+  ]
+}

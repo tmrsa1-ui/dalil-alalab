@@ -1,0 +1,20 @@
+{
+  "_note": "قائمة عناوين التقييم (أسماء فقط). المراجع البشري يعبّي لكل عنوان بطاقة مرجعية في data/titles بحالة human_reviewed و isDemo:false، ثم يشغّل npm run eval:agent. لا تضع أي قيم هنا.",
+  "titles": [
+    { "slug": "minecraft", "nameEn": "Minecraft" },
+    { "slug": "roblox", "nameEn": "Roblox" },
+    { "slug": "fortnite", "nameEn": "Fortnite" },
+    { "slug": "pubg-mobile", "nameEn": "PUBG Mobile" },
+    { "slug": "tiktok", "nameEn": "TikTok" },
+    { "slug": "ea-sports-fc", "nameEn": "EA SPORTS FC" },
+    { "slug": "among-us", "nameEn": "Among Us" },
+    { "slug": "brawl-stars", "nameEn": "Brawl Stars" },
+    { "slug": "clash-royale", "nameEn": "Clash Royale" },
+    { "slug": "subway-surfers", "nameEn": "Subway Surfers" },
+    { "slug": "free-fire", "nameEn": "Free Fire" },
+    { "slug": "call-of-duty-mobile", "nameEn": "Call of Duty: Mobile" },
+    { "slug": "snapchat", "nameEn": "Snapchat" },
+    { "slug": "youtube-kids", "nameEn": "YouTube Kids" },
+    { "slug": "genshin-impact", "nameEn": "Genshin Impact" }
+  ]
+}

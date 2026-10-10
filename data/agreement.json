@@ -1,0 +1,179 @@
+{
+  "questions": [
+    {
+      "id": "when",
+      "textParentAr": "متى يلعب، وكم المدة اللي تشوفها مناسبة؟",
+      "textChildAr": "كم تبي تلعب؟",
+      "options": [
+        {
+          "id": "when-30m",
+          "labelAr": "نص ساعة يوميًا بعد الواجبات",
+          "childLabelAr": "نص ساعة كل يوم",
+          "clauseAr": "نص ساعة يوميًا بعد ما تخلص الواجبات.",
+          "icon": "🕐",
+          "rank": 1
+        },
+        {
+          "id": "when-1h",
+          "labelAr": "ساعة يوميًا بعد الواجبات",
+          "childLabelAr": "ساعة كل يوم",
+          "clauseAr": "ساعة يوميًا بعد ما تخلص الواجبات.",
+          "icon": "🕑",
+          "rank": 2
+        },
+        {
+          "id": "when-1h-2h-weekend",
+          "labelAr": "ساعة أيام الدراسة، وساعتين في الويكند",
+          "childLabelAr": "ساعة في المدرسة، وساعتين بالويكند",
+          "clauseAr": "ساعة في أيام الدراسة، وساعتين في الويكند.",
+          "icon": "📅",
+          "rank": 3
+        },
+        {
+          "id": "when-2h",
+          "labelAr": "ساعتين يوميًا",
+          "childLabelAr": "ساعتين كل يوم",
+          "clauseAr": "ساعتين يوميًا، بعد الواجبات.",
+          "icon": "🕓",
+          "rank": 4
+        },
+        {
+          "id": "when-3h",
+          "labelAr": "ثلاث ساعات يوميًا",
+          "childLabelAr": "ثلاث ساعات كل يوم",
+          "clauseAr": "ثلاث ساعات يوميًا، بعد الواجبات.",
+          "icon": "🕕",
+          "rank": 5
+        }
+      ]
+    },
+    {
+      "id": "talk",
+      "textParentAr": "مع مين يتكلم داخل اللعبة؟",
+      "textChildAr": "مع مين تبي تتكلم وأنت تلعب؟",
+      "options": [
+        {
+          "id": "talk-none",
+          "labelAr": "لا أحد — المحادثة مقفلة",
+          "childLabelAr": "ما أكلم أحد",
+          "clauseAr": "المحادثة مقفلة، والتواصل يكون معنا في البيت.",
+          "icon": "🔕",
+          "rank": 1
+        },
+        {
+          "id": "talk-known-text",
+          "labelAr": "كتابة فقط مع أصحاب يعرفهم في الواقع",
+          "childLabelAr": "أكتب لأصحابي اللي أعرفهم بس",
+          "clauseAr": "محادثة كتابية فقط، مع أصحاب نعرفهم في الواقع.",
+          "icon": "💬",
+          "rank": 2
+        },
+        {
+          "id": "talk-known",
+          "labelAr": "كتابة وصوت مع أصحاب يعرفهم في الواقع",
+          "childLabelAr": "أكلم أصحابي اللي أعرفهم بالصوت والكتابة",
+          "clauseAr": "كتابة وصوت مع أصحاب نعرفهم في الواقع فقط.",
+          "icon": "🎧",
+          "rank": 3
+        },
+        {
+          "id": "talk-all-approved",
+          "labelAr": "أي أحد، بعد ما يستأذن ونوافق",
+          "childLabelAr": "أي أحد، بس أستأذن قبل",
+          "clauseAr": "أي شخص جديد يستأذن عليه قبل، ونقرر مع بعض.",
+          "icon": "🤝",
+          "rank": 4
+        }
+      ]
+    },
+    {
+      "id": "purchases",
+      "textParentAr": "وش رأيك في المشتريات داخل اللعبة؟",
+      "textChildAr": "وش تبي في الشراء داخل اللعبة؟",
+      "options": [
+        {
+          "id": "buy-none",
+          "labelAr": "لا شي — المشتريات مقفلة",
+          "childLabelAr": "ما أشتري شي",
+          "clauseAr": "ما فيه مشتريات داخل اللعبة، والمشتريات مقفلة من الإعدادات.",
+          "icon": "🚫",
+          "rank": 1
+        },
+        {
+          "id": "buy-ask",
+          "labelAr": "بإذن، كل مرة",
+          "childLabelAr": "أستأذن كل مرة",
+          "clauseAr": "أي شراء يكون بإذن مسبق، كل مرة.",
+          "icon": "🙋",
+          "rank": 2
+        },
+        {
+          "id": "buy-allowance",
+          "labelAr": "مصروف شهري محدد يتفق عليه",
+          "childLabelAr": "مصروف شهري محدد",
+          "clauseAr": "مصروف شهري محدد نتفق على مبلغه، وما نتعداه.",
+          "icon": "💳",
+          "rank": 3
+        }
+      ]
+    }
+  ],
+  "midpointRules": [
+    {
+      "questionId": "when",
+      "between": ["when-30m", "when-1h"],
+      "clauseAr": "نص ساعة في أيام الدراسة، وساعة في الويكند."
+    },
+    {
+      "questionId": "when",
+      "between": ["when-1h", "when-2h"],
+      "clauseAr": "ساعة في أيام الدراسة، وساعتين في الويكند."
+    },
+    {
+      "questionId": "when",
+      "between": ["when-1h", "when-3h"],
+      "clauseAr": "ساعتين في الويكند، وساعة في أيام الدراسة."
+    },
+    {
+      "questionId": "when",
+      "between": ["when-2h", "when-3h"],
+      "clauseAr": "ساعتين في أيام الدراسة، وثلاث ساعات في الويكند."
+    },
+    {
+      "questionId": "talk",
+      "between": ["talk-none", "talk-known-text"],
+      "clauseAr": "المحادثة مقفلة الحين، ونجرب الكتابة مع أصحاب نعرفهم بعد المراجعة الجاية."
+    },
+    {
+      "questionId": "talk",
+      "between": ["talk-known", "talk-all-approved"],
+      "clauseAr": "كتابة وصوت مع أصحاب نعرفهم، وأي شخص جديد نتعرف عليه مع بعض قبل."
+    },
+    {
+      "questionId": "purchases",
+      "between": ["buy-none", "buy-ask"],
+      "clauseAr": "المشتريات مقفلة، ونقدر نشتري مع بعض في المناسبات بعد ما نتفق."
+    },
+    {
+      "questionId": "purchases",
+      "between": ["buy-ask", "buy-allowance"],
+      "clauseAr": "الشراء بإذن، ولو التزمنا شهرين نجرب مصروف شهري محدد."
+    }
+  ],
+  "parentCommitments": [
+    { "id": "play-together", "labelAr": "أجرب اللعبة معك مرة على الأقل", "icon": "🎮" },
+    { "id": "no-confiscate", "labelAr": "ما أصادر الجوال بدون ما نتناقش", "icon": "🗣️" },
+    { "id": "phone-free-meals", "labelAr": "أنا بعد أخلي الجوال وقت الأكل", "icon": "🍽️" },
+    { "id": "warn-before-end", "labelAr": "أنبهك قبل نهاية الوقت بعشر دقايق", "icon": "⏰" },
+    { "id": "listen-first", "labelAr": "إذا صار شي مزعج في اللعبة، أسمعك قبل ما أحكم", "icon": "👂" },
+    { "id": "review-together", "labelAr": "نراجع الاتفاق مع بعض بعد أسبوعين", "icon": "🔁" }
+  ],
+  "teenSuggestions": [
+    { "id": "choose-time", "labelAr": "أختار وقت لعبي بنفسي ضمن المدة المتفق عليها", "icon": "🗓️" },
+    { "id": "bonus-weekend", "labelAr": "إذا التزمت طول الأسبوع، أطلب نص ساعة زيادة بالويكند", "icon": "⭐" },
+    { "id": "finish-match", "labelAr": "إذا خلص الوقت وأنا في مباراة، أكمّلها وأطلع", "icon": "🏁" },
+    { "id": "friend-intro", "labelAr": "أعرّفكم على أي صاحب جديد أبي ألعب معه", "icon": "👋" },
+    { "id": "no-phone-bed", "labelAr": "الجوال برا الغرفة وقت النوم", "icon": "🌙" },
+    { "id": "tell-if-bothered", "labelAr": "إذا ضايقني أحد في اللعبة، أقول لكم بدون ما أخاف من العقاب", "icon": "🛟" }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "switch",
+  "nameAr": "نينتندو سويتش",
+  "nameEn": "Nintendo Switch",
+  "toolNameEn": "Nintendo Switch Parental Controls",
+  "officialGuideUrl": "https://www.nintendo.com/us/switch/parental-controls/",
+  "officialGuideTitle": "Nintendo: Parental Controls",
+  "verifiedAt": null,
+  "linkCheckedAt": null,
+  "steps": [
+    {
+      "id": "switch-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "تطبيق Nintendo Switch Parental Controls ← Restriction Level ← Communicating with Others: اقفلها أو حددها لألعاب معينة.",
+      "sourceUrl": "https://example.org/demo/platforms/switch/strangerChat",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "switch-purchases-2",
+      "pointKey": "purchases",
+      "stepAr": "حساب Nintendo Account للعائلة ← Spending restrictions: امنع الشراء في eShop أو حدد مبلغ.",
+      "sourceUrl": "https://example.org/demo/platforms/switch/purchases",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "switch-content-3",
+      "pointKey": "content",
+      "stepAr": "Parental Controls ← Restriction Level: اختر مستوى العمر المناسب.",
+      "sourceUrl": "https://example.org/demo/platforms/switch/content",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "switch-sessionpause-4",
+      "pointKey": "sessionPause",
+      "stepAr": "Parental Controls ← Play-Time Limit: حدد الوقت، واختر «Suspend Software» لو تبي اللعبة تتوقف عند انتهاء الوقت.",
+      "sourceUrl": "https://example.org/demo/platforms/switch/sessionPause",
+      "verifiedAt": null,
+      "isDemo": true
+    }
+  ]
+}

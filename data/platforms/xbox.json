@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "xbox",
+  "nameAr": "إكس بوكس",
+  "nameEn": "Xbox",
+  "toolNameEn": "Xbox Family Settings",
+  "officialGuideUrl": "https://www.xbox.com/en-US/family-hub",
+  "officialGuideTitle": "Xbox Family Hub",
+  "verifiedAt": null,
+  "linkCheckedAt": null,
+  "steps": [
+    {
+      "id": "xbox-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "تطبيق Xbox Family Settings ← حساب الطفل ← Privacy & online: «Communicate with others» على «Friends» أو «Blocked».",
+      "sourceUrl": "https://example.org/demo/platforms/xbox/strangerChat",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "xbox-purchases-2",
+      "pointKey": "purchases",
+      "stepAr": "Xbox Family Settings ← Spending: فعّل «Ask to buy» وحط رصيد محدد إن حبيت.",
+      "sourceUrl": "https://example.org/demo/platforms/xbox/purchases",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "xbox-content-3",
+      "pointKey": "content",
+      "stepAr": "Xbox Family Settings ← Content restrictions: اختر الحد العمري للألعاب والتطبيقات.",
+      "sourceUrl": "https://example.org/demo/platforms/xbox/content",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "xbox-sessionpause-4",
+      "pointKey": "sessionPause",
+      "stepAr": "Xbox Family Settings ← Screen time: حدد الأيام والساعات.",
+      "sourceUrl": "https://example.org/demo/platforms/xbox/sessionPause",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "xbox-searchandstore-5",
+      "pointKey": "searchAndStore",
+      "stepAr": "Content restrictions ← Web filtering على Microsoft Edge.",
+      "sourceUrl": "https://example.org/demo/platforms/xbox/searchAndStore",
+      "verifiedAt": null,
+      "isDemo": true
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "playstation",
+  "nameAr": "بلايستيشن",
+  "nameEn": "PlayStation",
+  "toolNameEn": "PlayStation Family Management",
+  "officialGuideUrl": "https://www.playstation.com/en-us/parental-controls/",
+  "officialGuideTitle": "PlayStation: Parental controls",
+  "verifiedAt": null,
+  "linkCheckedAt": null,
+  "steps": [
+    {
+      "id": "playstation-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "Family Management ← حساب الطفل ← Communication and User-Generated Content: اختر «Restrict».",
+      "sourceUrl": "https://example.org/demo/platforms/playstation/strangerChat",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "playstation-purchases-2",
+      "pointKey": "purchases",
+      "stepAr": "Family Management ← Monthly Spending Limit: حط حد شهري، أو صفر لمنع الشراء.",
+      "sourceUrl": "https://example.org/demo/platforms/playstation/purchases",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "playstation-content-3",
+      "pointKey": "content",
+      "stepAr": "Family Management ← Age Level for Games: اختر العمر المناسب.",
+      "sourceUrl": "https://example.org/demo/platforms/playstation/content",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "playstation-sessionpause-4",
+      "pointKey": "sessionPause",
+      "stepAr": "Family Management ← Play Time Settings: حدد مدة اللعب اليومية وتصرّف الجهاز عند انتهاء الوقت.",
+      "sourceUrl": "https://example.org/demo/platforms/playstation/sessionPause",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "playstation-searchandstore-5",
+      "pointKey": "searchAndStore",
+      "stepAr": "Family Management ← Web Browsing: «Restrict».",
+      "sourceUrl": "https://example.org/demo/platforms/playstation/searchAndStore",
+      "verifiedAt": null,
+      "isDemo": true
+    }
+  ]
+}

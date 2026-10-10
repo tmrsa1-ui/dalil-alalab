@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "fortnite",
+    "nameAr": "فورتنايت",
+    "nameEn": "Fortnite",
+    "aliases": [
+      "فورت نايت",
+      "فورتنايت",
+      "فورت",
+      "fortnite battle royale"
+    ],
+    "isDemo": true,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "minecraft",
+    "nameAr": "ماين كرافت",
+    "nameEn": "Minecraft",
+    "aliases": [
+      "ماينكرافت",
+      "ماين كرافت",
+      "ماين",
+      "minecraft pe",
+      "minecraft bedrock",
+      "mc"
+    ],
+    "isDemo": true,
+    "reviewStatus": "human_reviewed"
+  },
+  {
+    "slug": "no-data-demo",
+    "nameAr": "لعبة بلا بيانات (مثال)",
+    "nameEn": "No-Data Demo Game",
+    "aliases": [
+      "لعبة بلا بيانات",
+      "بلا بيانات"
+    ],
+    "isDemo": true,
+    "reviewStatus": "not_found"
+  },
+  {
+    "slug": "pubg-mobile",
+    "nameAr": "ببجي موبايل",
+    "nameEn": "PUBG Mobile",
+    "aliases": [
+      "ببجي",
+      "ببجى",
+      "pubg",
+      "pubgm",
+      "ببجي موبايل",
+      "بابجي"
+    ],
+    "isDemo": true,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "roblox",
+    "nameAr": "روبلوكس",
+    "nameEn": "Roblox",
+    "aliases": [
+      "روبلكس",
+      "روبلوكس",
+      "روبلس",
+      "roblox"
+    ],
+    "isDemo": true,
+    "reviewStatus": "human_reviewed"
+  },
+  {
+    "slug": "tiktok",
+    "nameAr": "تيك توك",
+    "nameEn": "TikTok",
+    "aliases": [
+      "تيكتوك",
+      "تك توك",
+      "تيك توك",
+      "tik tok",
+      "tiktok"
+    ],
+    "isDemo": true,
+    "reviewStatus": "auto_sourced"
+  }
+]
