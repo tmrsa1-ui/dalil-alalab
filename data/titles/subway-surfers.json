@@ -10,9 +10,12 @@
   ],
   "kind": "game",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "Sybo Games ApS",
+    "url": null
+  },
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -31,14 +34,21 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "9+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id512939461",
+      "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 9+",
+      "confidence": "auto"
     },
     "googlePlay": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "7+",
+      "descriptors": [
+        "Mild Violence"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rated for 7+",
+      "confidence": "auto"
     }
   },
   "attentionPoints": {
@@ -49,22 +59,49 @@
       "confidence": "none"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id512939461",
+          "title": "App Store (السعودية): Subway Surfers",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Subway Surfers",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Subway Surfers",
+          "quote": "Mild Violence",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Subway Surfers",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "sessionPause": {
       "status": "unknown",
@@ -77,9 +114,16 @@
   },
   "familyLens": {
     "gambling": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Subway Surfers",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
     },
     "mixedVoiceChat": {
       "status": "unknown",

@@ -94,6 +94,7 @@ export const ar = {
     summaryNone: "لا يوجد تصنيف متوفر لهذا العنوان حاليًا.",
     descriptors: "واصفات المحتوى",
     edition: (e: string) => `النسخة: ${e}`,
+    shownOn: (s: string) => `يعرضه: ${s}`,
     systems: {
       gcam: { name: "الهيئة العامة لتنظيم الإعلام", short: "GCAM" },
       esrb: { name: "ESRB", short: "ESRB" },

@@ -27,7 +27,13 @@ export function PrayerPause({ data }: { data: Title["prayerPause"] }) {
           {data.noteAr ? <p className="mt-2">{data.noteAr}</p> : null}
           <div className="text-sm">
             {data.sources.map((s) => (
-              <SourceLink key={s.url} url={s.url} label={s.title} verifiedAt={s.verifiedAt} />
+              <SourceLink
+                key={`${s.url}|${s.quote}`}
+                url={s.url}
+                label={s.title}
+                quote={s.quote}
+                verifiedAt={s.verifiedAt}
+              />
             ))}
           </div>
         </>

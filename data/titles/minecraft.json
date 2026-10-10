@@ -11,7 +11,10 @@
   ],
   "kind": "game",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "Mojang AB",
+    "url": null
+  },
   "isDemo": false,
   "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
@@ -39,22 +42,40 @@
       "value": "9+",
       "sourceUrl": "https://apps.apple.com/sa/app/id479516143",
       "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 9+",
       "confidence": "auto"
     },
     "googlePlay": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "7+",
+      "descriptors": [
+        "Mild Violence"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rated for 7+",
+      "confidence": "auto"
     }
   },
   "attentionPoints": {
     "strangerChat": {
       "status": "present",
-      "summaryAr": "ESRB تذكر «Users Interact»: اللاعبون يتواصلون مع بعض.",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: ESRB، App Store، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/39862/minecraft/",
           "title": "ESRB: Minecraft",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id479516143",
+          "title": "App Store (السعودية): Minecraft",
+          "quote": "Messaging and Chat",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Minecraft",
           "quote": "Users Interact",
           "verifiedAt": "2026-10-10"
         }
@@ -63,11 +84,23 @@
     },
     "purchases": {
       "status": "present",
-      "summaryAr": "ESRB تذكر «In-Game Purchases»: فيها مشتريات داخل اللعبة.",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: ESRB، App Store، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/39862/minecraft/",
           "title": "ESRB: Minecraft",
+          "quote": "In-Game Purchases",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id479516143",
+          "title": "App Store (السعودية): Minecraft",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Minecraft",
           "quote": "In-Game Purchases",
           "verifiedAt": "2026-10-10"
         }
@@ -76,12 +109,24 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "ESRB: «Fantasy Violence» عنف خيالي (ضرب الوحوش حتى تسقط).",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: ESRB، App Store، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/39862/minecraft/",
           "title": "ESRB: Minecraft",
           "quote": "Fantasy Violence",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id479516143",
+          "title": "App Store (السعودية): Minecraft",
+          "quote": "Infrequent: Cartoon or Fantasy Violence, Infrequent: Contests, Infrequent: Guns or Other Weapons",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Minecraft",
+          "quote": "Mild Violence",
           "verifiedAt": "2026-10-10"
         }
       ],

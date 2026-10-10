@@ -3,6 +3,7 @@ import { useId, useState } from "react";
 import { ar } from "@/lib/i18n/ar";
 import { FAMILY_LENS_KEYS, type Title } from "@schemas/title";
 import { SourceLink } from "./SourceLink";
+import { BidiText } from "./BidiText";
 
 const STYLE = {
   present: "bg-accent-soft text-accent border-accent/40",
@@ -53,13 +54,18 @@ export function FamilyLens({ lens }: { lens: Title["familyLens"] }) {
                 </div>
                 {!unknown ? (
                   <>
-                    {item.noteAr ? <p className="mt-1 text-sm">{item.noteAr}</p> : null}
+                    {item.noteAr ? (
+                      <p className="mt-1 text-sm">
+                        <BidiText text={item.noteAr} />
+                      </p>
+                    ) : null}
                     <div className="text-sm">
                       {item.sources.map((s) => (
                         <SourceLink
-                          key={s.url}
+                          key={`${s.url}|${s.quote}`}
                           url={s.url}
                           label={s.title}
+                          quote={s.quote}
                           verifiedAt={s.verifiedAt}
                         />
                       ))}

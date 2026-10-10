@@ -29,23 +29,24 @@ Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · Z
 
 ## الأوامر
 
-| الأمر                                                      | الوظيفة                                     |
-| ---------------------------------------------------------- | ------------------------------------------- |
-| `npm run dev`                                              | خادم التطوير (يبني الفهرس أولًا)            |
-| `npm run build`                                            | `validate:data` + فهرس + `next build`       |
-| `npm run start`                                            | تشغيل نسخة الإنتاج                          |
-| `npm run test`                                             | Vitest (unit + component)                   |
-| `npm run test:e2e`                                         | Playwright (Pixel 7 + Desktop Chrome) + axe |
-| `npm run lint`                                             | ESLint                                      |
-| `npm run typecheck`                                        | `tsc --noEmit`                              |
-| `npm run validate:data`                                    | يتحقق من كل ملفات `data/` ويفشل عند أي نقص  |
-| `npm run build:index`                                      | يولّد `data/titles.index.json`              |
-| `npm run export:schema`                                    | يصدّر JSON Schema إلى `schemas/json/`       |
-| `npm run new-title -- <slug> "<الاسم العربي>" "<English>"` | قالب عنوان فاضي للمراجع                     |
-| `npm run import:verified -- <file> [--dry]`                | دمج بيانات متحقق منها + تحقق كامل           |
-| `npm run seed:real`                                        | قوالب العناوين الحقيقية العشرين             |
-| `npm run eval:agent`                                       | تقييم الوكيل مقابل `data/eval/holdout.json` |
-| `npm run format`                                           | Prettier                                    |
+| الأمر                                                      | الوظيفة                                                         |
+| ---------------------------------------------------------- | --------------------------------------------------------------- |
+| `npm run dev`                                              | خادم التطوير (يبني الفهرس أولًا)                                |
+| `npm run build`                                            | `validate:data` + فهرس + `next build`                           |
+| `npm run start`                                            | تشغيل نسخة الإنتاج                                              |
+| `npm run test`                                             | Vitest (unit + component)                                       |
+| `npm run test:e2e`                                         | Playwright (Pixel 7 + Desktop Chrome) + axe                     |
+| `npm run lint`                                             | ESLint                                                          |
+| `npm run typecheck`                                        | `tsc --noEmit`                                                  |
+| `npm run validate:data`                                    | يتحقق من كل ملفات `data/` ويفشل عند أي نقص                      |
+| `npm run build:index`                                      | يولّد `data/titles.index.json`                                  |
+| `npm run export:schema`                                    | يصدّر JSON Schema إلى `schemas/json/`                           |
+| `npm run new-title -- <slug> "<الاسم العربي>" "<English>"` | قالب عنوان فاضي للمراجع                                         |
+| `npm run import:verified -- <file> [--dry]`                | دمج بيانات متحقق منها + تحقق كامل                               |
+| `npm run seed:real`                                        | قوالب العناوين الحقيقية العشرين                                 |
+| `npm run fetch:official` / `apply:official [-- --dry]`     | جلب App Store/Google Play الرسمية وتطبيقها (بحاجة مراجعة بشرية) |
+| `npm run eval:agent`                                       | تقييم الوكيل مقابل `data/eval/holdout.json`                     |
+| `npm run format`                                           | Prettier                                                        |
 
 فحص كل checkpoint: `npm run lint && npm run typecheck && npm run test && npm run build`.
 
@@ -93,6 +94,7 @@ public/          manifest.webmanifest, icons/, sw.js
 
 - كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 105 unit/component · build · 58 e2e (موبايل + ديسكتوب، axe) كلها تمر.
 - Lighthouse محلي: الأداء 90–97، الوصولية 100.
-- `data/titles`: 20 عنوان حقيقي، كل قيمها «غير متوفر/ما لقيت» (المواقع الرسمية محجوبة عن بيئة الجلسة). البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا).
-- المطلوب بشريًا: تعبئة العناوين من المصادر الرسمية (`import:verified`)، التحقق من روابط المنصات (`verifiedAt`)، ومصدر GCAM. روابط مرشّحة في `research/candidate_sources.json`.
+- `data/titles`: 20 عنوان حقيقي. القيم من App Store السعودي وGoogle Play (السعودية) وESRB (من ملف البحث)، كلها `confidence: auto` = «بحاجة مراجعة بشرية». الناقص «غير متوفر/ما لقيت». البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا، فـminecraft/fortnite/roblox/pubg-mobile/tiktok في الـe2e تجريبية).
+- الشبكة: App Store وGoogle Play مفتوحة؛ `www.esrb.org` و`pegi.info` و`gcam.gov.sa` ومواقع أغلب الناشرين مرفوضة من البوابة. Node يحتاج `NODE_USE_ENV_PROXY=1` (مضبوط في `fetch:official`).
+- المطلوب بشريًا: مراجعة القيم وتحويلها لـ`human`، PEGI وموقع GCAM، روابط PlayStation/Xbox/Nintendo/Steam، ورابط Epic.
 - ملاحظة بيئة: `pkill -f next-server` يقتل الـshell نفسه في هذه البيئة؛ استخدم `ps aux | grep -E "next-serve[r]" | awk '{print $2}' | xargs -r kill`.

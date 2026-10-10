@@ -59,6 +59,11 @@ export function RatingTable({
           >
             <div className="min-w-0">
               <div className="font-bold">{ar.know.systems[key].name}</div>
+              {available && r.shownOn ? (
+                <div className="text-xs text-muted" dir="auto">
+                  {ar.know.shownOn(r.shownOn)}
+                </div>
+              ) : null}
               {available && r.edition ? (
                 <div className="text-xs text-muted" dir="auto">
                   {ar.know.edition(r.edition)}

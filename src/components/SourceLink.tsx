@@ -13,11 +13,14 @@ export function SourceLink({
   url,
   label,
   verifiedAt,
+  quote,
   className = "",
 }: {
   url: string;
   label?: string;
   verifiedAt?: string | null;
+  /** الاقتباس الحرفي من المصدر (يظهر تحت الرابط كدليل). */
+  quote?: string;
   className?: string;
 }) {
   const isDemo = hostLabel(url) === "example.org";
@@ -37,6 +40,11 @@ export function SourceLink({
       {isDemo ? <span className="text-xs text-demo">({ar.source.demoLink})</span> : null}
       {verifiedAt ? (
         <span className="text-xs text-muted num">{ar.know.verifiedAt(verifiedAt)}</span>
+      ) : null}
+      {quote && !isDemo ? (
+        <span className="w-full text-xs text-muted" data-testid="source-quote">
+          {ar.source.quote}: «<bdi dir="ltr">{quote}</bdi>»
+        </span>
       ) : null}
     </span>
   );

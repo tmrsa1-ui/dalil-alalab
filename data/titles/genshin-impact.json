@@ -10,9 +10,12 @@
   ],
   "kind": "game",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "COGNOSPHERE PTE. LTD.",
+    "url": null
+  },
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -31,34 +34,86 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "13+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id1517783697",
+      "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 13+",
+      "confidence": "auto"
     },
     "googlePlay": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "16+",
+      "descriptors": [
+        "Moderate Violence"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rated for 16+",
+      "confidence": "auto"
     }
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1517783697",
+          "title": "App Store (السعودية): Genshin",
+          "quote": "Messaging and Chat",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Genshin",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1517783697",
+          "title": "App Store (السعودية): Genshin",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id1517783697",
+          "title": "App Store (السعودية): Genshin",
+          "quote": "Loot Boxes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Genshin",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1517783697",
+          "title": "App Store (السعودية): Genshin",
+          "quote": "Infrequent: Cartoon or Fantasy Violence, Infrequent: Sexual Content or Nudity, Infrequent: Guns or Other Weapons",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Genshin",
+          "quote": "Moderate Violence",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
       "status": "unknown",
@@ -77,9 +132,22 @@
   },
   "familyLens": {
     "gambling": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1517783697",
+          "title": "App Store (السعودية): Genshin",
+          "quote": "Loot Boxes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Genshin",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
     },
     "mixedVoiceChat": {
       "status": "unknown",

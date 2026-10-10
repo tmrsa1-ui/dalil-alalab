@@ -10,7 +10,10 @@
   ],
   "kind": "app",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "Google LLC",
+    "url": null
+  },
   "isDemo": false,
   "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
@@ -34,12 +37,15 @@
       "value": "4+",
       "sourceUrl": "https://apps.apple.com/sa/app/id936971630",
       "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 4+",
       "confidence": "auto"
     },
     "googlePlay": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "3+",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rated for 3+",
+      "confidence": "auto"
     }
   },
   "attentionPoints": {
@@ -62,10 +68,17 @@
       "confidence": "none"
     },
     "ads": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en&gl=SA",
+          "title": "Google Play (السعودية): YouTube Kids",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "sessionPause": {
       "status": "unknown",

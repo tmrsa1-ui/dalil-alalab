@@ -24,6 +24,8 @@ export const ratingSchema = z
     quote: z.string().min(1).optional(),
     /** النسخة اللي يخصها التصنيف لو تختلف (مثل «Battle Royale»). */
     edition: z.string().min(1).optional(),
+    /** وين يظهر هذا التصنيف لو المصدر مو موقع الجهة نفسها (مثل تصنيف Gmedia كما يعرضه Google Play في السعودية). */
+    shownOn: z.string().min(1).optional(),
     /** human = راجعها إنسان، auto = قُرئت آليًا وبحاجة مراجعة بشرية. */
     confidence: z.enum(["human", "auto"]).optional(),
   })

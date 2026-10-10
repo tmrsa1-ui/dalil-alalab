@@ -24,7 +24,9 @@
     "eval:agent": "tsx scripts/eval-agent.ts",
     "format": "prettier --write .",
     "import:verified": "tsx scripts/import-verified.ts",
-    "seed:real": "tsx scripts/seed-real-titles.ts"
+    "seed:real": "tsx scripts/seed-real-titles.ts",
+    "fetch:official": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/fetch-official.ts",
+    "apply:official": "tsx scripts/apply-official.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",

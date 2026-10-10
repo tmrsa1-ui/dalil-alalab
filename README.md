@@ -3,8 +3,8 @@
 طبقة مرافقة عربية للأهالي فوق أدوات الرقابة الأبوية: **اعرف، اضبط، تحاور، اتفق.**
 مقدَّم لجائزة نورة الملاحي للابتكار الاجتماعي التقني، المسار الثاني (تعرّض الأطفال لمحتوى لا يناسب أعمارهم، وضعف فاعلية أدوات الحماية الأبوية الحالية).
 
-> **حالة البيانات (2026-10-10):** `data/titles/` فيها **20 عنوان حقيقي** (Roblox، Minecraft، Fortnite، Among Us، PUBG MOBILE، Free Fire، Brawl Stars، Clash Royale، TikTok، Snapchat، YouTube Kids، Pokémon GO، EA SPORTS FC، Call of Duty: Mobile، Subway Surfers، Genshin Impact، Stumble Guys، Discord، Instagram، Rocket League) بدون شارة «تجريبي». **لكن ولا معلومة فيها متحقق منها بعد**: كل التصنيفات «غير متوفر» وكل النقاط «ما لقيت»، لأن المواقع الرسمية كانت محجوبة عن بيئة البناء. التعبئة تكون من مصادر رسمية فقط عبر `npm run import:verified` أو يدويًا (انظر `docs/CONTENT_GUIDE.md`).
-> البطاقات التجريبية انتقلت إلى `data/demo/titles/` ولا تظهر إلا مع `DALIL_DEMO=1` (للاختبارات والعرض التجريبي).
+> **حالة البيانات (2026-10-10):** `data/titles/` فيها **20 عنوان حقيقي** بدون شارة «تجريبي». القيم المتوفرة مأخوذة من صفحات رسمية — App Store السعودي وGoogle Play بمنطقة السعودية (وتشمل شارة Gmedia السعودية لعنوانين)، وESRB من ملف البحث — ولكل قيمة رابط واقتباس حرفي وتاريخ. **كلها بحالة «بحاجة مراجعة بشرية»**: قُرئت آليًا ولم يراجعها إنسان بعد. أي شي ما له مصدر رسمي يبقى «غير متوفر/ما لقيت» (مثل PEGI وموقع GCAM اللي ما قدرنا نوصلها، وRocket League اللي ما له تطبيق جوال). التفاصيل: `research/official-report.md` و`research/import-report.md`.
+> البطاقات التجريبية في `data/demo/titles/` ولا تظهر إلا مع `DALIL_DEMO=1` (للاختبارات والعرض التجريبي).
 
 ## المشكلة
 
@@ -63,6 +63,16 @@ npm run import:verified -- research/seed_titles_verified.json         # دمج +
 
 أي عنوان فيه رابط خارج النطاقات الرسمية، أو تصنيف بدون مصدر وتاريخ، أو كلمة ممنوعة، يُرفض ولا يُكتب.
 `research/candidate_sources.json` فيه روابط **مرشّحة** من بحث عام مقيّد بالنطاقات الرسمية — غير متحقق منها ولا يستخدمها التطبيق.
+
+### التحقق من المصادر الرسمية (App Store / Google Play)
+
+```bash
+npm run fetch:official            # يجلب الصفحات الرسمية ويحفظ مقتطفات حرفية في research/official_snapshot.json
+npm run apply:official -- --dry   # يعرض التعديلات بدون كتابة
+npm run apply:official            # يكتب القيم بحالة «بحاجة مراجعة بشرية» + research/official-report.md
+```
+
+المعرّفات في `research/official_sources.json`. أي صفحة ما تطابق اسم العنوان أو فشل جلبها ما يُكتب منها شي.
 
 ## إضافة عنوان جديد ومراجعته
 

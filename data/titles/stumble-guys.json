@@ -9,9 +9,12 @@
   ],
   "kind": "game",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "Scopely, Inc.",
+    "url": null
+  },
   "isDemo": false,
-  "reviewStatus": "not_found",
+  "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
@@ -30,14 +33,18 @@
       "verifiedAt": null
     },
     "appStore": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "9+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id1541153375",
+      "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 9+",
+      "confidence": "auto"
     },
     "googlePlay": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "3+",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rated for 3+",
+      "confidence": "auto"
     }
   },
   "attentionPoints": {
@@ -48,22 +55,55 @@
       "confidence": "none"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1541153375",
+          "title": "App Store (السعودية): Stumble Guys",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Stumble Guys",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1541153375",
+          "title": "App Store (السعودية): Stumble Guys",
+          "quote": "Infrequent: Cartoon or Fantasy Violence, Infrequent: Guns or Other Weapons",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1541153375",
+          "title": "App Store (السعودية): Stumble Guys",
+          "quote": "Advertising",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Stumble Guys",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "sessionPause": {
       "status": "unknown",
@@ -76,9 +116,16 @@
   },
   "familyLens": {
     "gambling": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Stumble Guys",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
     },
     "mixedVoiceChat": {
       "status": "unknown",

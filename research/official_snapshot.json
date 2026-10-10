@@ -1,0 +1,799 @@
+{
+  "fetchedAt": "2026-10-10",
+  "method": "fetch-official.ts",
+  "titles": {
+    "roblox": {
+      "expect": "Roblox",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id431946152",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Roblox App - App Store",
+        "provider": "Roblox Corporation",
+        "ageRating": "13+",
+        "ageRatingDetails": "This app is rated 13+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Roblox",
+        "developer": "Roblox Corporation",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
+        "ratedFor": "Rated for 12+",
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://about.roblox.com/parental-controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://about.roblox.com/parental-controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "minecraft": {
+      "expect": "Minecraft",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id479516143",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Minecraft: Dream it, Build it! App - App Store",
+        "provider": "Mojang AB",
+        "ageRating": "9+",
+        "ageRatingDetails": "**Infrequent**\nCartoon or Fantasy Violence\nContests\nGuns or Other Weapons\n\n**Contains**\nMessaging and Chat\nUser-Generated Content",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Minecraft: Dream it, Build it!",
+        "developer": "Mojang",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
+        "ratedFor": "Rated for 7+",
+        "ratingLines": [
+          "Mild Violence",
+          "Users Interact, In-Game Purchases"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://www.minecraft.net/en-us/article/parental-controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.minecraft.net/en-us/article/parental-controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://help.minecraft.net/en-us/article/parental-controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://help.minecraft.net/en-us/article/parental-controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://www.xbox.com/en-US/family-hub",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.xbox.com/en-US/family-hub",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "fortnite": {
+      "expect": "Fortnite",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id6483539426",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Fortnite App - App Store",
+        "provider": "Epic Games Sweden AB",
+        "ageRating": "13+",
+        "ageRatingDetails": "This app is rated 13+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Fortnite",
+        "developer": "Epic Games, Inc",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
+        "ratedFor": "Rated for 12+",
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://www.epicgames.com/site/en-US/parental-controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.epicgames.com/site/en-US/parental-controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://safety.epicgames.com/parental-controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://safety.epicgames.com/parental-controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://www.epicgames.com/fortnite/en-US/parental-controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.epicgames.com/fortnite/en-US/parental-controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "among-us": {
+      "expect": "Among Us",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1351168404",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Among Us! App - App Store",
+        "provider": "InnerSloth LLC",
+        "ageRating": "9+",
+        "ageRatingDetails": "This app is rated 9+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Among Us",
+        "developer": "Innersloth LLC",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
+        "ratedFor": "Rated for 7+",
+        "ratingLines": [
+          "Mild Violence",
+          "Users Interact, Digital Purchases"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "pubg-mobile": {
+      "expect": "PUBG",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1330123889",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎PUBG MOBILE App - App Store",
+        "provider": "Tencent Mobile International Limited",
+        "ageRating": "13+",
+        "ageRatingDetails": "**Frequent**\nGuns or Other Weapons\n\n**Infrequent**\nRealistic Violence\n\n**Contains**\nLoot Boxes\nMessaging and Chat\nUser-Generated Content\nSocial Media",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "PUBG MOBILE",
+        "developer": "Level Infinite",
+        "ratingBody": "Gmedia",
+        "badgeSrc": "https://play-apps-features.googleusercontent.com/png/Gmedia_12_272.png",
+        "ratedFor": "12",
+        "ratingLines": [
+          "Users Interact"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "free-fire": {
+      "expect": "Free Fire",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1300146617",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Free Fire x NARUTO SHIPPUDEN App - App Store",
+        "provider": "GARENA INTERNATIONAL I PRIVATE LIMITED",
+        "ageRating": "13+",
+        "ageRatingDetails": "**Frequent**\nCartoon or Fantasy Violence\nHorror/Fear Themes\nGuns or Other Weapons\n\n**Infrequent**\nRealistic Violence\nProfanity or Crude Humour\nMature or Suggestive Themes\nAlcohol, Tobacco, Drug Use or References\n\n**Contains**\nLoot Boxes\nMessaging and Chat\nUser-Generated Content",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.dts.freefireth&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Free Fire x NARUTO SHIPPUDEN",
+        "developer": "GARENA INTERNATIONAL I",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
+        "ratedFor": "Rated for 16+",
+        "ratingLines": [
+          "Moderate Violence",
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "brawl-stars": {
+      "expect": "Brawl Stars",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1229016807",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Brawl Stars App - App Store",
+        "provider": "Supercell Oy",
+        "ageRating": "13+",
+        "ageRatingDetails": "**Frequent**\nGuns or Other Weapons\n\n**Infrequent**\nCartoon or Fantasy Violence\n\n**Contains**\nMessaging and Chat",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Brawl Stars",
+        "developer": "Supercell",
+        "ratingBody": "Gmedia",
+        "badgeSrc": "https://play-apps-features.googleusercontent.com/png/Gmedia_7_272.png",
+        "ratedFor": "7",
+        "ratingLines": [],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://supercell.com/en/parents/",
+          "fetchedAt": "2026-10-10",
+          "status": 200,
+          "finalUrl": "https://supercell.com/en/parents/",
+          "finalAllowed": true,
+          "pageTitle": "Parent&#x27;s Guide × Supercell",
+          "mentionsParental": true
+        }
+      ]
+    },
+    "clash-royale": {
+      "expect": "Clash Royale",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1053012308",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Clash Royale App - App Store",
+        "provider": "Supercell Oy",
+        "ageRating": "9+",
+        "ageRatingDetails": "This app is rated 9+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.supercell.clashroyale&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Clash Royale",
+        "developer": "Supercell",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
+        "ratedFor": "Rated for 16+",
+        "ratingLines": [
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://supercell.com/en/parents/",
+          "fetchedAt": "2026-10-10",
+          "status": 200,
+          "finalUrl": "https://supercell.com/en/parents/",
+          "finalAllowed": true,
+          "pageTitle": "Parent&#x27;s Guide × Supercell",
+          "mentionsParental": true
+        }
+      ]
+    },
+    "tiktok": {
+      "expect": "TikTok",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id835599320",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎TikTok - Videos, Music & LIVE App - App Store",
+        "provider": "TIKTOK PTE. LTD.",
+        "ageRating": "13+",
+        "ageRatingDetails": "This app is rated 13+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "TikTok",
+        "developer": "TikTok Pte. Ltd.",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
+        "ratedFor": "Rated for 12+",
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, Shares Location, In-App Purchases"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "snapchat": {
+      "expect": "Snapchat",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id447188370",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Snapchat: Chat with friends App - App Store",
+        "provider": "Snap, Inc.",
+        "ageRating": "13+",
+        "ageRatingDetails": "This app is rated 13+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Snapchat",
+        "developer": "Snap Inc",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
+        "ratedFor": "Rated for 12+",
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, Shares Location, In-App Purchases"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://values.snap.com/safety/family-center",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://values.snap.com/safety/family-center",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://parents.snapchat.com/family-center",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://parents.snapchat.com/family-center",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "youtube-kids": {
+      "expect": "YouTube Kids",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id936971630",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎YouTube Kids App - App Store",
+        "provider": "Google LLC",
+        "ageRating": "4+",
+        "ageRatingDetails": "Made For Ages 0–5\n\nThis app is rated 4+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": null
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "YouTube Kids",
+        "developer": "Google LLC",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/_re6mcALPaqotePA0WkgYeOQ6TighHRUS62FRmREPEhyZPdGM3QmRjcSpiMt6Pz1O-WZyvEIy4mtGHj9zw=s38",
+        "ratedFor": "Rated for 3+",
+        "ratingLines": [],
+        "containsAds": true,
+        "inAppPurchasesLabel": false
+      },
+      "guides": [
+        {
+          "url": "https://support.google.com/youtubekids/?hl=ar",
+          "fetchedAt": "2026-10-10",
+          "status": 200,
+          "finalUrl": "https://support.google.com/youtubekids/?hl=ar",
+          "finalAllowed": true,
+          "pageTitle": "المساعدة بشأن \"YouTube للعائلات\"",
+          "mentionsParental": true
+        },
+        {
+          "url": "https://support.google.com/youtubekids/answer/6172308?hl=en",
+          "fetchedAt": "2026-10-10",
+          "status": 200,
+          "finalUrl": "https://support.google.com/youtubekids/answer/6172308?hl=en",
+          "finalAllowed": true,
+          "pageTitle": "Parental controls for YouTube Kids profiles - Computer - YouTube For Families Help",
+          "mentionsParental": true
+        }
+      ]
+    },
+    "pokemon-go": {
+      "expect": "Pokémon GO",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1094591345",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Pokémon GO App - App Store",
+        "provider": "Scopely Explore, Inc.",
+        "ageRating": "9+",
+        "ageRatingDetails": "This app is rated 9+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Pokémon GO",
+        "developer": "Scopely Explore, Inc.",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
+        "ratedFor": "Rated for 16+",
+        "ratingLines": [
+          "Shares Location, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "ea-sports-fc": {
+      "expect": "FC",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1094930513",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎EA SPORTS FC™ Football Mobile App - App Store",
+        "provider": "EA Swiss Sarl",
+        "ageRating": "9+",
+        "ageRatingDetails": "**Contains**\nLoot Boxes\nAdvertising\nMessaging and Chat\nUser-Generated Content",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "EA SPORTS FC Soccer Mobile 27",
+        "developer": "ELECTRONIC ARTS",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
+        "ratedFor": "Rated for 16+",
+        "ratingLines": [
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "call-of-duty-mobile": {
+      "expect": "Call of Duty",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1287282214",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Call of Duty®: Mobile App - App Store",
+        "provider": "Activision Publishing, Inc.",
+        "ageRating": "18+",
+        "ageRatingDetails": "**Frequent**\nRealistic Violence\nGuns or Other Weapons\n\n**Infrequent**\nCartoon or Fantasy Violence\nProfanity or Crude Humour\n\n**Contains**\nLoot Boxes\nAdvertising\nMessaging and Chat",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Call of Duty®: Mobile",
+        "developer": "Activision Publishing, Inc.",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
+        "ratedFor": "Rated for 16+",
+        "ratingLines": [
+          "Strong Violence",
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "subway-surfers": {
+      "expect": "Subway Surfers",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id512939461",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Subway Surfers App - App Store",
+        "provider": "Sybo Games ApS",
+        "ageRating": "9+",
+        "ageRatingDetails": "This app is rated 9+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Subway Surfers",
+        "developer": "SYBO Games",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
+        "ratedFor": "Rated for 7+",
+        "ratingLines": [
+          "Mild Violence",
+          "In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "genshin-impact": {
+      "expect": "Genshin",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1517783697",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Genshin Impact 6th Anniversary App - App Store",
+        "provider": "COGNOSPHERE PTE. LTD.",
+        "ageRating": "13+",
+        "ageRatingDetails": "**Infrequent**\nCartoon or Fantasy Violence\nSexual Content or Nudity\nGuns or Other Weapons\n\n**Contains**\nLoot Boxes\nMessaging and Chat\nUser-Generated Content\nSocial Media",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Genshin Impact 6th Anniversary",
+        "developer": "COGNOSPHERE PTE. LTD.",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
+        "ratedFor": "Rated for 16+",
+        "ratingLines": [
+          "Moderate Violence",
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "stumble-guys": {
+      "expect": "Stumble Guys",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id1541153375",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Stumble Guys App - App Store",
+        "provider": "Scopely, Inc.",
+        "ageRating": "9+",
+        "ageRatingDetails": "**Infrequent**\nCartoon or Fantasy Violence\nGuns or Other Weapons\n\n**Contains**\nAdvertising\nUser-Generated Content",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Stumble Guys",
+        "developer": "Scopely",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/_re6mcALPaqotePA0WkgYeOQ6TighHRUS62FRmREPEhyZPdGM3QmRjcSpiMt6Pz1O-WZyvEIy4mtGHj9zw=s38",
+        "ratedFor": "Rated for 3+",
+        "ratingLines": [
+          "In-Game Purchases (Includes Random Items)"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": []
+    },
+    "discord": {
+      "expect": "Discord",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id985746746",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Discord – Talk, Play, Hang Out App - App Store",
+        "provider": "Discord Inc.",
+        "ageRating": "13+",
+        "ageRatingDetails": "This app is rated 13+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.discord&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Discord - Talk, Play, Hang Out",
+        "developer": "Discord Inc.",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
+        "ratedFor": "Rated for 12+",
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, In-App Purchases"
+        ],
+        "containsAds": false,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://discord.com/safety-family-center",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://discord.com/safety-family-center",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "instagram": {
+      "expect": "Instagram",
+      "appStore": {
+        "url": "https://apps.apple.com/sa/app/id389801252",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "‎Instagram App - App Store",
+        "provider": "Instagram, Inc.",
+        "ageRating": "13+",
+        "ageRatingDetails": "This app is rated 13+ with content restrictions.\n\nSome content may be rated higher, and may therefore be restricted and managed by the developer through in-app controls.",
+        "inAppPurchases": "Yes"
+      },
+      "googlePlay": {
+        "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Instagram",
+        "developer": "Instagram",
+        "ratingBody": "IARC",
+        "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
+        "ratedFor": "Rated for 12+",
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, Shares Location, In-App Purchases"
+        ],
+        "containsAds": true,
+        "inAppPurchasesLabel": true
+      },
+      "guides": [
+        {
+          "url": "https://help.instagram.com/995996839195964",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://help.instagram.com/995996839195964",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://familycenter.meta.com/",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://familycenter.meta.com/",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    },
+    "rocket-league": {
+      "expect": "Rocket League",
+      "appStore": null,
+      "googlePlay": null,
+      "guides": [
+        {
+          "url": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        },
+        {
+          "url": "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031",
+          "fetchedAt": "2026-10-10",
+          "status": 0,
+          "finalUrl": "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031",
+          "finalAllowed": true,
+          "pageTitle": "",
+          "mentionsParental": false
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,7 @@ import type { PointKey } from "@schemas/common";
 import type { Title } from "@schemas/title";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { SourceLink } from "./SourceLink";
+import { BidiText } from "./BidiText";
 
 type Point = Title["attentionPoints"][PointKey];
 
@@ -65,7 +66,9 @@ export function AttentionPoint({
             </p>
           ) : (
             <>
-              <p className="mt-2 line-clamp-3">{point.summaryAr}</p>
+              <p className="mt-2">
+                <BidiText text={point.summaryAr} />
+              </p>
               {extras ? (
                 <ul className="mt-2 flex flex-wrap gap-2 text-sm">
                   {extras.map(([label, v]) => (
@@ -85,7 +88,13 @@ export function AttentionPoint({
               <div className="mt-1 text-sm">
                 <span className="sr-only">{ar.know.sourcesLabel}: </span>
                 {point.sources.map((s) => (
-                  <SourceLink key={s.url} url={s.url} label={s.title} verifiedAt={s.verifiedAt} />
+                  <SourceLink
+                    key={`${s.url}|${s.quote}`}
+                    url={s.url}
+                    label={s.title}
+                    quote={s.quote}
+                    verifiedAt={s.verifiedAt}
+                  />
                 ))}
               </div>
             </>

@@ -13,15 +13,21 @@
   ],
   "kind": "game",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "Tencent Mobile International Limited",
+    "url": null
+  },
   "isDemo": false,
   "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "12",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Gmedia_12_272.png — 12",
+      "shownOn": "Google Play (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": null,
@@ -37,6 +43,7 @@
       "value": "13+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1330123889",
       "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 13+",
       "confidence": "auto"
     },
     "googlePlay": {
@@ -47,28 +54,68 @@
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Messaging and Chat",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+          "title": "Google Play (السعودية): PUBG",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "purchases": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Loot Boxes",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Frequent: Guns or Other Weapons, Infrequent: Realistic Violence",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+          "title": "Google Play (السعودية): PUBG",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "sessionPause": {
       "status": "unknown",
@@ -81,9 +128,16 @@
   },
   "familyLens": {
     "gambling": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Loot Boxes",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
     },
     "mixedVoiceChat": {
       "status": "unknown",

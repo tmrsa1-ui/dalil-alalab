@@ -9,7 +9,10 @@
   ],
   "kind": "game",
   "platforms": [],
-  "publisher": null,
+  "publisher": {
+    "name": "Epic Games Sweden AB",
+    "url": null
+  },
   "isDemo": false,
   "reviewStatus": "auto_sourced",
   "lastReviewedAt": null,
@@ -40,22 +43,34 @@
       "value": "13+",
       "sourceUrl": "https://apps.apple.com/sa/app/id6483539426",
       "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 13+",
       "confidence": "auto"
     },
     "googlePlay": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "12+",
+      "descriptors": [
+        "Parental Guidance Recommended"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rated for 12+",
+      "confidence": "auto"
     }
   },
   "attentionPoints": {
     "strangerChat": {
       "status": "present",
-      "summaryAr": "ESRB تذكر «Users Interact»: تواصل مع لاعبين آخرين.",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: ESRB، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Fortnite",
           "quote": "Users Interact",
           "verifiedAt": "2026-10-10"
         }
@@ -64,12 +79,24 @@
     },
     "purchases": {
       "status": "present",
-      "summaryAr": "ESRB تذكر «In-Game Purchases».",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: ESRB، App Store، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite",
           "quote": "In-Game Purchases",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id6483539426",
+          "title": "App Store (السعودية): Fortnite",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Fortnite",
+          "quote": "In-Game Purchases (Includes Random Items)",
           "verifiedAt": "2026-10-10"
         }
       ],
@@ -77,12 +104,18 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "ESRB: «Violence, Suggestive Themes, Lyrics» أسلحة نارية، وشخصية نسائية بلبس كاشف، وكلمات أغاني فيها ألفاظ وإشارات للمخدرات.",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: ESRB، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite",
           "quote": "Violence, Suggestive Themes, Lyrics",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Fortnite",
+          "quote": "Parental Guidance Recommended",
           "verifiedAt": "2026-10-10"
         }
       ],
@@ -105,9 +138,16 @@
   },
   "familyLens": {
     "gambling": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Fortnite",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
     },
     "mixedVoiceChat": {
       "status": "unknown",

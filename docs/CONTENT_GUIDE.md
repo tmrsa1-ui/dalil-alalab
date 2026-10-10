@@ -18,6 +18,14 @@ npm run import:verified -- research/seed_titles_verified.json
 الملف: `{ "titles": [ { "slug": "roblox", "ratings": {...}, "attentionPoints": {...}, ... } ] }` بنفس حقول هذا الدليل. أي عنوان يفشل التحقق ما يُكتب.
 روابط مرشّحة (غير متحقق منها) في `research/candidate_sources.json` — افتح كل رابط بنفسك قبل ما تستخدمه.
 
+### أو: جلب المتاجر الرسمية آليًا
+
+```bash
+npm run fetch:official && npm run apply:official -- --dry && npm run apply:official
+```
+
+يكتب قيم App Store السعودي وGoogle Play (السعودية) بحالة «بحاجة مراجعة بشرية». مهمة المراجع: يفتح كل رابط، يتأكد، ثم يغيّر `confidence` إلى `human` ويضبط `reviewStatus: human_reviewed` و`lastReviewedAt`.
+
 ## 2. القواعد الذهبية
 
 - **لا تكتب شي ما شفته بعينك في مصدر رسمي.** الفراغ أحسن من التخمين.
