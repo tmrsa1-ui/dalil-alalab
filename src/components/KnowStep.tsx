@@ -6,7 +6,16 @@ import { AttentionPoint } from "./AttentionPoint";
 import { FamilyLens } from "./FamilyLens";
 import { PrayerPause } from "./PrayerPause";
 
-export function KnowStep({ title, age }: { title: Title; age: number | null }) {
+export function KnowStep({
+  title,
+  age,
+  reserveSummary = false,
+}: {
+  title: Title;
+  age: number | null;
+  /** يحجز مكان سطر الملخص قبل ما نعرف العمر (يمنع إزاحة التخطيط). */
+  reserveSummary?: boolean;
+}) {
   return (
     <div className="grid gap-6">
       <section aria-labelledby="ratings-h">
@@ -14,7 +23,7 @@ export function KnowStep({ title, age }: { title: Title; age: number | null }) {
           {ar.know.ratingsTitle}
         </h3>
         <p className="mb-3 text-sm text-muted">{ar.know.ratingsLead}</p>
-        <RatingTable ratings={title.ratings} age={age} />
+        <RatingTable ratings={title.ratings} age={age} reserveSummary={reserveSummary} />
       </section>
       <section aria-labelledby="points-h">
         <h3 id="points-h" className="text-xl font-bold">

@@ -3,23 +3,9 @@
   "slug": "minecraft",
   "nameAr": "ماين كرافت",
   "nameEn": "Minecraft",
-  "aliases": [
-    "ماينكرافت",
-    "ماين كرافت",
-    "ماين",
-    "minecraft pe",
-    "minecraft bedrock",
-    "mc"
-  ],
+  "aliases": ["ماينكرافت", "ماين كرافت", "ماين", "minecraft pe", "minecraft bedrock", "mc"],
   "kind": "game",
-  "platforms": [
-    "ios",
-    "android",
-    "playstation",
-    "xbox",
-    "switch",
-    "pc"
-  ],
+  "platforms": ["ios", "android", "playstation", "xbox", "switch", "pc"],
   "publisher": {
     "name": "Mojang Studios",
     "url": "https://example.org/demo/minecraft/publisher"
@@ -35,17 +21,13 @@
     },
     "esrb": {
       "value": "E10+",
-      "descriptors": [
-        "Fantasy Violence"
-      ],
+      "descriptors": ["Fantasy Violence"],
       "sourceUrl": "https://example.org/demo/minecraft/rating-esrb",
       "verifiedAt": "2026-10-10"
     },
     "pegi": {
       "value": "7",
-      "descriptors": [
-        "Violence"
-      ],
+      "descriptors": ["Violence"],
       "sourceUrl": "https://example.org/demo/minecraft/rating-pegi",
       "verifiedAt": "2026-10-10"
     },
@@ -215,8 +197,5 @@
     ],
     "platformOverrides": {}
   },
-  "conversationTags": [
-    "strangerChat",
-    "purchases"
-  ]
+  "conversationTags": ["strangerChat", "purchases"]
 }

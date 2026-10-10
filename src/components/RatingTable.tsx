@@ -16,16 +16,29 @@ const CMP_LABEL: Record<AgeComparison, string> = {
 };
 
 /** الترتيب ثابت: GCAM أولًا ثم ESRB ثم PEGI ثم App Store ثم Google Play. */
-export function RatingTable({ ratings, age }: { ratings: Title["ratings"]; age: number | null }) {
+export function RatingTable({
+  ratings,
+  age,
+  reserveSummary = false,
+}: {
+  ratings: Title["ratings"];
+  age: number | null;
+  reserveSummary?: boolean;
+}) {
   const rows = RATING_KEYS.map((key) => {
     const r = ratings[key];
     const available = r.value !== null && !!r.sourceUrl && !!r.verifiedAt;
-    const cmp: AgeComparison = available && age !== null ? compareAge(key, r.value, age) : "unavailable";
+    const cmp: AgeComparison =
+      available && age !== null ? compareAge(key, r.value, age) : "unavailable";
     return { key, r, available, cmp };
   });
   const anyAbove = rows.some((x) => x.cmp === "above");
   const anyWithin = rows.some((x) => x.cmp === "within");
-  const summary = anyAbove ? ar.know.summaryAbove : anyWithin ? ar.know.summaryWithin : ar.know.summaryNone;
+  const summary = anyAbove
+    ? ar.know.summaryAbove
+    : anyWithin
+      ? ar.know.summaryWithin
+      : ar.know.summaryNone;
 
   return (
     <div>
@@ -33,6 +46,8 @@ export function RatingTable({ ratings, age }: { ratings: Title["ratings"]; age: 
         <p className="mb-3 font-semibold" data-testid="rating-summary" role="status">
           {summary}
         </p>
+      ) : reserveSummary ? (
+        <p className="mb-3 min-h-[1.75em]" aria-hidden="true" />
       ) : null}
       <ul className="grid gap-2" aria-label={ar.know.ratingsTitle} data-testid="rating-table">
         {rows.map(({ key, r, available, cmp }) => (
@@ -49,7 +64,10 @@ export function RatingTable({ ratings, age }: { ratings: Title["ratings"]; age: 
             </div>
             <div className="flex flex-wrap items-center gap-2">
               {available ? (
-                <span className="num rounded-lg border-2 border-ink px-2 py-0.5 text-lg font-extrabold" dir="ltr">
+                <span
+                  className="num rounded-lg border-2 border-ink px-2 py-0.5 text-lg font-extrabold"
+                  dir="ltr"
+                >
                   {r.value}
                 </span>
               ) : (

@@ -3,20 +3,9 @@
   "slug": "roblox",
   "nameAr": "روبلوكس",
   "nameEn": "Roblox",
-  "aliases": [
-    "روبلكس",
-    "روبلوكس",
-    "روبلس",
-    "roblox"
-  ],
+  "aliases": ["روبلكس", "روبلوكس", "روبلس", "roblox"],
   "kind": "game",
-  "platforms": [
-    "ios",
-    "android",
-    "xbox",
-    "playstation",
-    "pc"
-  ],
+  "platforms": ["ios", "android", "xbox", "playstation", "pc"],
   "publisher": {
     "name": "Roblox Corporation",
     "url": "https://example.org/demo/roblox/publisher"
@@ -185,9 +174,5 @@
     ],
     "platformOverrides": {}
   },
-  "conversationTags": [
-    "strangerChat",
-    "content",
-    "purchases"
-  ]
+  "conversationTags": ["strangerChat", "content", "purchases"]
 }

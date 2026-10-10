@@ -28,7 +28,9 @@ export default function HomePage() {
               <li key={t.slug}>
                 <Link href={`/title/${t.slug}`} className="btn btn-secondary min-h-[44px] text-sm">
                   {t.nameAr}
-                  {t.isDemo ? <span className="chip bg-demo-soft text-demo">{ar.demo.badge}</span> : null}
+                  {t.isDemo ? (
+                    <span className="chip bg-demo-soft text-demo">{ar.demo.badge}</span>
+                  ) : null}
                 </Link>
               </li>
             ))}

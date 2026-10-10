@@ -117,7 +117,9 @@ export function SearchBox({
                 {r.entry.nameEn}
               </span>
             </span>
-            {r.entry.isDemo ? <span className="chip bg-demo-soft text-demo">{ar.search.demo}</span> : null}
+            {r.entry.isDemo ? (
+              <span className="chip bg-demo-soft text-demo">{ar.search.demo}</span>
+            ) : null}
           </li>
         ))}
       </ul>

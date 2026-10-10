@@ -21,7 +21,8 @@ type StepView = {
   isDemo: boolean;
 };
 
-const byKey = (a: StepView, b: StepView) => CONTROL_KEYS.indexOf(a.pointKey) - CONTROL_KEYS.indexOf(b.pointKey);
+const byKey = (a: StepView, b: StepView) =>
+  CONTROL_KEYS.indexOf(a.pointKey) - CONTROL_KEYS.indexOf(b.pointKey);
 
 export function PlatformTabs({
   title,
@@ -77,7 +78,9 @@ export function PlatformTabs({
 
   return (
     <div>
-      {!title.platforms.length ? <p className="mb-2 text-sm text-muted">{ar.setup.noPlatforms}</p> : null}
+      {!title.platforms.length ? (
+        <p className="mb-2 text-sm text-muted">{ar.setup.noPlatforms}</p>
+      ) : null}
       <div
         role="tablist"
         aria-label={ar.setup.tabsLabel}
@@ -107,11 +110,20 @@ export function PlatformTabs({
         ))}
       </div>
 
-      <div role="tabpanel" id={`panel-${active}`} aria-labelledby={`tab-${active}`} tabIndex={0} className="mt-2">
+      <div
+        role="tabpanel"
+        id={`panel-${active}`}
+        aria-labelledby={`tab-${active}`}
+        tabIndex={0}
+        className="mt-2"
+      >
         {platform ? (
           <div className="card mb-3 p-3">
             <div className="text-sm text-muted">
-              {ar.setup.tool}: <span dir="ltr" className="font-semibold text-ink">{platform.toolNameEn}</span>
+              {ar.setup.tool}:{" "}
+              <span dir="ltr" className="font-semibold text-ink">
+                {platform.toolNameEn}
+              </span>
             </div>
             {platform.officialGuideUrl ? (
               <>
@@ -120,7 +132,9 @@ export function PlatformTabs({
                   label={ar.setup.officialGuideFor(platform.nameAr)}
                   verifiedAt={platform.verifiedAt}
                 />
-                {!platform.verifiedAt ? <p className="text-xs text-muted">{ar.setup.guidePending}</p> : null}
+                {!platform.verifiedAt ? (
+                  <p className="text-xs text-muted">{ar.setup.guidePending}</p>
+                ) : null}
               </>
             ) : (
               <p>

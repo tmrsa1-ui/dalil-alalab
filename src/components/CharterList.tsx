@@ -30,7 +30,9 @@ export function CharterList() {
               <h2 className="text-lg font-bold">{a.titleNameAr}</h2>
               <div className="flex items-center gap-2">
                 {a.isDemo ? <DemoBadge /> : null}
-                {isDue(a.reviewAt) ? <span className="chip bg-accent-soft text-accent">{ar.charter.due}</span> : null}
+                {isDue(a.reviewAt) ? (
+                  <span className="chip bg-accent-soft text-accent">{ar.charter.due}</span>
+                ) : null}
               </div>
             </div>
             <ul className="mt-2 list-disc ps-5 text-sm">
@@ -38,9 +40,14 @@ export function CharterList() {
                 <li key={c.questionId}>{c.clauseAr}</li>
               ))}
             </ul>
-            <p className="num mt-2 text-sm text-muted">{ar.charter.review(formatDateAr(a.reviewAt))}</p>
+            <p className="num mt-2 text-sm text-muted">
+              {ar.charter.review(formatDateAr(a.reviewAt))}
+            </p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Link href={`/agreement/print?id=${encodeURIComponent(a.id)}`} className="btn btn-secondary">
+              <Link
+                href={`/agreement/print?id=${encodeURIComponent(a.id)}`}
+                className="btn btn-secondary"
+              >
                 {ar.charter.open}
               </Link>
               <button

@@ -24,6 +24,11 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
     timeout: 240_000,
     // بدون أي متغيرات بيئة: المنتج لازم يشتغل كامل بدون LLM وبدون Supabase.
-    env: { ENABLE_AI_CARDS: "false", ANTHROPIC_API_KEY: "", SUPABASE_URL: "", SUPABASE_ANON_KEY: "" },
+    env: {
+      ENABLE_AI_CARDS: "false",
+      ANTHROPIC_API_KEY: "",
+      SUPABASE_URL: "",
+      SUPABASE_ANON_KEY: "",
+    },
   },
 });

@@ -17,4 +17,6 @@ if (fs.existsSync(file)) {
   process.exit(1);
 }
 fs.writeFileSync(file, JSON.stringify(emptyTitle(slug, nameAr, nameEn), null, 2) + "\n");
-console.log(`✓ أُنشئ ${path.relative(process.cwd(), file)} — عبّه حسب docs/CONTENT_GUIDE.md ثم شغّل npm run validate:data`);
+console.log(
+  `✓ أُنشئ ${path.relative(process.cwd(), file)} — عبّه حسب docs/CONTENT_GUIDE.md ثم شغّل npm run validate:data`,
+);

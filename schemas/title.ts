@@ -26,8 +26,10 @@ export const ratingSchema = z
   .strict()
   .superRefine((r, ctx) => {
     if (r.value !== null) {
-      if (!r.sourceUrl) ctx.addIssue({ code: "custom", message: "تصنيف بدون sourceUrl", path: ["sourceUrl"] });
-      if (!r.verifiedAt) ctx.addIssue({ code: "custom", message: "تصنيف بدون verifiedAt", path: ["verifiedAt"] });
+      if (!r.sourceUrl)
+        ctx.addIssue({ code: "custom", message: "تصنيف بدون sourceUrl", path: ["sourceUrl"] });
+      if (!r.verifiedAt)
+        ctx.addIssue({ code: "custom", message: "تصنيف بدون verifiedAt", path: ["verifiedAt"] });
     }
   });
 export type Rating = z.infer<typeof ratingSchema>;
@@ -70,7 +72,13 @@ export const sessionPausePointSchema = pointBase
   .superRefine(pointRules);
 export type AttentionPoint = z.infer<typeof attentionPointSchema>;
 
-export const FAMILY_LENS_KEYS = ["gambling", "mixedVoiceChat", "magic", "clothing", "music"] as const;
+export const FAMILY_LENS_KEYS = [
+  "gambling",
+  "mixedVoiceChat",
+  "magic",
+  "clothing",
+  "music",
+] as const;
 export type FamilyLensKey = (typeof FAMILY_LENS_KEYS)[number];
 
 export const familyLensItemSchema = z
@@ -113,10 +121,9 @@ export type TitleControlStep = z.infer<typeof controlStepSchema>;
 
 const platformOverrides = z
   .object(
-    Object.fromEntries(PLATFORM_IDS.map((p) => [p, z.array(controlStepSchema).optional()])) as Record<
-      (typeof PLATFORM_IDS)[number],
-      z.ZodOptional<z.ZodArray<typeof controlStepSchema>>
-    >,
+    Object.fromEntries(
+      PLATFORM_IDS.map((p) => [p, z.array(controlStepSchema).optional()]),
+    ) as Record<(typeof PLATFORM_IDS)[number], z.ZodOptional<z.ZodArray<typeof controlStepSchema>>>,
   )
   .strict();
 
@@ -129,7 +136,10 @@ export const titleSchema = z
     aliases: z.array(z.string().min(1)),
     kind: z.enum(["game", "app"]).default("game"),
     platforms: z.array(platformId),
-    publisher: z.object({ name: z.string().min(1), url: httpsUrl.nullable() }).strict().nullable(),
+    publisher: z
+      .object({ name: z.string().min(1), url: httpsUrl.nullable() })
+      .strict()
+      .nullable(),
     isDemo: z.boolean(),
     reviewStatus: z.enum(["human_reviewed", "auto_sourced", "not_found"]),
     lastReviewedAt: isoDate.nullable(),
@@ -167,7 +177,9 @@ export const titleSchema = z
         platformOverrides,
       })
       .strict(),
-    conversationTags: z.array(z.enum(["strangerChat", "purchases", "content", "ads", "sessionPause"])),
+    conversationTags: z.array(
+      z.enum(["strangerChat", "purchases", "content", "ads", "sessionPause"]),
+    ),
   })
   .strict()
   .superRefine((t, ctx) => {
@@ -181,7 +193,11 @@ export const titleSchema = z
       });
     }
     if (t.reviewStatus === "human_reviewed" && !t.lastReviewedAt) {
-      ctx.addIssue({ code: "custom", message: "عنوان مراجع بدون lastReviewedAt", path: ["lastReviewedAt"] });
+      ctx.addIssue({
+        code: "custom",
+        message: "عنوان مراجع بدون lastReviewedAt",
+        path: ["lastReviewedAt"],
+      });
     }
 
     // سياسة الروابط.

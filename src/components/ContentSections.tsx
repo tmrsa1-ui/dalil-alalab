@@ -1,4 +1,8 @@
-type Section = { readonly h: string; readonly p?: readonly string[]; readonly list?: readonly string[] };
+type Section = {
+  readonly h: string;
+  readonly p?: readonly string[];
+  readonly list?: readonly string[];
+};
 
 export function ContentSections({ sections }: { sections: readonly Section[] }) {
   return (
@@ -6,7 +10,9 @@ export function ContentSections({ sections }: { sections: readonly Section[] }) 
       {sections.map((s) => (
         <section key={s.h}>
           <h2>{s.h}</h2>
-          {s.p?.map((t) => <p key={t}>{t}</p>)}
+          {s.p?.map((t) => (
+            <p key={t}>{t}</p>
+          ))}
           {s.list ? (
             <ul>
               {s.list.map((t) => (

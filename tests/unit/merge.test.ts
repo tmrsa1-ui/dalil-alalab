@@ -45,11 +45,13 @@ describe("merge (البند الوسط)", () => {
     const c = mergeQuestion(q("when"), a.midpointRules, "when-30m", "when-2h");
     expect(c.optionId).toBe("when-1h");
     // talk-none(1) × talk-all-approved(4) ⇐ 2
-    expect(mergeQuestion(q("talk"), a.midpointRules, "talk-all-approved", "talk-none").optionId).toBe(
-      "talk-known-text",
-    );
+    expect(
+      mergeQuestion(q("talk"), a.midpointRules, "talk-all-approved", "talk-none").optionId,
+    ).toBe("talk-known-text");
     // buy-none(1) × buy-allowance(3) ⇐ 2
-    expect(mergeQuestion(q("purchases"), a.midpointRules, "buy-none", "buy-allowance").optionId).toBe("buy-ask");
+    expect(
+      mergeQuestion(q("purchases"), a.midpointRules, "buy-none", "buy-allowance").optionId,
+    ).toBe("buy-ask");
   });
   it("أقل من 7 ⇐ قرار الأب", () => {
     const all = mergeAll(a, { when: "when-30m", talk: "talk-none", purchases: "buy-none" }, null);

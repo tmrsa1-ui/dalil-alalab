@@ -13,7 +13,11 @@ export function generateStaticParams() {
   return getIndex().map((t) => ({ slug: t.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const t = getTitle(slug);
   return t ? { title: `${t.nameAr} (${t.nameEn})` } : {};
@@ -24,12 +28,18 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const title = getTitle(slug);
   if (!title) notFound();
   const statusLevel =
-    title.reviewStatus === "human_reviewed" ? "human" : title.reviewStatus === "auto_sourced" ? "auto" : "none";
+    title.reviewStatus === "human_reviewed"
+      ? "human"
+      : title.reviewStatus === "auto_sourced"
+        ? "auto"
+        : "none";
 
   return (
     <article>
       <header className="mb-4">
-        <p className="text-sm font-semibold text-muted">{title.kind === "app" ? ar.title.kindApp : ar.title.kindGame}</p>
+        <p className="text-sm font-semibold text-muted">
+          {title.kind === "app" ? ar.title.kindApp : ar.title.kindGame}
+        </p>
         <h1 className="text-3xl font-extrabold">
           {title.nameAr}{" "}
           <span className="text-lg font-semibold text-muted" dir="ltr" lang="en">
@@ -40,11 +50,16 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           {title.isDemo ? <DemoBadge /> : null}
           <ConfidenceBadge level={statusLevel} isDemo={title.isDemo} />
           {title.lastReviewedAt ? (
-            <span className="num text-sm text-muted">{ar.title.lastReviewed(title.lastReviewedAt)}</span>
+            <span className="num text-sm text-muted">
+              {ar.title.lastReviewed(title.lastReviewedAt)}
+            </span>
           ) : null}
         </div>
         {title.isDemo ? (
-          <p className="mt-3 rounded-xl border border-demo/40 bg-demo-soft p-3 text-sm text-demo" data-testid="demo-notice">
+          <p
+            className="mt-3 rounded-xl border border-demo/40 bg-demo-soft p-3 text-sm text-demo"
+            data-testid="demo-notice"
+          >
             {ar.title.demoNotice}
           </p>
         ) : null}

@@ -14,7 +14,11 @@ export function FamilyLens({ lens }: { lens: Title["familyLens"] }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   return (
-    <section className="card overflow-hidden" aria-labelledby={`${panelId}-h`} data-testid="family-lens">
+    <section
+      className="card overflow-hidden"
+      aria-labelledby={`${panelId}-h`}
+      data-testid="family-lens"
+    >
       <h3 id={`${panelId}-h`} className="m-0">
         <button
           type="button"
@@ -52,7 +56,12 @@ export function FamilyLens({ lens }: { lens: Title["familyLens"] }) {
                     {item.noteAr ? <p className="mt-1 text-sm">{item.noteAr}</p> : null}
                     <div className="text-sm">
                       {item.sources.map((s) => (
-                        <SourceLink key={s.url} url={s.url} label={s.title} verifiedAt={s.verifiedAt} />
+                        <SourceLink
+                          key={s.url}
+                          url={s.url}
+                          label={s.title}
+                          verifiedAt={s.verifiedAt}
+                        />
                       ))}
                     </div>
                   </>

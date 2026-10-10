@@ -165,15 +165,31 @@
     { "id": "no-confiscate", "labelAr": "ما أصادر الجوال بدون ما نتناقش", "icon": "🗣️" },
     { "id": "phone-free-meals", "labelAr": "أنا بعد أخلي الجوال وقت الأكل", "icon": "🍽️" },
     { "id": "warn-before-end", "labelAr": "أنبهك قبل نهاية الوقت بعشر دقايق", "icon": "⏰" },
-    { "id": "listen-first", "labelAr": "إذا صار شي مزعج في اللعبة، أسمعك قبل ما أحكم", "icon": "👂" },
+    {
+      "id": "listen-first",
+      "labelAr": "إذا صار شي مزعج في اللعبة، أسمعك قبل ما أحكم",
+      "icon": "👂"
+    },
     { "id": "review-together", "labelAr": "نراجع الاتفاق مع بعض بعد أسبوعين", "icon": "🔁" }
   ],
   "teenSuggestions": [
     { "id": "choose-time", "labelAr": "أختار وقت لعبي بنفسي ضمن المدة المتفق عليها", "icon": "🗓️" },
-    { "id": "bonus-weekend", "labelAr": "إذا التزمت طول الأسبوع، أطلب نص ساعة زيادة بالويكند", "icon": "⭐" },
-    { "id": "finish-match", "labelAr": "إذا خلص الوقت وأنا في مباراة، أكمّلها وأطلع", "icon": "🏁" },
+    {
+      "id": "bonus-weekend",
+      "labelAr": "إذا التزمت طول الأسبوع، أطلب نص ساعة زيادة بالويكند",
+      "icon": "⭐"
+    },
+    {
+      "id": "finish-match",
+      "labelAr": "إذا خلص الوقت وأنا في مباراة، أكمّلها وأطلع",
+      "icon": "🏁"
+    },
     { "id": "friend-intro", "labelAr": "أعرّفكم على أي صاحب جديد أبي ألعب معه", "icon": "👋" },
     { "id": "no-phone-bed", "labelAr": "الجوال برا الغرفة وقت النوم", "icon": "🌙" },
-    { "id": "tell-if-bothered", "labelAr": "إذا ضايقني أحد في اللعبة، أقول لكم بدون ما أخاف من العقاب", "icon": "🛟" }
+    {
+      "id": "tell-if-bothered",
+      "labelAr": "إذا ضايقني أحد في اللعبة، أقول لكم بدون ما أخاف من العقاب",
+      "icon": "🛟"
+    }
   ]
 }

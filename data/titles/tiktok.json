@@ -3,18 +3,9 @@
   "slug": "tiktok",
   "nameAr": "تيك توك",
   "nameEn": "TikTok",
-  "aliases": [
-    "تيكتوك",
-    "تك توك",
-    "تيك توك",
-    "tik tok",
-    "tiktok"
-  ],
+  "aliases": ["تيكتوك", "تك توك", "تيك توك", "tik tok", "tiktok"],
   "kind": "app",
-  "platforms": [
-    "ios",
-    "android"
-  ],
+  "platforms": ["ios", "android"],
   "publisher": {
     "name": "TikTok",
     "url": "https://example.org/demo/tiktok/publisher"
@@ -168,8 +159,5 @@
     "inGame": [],
     "platformOverrides": {}
   },
-  "conversationTags": [
-    "sessionPause",
-    "strangerChat"
-  ]
+  "conversationTags": ["sessionPause", "strangerChat"]
 }

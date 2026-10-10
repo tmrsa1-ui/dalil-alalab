@@ -1,7 +1,12 @@
 import type { Title } from "../../../schemas/title";
 
 const nullRating = () => ({ value: null, sourceUrl: null, verifiedAt: null });
-const unknownPoint = () => ({ status: "unknown" as const, summaryAr: "", sources: [], confidence: "none" as const });
+const unknownPoint = () => ({
+  status: "unknown" as const,
+  summaryAr: "",
+  sources: [],
+  confidence: "none" as const,
+});
 const unknownLens = () => ({ status: "unknown" as const, noteAr: "", sources: [] });
 
 /** بطاقة فاضية: كل شي «غير متوفر/ما لقيت» لين يعبّيها مراجع بمصادر. */

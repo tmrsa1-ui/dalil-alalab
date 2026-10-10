@@ -2,7 +2,12 @@ import "server-only";
 import fs from "node:fs";
 import path from "node:path";
 import { cache } from "react";
-import { titleSchema, titleIndexSchema, type Title, type TitleIndexEntry } from "../../../schemas/title";
+import {
+  titleSchema,
+  titleIndexSchema,
+  type Title,
+  type TitleIndexEntry,
+} from "../../../schemas/title";
 import { platformSchema, type Platform } from "../../../schemas/platform";
 import { questionsFileSchema, type ConversationQuestion } from "../../../schemas/questions";
 import { agreementFileSchema, type AgreementFile } from "../../../schemas/agreement";
@@ -32,4 +37,6 @@ export const getQuestions = cache((): ConversationQuestion[] =>
   questionsFileSchema.parse(read("questions.json")),
 );
 
-export const getAgreement = cache((): AgreementFile => agreementFileSchema.parse(read("agreement.json")));
+export const getAgreement = cache((): AgreementFile =>
+  agreementFileSchema.parse(read("agreement.json")),
+);

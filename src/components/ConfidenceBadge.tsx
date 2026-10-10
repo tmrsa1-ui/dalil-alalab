@@ -8,7 +8,13 @@ const STYLE: Record<Confidence, string> = {
 };
 const ICON: Record<Confidence, string> = { human: "✓", auto: "⚙", none: "—" };
 
-export function ConfidenceBadge({ level, isDemo = false }: { level: Confidence; isDemo?: boolean }) {
+export function ConfidenceBadge({
+  level,
+  isDemo = false,
+}: {
+  level: Confidence;
+  isDemo?: boolean;
+}) {
   return (
     <span
       className={`chip border ${STYLE[level]}`}
@@ -17,7 +23,9 @@ export function ConfidenceBadge({ level, isDemo = false }: { level: Confidence; 
     >
       <span aria-hidden="true">{ICON[level]}</span>
       {ar.confidence[level]}
-      {isDemo && level !== "none" ? <span className="font-normal">· {ar.confidence.demoSuffix}</span> : null}
+      {isDemo && level !== "none" ? (
+        <span className="font-normal">· {ar.confidence.demoSuffix}</span>
+      ) : null}
     </span>
   );
 }

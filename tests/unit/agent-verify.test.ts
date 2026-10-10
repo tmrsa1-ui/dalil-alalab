@@ -6,7 +6,8 @@ import { htmlToText, fetchSources } from "@/lib/agent/fetch";
 import { isAllowedUrl } from "@/lib/agent/allowlist";
 import type { AgentLlm, ExtractedCard, Identity, SourceDoc } from "@/lib/agent/types";
 
-const fx = (n: string) => fs.readFileSync(path.join(process.cwd(), "tests/fixtures/agent", n), "utf8");
+const fx = (n: string) =>
+  fs.readFileSync(path.join(process.cwd(), "tests/fixtures/agent", n), "utf8");
 const ESRB_URL = "https://www.esrb.org/ratings/minecraft/";
 const PUB_URL = "https://www.minecraft.net/en-us/help";
 const docs: SourceDoc[] = [
@@ -29,7 +30,13 @@ const lunk = { status: "unknown" as const, noteAr: "", quote: null, sourceUrl: n
 function card(over: Partial<ExtractedCard> = {}): ExtractedCard {
   return {
     ratings: { gcam: nul, esrb: nul, pegi: nul, appStore: nul, googlePlay: nul },
-    attentionPoints: { strangerChat: unk, purchases: unk, content: unk, ads: unk, sessionPause: unk },
+    attentionPoints: {
+      strangerChat: unk,
+      purchases: unk,
+      content: unk,
+      ads: unk,
+      sessionPause: unk,
+    },
     familyLens: { gambling: lunk, mixedVoiceChat: lunk, magic: lunk, clothing: lunk, music: lunk },
     prayerPause: { status: "unknown", noteAr: "", quote: null, sourceUrl: null },
     ...over,
@@ -78,7 +85,12 @@ describe("verifier (deterministic)", () => {
       card({
         attentionPoints: {
           ...card().attentionPoints,
-          ads: { status: "present", summaryAr: "فيه إعلانات.", quote: "Contains ads everywhere", sourceUrl: PUB_URL },
+          ads: {
+            status: "present",
+            summaryAr: "فيه إعلانات.",
+            quote: "Contains ads everywhere",
+            sourceUrl: PUB_URL,
+          },
         },
       }),
     );
@@ -89,7 +101,9 @@ describe("verifier (deterministic)", () => {
 
   it("تصنيف بدون اقتباس ⇐ «غير متوفر»", async () => {
     const { title } = await run(
-      card({ ratings: { ...card().ratings, esrb: { value: "E10+", quote: null, sourceUrl: ESRB_URL } } }),
+      card({
+        ratings: { ...card().ratings, esrb: { value: "E10+", quote: null, sourceUrl: ESRB_URL } },
+      }),
     );
     expect(title.ratings.esrb.value).toBeNull();
   });
@@ -97,16 +111,26 @@ describe("verifier (deterministic)", () => {
   it("تصنيف مقتبس من صفحة الجهة ⇐ مقبول مع المصدر والتاريخ", async () => {
     const { title } = await run(
       card({
-        ratings: { ...card().ratings, esrb: { value: "E10+", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL } },
+        ratings: {
+          ...card().ratings,
+          esrb: { value: "E10+", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL },
+        },
       }),
     );
-    expect(title.ratings.esrb).toMatchObject({ value: "E10+", sourceUrl: ESRB_URL, verifiedAt: "2026-10-10" });
+    expect(title.ratings.esrb).toMatchObject({
+      value: "E10+",
+      sourceUrl: ESRB_URL,
+      verifiedAt: "2026-10-10",
+    });
   });
 
   it("تصنيف من غير صفحة الجهة المصنفة ⇐ مرفوض حتى لو الاقتباس موجود", async () => {
     const { title } = await run(
       card({
-        ratings: { ...card().ratings, pegi: { value: "E10+", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL } },
+        ratings: {
+          ...card().ratings,
+          pegi: { value: "E10+", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL },
+        },
       }),
     );
     expect(title.ratings.pegi.value).toBeNull();
@@ -114,7 +138,12 @@ describe("verifier (deterministic)", () => {
 
   it("قيمة تصنيف مو موجودة في الاقتباس ⇐ مرفوضة", async () => {
     const { title } = await run(
-      card({ ratings: { ...card().ratings, esrb: { value: "T", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL } } }),
+      card({
+        ratings: {
+          ...card().ratings,
+          esrb: { value: "T", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL },
+        },
+      }),
     );
     expect(title.ratings.esrb.value).toBeNull();
   });
@@ -181,11 +210,17 @@ describe("agent pipeline (mock LLM، بدون API حقيقي)", () => {
       const res = new Response(u.includes("pegi") ? "<p>PEGI 7</p>" : "<p>x</p>", {
         headers: { "content-type": "text/html" },
       });
-      Object.defineProperty(res, "url", { value: u.includes("esrb") ? "https://evil.example.com/" : u });
+      Object.defineProperty(res, "url", {
+        value: u.includes("esrb") ? "https://evil.example.com/" : u,
+      });
       return res;
     }) as unknown as typeof fetch;
     const out = await fetchSources(
-      ["https://pegi.info/search-pegi?q=x", "https://www.esrb.org/search/?searchKeyword=x", "https://reddit.com/x"],
+      [
+        "https://pegi.info/search-pegi?q=x",
+        "https://www.esrb.org/search/?searchKeyword=x",
+        "https://reddit.com/x",
+      ],
       null,
       fake,
     );
@@ -200,15 +235,23 @@ describe("agent pipeline (mock LLM، بدون API حقيقي)", () => {
         if (prompts.length === 1) return schema.parse(identity);
         return schema.parse(
           card({
-            ratings: { ...card().ratings, esrb: { value: "E10+", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL } },
+            ratings: {
+              ...card().ratings,
+              esrb: { value: "E10+", quote: "ESRB Rating: E10+", sourceUrl: ESRB_URL },
+            },
           }),
         );
       },
     };
     const fake = vi.fn(async (url: string | URL | Request) => {
       const u = String(url);
-      const body = u.includes("esrb") ? `<html><title>ESRB</title><body>${fx("esrb.txt")}</body></html>` : "";
-      const res = new Response(body, { status: body ? 200 : 404, headers: { "content-type": "text/html" } });
+      const body = u.includes("esrb")
+        ? `<html><title>ESRB</title><body>${fx("esrb.txt")}</body></html>`
+        : "";
+      const res = new Response(body, {
+        status: body ? 200 : 404,
+        headers: { "content-type": "text/html" },
+      });
       Object.defineProperty(res, "url", { value: u.includes("esrb") ? ESRB_URL : u });
       return res;
     }) as unknown as typeof fetch;

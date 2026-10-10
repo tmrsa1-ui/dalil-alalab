@@ -3,7 +3,9 @@ import type { ConversationQuestion } from "@schemas/questions";
 
 export function ConversationCard({ q, n }: { q: ConversationQuestion; n: number }) {
   const tag =
-    q.pointKey === "friends" ? ar.talk.friendsTag : ar.talk.pointTag(ar.know.points[q.pointKey].title);
+    q.pointKey === "friends"
+      ? ar.talk.friendsTag
+      : ar.talk.pointTag(ar.know.points[q.pointKey].title);
   return (
     <li className="card p-4" data-testid="conversation-card" data-point={q.pointKey}>
       <div className="mb-2 flex items-center gap-2">

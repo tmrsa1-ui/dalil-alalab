@@ -4,7 +4,9 @@ import { pick, searchAndStart } from "./helpers";
 test("7) بدون موافقة لا طلبات أحداث، وبعد الموافقة الحدث ما فيه شي عن الطفل", async ({ page }) => {
   const events: string[] = [];
   // sendBeacon ما يكشف الـbody لـPlaywright؛ نعطّله عشان يُستخدم fetch ونقدر نفحص المحتوى.
-  await page.addInitScript(() => Object.defineProperty(navigator, "sendBeacon", { value: undefined }));
+  await page.addInitScript(() =>
+    Object.defineProperty(navigator, "sendBeacon", { value: undefined }),
+  );
   page.on("request", (r) => {
     if (r.url().includes("/api/events")) events.push(r.postData() ?? "");
   });
@@ -39,7 +41,17 @@ test("7) بدون موافقة لا طلبات أحداث، وبعد الموا�
   await expect.poll(() => events.length).toBeGreaterThan(0);
   for (const raw of events) {
     const e = JSON.parse(raw);
-    const allowed = ["type", "titleSlug", "ageBand", "platform", "step", "controlKey", "found", "ts", "sessionId"];
+    const allowed = [
+      "type",
+      "titleSlug",
+      "ageBand",
+      "platform",
+      "step",
+      "controlKey",
+      "found",
+      "ts",
+      "sessionId",
+    ];
     expect(Object.keys(e).every((k) => allowed.includes(k))).toBe(true);
     expect(raw).not.toMatch(/"age"\s*:/);
     if (e.ageBand) expect(["under7", "7to12", "13plus"]).toContain(e.ageBand);
@@ -59,7 +71,9 @@ test("«امسح كل بياناتي» يفضي localStorage", async ({ page }) 
   page.once("dialog", (d) => d.accept());
   await page.getByRole("button", { name: "امسح كل بياناتي من هذا الجهاز" }).click();
   await expect(page.getByText("انمسحت كل بيانات الدليل")).toBeVisible();
-  const keys = await page.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith("dalil.")));
+  const keys = await page.evaluate(() =>
+    Object.keys(localStorage).filter((k) => k.startsWith("dalil.")),
+  );
   expect(keys).toEqual([]);
 });
 
@@ -75,7 +89,9 @@ test("اختيارات الطفل ما تنحفظ في التخزين المحل
     await pick(page, t);
     await page.getByRole("button", { name: /^(التالي|خلصت)$/ }).click();
   }
-  const dump = await page.evaluate(() => JSON.stringify({ ...localStorage }) + JSON.stringify({ ...sessionStorage }));
+  const dump = await page.evaluate(
+    () => JSON.stringify({ ...localStorage }) + JSON.stringify({ ...sessionStorage }),
+  );
   expect(dump).not.toContain("when-3h");
   expect(dump).not.toContain("talk-known-text");
 });

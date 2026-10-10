@@ -59,7 +59,10 @@ export default async function RequestPage({
           {platforms.map((p) => (
             <li key={p.id}>
               {p.officialGuideUrl ? (
-                <SourceLink url={p.officialGuideUrl} label={`${ar.setup.platforms[p.id]} — ${p.toolNameEn}`} />
+                <SourceLink
+                  url={p.officialGuideUrl}
+                  label={`${ar.setup.platforms[p.id]} — ${p.toolNameEn}`}
+                />
               ) : (
                 <span>
                   {ar.setup.platforms[p.id]}: {ar.setup.guideUnavailable}

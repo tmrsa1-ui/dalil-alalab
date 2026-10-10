@@ -26,7 +26,9 @@ export function AttentionPoint({
 }) {
   const meta = ar.know.points[pointKey];
   const statusLabel =
-    pointKey === "sessionPause" ? ar.know.sessionStatus[point.status] : ar.know.status[point.status];
+    pointKey === "sessionPause"
+      ? ar.know.sessionStatus[point.status]
+      : ar.know.status[point.status];
   const unknown = point.status === "unknown" || point.sources.length === 0;
   const headingId = `point-${pointKey}`;
   const extras =
@@ -67,8 +69,12 @@ export function AttentionPoint({
               {extras ? (
                 <ul className="mt-2 flex flex-wrap gap-2 text-sm">
                   {extras.map(([label, v]) => (
-                    <li key={String(label)} className="chip border border-line bg-surface-2 font-semibold">
-                      {String(label)}: {v === null ? ar.know.unknownShort : v ? ar.know.yes : ar.know.no}
+                    <li
+                      key={String(label)}
+                      className="chip border border-line bg-surface-2 font-semibold"
+                    >
+                      {String(label)}:{" "}
+                      {v === null ? ar.know.unknownShort : v ? ar.know.yes : ar.know.no}
                     </li>
                   ))}
                 </ul>

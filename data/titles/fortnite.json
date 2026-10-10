@@ -3,21 +3,9 @@
   "slug": "fortnite",
   "nameAr": "فورتنايت",
   "nameEn": "Fortnite",
-  "aliases": [
-    "فورت نايت",
-    "فورتنايت",
-    "فورت",
-    "fortnite battle royale"
-  ],
+  "aliases": ["فورت نايت", "فورتنايت", "فورت", "fortnite battle royale"],
   "kind": "game",
-  "platforms": [
-    "ios",
-    "android",
-    "playstation",
-    "xbox",
-    "switch",
-    "pc"
-  ],
+  "platforms": ["ios", "android", "playstation", "xbox", "switch", "pc"],
   "publisher": {
     "name": "Epic Games",
     "url": "https://example.org/demo/fortnite/publisher"
@@ -33,17 +21,13 @@
     },
     "esrb": {
       "value": "T",
-      "descriptors": [
-        "Fantasy Violence"
-      ],
+      "descriptors": ["Fantasy Violence"],
       "sourceUrl": "https://example.org/demo/fortnite/rating-esrb",
       "verifiedAt": "2026-10-10"
     },
     "pegi": {
       "value": "12",
-      "descriptors": [
-        "Violence"
-      ],
+      "descriptors": ["Violence"],
       "sourceUrl": "https://example.org/demo/fortnite/rating-pegi",
       "verifiedAt": "2026-10-10"
     },
@@ -184,8 +168,5 @@
     "inGame": [],
     "platformOverrides": {}
   },
-  "conversationTags": [
-    "strangerChat",
-    "purchases"
-  ]
+  "conversationTags": ["strangerChat", "purchases"]
 }

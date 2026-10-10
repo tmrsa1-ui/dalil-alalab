@@ -62,7 +62,9 @@ export function AgreementPrint({ id }: { id: string | null }) {
       <article className="print-sheet card p-5 sm:p-8" data-testid="print-sheet">
         <header className="flex items-start justify-between gap-4 border-b border-line pb-3">
           <div>
-            <p className="text-sm font-semibold text-muted">{ar.app.name} — {ar.print.title}</p>
+            <p className="text-sm font-semibold text-muted">
+              {ar.app.name} — {ar.print.title}
+            </p>
             <h1 className="text-2xl font-extrabold">{ar.print.heading(a.titleNameAr)}</h1>
             {a.isDemo ? <DemoBadge className="mt-1" /> : null}
             <p className="num mt-1 text-sm">{ar.print.createdAt(formatDateAr(a.createdAt))}</p>
@@ -78,7 +80,9 @@ export function AgreementPrint({ id }: { id: string | null }) {
                 aria-label={`${ar.print.qr}: ${url}`}
                 dangerouslySetInnerHTML={{ __html: qr }}
               />
-              <figcaption className="mt-1 text-[10px] leading-tight text-muted">{ar.print.qr}</figcaption>
+              <figcaption className="mt-1 text-[10px] leading-tight text-muted">
+                {ar.print.qr}
+              </figcaption>
             </figure>
           ) : null}
         </header>

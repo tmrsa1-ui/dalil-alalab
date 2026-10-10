@@ -6,9 +6,21 @@ import type { Title } from "@schemas/title";
 import { KnowStep } from "./KnowStep";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 
-export function RequestTitle({ query, aiEnabled, age }: { query: string; aiEnabled: boolean; age: number | null }) {
+export function RequestTitle({
+  query,
+  aiEnabled,
+  age,
+}: {
+  query: string;
+  aiEnabled: boolean;
+  age: number | null;
+}) {
   const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
-  const [ai, setAi] = useState<{ status: "idle" | "loading" | "error"; message?: string; title?: Title }>({
+  const [ai, setAi] = useState<{
+    status: "idle" | "loading" | "error";
+    message?: string;
+    title?: Title;
+  }>({
     status: "idle",
   });
 
@@ -65,13 +77,22 @@ export function RequestTitle({ query, aiEnabled, age }: { query: string; aiEnabl
 
       {aiEnabled && query ? (
         <div className="card p-4">
-          <button type="button" className="btn btn-secondary w-full" onClick={generate} disabled={ai.status === "loading"}>
+          <button
+            type="button"
+            className="btn btn-secondary w-full"
+            onClick={generate}
+            disabled={ai.status === "loading"}
+          >
             <span aria-hidden="true">⚙</span>
             {ar.request.aiCta}
           </button>
           <p className="mt-2 text-sm text-muted">{ar.request.aiNote}</p>
           <p role="status" aria-live="polite" className="mt-2">
-            {ai.status === "loading" ? ar.request.aiLoading : ai.status === "error" ? ai.message : ""}
+            {ai.status === "loading"
+              ? ar.request.aiLoading
+              : ai.status === "error"
+                ? ai.message
+                : ""}
           </p>
         </div>
       ) : null}
@@ -79,7 +100,10 @@ export function RequestTitle({ query, aiEnabled, age }: { query: string; aiEnabl
       {ai.title ? (
         <section aria-labelledby="ai-h" className="grid gap-3">
           <h2 id="ai-h" className="text-2xl font-extrabold">
-            {ai.title.nameAr} <span className="text-lg text-muted" dir="ltr">{ai.title.nameEn}</span>
+            {ai.title.nameAr}{" "}
+            <span className="text-lg text-muted" dir="ltr">
+              {ai.title.nameEn}
+            </span>
           </h2>
           <div className="flex items-center gap-2">
             <ConfidenceBadge level="auto" />

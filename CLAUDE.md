@@ -29,21 +29,21 @@ Next.js 15 (App Router) · React 19 · TypeScript strict · Tailwind CSS v4 · Z
 
 ## الأوامر
 
-| الأمر | الوظيفة |
-| --- | --- |
-| `npm run dev` | خادم التطوير (يبني الفهرس أولًا) |
-| `npm run build` | `validate:data` + فهرس + `next build` |
-| `npm run start` | تشغيل نسخة الإنتاج |
-| `npm run test` | Vitest (unit + component) |
-| `npm run test:e2e` | Playwright (Pixel 7 + Desktop Chrome) + axe |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | `tsc --noEmit` |
-| `npm run validate:data` | يتحقق من كل ملفات `data/` ويفشل عند أي نقص |
-| `npm run build:index` | يولّد `data/titles.index.json` |
-| `npm run export:schema` | يصدّر JSON Schema إلى `schemas/json/` |
-| `npm run new-title -- <slug> "<الاسم العربي>" "<English>"` | قالب عنوان فاضي للمراجع |
-| `npm run eval:agent` | تقييم الوكيل مقابل `data/eval/holdout.json` |
-| `npm run format` | Prettier |
+| الأمر                                                      | الوظيفة                                     |
+| ---------------------------------------------------------- | ------------------------------------------- |
+| `npm run dev`                                              | خادم التطوير (يبني الفهرس أولًا)            |
+| `npm run build`                                            | `validate:data` + فهرس + `next build`       |
+| `npm run start`                                            | تشغيل نسخة الإنتاج                          |
+| `npm run test`                                             | Vitest (unit + component)                   |
+| `npm run test:e2e`                                         | Playwright (Pixel 7 + Desktop Chrome) + axe |
+| `npm run lint`                                             | ESLint                                      |
+| `npm run typecheck`                                        | `tsc --noEmit`                              |
+| `npm run validate:data`                                    | يتحقق من كل ملفات `data/` ويفشل عند أي نقص  |
+| `npm run build:index`                                      | يولّد `data/titles.index.json`              |
+| `npm run export:schema`                                    | يصدّر JSON Schema إلى `schemas/json/`       |
+| `npm run new-title -- <slug> "<الاسم العربي>" "<English>"` | قالب عنوان فاضي للمراجع                     |
+| `npm run eval:agent`                                       | تقييم الوكيل مقابل `data/eval/holdout.json` |
+| `npm run format`                                           | Prettier                                    |
 
 فحص كل checkpoint: `npm run lint && npm run typecheck && npm run test && npm run build`.
 
@@ -67,17 +67,17 @@ public/          manifest.webmanifest, icons/, sw.js
 
 ## Checkpoints
 
-- [ ] CP0 الأساس
-- [ ] CP1 البيانات (schemas, validate, index, seeds, banks, platforms)
-- [ ] CP2 البحث والعمر
-- [ ] CP3 «اعرف»
-- [ ] CP4 «اضبط»
-- [ ] CP5 «تحاور»
-- [ ] CP6 «اتفق» + الطباعة + الميثاق
-- [ ] CP7 الأحداث والخصوصية
-- [ ] CP8 الوكيل الاختياري
-- [ ] CP9 PWA وأداء ووصولية
-- [ ] CP10 الوثائق والتحقق النهائي
+- [x] CP0 الأساس
+- [x] CP1 البيانات (schemas, validate, index, seeds, banks, platforms)
+- [x] CP2 البحث والعمر
+- [x] CP3 «اعرف»
+- [x] CP4 «اضبط»
+- [x] CP5 «تحاور»
+- [x] CP6 «اتفق» + الطباعة + الميثاق
+- [x] CP7 الأحداث والخصوصية
+- [x] CP8 الوكيل الاختياري
+- [x] CP9 PWA وأداء ووصولية
+- [x] CP10 الوثائق والتحقق النهائي
 
 ## ملاحظات للوكيل
 
@@ -85,3 +85,10 @@ public/          manifest.webmanifest, icons/, sw.js
 - البيانات تُقرأ وقت البناء من `data/` (Server Components). لا قاعدة بيانات مطلوبة.
 - `isDemo: false` يتطلب روابط من allowlist (`src/lib/agent/allowlist.ts`) أو نطاق الناشر.
 - Playwright يستخدم Chromium المثبت مسبقًا (`/opt/pw-browsers`) — لا تشغّل `playwright install`.
+
+## الحالة الحالية (2026-10-10)
+
+- كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 105 unit/component · build · 58 e2e (موبايل + ديسكتوب، axe) كلها تمر.
+- Lighthouse محلي: الأداء 90–97، الوصولية 100.
+- البيانات كلها تجريبية (`isDemo: true`). المطلوب بشريًا: تعبئة العناوين الحقيقية ومراجعتها، التحقق من روابط المنصات (`verifiedAt`)، ومصدر GCAM.
+- ملاحظة بيئة: `pkill -f next-server` يقتل الـshell نفسه في هذه البيئة؛ استخدم `ps aux | grep -E "next-serve[r]" | awk '{print $2}' | xargs -r kill`.

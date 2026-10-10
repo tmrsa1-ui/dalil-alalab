@@ -53,7 +53,9 @@ describe("ممنوع «آمن/آمنة» في المنتج كله", () => {
     expect(bad).toEqual([]);
   });
   it("كل ملفات src/ نظيفة (نص عربي)", () => {
-    const files = walk(path.join(root, "src"), [".ts", ".tsx"]).filter((f) => !f.endsWith("forbidden-words.ts"));
+    const files = walk(path.join(root, "src"), [".ts", ".tsx"]).filter(
+      (f) => !f.endsWith("forbidden-words.ts"),
+    );
     const bad = files.filter((f) => findForbiddenWord(fs.readFileSync(f, "utf8")));
     expect(bad).toEqual([]);
   });

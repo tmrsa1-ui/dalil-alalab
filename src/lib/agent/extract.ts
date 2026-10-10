@@ -1,7 +1,14 @@
 import { FORBIDDEN_LIST } from "../forbidden-words";
-import { extractedCardSchema, type AgentLlm, type ExtractedCard, type Identity, type SourceDoc } from "./types";
+import {
+  extractedCardSchema,
+  type AgentLlm,
+  type ExtractedCard,
+  type Identity,
+  type SourceDoc,
+} from "./types";
 
-const SYSTEM = () => `You fill a parental guide card for a game/app STRICTLY from the provided source documents.
+const SYSTEM =
+  () => `You fill a parental guide card for a game/app STRICTLY from the provided source documents.
 Rules:
 - Every non-unknown field MUST include "quote": an exact, verbatim substring copied from ONE document,
   and "sourceUrl": that document's URL exactly as given. Do not paraphrase quotes.
@@ -14,7 +21,11 @@ Rules:
 - Never add numbers or statistics that are not in the quote.`;
 
 /** المرحلة 3: استخراج منظّم مع اقتباس حرفي ورابط لكل حقل. */
-export async function extract(identity: Identity, docs: SourceDoc[], llm: AgentLlm): Promise<ExtractedCard> {
+export async function extract(
+  identity: Identity,
+  docs: SourceDoc[],
+  llm: AgentLlm,
+): Promise<ExtractedCard> {
   const docsText = docs
     .map((d, i) => `<document index="${i}" url="${d.url}">\n${d.text}\n</document>`)
     .join("\n\n");

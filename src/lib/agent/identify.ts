@@ -15,7 +15,8 @@ export async function identify(name: string, llm: AgentLlm): Promise<Identity> {
     maxTokens: 2000,
   });
   const id = identitySchema.parse(raw);
-  const publisherUrl = id.publisherUrl && /^https:\/\//.test(id.publisherUrl) ? id.publisherUrl : null;
+  const publisherUrl =
+    id.publisherUrl && /^https:\/\//.test(id.publisherUrl) ? id.publisherUrl : null;
   return {
     ...id,
     publisherUrl,

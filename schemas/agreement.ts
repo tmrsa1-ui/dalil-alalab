@@ -44,7 +44,13 @@ export const midpointRuleSchema = z
   .strict();
 export type MidpointRule = z.infer<typeof midpointRuleSchema>;
 
-const listItem = z.object({ id: z.string().regex(/^[a-z0-9-]+$/), labelAr: z.string().min(1), icon: z.string().optional() }).strict();
+const listItem = z
+  .object({
+    id: z.string().regex(/^[a-z0-9-]+$/),
+    labelAr: z.string().min(1),
+    icon: z.string().optional(),
+  })
+  .strict();
 
 export const agreementFileSchema = z
   .object({
@@ -60,7 +66,10 @@ export const agreementFileSchema = z
       const q = a.questions.find((x) => x.id === r.questionId);
       const ids = new Set(q?.options.map((o) => o.id));
       if (!ids.has(r.between[0]) || !ids.has(r.between[1])) {
-        ctx.addIssue({ code: "custom", message: `قاعدة وسط تشير لخيار غير موجود: ${r.between.join("|")}` });
+        ctx.addIssue({
+          code: "custom",
+          message: `قاعدة وسط تشير لخيار غير موجود: ${r.between.join("|")}`,
+        });
       }
     }
     for (const { path, text } of collectStrings(a)) {

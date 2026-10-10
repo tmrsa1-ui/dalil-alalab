@@ -30,12 +30,22 @@ export function mergeQuestion(
   const parent = question.options.find((o) => o.id === parentOptionId);
   if (!parent) throw new Error(`خيار غير معروف: ${parentOptionId}`);
   if (childOptionId === null) {
-    return { questionId: question.id, kind: "parent_only", optionId: parent.id, clauseAr: parent.clauseAr };
+    return {
+      questionId: question.id,
+      kind: "parent_only",
+      optionId: parent.id,
+      clauseAr: parent.clauseAr,
+    };
   }
   const child = question.options.find((o) => o.id === childOptionId);
   if (!child) throw new Error(`خيار غير معروف: ${childOptionId}`);
   if (child.id === parent.id) {
-    return { questionId: question.id, kind: "agreed", optionId: parent.id, clauseAr: parent.clauseAr };
+    return {
+      questionId: question.id,
+      kind: "agreed",
+      optionId: parent.id,
+      clauseAr: parent.clauseAr,
+    };
   }
   const rule = rules.find(
     (r) =>
@@ -49,8 +59,7 @@ export function mergeQuestion(
   const target = Math.floor((parent.rank + child.rank) / 2);
   const sorted = [...question.options].sort((a, b) => a.rank - b.rank);
   // أقرب خيار رتبته ≤ الهدف (الأكثر تقييدًا عند عدم وجود رتبة مطابقة).
-  const mid =
-    [...sorted].reverse().find((o) => o.rank <= target) ?? sorted[0] ?? parent;
+  const mid = [...sorted].reverse().find((o) => o.rank <= target) ?? sorted[0] ?? parent;
   return { questionId: question.id, kind: "midpoint", optionId: mid.id, clauseAr: mid.clauseAr };
 }
 
@@ -62,7 +71,12 @@ export function mergeAll(
   return file.questions.map((q) => {
     const p = parentAnswers[q.id];
     if (!p) throw new Error(`ناقص اختيار الأب لـ ${q.id}`);
-    return mergeQuestion(q, file.midpointRules, p, childAnswers ? (childAnswers[q.id] ?? null) : null);
+    return mergeQuestion(
+      q,
+      file.midpointRules,
+      p,
+      childAnswers ? (childAnswers[q.id] ?? null) : null,
+    );
   });
 }
 

@@ -47,7 +47,10 @@ function OptionGroup({
               onChange={() => onChange(o.id)}
               className="sr-only"
             />
-            <span aria-hidden="true" className={variant === "picture" ? "text-5xl" : big ? "text-3xl" : "text-xl"}>
+            <span
+              aria-hidden="true"
+              className={variant === "picture" ? "text-5xl" : big ? "text-3xl" : "text-xl"}
+            >
               {o.icon}
             </span>
             <span>{variant === "parent" ? o.labelAr : o.childLabelAr}</span>
@@ -75,10 +78,18 @@ export function AgreementFlow({
     return (
       <div className="grid gap-3" data-testid="agree-mode">
         <p className="text-lg">{ar.agree.under7Lead}</p>
-        <button type="button" className="btn btn-primary text-lg" onClick={() => s.chooseMode(false)}>
+        <button
+          type="button"
+          className="btn btn-primary text-lg"
+          onClick={() => s.chooseMode(false)}
+        >
           {ar.agree.under7ParentOnly}
         </button>
-        <button type="button" className="btn btn-secondary text-lg" onClick={() => s.chooseMode(true)}>
+        <button
+          type="button"
+          className="btn btn-secondary text-lg"
+          onClick={() => s.chooseMode(true)}
+        >
           <span aria-hidden="true">🖼️</span>
           {ar.agree.under7WithChild}
         </button>
@@ -111,7 +122,8 @@ export function AgreementFlow({
           type="button"
           className="btn btn-primary text-lg"
           onClick={() => {
-            if (file.questions.some((q) => !s.parentAnswers[q.id])) return setError(ar.agree.needAllAnswers);
+            if (file.questions.some((q) => !s.parentAnswers[q.id]))
+              return setError(ar.agree.needAllAnswers);
             setError(null);
             s.finishParent();
           }}
@@ -142,7 +154,9 @@ export function AgreementFlow({
     return (
       <div className="grid gap-4" data-testid="agree-child">
         <div>
-          <p className="num text-sm text-muted">{ar.agree.questionOf(s.childIndex + 1, file.questions.length)}</p>
+          <p className="num text-sm text-muted">
+            {ar.agree.questionOf(s.childIndex + 1, file.questions.length)}
+          </p>
           <h3 className="text-2xl font-extrabold">{ar.agree.childTurn}</h3>
           <p className="text-lg">{ar.agree.childLead}</p>
         </div>
@@ -219,7 +233,11 @@ export function AgreementFlow({
       titleSlug: title.slug,
       titleNameAr: title.nameAr,
       isDemo: title.isDemo,
-      clauses: s.clauses.map((c) => ({ questionId: c.questionId, clauseAr: c.clauseAr, kind: c.kind })),
+      clauses: s.clauses.map((c) => ({
+        questionId: c.questionId,
+        clauseAr: c.clauseAr,
+        kind: c.kind,
+      })),
       teenClauses: s.acceptedTeen
         .map((x) => file.teenSuggestions.find((t) => t.id === x)?.labelAr)
         .filter((x): x is string => !!x),
@@ -246,7 +264,12 @@ export function AgreementFlow({
           const customSuggested = suggested && suggested.optionId === null;
           const selectId = `edit-${c.questionId}`;
           return (
-            <li key={c.questionId} className="card p-4" data-testid={`clause-${c.questionId}`} data-kind={c.kind}>
+            <li
+              key={c.questionId}
+              className="card p-4"
+              data-testid={`clause-${c.questionId}`}
+              data-kind={c.kind}
+            >
               <div className="mb-1 flex flex-wrap items-center gap-2">
                 <span className="text-sm text-muted">{q.textParentAr}</span>
                 <span
@@ -273,7 +296,11 @@ export function AgreementFlow({
                 value={c.optionId ?? SUGGESTED}
                 onChange={(e) => s.editClause(c.questionId, e.target.value)}
               >
-                {customSuggested ? <option value={SUGGESTED}>{`${ar.agree.keepMidpoint}: ${suggested.clauseAr}`}</option> : null}
+                {customSuggested ? (
+                  <option
+                    value={SUGGESTED}
+                  >{`${ar.agree.keepMidpoint}: ${suggested.clauseAr}`}</option>
+                ) : null}
                 {q.options.map((o) => (
                   <option key={o.id} value={o.id}>
                     {o.clauseAr}

@@ -30,7 +30,7 @@ describe("agreement store", () => {
     // لا يوجد أي حقل في الحالة يحمل خريطة اختيارات الطفل.
     const json = JSON.stringify({ ...st, clauses: [], suggested: [] });
     expect(json).not.toContain("when-3h");
-    expect(json).not.toContain("talk-known\"");
+    expect(json).not.toContain('talk-known"');
   });
   it("13+: شاشة «أقترح بند» ثم تُمسح الاختيارات الخام وتبقى المقترحات كبنود", () => {
     const s = runFlow("13plus");

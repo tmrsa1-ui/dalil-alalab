@@ -30,7 +30,9 @@ export default function SourcesPage() {
               ) : (
                 ar.setup.guideUnavailable
               )}
-              {!p.verifiedAt ? <span className="block text-xs text-muted">{ar.setup.guidePending}</span> : null}
+              {!p.verifiedAt ? (
+                <span className="block text-xs text-muted">{ar.setup.guidePending}</span>
+              ) : null}
             </li>
           ))}
         </ul>

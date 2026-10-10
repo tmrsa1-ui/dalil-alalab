@@ -41,7 +41,13 @@ export function minAgeFromRating(system: RatingKey, value: string | null): numbe
     return map[v] ?? null;
   }
   if (system === "googlePlay") {
-    const map: Record<string, number> = { EVERYONE: 0, "EVERYONE 10+": 10, TEEN: 13, "MATURE 17+": 17, "ADULTS ONLY 18+": 18 };
+    const map: Record<string, number> = {
+      EVERYONE: 0,
+      "EVERYONE 10+": 10,
+      TEEN: 13,
+      "MATURE 17+": 17,
+      "ADULTS ONLY 18+": 18,
+    };
     if (v in map) return map[v] ?? null;
   }
   const m = v.match(/(\d{1,2})\s*\+?/);

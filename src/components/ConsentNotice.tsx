@@ -34,10 +34,18 @@ export function ConsentNotice() {
           <li>🤖 {ar.consent.llm}</li>
         </ul>
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <button type="button" className="btn btn-primary flex-1" onClick={() => choose("granted")}>
+          <button
+            type="button"
+            className="btn btn-primary flex-1"
+            onClick={() => choose("granted")}
+          >
             {ar.consent.accept}
           </button>
-          <button type="button" className="btn btn-secondary flex-1" onClick={() => choose("denied")}>
+          <button
+            type="button"
+            className="btn btn-secondary flex-1"
+            onClick={() => choose("denied")}
+          >
             {ar.consent.decline}
           </button>
           <Link href="/privacy" className="btn btn-ghost w-full text-sm sm:w-auto">

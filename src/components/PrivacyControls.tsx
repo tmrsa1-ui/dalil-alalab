@@ -13,7 +13,11 @@ export function PrivacyControls() {
     window.dispatchEvent(new Event("dalil:consent"));
   };
   return (
-    <section className="card mt-6 grid gap-3 p-4" aria-label={ar.privacy.clearAll} data-testid="privacy-controls">
+    <section
+      className="card mt-6 grid gap-3 p-4"
+      aria-label={ar.privacy.clearAll}
+      data-testid="privacy-controls"
+    >
       <p className="font-semibold" role="status">
         {consent === "granted"
           ? ar.privacy.consentState.granted

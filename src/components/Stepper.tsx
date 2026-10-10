@@ -7,7 +7,10 @@ import { STEP_IDS, type StepId } from "@/lib/steps";
 export function Stepper({ current, onChange }: { current: StepId; onChange: (s: StepId) => void }) {
   const idx = STEP_IDS.indexOf(current);
   return (
-    <nav aria-label={ar.steps.progress} className="sticky top-0 z-10 -mx-4 bg-bg/95 px-4 py-2 backdrop-blur">
+    <nav
+      aria-label={ar.steps.progress}
+      className="sticky top-0 z-10 -mx-4 bg-bg/95 px-4 py-2 backdrop-blur"
+    >
       <ol className="grid grid-cols-4 gap-1" data-testid="stepper">
         {STEP_IDS.map((s, i) => {
           const state = i < idx ? "done" : i === idx ? "current" : "todo";

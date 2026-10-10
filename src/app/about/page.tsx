@@ -13,9 +13,15 @@ export default function AboutPage() {
       <p className="mt-2 text-lg text-muted">{ar.app.description}</p>
       <ContentSections sections={pages.about.sections} />
       <p className="mt-6 flex flex-wrap gap-2">
-        <Link href="/sources" className="btn btn-secondary">{ar.nav.sources}</Link>
-        <Link href="/privacy" className="btn btn-secondary">{ar.nav.privacy}</Link>
-        <Link href="/about/impact" className="btn btn-secondary">{ar.nav.impact}</Link>
+        <Link href="/sources" className="btn btn-secondary">
+          {ar.nav.sources}
+        </Link>
+        <Link href="/privacy" className="btn btn-secondary">
+          {ar.nav.privacy}
+        </Link>
+        <Link href="/about/impact" className="btn btn-secondary">
+          {ar.nav.impact}
+        </Link>
       </p>
       <p className="mt-6 text-sm text-muted">{ar.footer.award}</p>
     </article>

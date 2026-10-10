@@ -15,12 +15,22 @@ describe("RatingTable", () => {
   it("GCAM أولًا ثم ESRB ثم PEGI ثم App Store ثم Google Play", () => {
     render(<RatingTable ratings={mc.ratings} age={9} />);
     const ids = screen.getAllByRole("listitem").map((li) => li.getAttribute("data-testid"));
-    expect(ids).toEqual(["rating-gcam", "rating-esrb", "rating-pegi", "rating-appStore", "rating-googlePlay"]);
+    expect(ids).toEqual([
+      "rating-gcam",
+      "rating-esrb",
+      "rating-pegi",
+      "rating-appStore",
+      "rating-googlePlay",
+    ]);
   });
   it("التصنيف الناقص يظهر «غير متوفر» بدون تخمين", () => {
     render(<RatingTable ratings={mc.ratings} age={9} />);
-    expect(within(screen.getByTestId("rating-gcam")).getByText(ar.know.unavailable)).toBeInTheDocument();
-    expect(within(screen.getByTestId("rating-appStore")).getByText(ar.know.unavailable)).toBeInTheDocument();
+    expect(
+      within(screen.getByTestId("rating-gcam")).getByText(ar.know.unavailable),
+    ).toBeInTheDocument();
+    expect(
+      within(screen.getByTestId("rating-appStore")).getByText(ar.know.unavailable),
+    ).toBeInTheDocument();
   });
   it("مقارنة العمر لكل جهة على حدة", () => {
     render(<RatingTable ratings={mc.ratings} age={9} />);
@@ -56,7 +66,12 @@ describe("AttentionPoint", () => {
   it("نقطة بمصدر تعرض النص والمصدر والثقة", () => {
     render(
       <ol>
-        <AttentionPoint pointKey="strangerChat" point={mc.attentionPoints.strangerChat} index={1} isDemo />
+        <AttentionPoint
+          pointKey="strangerChat"
+          point={mc.attentionPoints.strangerChat}
+          index={1}
+          isDemo
+        />
       </ol>,
     );
     expect(screen.getByText(mc.attentionPoints.strangerChat.summaryAr)).toBeInTheDocument();
@@ -79,6 +94,12 @@ describe("KnowStep", () => {
       .getAllByRole("listitem")
       .map((li) => li.getAttribute("data-testid"))
       .filter((x) => x?.startsWith("point-"));
-    expect(ids).toEqual(["point-strangerChat", "point-purchases", "point-content", "point-ads", "point-sessionPause"]);
+    expect(ids).toEqual([
+      "point-strangerChat",
+      "point-purchases",
+      "point-content",
+      "point-ads",
+      "point-sessionPause",
+    ]);
   });
 });

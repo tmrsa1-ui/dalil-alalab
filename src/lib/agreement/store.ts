@@ -97,22 +97,36 @@ export function createAgreementStore(file: AgreementFile, ageBand: AgeBand = "7t
     },
     toggleTeen: (id) =>
       set((s) => ({
-        teenPicks: s.teenPicks.includes(id) ? s.teenPicks.filter((x) => x !== id) : [...s.teenPicks, id],
+        teenPicks: s.teenPicks.includes(id)
+          ? s.teenPicks.filter((x) => x !== id)
+          : [...s.teenPicks, id],
       })),
     finishChild: () => {
       const s = get();
       if (file.questions.some((q) => !s.childAnswers[q.id])) return;
       const clauses = mergeAll(file, s.parentAnswers, s.childAnswers);
-      const teenProposals = s.teenPicks.filter((id) => file.teenSuggestions.some((t) => t.id === id));
+      const teenProposals = s.teenPicks.filter((id) =>
+        file.teenSuggestions.some((t) => t.id === id),
+      );
       // خصوصية: نمسح الخام فورًا.
-      set({ clauses, suggested: clauses, teenProposals, childAnswers: {}, teenPicks: [], childIndex: 0, stage: "handoffParent" });
+      set({
+        clauses,
+        suggested: clauses,
+        teenProposals,
+        childAnswers: {},
+        teenPicks: [],
+        childIndex: 0,
+        stage: "handoffParent",
+      });
     },
     parentReady: () => set({ stage: "result" }),
     editClause: (questionId, optionId) =>
       set((s) => {
         if (optionId === SUGGESTED) {
           const orig = s.suggested.find((c) => c.questionId === questionId);
-          return orig ? { clauses: s.clauses.map((c) => (c.questionId === questionId ? orig : c)) } : {};
+          return orig
+            ? { clauses: s.clauses.map((c) => (c.questionId === questionId ? orig : c)) }
+            : {};
         }
         const q = file.questions.find((x) => x.id === questionId);
         const o = q?.options.find((x) => x.id === optionId);

@@ -3,7 +3,8 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  --font-sans: var(--font-plex-ar), var(--font-plex-latin), system-ui, "Segoe UI", Tahoma, sans-serif;
+  --font-sans:
+    var(--font-plex-ar), var(--font-plex-latin), system-ui, "Segoe UI", Tahoma, sans-serif;
   --color-bg: #fbf8f3;
   --color-surface: #ffffff;
   --color-surface-2: #f3eee5;
@@ -107,7 +108,9 @@
     border-radius: 0.9rem;
     font-weight: 700;
     text-decoration: none;
-    transition: background-color 0.15s, transform 0.1s;
+    transition:
+      background-color 0.15s,
+      transform 0.1s;
     cursor: pointer;
   }
   .btn:active {

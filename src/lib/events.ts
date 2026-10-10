@@ -14,7 +14,11 @@ export function getSessionId(): string {
 }
 
 /** يبني الحدث ويتحقق منه (strict: أي حقل زايد يُرفض). */
-export function buildEvent(input: TrackInput, now = Date.now(), sessionId = getSessionId()): AppEvent | null {
+export function buildEvent(
+  input: TrackInput,
+  now = Date.now(),
+  sessionId = getSessionId(),
+): AppEvent | null {
   const r = eventSchema.safeParse({ ...input, ts: now, sessionId });
   return r.success ? r.data : null;
 }
@@ -31,7 +35,10 @@ export function track(input: TrackInput): boolean {
   const body = JSON.stringify(event);
   try {
     if (navigator.sendBeacon) {
-      const ok = navigator.sendBeacon("/api/events", new Blob([body], { type: "application/json" }));
+      const ok = navigator.sendBeacon(
+        "/api/events",
+        new Blob([body], { type: "application/json" }),
+      );
       if (ok) return true;
     }
     void fetch("/api/events", {

@@ -31,7 +31,10 @@ describe("validate:data", () => {
     const tmp = fs.mkdtempSync(path.join(root, "test-results-tmp-"));
     try {
       fs.cpSync(path.join(root, "data"), tmp, { recursive: true });
-      fs.copyFileSync(fx("rating-without-source"), path.join(tmp, "titles", "rating-without-source.json"));
+      fs.copyFileSync(
+        fx("rating-without-source"),
+        path.join(tmp, "titles", "rating-without-source.json"),
+      );
       const issues = validateDataDir(tmp);
       expect(issues.some((i) => i.file.endsWith("rating-without-source.json"))).toBe(true);
     } finally {
@@ -59,9 +62,17 @@ describe("validate:data", () => {
   it("عنوان حقيقي يقبل روابط الـallowlist ونطاق الناشر فقط", () => {
     const t = emptyTitle("real-game", "لعبة", "Real Game");
     t.publisher = { name: "Pub", url: "https://www.publisher.example.com/" };
-    t.ratings.esrb = { value: "E", sourceUrl: "https://www.esrb.org/ratings/1/", verifiedAt: "2026-10-01" };
+    t.ratings.esrb = {
+      value: "E",
+      sourceUrl: "https://www.esrb.org/ratings/1/",
+      verifiedAt: "2026-10-01",
+    };
     expect(titleSchema.safeParse(t).success).toBe(true);
-    t.ratings.pegi = { value: "3", sourceUrl: "https://random-blog.com/pegi", verifiedAt: "2026-10-01" };
+    t.ratings.pegi = {
+      value: "3",
+      sourceUrl: "https://random-blog.com/pegi",
+      verifiedAt: "2026-10-01",
+    };
     expect(titleSchema.safeParse(t).success).toBe(false);
   });
 

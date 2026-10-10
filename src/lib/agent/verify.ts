@@ -41,7 +41,13 @@ export type VerifyReport = {
  * أي حقل يفشل يتحول إلى «ما لقيت» (unknown) أو «غير متوفر» (null).
  */
 export async function verifyCard(
-  input: { slug: string; nameAr: string; identity: Identity; extracted: ExtractedCard; docs: SourceDoc[] },
+  input: {
+    slug: string;
+    nameAr: string;
+    identity: Identity;
+    extracted: ExtractedCard;
+    docs: SourceDoc[];
+  },
   judge?: Judge,
 ): Promise<{ title: Title; report: VerifyReport }> {
   const { identity, extracted, docs } = input;
@@ -52,13 +58,25 @@ export async function verifyCard(
   title.kind = identity.kind;
   title.platforms = identity.platforms;
   title.publisher = identity.publisherName
-    ? { name: identity.publisherName, url: publisherUrl && isAllowedUrl(publisherUrl, publisherUrl) ? publisherUrl : null }
+    ? {
+        name: identity.publisherName,
+        url: publisherUrl && isAllowedUrl(publisherUrl, publisherUrl) ? publisherUrl : null,
+      }
     : null;
   title.reviewStatus = "auto_sourced";
-  title.aliases = [...new Set([input.nameAr, identity.nameAr].filter((x): x is string => !!x && x !== input.nameAr))];
+  title.aliases = [
+    ...new Set(
+      [input.nameAr, identity.nameAr].filter((x): x is string => !!x && x !== input.nameAr),
+    ),
+  ];
 
   const sourceOf = (doc: SourceDoc, quote: string) => [
-    { url: doc.url, title: doc.title.slice(0, 200) || doc.url, quote: quote.trim(), verifiedAt: doc.fetchedAt },
+    {
+      url: doc.url,
+      title: doc.title.slice(0, 200) || doc.url,
+      quote: quote.trim(),
+      verifiedAt: doc.fetchedAt,
+    },
   ];
 
   async function supported(field: string, claim: string, quote: string): Promise<boolean> {
@@ -95,7 +113,12 @@ export async function verifyCard(
       reject(field, "قيمة التصنيف مو موجودة في الاقتباس");
       continue;
     }
-    title.ratings[key] = { value: r.value.trim(), sourceUrl: doc.url, verifiedAt: doc.fetchedAt, quote: r.quote.trim() };
+    title.ratings[key] = {
+      value: r.value.trim(),
+      sourceUrl: doc.url,
+      verifiedAt: doc.fetchedAt,
+      quote: r.quote.trim(),
+    };
     report.accepted.push(field);
   }
 
@@ -139,7 +162,8 @@ export async function verifyCard(
     const field = "prayerPause";
     if (pp.status !== "unknown") {
       const doc = quoteInSource(pp.quote, pp.sourceUrl, docs);
-      if (!doc || !pp.quote || !isAllowedUrl(doc.url, publisherUrl)) reject(field, "اقتباس غير موجود في المصدر");
+      if (!doc || !pp.quote || !isAllowedUrl(doc.url, publisherUrl))
+        reject(field, "اقتباس غير موجود في المصدر");
       else {
         const note = pp.noteAr.trim().slice(0, 220);
         if (await supported(field, note || pp.quote, pp.quote)) {

@@ -3,19 +3,9 @@
   "slug": "pubg-mobile",
   "nameAr": "ببجي موبايل",
   "nameEn": "PUBG Mobile",
-  "aliases": [
-    "ببجي",
-    "ببجى",
-    "pubg",
-    "pubgm",
-    "ببجي موبايل",
-    "بابجي"
-  ],
+  "aliases": ["ببجي", "ببجى", "pubg", "pubgm", "ببجي موبايل", "بابجي"],
   "kind": "game",
-  "platforms": [
-    "ios",
-    "android"
-  ],
+  "platforms": ["ios", "android"],
   "publisher": {
     "name": "Krafton / Level Infinite",
     "url": "https://example.org/demo/pubg-mobile/publisher"
@@ -36,9 +26,7 @@
     },
     "pegi": {
       "value": "16",
-      "descriptors": [
-        "Violence"
-      ],
+      "descriptors": ["Violence"],
       "sourceUrl": "https://example.org/demo/pubg-mobile/rating-pegi",
       "verifiedAt": "2026-10-10"
     },
@@ -172,9 +160,5 @@
     "inGame": [],
     "platformOverrides": {}
   },
-  "conversationTags": [
-    "strangerChat",
-    "purchases",
-    "content"
-  ]
+  "conversationTags": ["strangerChat", "purchases", "content"]
 }

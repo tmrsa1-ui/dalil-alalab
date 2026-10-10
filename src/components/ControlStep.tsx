@@ -29,7 +29,10 @@ export function ControlStep({
   const id = useId();
   const { path, rest } = splitStepPath(stepAr);
   return (
-    <li className={`card p-3 ${done ? "border-ok/60 bg-ok-soft/40" : ""}`} data-testid="control-step">
+    <li
+      className={`card p-3 ${done ? "border-ok/60 bg-ok-soft/40" : ""}`}
+      data-testid="control-step"
+    >
       <div className="flex items-start gap-3">
         <span
           aria-hidden="true"

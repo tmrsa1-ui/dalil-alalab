@@ -34,22 +34,33 @@ async function persist(title: Title, report: unknown) {
 export async function POST(req: Request) {
   if (!aiEnabled()) {
     return NextResponse.json(
-      { ok: false, message: "البطاقات الآلية غير مفعّلة حاليًا. تقدر تطلب إضافة العنوان وبنراجعه." },
+      {
+        ok: false,
+        message: "البطاقات الآلية غير مفعّلة حاليًا. تقدر تطلب إضافة العنوان وبنراجعه.",
+      },
       { status: 503 },
     );
   }
   const parsed = body.safeParse(await req.json().catch(() => null));
-  if (!parsed.success) return NextResponse.json({ ok: false, message: "اسم غير صالح." }, { status: 400 });
+  if (!parsed.success)
+    return NextResponse.json({ ok: false, message: "اسم غير صالح." }, { status: 400 });
   const key = compactKey(parsed.data.name);
   const hit = cache.get(key);
-  if (hit && Date.now() - hit.at < TTL) return NextResponse.json({ ok: true, cached: true, title: hit.title });
+  if (hit && Date.now() - hit.at < TTL)
+    return NextResponse.json({ ok: true, cached: true, title: hit.title });
 
   if (!rateLimit(clientKey(req, "ai"), 3, 60 * 60_000)) {
-    return NextResponse.json({ ok: false, message: "وصلت الحد المسموح، جرّب بعد ساعة." }, { status: 429 });
+    return NextResponse.json(
+      { ok: false, message: "وصلت الحد المسموح، جرّب بعد ساعة." },
+      { status: 429 },
+    );
   }
   const max = Number(process.env.MAX_AI_CARDS_PER_DAY ?? 20) || 20;
   if (!takeDailyBudget(max)) {
-    return NextResponse.json({ ok: false, message: "وصلنا حد اليوم للبطاقات الآلية. جرّب بكرة." }, { status: 429 });
+    return NextResponse.json(
+      { ok: false, message: "وصلنا حد اليوم للبطاقات الآلية. جرّب بكرة." },
+      { status: 429 },
+    );
   }
 
   try {
@@ -57,12 +68,18 @@ export async function POST(req: Request) {
     const { generateCard } = await import("@/lib/agent/pipeline");
     const llm = createAnthropicLlm();
     // فقط اسم العنوان يُرسل للنموذج — لا عمر ولا أي شي عن الطفل.
-    const { title, report } = await generateCard(parsed.data.name, { llm, judge: createAnthropicJudge(llm) });
+    const { title, report } = await generateCard(parsed.data.name, {
+      llm,
+      judge: createAnthropicJudge(llm),
+    });
     const safeTitle = titleSchema.parse(title);
     cache.set(key, { title: safeTitle, at: Date.now() });
     await persist(safeTitle, report);
     return NextResponse.json({ ok: true, cached: false, title: safeTitle });
   } catch {
-    return NextResponse.json({ ok: false, message: "ما قدرنا نولّد البطاقة الحين." }, { status: 502 });
+    return NextResponse.json(
+      { ok: false, message: "ما قدرنا نولّد البطاقة الحين." },
+      { status: 502 },
+    );
   }
 }

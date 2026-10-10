@@ -3,7 +3,9 @@ import { expectNoHorizontalScroll, pick, searchAndStart, setConsent } from "./he
 
 test.beforeEach(async ({ page }) => setConsent(page, "denied"));
 
-test("1) بحث «ماين كرافت» + عمر 9 ⇐ بطاقة فيها 5 نقاط وتصنيفات ومصادر وشارة تجريبي", async ({ page }) => {
+test("1) بحث «ماين كرافت» + عمر 9 ⇐ بطاقة فيها 5 نقاط وتصنيفات ومصادر وشارة تجريبي", async ({
+  page,
+}) => {
   await searchAndStart(page, "ماين كرافت", 9);
   await expect(page).toHaveURL(/\/title\/minecraft\?age=9/);
   await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
@@ -31,13 +33,18 @@ test("1) بحث «ماين كرافت» + عمر 9 ⇐ بطاقة فيها 5 ن�
   expect(await page.locator("body").innerText()).not.toMatch(/آمن|أمان/);
 });
 
-test("2) الخطوات الأربع كاملة ⇐ اتفاق ⇐ صفحة طباعة بالبنود والتوقيعين وتاريخ المراجعة", async ({ page }) => {
+test("2) الخطوات الأربع كاملة ⇐ اتفاق ⇐ صفحة طباعة بالبنود والتوقيعين وتاريخ المراجعة", async ({
+  page,
+}) => {
   await page.goto("/title/minecraft?age=9");
   // اضبط
   await page.getByRole("button", { name: /التالي: اضبط/ }).click();
   await expect(page.getByTestId("step-setup")).toBeVisible();
   await page.getByRole("tab", { name: "iPhone / iPad" }).click();
-  const firstStep = page.getByTestId("control-step").first().getByRole("checkbox", { name: "سويتها" });
+  const firstStep = page
+    .getByTestId("control-step")
+    .first()
+    .getByRole("checkbox", { name: "سويتها" });
   await firstStep.check();
   await expect(page.getByTestId("done-count")).toContainText("سويت 1 من");
   await page.reload();
@@ -47,7 +54,9 @@ test("2) الخطوات الأربع كاملة ⇐ اتفاق ⇐ صفحة طب
   await page.getByRole("button", { name: /التالي: تحاور/ }).click();
   const cards = page.getByTestId("conversation-card");
   await expect(cards).toHaveCount(3);
-  await expect(page.locator('[data-testid="conversation-card"][data-point="friends"]')).toHaveCount(1);
+  await expect(page.locator('[data-testid="conversation-card"][data-point="friends"]')).toHaveCount(
+    1,
+  );
   // اتفق
   await page.getByRole("button", { name: /التالي: اتفق/ }).click();
   await pick(page, "ساعة يوميًا بعد الواجبات");

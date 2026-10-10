@@ -58,8 +58,11 @@ export async function fetchSources(
         const body = (await res.text()).slice(0, MAX_BYTES);
         const type = res.headers.get("content-type") ?? "";
         const text = (type.includes("json") ? body : htmlToText(body)).slice(0, MAX_CHARS);
-        const title = body.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1]?.trim() || hostOf(finalUrl) || finalUrl;
-        return text ? { url: finalUrl, title, text, fetchedAt: now.toISOString().slice(0, 10) } : null;
+        const title =
+          body.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1]?.trim() || hostOf(finalUrl) || finalUrl;
+        return text
+          ? { url: finalUrl, title, text, fetchedAt: now.toISOString().slice(0, 10) }
+          : null;
       } catch {
         return null;
       }

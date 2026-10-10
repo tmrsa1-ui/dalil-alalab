@@ -14,24 +14,23 @@ export const conversationQuestionSchema = z
   .strict();
 export type ConversationQuestion = z.infer<typeof conversationQuestionSchema>;
 
-export const questionsFileSchema = z
-  .array(conversationQuestionSchema)
-  .superRefine((qs, ctx) => {
-    const ids = new Set<string>();
-    qs.forEach((q, i) => {
-      if (ids.has(q.id)) ctx.addIssue({ code: "custom", message: `id مكرر ${q.id}`, path: [i, "id"] });
-      ids.add(q.id);
-    });
-    for (const band of ageBand.options) {
-      for (const key of [...pointKey.options, "friends"] as const) {
-        const n = qs.filter((q) => q.ageBand === band && q.pointKey === key).length;
-        if (n < 6) {
-          ctx.addIssue({ code: "custom", message: `أقل من 6 أسئلة لـ ${band} × ${key} (${n})` });
-        }
+export const questionsFileSchema = z.array(conversationQuestionSchema).superRefine((qs, ctx) => {
+  const ids = new Set<string>();
+  qs.forEach((q, i) => {
+    if (ids.has(q.id))
+      ctx.addIssue({ code: "custom", message: `id مكرر ${q.id}`, path: [i, "id"] });
+    ids.add(q.id);
+  });
+  for (const band of ageBand.options) {
+    for (const key of [...pointKey.options, "friends"] as const) {
+      const n = qs.filter((q) => q.ageBand === band && q.pointKey === key).length;
+      if (n < 6) {
+        ctx.addIssue({ code: "custom", message: `أقل من 6 أسئلة لـ ${band} × ${key} (${n})` });
       }
     }
-    for (const { path, text } of collectStrings(qs)) {
-      const bad = findForbiddenWord(text);
-      if (bad) ctx.addIssue({ code: "custom", message: `كلمة ممنوعة «${bad}» في ${path}` });
-    }
-  });
+  }
+  for (const { path, text } of collectStrings(qs)) {
+    const bad = findForbiddenWord(text);
+    if (bad) ctx.addIssue({ code: "custom", message: `كلمة ممنوعة «${bad}» في ${path}` });
+  }
+});

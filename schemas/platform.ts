@@ -15,7 +15,11 @@ export const platformStepSchema = z
   .strict()
   .superRefine((s, ctx) => {
     if (s.isDemo && !isDemoUrl(s.sourceUrl)) {
-      ctx.addIssue({ code: "custom", message: "خطوة تجريبية لازم رابطها example.org", path: ["sourceUrl"] });
+      ctx.addIssue({
+        code: "custom",
+        message: "خطوة تجريبية لازم رابطها example.org",
+        path: ["sourceUrl"],
+      });
     }
     if (!s.isDemo && (!isAllowedUrl(s.sourceUrl) || !s.verifiedAt)) {
       ctx.addIssue({
@@ -45,7 +49,11 @@ export const platformSchema = z
   .strict()
   .superRefine((p, ctx) => {
     if (p.officialGuideUrl && !isAllowedUrl(p.officialGuideUrl)) {
-      ctx.addIssue({ code: "custom", message: "رابط الدليل مو من نطاق رسمي", path: ["officialGuideUrl"] });
+      ctx.addIssue({
+        code: "custom",
+        message: "رابط الدليل مو من نطاق رسمي",
+        path: ["officialGuideUrl"],
+      });
     }
     for (const { path, text } of collectStrings(p)) {
       const bad = findForbiddenWord(text);

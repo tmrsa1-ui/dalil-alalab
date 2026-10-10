@@ -19,7 +19,12 @@ export const metadata: Metadata = {
   icons: { icon: "/icons/icon.svg", apple: "/icons/icon-192.png" },
   appleWebApp: { capable: true, title: ar.app.name, statusBarStyle: "default" },
   formatDetection: { telephone: false },
-  openGraph: { title: ar.app.name, description: ar.app.description, locale: "ar_SA", type: "website" },
+  openGraph: {
+    title: ar.app.name,
+    description: ar.app.description,
+    locale: "ar_SA",
+    type: "website",
+  },
   robots: { index: true, follow: true },
   referrer: "no-referrer",
 };
@@ -38,7 +43,12 @@ const themeScript = `(function(){try{var t=JSON.parse(localStorage.getItem("dali
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" className={`${plexArabic.variable} ${plexLatin.variable}`} suppressHydrationWarning>
+    <html
+      lang="ar"
+      dir="rtl"
+      className={`${plexArabic.variable} ${plexLatin.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

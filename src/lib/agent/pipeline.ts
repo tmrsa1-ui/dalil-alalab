@@ -37,7 +37,10 @@ export async function generateCard(
     return { title, report, sourcesFetched: 0 };
   }
   const extracted = await extract(identity, docs, deps.llm);
-  const { title, report } = await verifyCard({ slug, nameAr, identity, extracted, docs }, deps.judge);
+  const { title, report } = await verifyCard(
+    { slug, nameAr, identity, extracted, docs },
+    deps.judge,
+  );
   return { title, report, sourcesFetched: docs.length };
 }
 

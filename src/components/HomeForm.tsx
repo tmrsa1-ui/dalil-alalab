@@ -40,7 +40,12 @@ export function HomeForm({ index }: { index: TitleIndexEntry[] }) {
   }
 
   return (
-    <form onSubmit={submit} noValidate className="card grid gap-5 p-4 shadow-sm sm:p-6" role="search">
+    <form
+      onSubmit={submit}
+      noValidate
+      className="card grid gap-5 p-4 shadow-sm sm:p-6"
+      role="search"
+    >
       <SearchBox
         index={index}
         value={query}

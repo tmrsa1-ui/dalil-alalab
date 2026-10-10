@@ -14,6 +14,12 @@ export async function POST(req: Request) {
   }
   const parsed = body.safeParse(await req.json().catch(() => null));
   if (!parsed.success) return NextResponse.json({ ok: false }, { status: 400 });
-  const result = await insert("title_requests", { name: parsed.data.name, ts: new Date().toISOString() });
-  return NextResponse.json({ ok: result !== "error", stored: result !== "disabled" }, { status: result === "error" ? 502 : 200 });
+  const result = await insert("title_requests", {
+    name: parsed.data.name,
+    ts: new Date().toISOString(),
+  });
+  return NextResponse.json(
+    { ok: result !== "error", stored: result !== "disabled" },
+    { status: result === "error" ? 502 : 200 },
+  );
 }

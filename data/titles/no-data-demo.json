@@ -3,10 +3,7 @@
   "slug": "no-data-demo",
   "nameAr": "لعبة بلا بيانات (مثال)",
   "nameEn": "No-Data Demo Game",
-  "aliases": [
-    "لعبة بلا بيانات",
-    "بلا بيانات"
-  ],
+  "aliases": ["لعبة بلا بيانات", "بلا بيانات"],
   "kind": "game",
   "platforms": [],
   "publisher": null,

@@ -75,7 +75,12 @@ export type SourceDoc = { url: string; title: string; text: string; fetchedAt: s
 
 /** واجهة النموذج — تُحقن عشان الاختبارات تستخدم mock بدون أي API حقيقي. */
 export interface AgentLlm {
-  json<T>(args: { system: string; prompt: string; schema: z.ZodType<T>; maxTokens?: number }): Promise<T>;
+  json<T>(args: {
+    system: string;
+    prompt: string;
+    schema: z.ZodType<T>;
+    maxTokens?: number;
+  }): Promise<T>;
 }
 
 /** المحقق المستقل: هل الاقتباس يدعم الادعاء؟ */

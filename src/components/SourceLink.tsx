@@ -35,7 +35,9 @@ export function SourceLink({
         <span className="sr-only">{ar.source.opensNewTab}</span>
       </a>
       {isDemo ? <span className="text-xs text-demo">({ar.source.demoLink})</span> : null}
-      {verifiedAt ? <span className="text-xs text-muted num">{ar.know.verifiedAt(verifiedAt)}</span> : null}
+      {verifiedAt ? (
+        <span className="text-xs text-muted num">{ar.know.verifiedAt(verifiedAt)}</span>
+      ) : null}
     </span>
   );
 }
