@@ -29,9 +29,12 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "3",
+      "sourceUrl": "https://pegi.info/search-pegi?q=Subway%20Surfers&op=Search",
+      "verifiedAt": "2026-10-10",
+      "quote": "This game has been rated PEGI 3 and contains no pertinent content.",
+      "edition": "Subway Surfers — Google Play Store",
+      "confidence": "auto"
     },
     "appStore": {
       "value": "9+",

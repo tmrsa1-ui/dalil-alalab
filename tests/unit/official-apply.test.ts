@@ -240,3 +240,67 @@ describe("applyOfficial (PlayStation / Xbox السعودية)", () => {
     expect(decisions.some((d) => d.field === "xbox" && d.action === "skip")).toBe(true);
   });
 });
+
+describe("applyOfficial (ESRB / PEGI من مواقع الجهات نفسها)", () => {
+  const ESRB = "https://www.esrb.org/ratings/1/game/";
+  const PEGI = "https://pegi.info/search-pegi?q=Game&op=Search";
+  const boards = (): Partial<SnapshotEntry> => ({
+    appStore: null,
+    googlePlay: null,
+    esrb: {
+      url: ESRB,
+      fetchedAt: "2026-10-10",
+      status: 200,
+      title: "Game",
+      platforms: "PlayStation 5, Xbox Series",
+      rating: "Everyone 10+",
+      descriptors: ["Fantasy Violence"],
+      interactive: ["Users Interact", "In-Game Purchases (Includes Random Items)"],
+      quote: "Game is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence.",
+    },
+    pegi: {
+      url: PEGI,
+      fetchedAt: "2026-10-10",
+      status: 200,
+      title: "Game",
+      platforms: ["PC - 25/09/2026", "PlayStation 5 - 25/09/2026"],
+      rating: "16",
+      descriptors: ["In-game purchases"],
+      quote:
+        "This game has received a PEGI 16 because it features the ability to purchase loot boxes.",
+    },
+  });
+
+  it("يكتب ESRB وPEGI بالاقتباس الحرفي والنسخة والمنصات", () => {
+    const { title } = applyOfficial(emptyTitle("game", "لعبة", "Game"), entry(boards()));
+    expect(title.ratings.esrb).toMatchObject({
+      value: "Everyone 10+",
+      descriptors: ["Fantasy Violence"],
+      sourceUrl: ESRB,
+      edition: "Game — PlayStation 5, Xbox Series",
+      confidence: "auto",
+    });
+    expect(title.ratings.pegi).toMatchObject({
+      value: "16",
+      sourceUrl: PEGI,
+      edition: "Game — PC, PlayStation 5",
+      confidence: "auto",
+    });
+    expect(title.ratings.pegi.descriptors).toBeUndefined();
+    expect(title.attentionPoints.strangerChat.sources[0]!.url).toBe(ESRB);
+    expect(title.attentionPoints.purchases.sources.map((s) => s.url)).toEqual([ESRB, PEGI]);
+    expect(title.familyLens.gambling.status).toBe("present");
+    expect(title.familyLens.gambling.sources.map((s) => s.url)).toEqual([ESRB, PEGI]);
+    expect(titleSchema.safeParse(title).success).toBe(true);
+  });
+
+  it("«No Descriptors» ما ينكتب كواصف، وفشل الجلب ما يكتب شي", () => {
+    const b = boards();
+    b.esrb = { ...b.esrb!, descriptors: ["No Descriptors"] };
+    b.pegi = { ...b.pegi!, status: 404, rating: null };
+    const { title } = applyOfficial(emptyTitle("game", "لعبة", "Game"), entry(b));
+    expect(title.ratings.esrb.descriptors).toBeUndefined();
+    expect(title.attentionPoints.content.status).toBe("unknown");
+    expect(title.ratings.pegi.value).toBeNull();
+  });
+});

@@ -13,7 +13,11 @@ test("عنوان حقيقي مستورد: القيم «بحاجة مراجعة �
   await expect(page.getByTestId("rating-esrb")).toContainText("Crewmate Edition");
   await expect(page.getByTestId("rating-appStore")).toContainText("9+");
   await expect(page.getByTestId("rating-gcam")).toContainText("PlayStation (السعودية)");
-  await expect(page.getByTestId("rating-pegi")).toContainText("غير متوفر");
+  await expect(page.getByTestId("rating-pegi")).toContainText("7");
+  await expect(page.getByTestId("rating-pegi").getByTestId("source-link")).toHaveAttribute(
+    "href",
+    /^https:\/\/pegi\.info\//,
+  );
   await expect(page.getByTestId("point-strangerChat")).toContainText("Users Interact");
   await expect(page.getByTestId("point-ads")).toContainText("Contains ads");
   await expect(page.getByTestId("rating-googlePlay")).toContainText("7+");
@@ -45,7 +49,7 @@ test("التصنيف السعودي (Gmedia) كما يعرضه Google Play في 
   await expect(page.getByTestId("rating-googlePlay")).toContainText("غير متوفر");
 });
 
-test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation (السعودية) وPEGI من Xbox (السعودية)", async ({
+test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation (السعودية)، PEGI من Xbox (السعودية)، وESRB من موقعها", async ({
   page,
 }) => {
   await page.goto("/title/among-us?age=10");
@@ -53,10 +57,16 @@ test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation (ا�
   await expect(gcam).toContainText("12");
   await expect(gcam).toContainText("يعرضه: PlayStation (السعودية)");
   await expect(gcam).toContainText("التصنيف أعلى من عمر طفلك");
-  await page.goto("/title/rocket-league?age=10");
+  await page.goto("/title/stumble-guys?age=10");
   const pegi = page.getByTestId("rating-pegi");
   await expect(pegi).toContainText("3");
   await expect(pegi).toContainText("يعرضه: Xbox (السعودية)");
+  await page.goto("/title/rocket-league?age=10");
+  await expect(page.getByTestId("rating-esrb")).toContainText("Everyone");
+  await expect(page.getByTestId("rating-esrb").getByTestId("source-link")).toHaveAttribute(
+    "href",
+    "https://www.esrb.org/ratings/10018866/rocket-league/",
+  );
   await expect(page.getByTestId("rating-appStore")).toContainText("غير متوفر");
   await expect(page.getByTestId("point-ads").getByTestId("not-found")).toBeVisible();
   await expect(page.getByTestId("point-sessionPause").getByTestId("not-found")).toBeVisible();

@@ -11,7 +11,9 @@
       ],
       "psGameSlug": "roblox",
       "xboxProductId": "BQ1TN1T79V9K",
-      "xboxExpect": "Roblox - Xbox"
+      "xboxExpect": "Roblox - Xbox",
+      "esrbQuery": "Roblox",
+      "esrbTitle": "Roblox"
     },
     "minecraft": {
       "appStoreId": "479516143",
@@ -24,7 +26,12 @@
       ],
       "psGameSlug": "minecraft",
       "xboxProductId": "9MVXMVT8ZKWC",
-      "xboxExpect": "Minecraft"
+      "xboxExpect": "Minecraft",
+      "esrbQuery": "Minecraft",
+      "esrbTitle": "Minecraft",
+      "esrbId": "39862",
+      "pegiQuery": "Minecraft",
+      "pegiTitle": "Minecraft"
     },
     "fortnite": {
       "appStoreId": "6483539426",
@@ -37,7 +44,11 @@
       ],
       "psGameSlug": "fortnite",
       "xboxProductId": "BT5P2X999VH2",
-      "xboxExpect": "Fortnite"
+      "xboxExpect": "Fortnite",
+      "esrbQuery": "Fortnite",
+      "esrbTitle": "Fortnite Battle Royale",
+      "pegiQuery": "Fortnite",
+      "pegiTitle": "Fortnite Battle Royale"
     },
     "among-us": {
       "appStoreId": "1351168404",
@@ -46,31 +57,47 @@
       "guides": [],
       "psGameSlug": "among-us",
       "xboxProductId": "9NG07QJNK38J",
-      "xboxExpect": "Among Us"
+      "xboxExpect": "Among Us",
+      "esrbQuery": "Among Us",
+      "esrbTitle": "Among Us - Crewmate Edition",
+      "pegiQuery": "Among Us",
+      "pegiTitle": "Among Us – Crewmate Edition"
     },
     "pubg-mobile": {
       "appStoreId": "1330123889",
       "playPackage": "com.tencent.ig",
       "expect": "PUBG",
-      "guides": []
+      "guides": [],
+      "pegiQuery": "PUBG MOBILE",
+      "pegiTitle": "PUBG MOBILE"
     },
     "free-fire": {
       "appStoreId": "1300146617",
       "playPackage": "com.dts.freefireth",
       "expect": "Free Fire",
-      "guides": []
+      "guides": [],
+      "pegiQuery": "Free Fire",
+      "pegiTitle": "Garena Free Fire"
     },
     "brawl-stars": {
       "appStoreId": "1229016807",
       "playPackage": "com.supercell.brawlstars",
       "expect": "Brawl Stars",
-      "guides": ["https://supercell.com/en/parents/"]
+      "guides": [
+        "https://supercell.com/en/parents/"
+      ],
+      "pegiQuery": "Brawl Stars",
+      "pegiTitle": "Brawl Stars"
     },
     "clash-royale": {
       "appStoreId": "1053012308",
       "playPackage": "com.supercell.clashroyale",
       "expect": "Clash Royale",
-      "guides": ["https://supercell.com/en/parents/"]
+      "guides": [
+        "https://supercell.com/en/parents/"
+      ],
+      "pegiQuery": "Clash Royale",
+      "pegiTitle": "Clash Royale"
     },
     "tiktok": {
       "appStoreId": "835599320",
@@ -103,7 +130,11 @@
       "appStoreId": "1094591345",
       "playPackage": "com.nianticlabs.pokemongo",
       "expect": "Pokémon GO",
-      "guides": []
+      "guides": [],
+      "esrbQuery": "Pokemon GO",
+      "esrbTitle": "Pokémon GO",
+      "pegiQuery": "Pokémon GO",
+      "pegiTitle": "Pokémon GO"
     },
     "ea-sports-fc": {
       "appStoreId": "1094930513",
@@ -116,19 +147,29 @@
       "psGameSlug": "ea-sports-fc-26",
       "psExpect": "FC 26",
       "xboxProductId": "9NJ2N85T2ZGS",
-      "xboxExpect": "EA SPORTS FC™ 27 XBOX Series X|S"
+      "xboxExpect": "EA SPORTS FC™ 27 XBOX Series X|S",
+      "esrbQuery": "EA SPORTS FC",
+      "esrbTitle": "EA SPORTS FC™ 27",
+      "pegiQuery": "EA SPORTS FC",
+      "pegiTitle": "EA SPORTS FC™ 27"
     },
     "call-of-duty-mobile": {
       "appStoreId": "1287282214",
       "playPackage": "com.activision.callofduty.shooter",
       "expect": "Call of Duty",
-      "guides": []
+      "guides": [],
+      "esrbQuery": "Call of Duty Mobile",
+      "esrbTitle": "Call of Duty: Mobile",
+      "pegiQuery": "Call of Duty Mobile",
+      "pegiTitle": "Call of Duty: Mobile"
     },
     "subway-surfers": {
       "appStoreId": "512939461",
       "playPackage": "com.kiloo.subwaysurf",
       "expect": "Subway Surfers",
-      "guides": []
+      "guides": [],
+      "pegiQuery": "Subway Surfers",
+      "pegiTitle": "Subway Surfers"
     },
     "genshin-impact": {
       "appStoreId": "1517783697",
@@ -137,7 +178,11 @@
       "guides": [],
       "psGameSlug": "genshin-impact",
       "xboxProductId": "9N7TFFRRZCC9",
-      "xboxExpect": "Genshin Impact"
+      "xboxExpect": "Genshin Impact",
+      "esrbQuery": "Genshin Impact",
+      "esrbTitle": "Genshin Impact",
+      "pegiQuery": "Genshin Impact",
+      "pegiTitle": "Genshin Impact"
     },
     "stumble-guys": {
       "appStoreId": "1541153375",
@@ -145,7 +190,11 @@
       "expect": "Stumble Guys",
       "guides": [],
       "xboxProductId": "9N9L211HC9LQ",
-      "xboxExpect": "Stumble Guys"
+      "xboxExpect": "Stumble Guys",
+      "esrbQuery": "Stumble Guys",
+      "esrbTitle": "Stumble Guys",
+      "pegiQuery": "Stumble Guys",
+      "pegiTitle": "Stumble Guys"
     },
     "discord": {
       "appStoreId": "985746746",
@@ -160,7 +209,10 @@
       "appStoreId": "389801252",
       "playPackage": "com.instagram.android",
       "expect": "Instagram",
-      "guides": ["https://help.instagram.com/995996839195964", "https://familycenter.meta.com/"]
+      "guides": [
+        "https://help.instagram.com/995996839195964",
+        "https://familycenter.meta.com/"
+      ]
     },
     "rocket-league": {
       "appStoreId": null,
@@ -172,7 +224,11 @@
       ],
       "psGameSlug": "rocket-league",
       "xboxProductId": "C125W9BG2K0V",
-      "xboxExpect": "Rocket League®"
+      "xboxExpect": "Rocket League®",
+      "esrbQuery": "Rocket League",
+      "esrbTitle": "Rocket League",
+      "pegiQuery": "Rocket League",
+      "pegiTitle": "Rocket League Ultimate Edition"
     }
   },
   "platformGuides": {

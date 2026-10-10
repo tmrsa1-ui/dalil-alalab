@@ -28,9 +28,15 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "7",
+      "descriptors": [
+        "Violence"
+      ],
+      "sourceUrl": "https://pegi.info/search-pegi?q=Clash%20Royale&op=Search",
+      "verifiedAt": "2026-10-10",
+      "quote": "This game has been rated PEGI 7 for mild violence against small human characters and fantastical creatures.",
+      "edition": "Clash Royale — Google Play Store",
+      "confidence": "auto"
     },
     "appStore": {
       "value": "9+",
@@ -81,10 +87,17 @@
       "confidence": "auto"
     },
     "content": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: PEGI.",
+      "sources": [
+        {
+          "url": "https://pegi.info/search-pegi?q=Clash%20Royale&op=Search",
+          "title": "PEGI: Clash Royale",
+          "quote": "Violence",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "ads": {
       "status": "unknown",

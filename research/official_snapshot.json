@@ -38,8 +38,13 @@
         "authority": "Generic",
         "ratingDescription": "IARC 12+",
         "ratingName": "GENERIC_12",
-        "descriptors": ["Parental Guidance Recommended"],
-        "interactive": ["In-Game Purchases (Includes Random Items)", "Users Interact"]
+        "descriptors": [
+          "Parental Guidance Recommended"
+        ],
+        "interactive": [
+          "In-Game Purchases (Includes Random Items)",
+          "Users Interact"
+        ]
       },
       "psExpect": "Roblox",
       "xbox": {
@@ -50,10 +55,22 @@
         "boardName": "PEGI",
         "rating": "الإرشاد الأبوي المستحسن",
         "ratingDescription": "الإرشاد الأبوي المستحسن",
-        "descriptors": ["الإرشاد الأبوي المستحسن"],
-        "interactive": ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+        "descriptors": [
+          "الإرشاد الأبوي المستحسن"
+        ],
+        "interactive": [
+          "تفاعل المستخدمين",
+          "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"
+        ]
       },
       "xboxExpect": "Roblox - Xbox",
+      "esrb": {
+        "url": "https://www.esrb.org/search/?searchKeyword=Roblox",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
+      "pegi": null,
       "guides": [
         {
           "url": "https://about.roblox.com/parental-controls",
@@ -98,7 +115,10 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
         "ratedFor": "Rated for 7+",
-        "ratingLines": ["Mild Violence", "Users Interact, In-Game Purchases"],
+        "ratingLines": [
+          "Mild Violence",
+          "Users Interact, In-Game Purchases"
+        ],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
@@ -126,6 +146,39 @@
         "interactive": []
       },
       "xboxExpect": "Minecraft",
+      "esrb": {
+        "url": "https://www.esrb.org/ratings/39862/minecraft/",
+        "title": "Minecraft",
+        "platforms": "PlayStation 5",
+        "rating": "Everyone 10+",
+        "descriptors": [
+          "Fantasy Violence"
+        ],
+        "interactive": [
+          "Users Interact",
+          "In-Game Purchases"
+        ],
+        "synopsis": "Minecraft is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence. Also includes Users Interact and In-Game Purchases. This is a sandbox adventure game in which players explore and mine/harvest cube-shaped materials. From a first-person perspective, players traverse pixilated open-world landscapes, avoid hazards, build structures, and craft potions and weapons (e.g., swords, axes, bows, magic staffs). Players are occasionally prompted to defend against enemies (e.g., zombies, skeletons, wizards/mages) by striking them repeatedly until they collapse. Players can also use weapons against animals and villagers, though these acts are not encouraged. Fighting is highlighted by short cries/grunts of pain, impact sounds, and occasional explosions.",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Minecraft",
+        "quote": "Minecraft is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence."
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Minecraft&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": [
+          "Minecraft Dungeons II",
+          "Minecraft Legends",
+          "Minecraft Java Edition",
+          "Minecraft Dungeons Ultimate Edition",
+          "Minecraft Dungeons",
+          "Minecraft: Story Mode - Season Two",
+          "Minecraft: Story Mode - Season Two - Episode 5: Above and Beyond",
+          "Minecraft: Story Mode - Season Two - Episode 5: Above and Beyond"
+        ]
+      },
       "guides": [
         {
           "url": "https://www.minecraft.net/en-us/article/parental-controls",
@@ -207,10 +260,53 @@
         "boardName": "PEGI",
         "rating": "الإرشاد الأبوي المستحسن",
         "ratingDescription": "الإرشاد الأبوي المستحسن",
-        "descriptors": ["الإرشاد الأبوي المستحسن"],
-        "interactive": ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+        "descriptors": [
+          "الإرشاد الأبوي المستحسن"
+        ],
+        "interactive": [
+          "تفاعل المستخدمين",
+          "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"
+        ]
       },
       "xboxExpect": "Fortnite",
+      "esrb": {
+        "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+        "title": "Fortnite Battle Royale",
+        "platforms": "Windows PC, PlayStation 4, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Xbox One, Xbox Series",
+        "rating": "Teen",
+        "descriptors": [
+          "Lyrics",
+          "Suggestive Themes",
+          "Violence"
+        ],
+        "interactive": [
+          "Users Interact",
+          "In-Game Purchases"
+        ],
+        "synopsis": "Fortnite Battle Royale is rated T for Teen by the ESRB with Lyrics, Suggestive Themes, and Violence. Also includes Users Interact and In-Game Purchases. This is a survival action game in which players compete in battle royale-style competitions to be the last person or team standing. From a third-person perspective, players gather supplies, build forts, and battle enemies on a shrinking battlefield. Players use pistols, shotguns, sniper rifles, machine guns, and melee weapons (e.g., axes, swords) to fight opposing players in ranged and close-quarter combat. Battles are fast-paced, highlighted by realistic gunfire and impact sounds. Some sequences allow players to enter a first-person view of combat (e.g., aiming through a scope). Defeated enemies typically burst into colorful light effects before disappearing. Players can encounter a female character depicted with deep inner cleavage and lower breast exposure. Some accompanying song lyrics contain the words “sh*t,” \"b*tch,\" and \"a*s\"; other song lyrics contain references to marijuana.",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Fortnite Battle Royale",
+        "quote": "Fortnite Battle Royale is rated T for Teen by the ESRB with Lyrics, Suggestive Themes, and Violence."
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Fortnite&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Fortnite Battle Royale",
+        "title": "Fortnite Battle Royale",
+        "publisher": "Epic Games Entertainment International GmbH",
+        "rating": "12",
+        "descriptors": [
+          "Violence",
+          "In-game purchases"
+        ],
+        "platforms": [
+          "Fortnite - 14/11/2023"
+        ],
+        "advice": "This game has received a PEGI 12 because it features moderate violence. Not suitable for persons under 12 years of age.",
+        "quote": "This game has received a PEGI 12 because it features moderate violence."
+      },
       "guides": [
         {
           "url": "https://www.epicgames.com/site/en-US/parental-controls",
@@ -265,7 +361,10 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
         "ratedFor": "Rated for 7+",
-        "ratingLines": ["Mild Violence", "Users Interact, Digital Purchases"],
+        "ratingLines": [
+          "Mild Violence",
+          "Users Interact, Digital Purchases"
+        ],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
@@ -293,6 +392,48 @@
         "interactive": []
       },
       "xboxExpect": "Among Us",
+      "esrb": {
+        "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
+        "title": "Among Us - Crewmate Edition",
+        "platforms": "Windows PC, PlayStation 4, PlayStation 5, Nintendo Switch, Xbox One, Xbox Series",
+        "rating": "Everyone 10+",
+        "descriptors": [
+          "Fantasy Violence",
+          "Mild Blood"
+        ],
+        "interactive": [
+          "Users Interact",
+          "In-Game Purchases"
+        ],
+        "synopsis": "Among Us - Crewmate Edition is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence and Mild Blood. Also includes Users Interact and In-Game Purchases. This is a multiplayer social deduction game in which players control either crewmates or imposters on a mysterious spaceship. From a pulled back perspective, players solve puzzles, complete tasks, and discover who the imposters are through deduction. Along the way, players can attack other characters by using various weapons (e.g., knives, pistols, spikes); brief animations depict characters eliminating each other (e.g., getting impaled, stabbed, shot), leaving behind a cartoony corpse for others to discover.",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Among Us - Crewmate Edition",
+        "quote": "Among Us - Crewmate Edition is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence and Mild Blood."
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Among%20Us&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Among Us – Crewmate Edition",
+        "title": "Among Us – Crewmate Edition",
+        "publisher": "Maximum Entertainment Ireland LTD",
+        "rating": "7",
+        "descriptors": [
+          "Violence",
+          "In-game purchases"
+        ],
+        "platforms": [
+          "Nintendo Switch - 02/11/2021",
+          "PlayStation 4 - 02/11/2021",
+          "PlayStation 5 - 02/11/2021",
+          "Xbox One - 02/11/2021",
+          "Xbox Series X|S - 02/11/2021",
+          "PC - 02/11/2021"
+        ],
+        "advice": "This game has received a PEGI 7 because it features mild violence. Not suitable for persons under 7 years of age.",
+        "quote": "This game has received a PEGI 7 because it features mild violence."
+      },
       "guides": []
     },
     "pubg-mobile": {
@@ -316,7 +457,9 @@
         "ratingBody": "Gmedia",
         "badgeSrc": "https://play-apps-features.googleusercontent.com/png/Gmedia_12_272.png",
         "ratedFor": "12",
-        "ratingLines": ["Users Interact"],
+        "ratingLines": [
+          "Users Interact"
+        ],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
@@ -324,6 +467,13 @@
       "psExpect": "PUBG",
       "xbox": null,
       "xboxExpect": "PUBG",
+      "esrb": null,
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=PUBG%20MOBILE&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
       "guides": []
     },
     "free-fire": {
@@ -358,6 +508,13 @@
       "psExpect": "Free Fire",
       "xbox": null,
       "xboxExpect": "Free Fire",
+      "esrb": null,
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Free%20Fire&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
       "guides": []
     },
     "brawl-stars": {
@@ -389,6 +546,13 @@
       "psExpect": "Brawl Stars",
       "xbox": null,
       "xboxExpect": "Brawl Stars",
+      "esrb": null,
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Brawl%20Stars&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
       "guides": [
         {
           "url": "https://supercell.com/en/parents/",
@@ -423,7 +587,9 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
         "ratedFor": "Rated for 16+",
-        "ratingLines": ["Users Interact, In-Game Purchases (Includes Random Items)"],
+        "ratingLines": [
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
@@ -431,6 +597,24 @@
       "psExpect": "Clash Royale",
       "xbox": null,
       "xboxExpect": "Clash Royale",
+      "esrb": null,
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Clash%20Royale&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Clash Royale",
+        "title": "Clash Royale",
+        "publisher": "Supercell",
+        "rating": "7",
+        "descriptors": [
+          "Violence"
+        ],
+        "platforms": [
+          "Google Play Store - 28/03/2018"
+        ],
+        "advice": "This game has been rated PEGI 7 for mild violence against small human characters and fantastical creatures.",
+        "quote": "This game has been rated PEGI 7 for mild violence against small human characters and fantastical creatures."
+      },
       "guides": [
         {
           "url": "https://supercell.com/en/parents/",
@@ -476,6 +660,8 @@
       "psExpect": "TikTok",
       "xbox": null,
       "xboxExpect": "TikTok",
+      "esrb": null,
+      "pegi": null,
       "guides": [
         {
           "url": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
@@ -531,6 +717,8 @@
       "psExpect": "Snapchat",
       "xbox": null,
       "xboxExpect": "Snapchat",
+      "esrb": null,
+      "pegi": null,
       "guides": [
         {
           "url": "https://values.snap.com/safety/family-center",
@@ -583,6 +771,8 @@
       "psExpect": "YouTube Kids",
       "xbox": null,
       "xboxExpect": "YouTube Kids",
+      "esrb": null,
+      "pegi": null,
       "guides": [
         {
           "url": "https://support.google.com/youtubekids/?hl=ar",
@@ -627,7 +817,9 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
         "ratedFor": "Rated for 16+",
-        "ratingLines": ["Shares Location, In-Game Purchases (Includes Random Items)"],
+        "ratingLines": [
+          "Shares Location, In-Game Purchases (Includes Random Items)"
+        ],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
@@ -635,6 +827,29 @@
       "psExpect": "Pokémon GO",
       "xbox": null,
       "xboxExpect": "Pokémon GO",
+      "esrb": {
+        "url": "https://www.esrb.org/search/?searchKeyword=Pokemon%20GO",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": [
+          "Pokémon Gold Version"
+        ]
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Pok%C3%A9mon%20GO&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Pokémon GO",
+        "title": "Pokémon GO",
+        "publisher": "Niantic, Inc.",
+        "rating": "7",
+        "descriptors": [],
+        "platforms": [
+          "Google Play Store - 14/09/2018"
+        ],
+        "advice": "This game has been rated PEGI 7 for mild violence against fantasy characters.",
+        "quote": "This game has been rated PEGI 7 for mild violence against fantasy characters."
+      },
       "guides": []
     },
     "ea-sports-fc": {
@@ -658,7 +873,9 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/UAlGNLgnQRVs-XrK_mUGJw1h_nlO1Ykv0jZK-YoRrRYIGIWmRdE_CCPB7U34jAiz4xLWUAqQ5Me7Daq7N_8=s38",
         "ratedFor": "Rated for 16+",
-        "ratingLines": ["Users Interact, In-Game Purchases (Includes Random Items)"],
+        "ratingLines": [
+          "Users Interact, In-Game Purchases (Includes Random Items)"
+        ],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
@@ -686,6 +903,47 @@
         "interactive": []
       },
       "xboxExpect": "EA SPORTS FC™ 27 XBOX Series X|S",
+      "esrb": {
+        "url": "https://www.esrb.org/ratings/41462/ea-sports-fctm-27/",
+        "title": "EA SPORTS FC™ 27",
+        "platforms": "Windows PC, PlayStation 4, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Xbox One, Xbox Series",
+        "rating": "Everyone",
+        "descriptors": [
+          "No Descriptors"
+        ],
+        "interactive": [
+          "Users Interact",
+          "In-Game Purchases (Includes Random Items)"
+        ],
+        "synopsis": "EA SPORTS FC™ 27 is rated E for Everyone by the ESRB. Also includes Users Interact and In-Game Purchases (Includes Random Items). This is a sports simulation game in which players engage in matches of realistic soccer. Players can participate in tournaments, skill games, and several modes of street soccer.",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "EA SPORTS FC™ 27",
+        "quote": "EA SPORTS FC™ 27 is rated E for Everyone by the ESRB."
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=EA%20SPORTS%20FC&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "EA SPORTS FC™ 27",
+        "title": "EA SPORTS FC™ 27",
+        "publisher": "EA Swiss Sarl",
+        "rating": "16",
+        "descriptors": [
+          "In-game purchases"
+        ],
+        "platforms": [
+          "PC - 25/09/2026",
+          "PlayStation 4 - 25/09/2026",
+          "PlayStation 5 - 25/09/2026",
+          "Xbox One - 25/09/2026",
+          "Xbox Series X|S - 25/09/2026",
+          "Nintendo Switch - 25/09/2026",
+          "Nintendo Switch 2 - 25/09/2026"
+        ],
+        "advice": "This game has received a PEGI 16 because it features the ability to purchase loot boxes. Not suitable for persons under 16 years of age.",
+        "quote": "This game has received a PEGI 16 because it features the ability to purchase loot boxes."
+      },
       "guides": [
         {
           "url": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
@@ -741,6 +999,18 @@
       "psExpect": "Call of Duty",
       "xbox": null,
       "xboxExpect": "Call of Duty",
+      "esrb": {
+        "url": "https://www.esrb.org/search/?searchKeyword=Call%20of%20Duty%20Mobile",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Call%20of%20Duty%20Mobile&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
       "guides": []
     },
     "subway-surfers": {
@@ -764,7 +1034,10 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
         "ratedFor": "Rated for 7+",
-        "ratingLines": ["Mild Violence", "In-Game Purchases (Includes Random Items)"],
+        "ratingLines": [
+          "Mild Violence",
+          "In-Game Purchases (Includes Random Items)"
+        ],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
@@ -772,6 +1045,22 @@
       "psExpect": "Subway Surfers",
       "xbox": null,
       "xboxExpect": "Subway Surfers",
+      "esrb": null,
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Subway%20Surfers&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Subway Surfers",
+        "title": "Subway Surfers",
+        "publisher": "Kiloo",
+        "rating": "3",
+        "descriptors": [],
+        "platforms": [
+          "Google Play Store - 28/03/2018"
+        ],
+        "advice": "This game has been rated PEGI 3 and contains no pertinent content.",
+        "quote": "This game has been rated PEGI 3 and contains no pertinent content."
+      },
       "guides": []
     },
     "genshin-impact": {
@@ -810,8 +1099,13 @@
         "authority": "Generic",
         "ratingDescription": "IARC 12+",
         "ratingName": "GENERIC_12",
-        "descriptors": ["Moderate Violence"],
-        "interactive": ["In-Game Purchases (Includes Random Items)", "Users Interact"]
+        "descriptors": [
+          "Moderate Violence"
+        ],
+        "interactive": [
+          "In-Game Purchases (Includes Random Items)",
+          "Users Interact"
+        ]
       },
       "psExpect": "Genshin",
       "xbox": {
@@ -822,10 +1116,56 @@
         "boardName": "PEGI",
         "rating": "PEGI 12",
         "ratingDescription": "للأعمار من 12 عاماً فأكبر",
-        "descriptors": ["عنف متوسط"],
-        "interactive": ["تفاعل المستخدمين", "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+        "descriptors": [
+          "عنف متوسط"
+        ],
+        "interactive": [
+          "تفاعل المستخدمين",
+          "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"
+        ]
       },
       "xboxExpect": "Genshin Impact",
+      "esrb": {
+        "url": "https://www.esrb.org/ratings/39201/genshin-impact/",
+        "title": "Genshin Impact",
+        "platforms": "Windows PC",
+        "rating": "Teen",
+        "descriptors": [
+          "Fantasy Violence",
+          "Mild Language",
+          "Mild Suggestive Themes",
+          "Use of Alcohol"
+        ],
+        "interactive": [
+          "Users Interact",
+          "In-Game Purchases (Includes Random Items)"
+        ],
+        "synopsis": "Genshin Impact is rated T for Teen by the ESRB with Fantasy Violence, Mild Language, Mild Suggestive Themes, and Use of Alcohol. Also includes Users Interact and In-Game Purchases (Includes Random Items). This is a role-playing game in which players assume the role of a character searching for a lost sibling in a fantasy world. From a third-person perspective, players explore an open-world environment, interact with characters, complete missions, and battle fantastical creatures (e.g., rock golems, slime creatures, goblins, insects). Players use swords and ranged attacks to fight enemies in frenetic melee-style combat. Combat is highlighted by frequent impact sounds, light effects, and explosions. The game contains some suggestive material: female characters designed with revealing outfits and camera angles (e.g., deep cleavage, close-ups, exaggerated proportions); innuendo in the dialogue/text (e.g. \"...[U]se your strong hand to stir it with a persistent rhythm…Keep going until the juices start to come out…Okay, okay, I get it…”; “Are you ready to please me?...What did you say?”). One sequence depicts characters engaging in a drinking game, resulting in drunken characters with slurred speech. The words “bastard” and “a*s” appear in the game.",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Genshin Impact",
+        "quote": "Genshin Impact is rated T for Teen by the ESRB with Fantasy Violence, Mild Language, Mild Suggestive Themes, and Use of Alcohol."
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Genshin%20Impact&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Genshin Impact",
+        "title": "Genshin Impact",
+        "publisher": "miHoYo Limited",
+        "rating": "12",
+        "descriptors": [
+          "Violence",
+          "In-game purchases"
+        ],
+        "platforms": [
+          "PC - 28/09/2020",
+          "PlayStation 4 - 28/09/2020",
+          "PlayStation 5 - 30/06/2021"
+        ],
+        "advice": "This game has received a PEGI 12 because it features depictions of non-realistic looking violence towards human-like characters. Not suitable for persons under 12 years of age.",
+        "quote": "This game has received a PEGI 12 because it features depictions of non-realistic looking violence towards human-like characters."
+      },
       "guides": []
     },
     "stumble-guys": {
@@ -849,7 +1189,9 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/_re6mcALPaqotePA0WkgYeOQ6TighHRUS62FRmREPEhyZPdGM3QmRjcSpiMt6Pz1O-WZyvEIy4mtGHj9zw=s38",
         "ratedFor": "Rated for 3+",
-        "ratingLines": ["In-Game Purchases (Includes Random Items)"],
+        "ratingLines": [
+          "In-Game Purchases (Includes Random Items)"
+        ],
         "containsAds": true,
         "inAppPurchasesLabel": true
       },
@@ -864,9 +1206,23 @@
         "rating": "PEGI 3",
         "ratingDescription": "للأعمار من 3 أعوام فأكبر",
         "descriptors": [],
-        "interactive": ["عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"]
+        "interactive": [
+          "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"
+        ]
       },
       "xboxExpect": "Stumble Guys",
+      "esrb": {
+        "url": "https://www.esrb.org/search/?searchKeyword=Stumble%20Guys",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Stumble%20Guys&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 404,
+        "candidates": []
+      },
       "guides": []
     },
     "discord": {
@@ -890,7 +1246,10 @@
         "ratingBody": "IARC",
         "badgeSrc": "https://play-lh.googleusercontent.com/YrkR-GP7OKghBTATCoO_jJrchSVrh-NSUBb5DnbRZC1DbLK_cgV9FC2e_iI4GzLsKXuZjuFZajnGCiA8qA=s38",
         "ratedFor": "Rated for 12+",
-        "ratingLines": ["Parental Guidance Recommended", "Users Interact, In-App Purchases"],
+        "ratingLines": [
+          "Parental Guidance Recommended",
+          "Users Interact, In-App Purchases"
+        ],
         "containsAds": false,
         "inAppPurchasesLabel": true
       },
@@ -898,6 +1257,8 @@
       "psExpect": "Discord",
       "xbox": null,
       "xboxExpect": "Discord",
+      "esrb": null,
+      "pegi": null,
       "guides": [
         {
           "url": "https://discord.com/safety-family-center",
@@ -953,6 +1314,8 @@
       "psExpect": "Instagram",
       "xbox": null,
       "xboxExpect": "Instagram",
+      "esrb": null,
+      "pegi": null,
       "guides": [
         {
           "url": "https://help.instagram.com/995996839195964",
@@ -988,7 +1351,9 @@
         "authority": "PEGI",
         "ratingDescription": "PEGI 3",
         "ratingName": "PEGI_3",
-        "descriptors": ["Online"],
+        "descriptors": [
+          "Online"
+        ],
         "interactive": []
       },
       "psExpect": "Rocket League",
@@ -1004,6 +1369,40 @@
         "interactive": []
       },
       "xboxExpect": "Rocket League®",
+      "esrb": {
+        "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+        "title": "Rocket League",
+        "platforms": "PlayStation 4, Xbox One",
+        "rating": "Everyone",
+        "descriptors": [
+          "Mild Lyrics"
+        ],
+        "interactive": [
+          "Users Interact"
+        ],
+        "synopsis": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics.",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Rocket League",
+        "quote": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics."
+      },
+      "pegi": {
+        "url": "https://pegi.info/search-pegi?q=Rocket%20League&op=Search",
+        "fetchedAt": "2026-10-10",
+        "status": 200,
+        "pageTitle": "Rocket League Ultimate Edition",
+        "title": "Rocket League Ultimate Edition",
+        "publisher": "Warner Brothers Entertainment UK Ltd",
+        "rating": "3",
+        "descriptors": [],
+        "platforms": [
+          "PlayStation 4 - 28/08/2018",
+          "Xbox One - 28/08/2018",
+          "Nintendo Switch - 28/08/2018"
+        ],
+        "advice": "This game was rated PEGI 3. The content of this game is suitable for all persons.",
+        "quote": "This game was rated PEGI 3."
+      },
       "guides": [
         {
           "url": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
@@ -1062,12 +1461,12 @@
     "switch": {
       "url": "https://www.nintendo.com/us/switch/parental-controls/",
       "fetchedAt": "2026-10-10",
-      "status": 0,
-      "finalUrl": "https://www.nintendo.com/us/switch/parental-controls/",
-      "metaDescription": null,
+      "status": 200,
+      "finalUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
+      "metaDescription": "Learn all about the Nintendo Switch Parental Controls app for your smart device to help manage your Nintendo Switch and Nintendo Switch 2 systems.",
       "finalAllowed": true,
-      "pageTitle": "",
-      "mentionsParental": false
+      "pageTitle": "Parental Controls App - Nintendo US",
+      "mentionsParental": true
     },
     "ios": {
       "url": "https://support.apple.com/ar-sa/105121",

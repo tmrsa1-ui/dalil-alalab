@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 0.5.0 — 2026-10-10 (ESRB وPEGI من مواقع الجهات)
+
+- ESRB من `www.esrb.org` لـ6 عناوين (Minecraft، Fortnite، Among Us، EA SPORTS FC 27، Genshin Impact، Rocket League) مع الاقتباس الرسمي والمنصات.
+- PEGI من `pegi.info` لـ8 عناوين (منها Clash Royale وSubway Surfers وPokémon GO وAmong Us)؛ PEGI صار متوفر لـ10 عناوين.
+- Fortnite صار عنده التصنيف السعودي (12) من PlayStation (السعودية).
+- عناصر ESRB التفاعلية وواصفات PEGI صارت مصادر لنقاط الانتباه ولعدسة «القمار أو ما يشبهه».
+- دليل Nintendo Switch صار مفحوص (رابط نهائي + اقتباس + تاريخ).
+- موقع GCAM نفسه ما زال ما يرد (502)، فالتصنيف السعودي يبقى من المتاجر السعودية فقط.
+
 ## 0.4.0 — 2026-10-10 (الأجهزة المنزلية)
 
 - PlayStation (السعودية) وXbox (السعودية): التصنيف السعودي GCAM/GAMR لـMinecraft (7) وFortnite (12) وAmong Us (12) وEA SPORTS FC 26 (3)، وPEGI لـRoblox وFortnite وGenshin Impact وStumble Guys وRocket League — كلها باقتباس ورابط وتاريخ وحالة «بحاجة مراجعة بشرية».

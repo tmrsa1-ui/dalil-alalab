@@ -39,8 +39,23 @@ export type ConsoleSnapshot = {
   interactive?: string[];
 };
 
+/** صفحة ESRB الرسمية (www.esrb.org) أو نتيجة بحث PEGI الرسمية (pegi.info). */
+export type BoardSnapshot = {
+  url: string;
+  fetchedAt: string;
+  status?: number;
+  title?: string;
+  platforms?: string | string[];
+  rating?: string | null;
+  descriptors?: string[];
+  interactive?: string[];
+  quote?: string | null;
+};
+
 export type SnapshotEntry = {
   expect: string;
+  esrb?: BoardSnapshot | null;
+  pegi?: BoardSnapshot | null;
   appStore: StoreSnapshot | null;
   googlePlay: StoreSnapshot | null;
   playstation?: ConsoleSnapshot | null;
@@ -269,6 +284,41 @@ export function applyOfficial(
     );
   }
 
+  // جهات التصنيف نفسها: ESRB (www.esrb.org) وPEGI (pegi.info) — مقدّمة على ما تعرضه المتاجر.
+  const esrb = e.esrb?.status === 200 && e.esrb.rating ? e.esrb : null;
+  const pegi = e.pegi?.status === 200 && e.pegi.rating ? e.pegi : null;
+  const esrbDescriptors = (esrb?.descriptors ?? []).filter((d) => d !== "No Descriptors");
+  if (esrb) {
+    const platforms = Array.isArray(esrb.platforms) ? esrb.platforms.join(", ") : esrb.platforms;
+    setRating("esrb", {
+      value: esrb.rating!,
+      ...(esrbDescriptors.length ? { descriptors: esrbDescriptors } : {}),
+      sourceUrl: esrb.url,
+      verifiedAt: esrb.fetchedAt,
+      quote: esrb.quote ?? `${esrb.title}: ${esrb.rating}`,
+      edition: [esrb.title, platforms].filter(Boolean).join(" — "),
+      confidence: "auto",
+    });
+  }
+  if (pegi) {
+    const pegiDescriptors = (pegi.descriptors ?? []).filter((d) => !/purchases/i.test(d));
+    const platforms = Array.isArray(pegi.platforms)
+      ? pegi.platforms
+          .map((p) => p.replace(/\s*-\s*\d{2}\/\d{2}\/\d{4}$/, ""))
+          .filter((p) => !(pegi.title ?? "").includes(p))
+          .join(", ")
+      : pegi.platforms;
+    setRating("pegi", {
+      value: pegi.rating!,
+      ...(pegiDescriptors.length ? { descriptors: pegiDescriptors } : {}),
+      sourceUrl: pegi.url,
+      verifiedAt: pegi.fetchedAt,
+      quote: pegi.quote ?? `PEGI ${pegi.rating}`,
+      edition: [pegi.title, platforms].filter(Boolean).join(" — "),
+      confidence: "auto",
+    });
+  }
+
   const apple = parseAppleDetails(as?.ageRatingDetails);
   const items: Record<Exclude<PointKey, "sessionPause">, Item[]> = {
     strangerChat: [],
@@ -331,6 +381,28 @@ export function applyOfficial(
     if (xb.descriptors?.length)
       items.content.push(fromConsole(xb, "Xbox", xbExpect, xb.descriptors.join("، ")));
   }
+  const fromBoard = (src: BoardSnapshot, label: string, quote: string): Item => ({
+    url: src.url,
+    title: `${label}: ${src.title ?? e.expect}`,
+    quote,
+    verifiedAt: src.fetchedAt,
+    label,
+  });
+  if (esrb) {
+    const ia = esrb.interactive ?? [];
+    if (ia.includes("Users Interact"))
+      items.strangerChat.push(fromBoard(esrb, "ESRB", "Users Interact"));
+    const p = ia.find((x) => /Purchases/i.test(x));
+    if (p) items.purchases.push(fromBoard(esrb, "ESRB", p));
+    if (esrbDescriptors.length)
+      items.content.push(fromBoard(esrb, "ESRB", esrbDescriptors.join(", ")));
+  }
+  if (pegi) {
+    const p = (pegi.descriptors ?? []).find((x) => /purchases/i.test(x));
+    if (p) items.purchases.push(fromBoard(pegi, "PEGI", p));
+    const d = (pegi.descriptors ?? []).filter((x) => !/purchases/i.test(x));
+    if (d.length) items.content.push(fromBoard(pegi, "PEGI", d.join(", ")));
+  }
   if (gp) {
     if (gpInteractive.includes("Users Interact"))
       items.strangerChat.push(fromGP("Google Play", "Users Interact"));
@@ -380,6 +452,13 @@ export function applyOfficial(
   if (ps && psRandom) lens.push(fromConsole(ps, "PlayStation", psExpect, psRandom));
   const xbRandom = xb?.interactive?.find((x) => /عناصر عشوائية/.test(x));
   if (xb && xbRandom) lens.push(fromConsole(xb, "Xbox", xbExpect, xbRandom));
+  const esrbRandom = esrb?.interactive?.find((x) => /Random Items|Simulated Gambling/i.test(x));
+  if (esrb && esrbRandom) lens.push(fromBoard(esrb, "ESRB", esrbRandom));
+  const esrbGambling = esrbDescriptors.find((x) => /Gambling/i.test(x));
+  if (esrb && esrbGambling) lens.push(fromBoard(esrb, "ESRB", esrbGambling));
+  if (pegi?.quote && /loot box/i.test(pegi.quote)) lens.push(fromBoard(pegi, "PEGI", pegi.quote));
+  const pegiGambling = pegi?.descriptors?.find((x) => /Gambling/i.test(x));
+  if (pegi && pegiGambling) lens.push(fromBoard(pegi, "PEGI", pegiGambling));
   if (lens.length) {
     const prev = t.familyLens.gambling.sources.filter(
       (s) => !lens.some((i) => i.url === s.url && i.quote === s.quote),

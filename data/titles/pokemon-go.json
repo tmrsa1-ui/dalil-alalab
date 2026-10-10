@@ -30,9 +30,12 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "7",
+      "sourceUrl": "https://pegi.info/search-pegi?q=Pok%C3%A9mon%20GO&op=Search",
+      "verifiedAt": "2026-10-10",
+      "quote": "This game has been rated PEGI 7 for mild violence against fantasy characters.",
+      "edition": "Pokémon GO — Google Play Store",
+      "confidence": "auto"
     },
     "appStore": {
       "value": "9+",

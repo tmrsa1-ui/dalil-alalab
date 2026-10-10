@@ -20,17 +20,22 @@
       "verifiedAt": null
     },
     "esrb": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "Everyone",
+      "descriptors": [
+        "Mild Lyrics"
+      ],
+      "sourceUrl": "https://www.esrb.org/ratings/10018866/rocket-league/",
+      "verifiedAt": "2026-10-10",
+      "quote": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics.",
+      "edition": "Rocket League — PlayStation 4, Xbox One",
+      "confidence": "auto"
     },
     "pegi": {
       "value": "3",
-      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/C125W9BG2K0V",
+      "sourceUrl": "https://pegi.info/search-pegi?q=Rocket%20League&op=Search",
       "verifiedAt": "2026-10-10",
-      "quote": "PEGI 3 — للأعمار من 3 أعوام فأكبر",
-      "edition": "Rocket League®",
-      "shownOn": "Xbox (السعودية)",
+      "quote": "This game was rated PEGI 3.",
+      "edition": "Rocket League Ultimate Edition — PlayStation 4, Xbox One, Nintendo Switch",
       "confidence": "auto"
     },
     "appStore": {
@@ -46,10 +51,17 @@
   },
   "attentionPoints": {
     "strangerChat": {
-      "status": "unknown",
-      "summaryAr": "",
-      "sources": [],
-      "confidence": "none"
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: ESRB.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "title": "ESRB: Rocket League",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
     },
     "purchases": {
       "status": "unknown",
@@ -59,12 +71,18 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: PlayStation.",
+      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: PlayStation، ESRB.",
       "sources": [
         {
           "url": "https://www.playstation.com/en-sa/games/rocket-league/",
           "title": "PlayStation (السعودية): Rocket League",
           "quote": "Online",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "title": "ESRB: Rocket League",
+          "quote": "Mild Lyrics",
           "verifiedAt": "2026-10-10"
         }
       ],

@@ -4,10 +4,11 @@
   "nameAr": "نينتندو سويتش",
   "nameEn": "Nintendo Switch",
   "toolNameEn": "Nintendo Switch Parental Controls",
-  "officialGuideUrl": "https://www.nintendo.com/us/switch/parental-controls/",
-  "officialGuideTitle": "Nintendo: Parental Controls",
+  "officialGuideUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
+  "officialGuideTitle": "Parental Controls App - Nintendo US",
   "verifiedAt": null,
-  "linkCheckedAt": null,
+  "linkCheckedAt": "2026-10-10",
+  "guideQuote": "Learn all about the Nintendo Switch Parental Controls app for your smart device to help manage your Nintendo Switch and Nintendo Switch 2 systems.",
   "steps": [
     {
       "id": "switch-strangerchat-1",

@@ -21,6 +21,11 @@ type Cfg = {
       psExpect?: string;
       xboxProductId?: string;
       xboxExpect?: string;
+      esrbQuery?: string;
+      esrbTitle?: string;
+      esrbId?: string;
+      pegiQuery?: string;
+      pegiTitle?: string;
     }
   >;
   platformGuides?: Record<string, string>;
@@ -31,11 +36,19 @@ const UA =
 const today = new Date().toISOString().slice(0, 10);
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function get(url: string): Promise<{ status: number; finalUrl: string; body: string }> {
+async function get(
+  url: string,
+  extra: { referer?: string } = {},
+): Promise<{ status: number; finalUrl: string; body: string }> {
   for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const res = await fetch(url, {
-        headers: { "user-agent": UA, "accept-language": "en" },
+        headers: {
+          "user-agent": UA,
+          accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "accept-language": "en-US,en;q=0.9",
+          ...(extra.referer ? { referer: extra.referer } : {}),
+        },
         redirect: "follow",
         signal: AbortSignal.timeout(25_000),
       });
@@ -208,6 +221,86 @@ async function xbox(productId: string) {
   }
 }
 
+const normTitle = (t: string) =>
+  t.replace(/[™®]/g, "").replace(/[–—]/g, "-").replace(/\s+/g, " ").trim().toLowerCase();
+
+/** نتائج بحث ESRB: نختار الإصدار اللي عنوانه يطابق حرفيًا (أحدث رقم، أو رقم محدد). */
+async function esrb(query: string, title: string, id?: string) {
+  const searchUrl = `https://www.esrb.org/search/?searchKeyword=${encodeURIComponent(query)}`;
+  const r = await get(searchUrl);
+  if (r.status !== 200) return { url: searchUrl, fetchedAt: today, status: r.status };
+  const games = r.body
+    .split('<div class="game">')
+    .slice(1)
+    .map((g) => {
+      const t = g.match(/<h2><a href="([^"]+)">([\s\S]*?)<\/a>/);
+      const cells = [...g.matchAll(/<td>([\s\S]*?)<\/td>/g)].map((m) => m[1]!);
+      return {
+        url: t?.[1] ?? "",
+        title: strip(t?.[2] ?? ""),
+        platforms: strip(g.match(/class="platforms">([\s\S]*?)<\/div>/)?.[1] ?? ""),
+        rating: cells[0]?.match(/alt="([^"]+)"/)?.[1] ?? null,
+        descriptors: strip(cells[1] ?? "")
+          .split(",")
+          .map((x) => x.trim())
+          .filter(Boolean),
+        interactive: [...(cells[2] ?? "").matchAll(/<p>([\s\S]*?)<\/p>/g)]
+          .map((m) => strip(m[1]!).replace(/\s*\([^)]*\)\s*$/, ""))
+          .filter(Boolean),
+        synopsis: strip(cells[3] ?? ""),
+      };
+    });
+  const matches = games.filter(
+    (g) => normTitle(g.title) === normTitle(title) && (!id || g.url.includes(`/ratings/${id}/`)),
+  );
+  const num = (u: string) => Number(u.match(/ratings\/(\d+)\//)?.[1] ?? 0);
+  const best = matches.sort((a, b) => num(b.url) - num(a.url))[0];
+  if (!best)
+    return {
+      url: searchUrl,
+      fetchedAt: today,
+      status: 404,
+      candidates: games.map((g) => g.title).slice(0, 8),
+    };
+  const quote = best.synopsis.match(/^.*?by the ESRB[^.]*\./)?.[0] ?? null;
+  return { ...best, fetchedAt: today, status: 200, pageTitle: best.title, quote };
+}
+
+/** قاعدة بيانات PEGI: أول نتيجة عنوانها يطابق حرفيًا (النتائج مرتبة من الأحدث). */
+async function pegi(query: string, title: string) {
+  const url = `https://pegi.info/search-pegi?q=${encodeURIComponent(query)}&op=Search`;
+  const r = await get(url, { referer: "https://pegi.info/" });
+  if (r.status !== 200) return { url, fetchedAt: today, status: r.status };
+  const main = r.body.slice(r.body.indexOf('id="results"'));
+  const games = main
+    .split('<article class="game">')
+    .slice(1)
+    .map((a) => ({
+      title: strip(a.match(/<h3>([\s\S]*?)<\/h3>/)?.[1] ?? ""),
+      publisher: strip(a.match(/class="publisher">([\s\S]*?)<\/span>/)?.[1] ?? ""),
+      rating: a.match(/alt="age rating ([^"]+)"/)?.[1] ?? null,
+      descriptors: [...a.matchAll(/category_threshold_icons\/[^"]+" alt="([^"]+)"/g)].map(
+        (m) => m[1]!,
+      ),
+      platforms: [...a.matchAll(/<div class="icon-[^"]*">([\s\S]*?)<\/div>/g)].map((m) =>
+        strip(m[1]!),
+      ),
+      advice: strip(a.match(/Advice for consumers<\/h3>[\s\S]*?<p>([\s\S]*?)<\/p>/)?.[1] ?? ""),
+    }));
+  const best = games.find((g) => normTitle(g.title) === normTitle(title));
+  if (!best)
+    return {
+      url,
+      fetchedAt: today,
+      status: 404,
+      candidates: games.map((g) => g.title).slice(0, 8),
+    };
+  const quote =
+    best.advice.match(/^[^.]*PEGI[^.]*\./)?.[0] ??
+    (best.rating ? `age rating ${best.rating}` : null);
+  return { url, fetchedAt: today, status: 200, pageTitle: best.title, ...best, quote };
+}
+
 async function guide(url: string) {
   if (!isAllowedUrl(url)) return { url, status: -1, reason: "خارج النطاقات الرسمية" };
   const r = await get(url);
@@ -260,12 +353,20 @@ async function main() {
       psExpect: c.psExpect ?? c.expect,
       xbox: keep(c.xboxProductId ? await xbox(c.xboxProductId) : null, prev[slug]?.xbox),
       xboxExpect: c.xboxExpect ?? c.expect,
+      esrb: keep(
+        c.esrbQuery && c.esrbTitle ? await esrb(c.esrbQuery, c.esrbTitle, c.esrbId) : null,
+        prev[slug]?.esrb,
+      ),
+      pegi: keep(
+        c.pegiQuery && c.pegiTitle ? await pegi(c.pegiQuery, c.pegiTitle) : null,
+        prev[slug]?.pegi,
+      ),
       guides: [] as unknown[],
     };
     for (const g of c.guides) entry.guides.push(await guide(g));
     out[slug] = entry;
     console.log(
-      `${slug}: AS=${(entry.appStore as { ageRating?: string } | null)?.ageRating ?? "—"} GP=${(entry.googlePlay as { ratedFor?: string } | null)?.ratedFor ?? "—"} PS=${(entry.playstation as { ratingDescription?: string } | null)?.ratingDescription ?? "—"} XB=${(entry.xbox as { boardName?: string; rating?: string } | null)?.boardName ?? "—"}:${(entry.xbox as { rating?: string } | null)?.rating ?? ""} guides=${entry.guides.map((g) => (g as { status: number }).status).join(",")}`,
+      `${slug}: AS=${(entry.appStore as { ageRating?: string } | null)?.ageRating ?? "—"} GP=${(entry.googlePlay as { ratedFor?: string } | null)?.ratedFor ?? "—"} PS=${(entry.playstation as { ratingDescription?: string } | null)?.ratingDescription ?? "—"} XB=${(entry.xbox as { boardName?: string; rating?: string } | null)?.boardName ?? "—"}:${(entry.xbox as { rating?: string } | null)?.rating ?? ""} ESRB=${(entry.esrb as { rating?: string } | null)?.rating ?? "—"} PEGI=${(entry.pegi as { rating?: string } | null)?.rating ?? "—"} guides=${entry.guides.map((g) => (g as { status: number }).status).join(",")}`,
     );
     await sleep(800);
   }
