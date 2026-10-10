@@ -122,7 +122,7 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: ESRB، PEGI، Google Play.",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: ESRB، PEGI، Google Play.",
       "sources": [
         {
           "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",

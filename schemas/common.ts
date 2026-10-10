@@ -1,5 +1,8 @@
 import { z } from "zod";
 
+// بدون JIT: Zod 4 يجرّب `new Function` وهذا ينحجب بـCSP (script-src بدون unsafe-eval) ويطلع مخالفة في المتصفح.
+z.config({ jitless: true });
+
 export const isoDate = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, "التاريخ لازم يكون بصيغة YYYY-MM-DD");

@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 export const plexArabic = localFont({
   src: [
     { path: "../fonts/plex-arabic-400.woff2", weight: "400", style: "normal" },
-    { path: "../fonts/plex-arabic-500.woff2", weight: "500", style: "normal" },
     { path: "../fonts/plex-arabic-700.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-plex-ar",

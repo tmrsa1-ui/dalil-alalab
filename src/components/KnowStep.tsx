@@ -5,6 +5,7 @@ import { RatingTable } from "./RatingTable";
 import { AttentionPoint } from "./AttentionPoint";
 import { FamilyLens } from "./FamilyLens";
 import { PrayerPause } from "./PrayerPause";
+import { KnowGlance } from "./KnowGlance";
 
 export function KnowStep({
   title,
@@ -18,6 +19,7 @@ export function KnowStep({
 }) {
   return (
     <div className="grid gap-6">
+      <KnowGlance title={title} age={age} pending={reserveSummary} />
       <section aria-labelledby="ratings-h">
         <h3 id="ratings-h" className="text-xl font-bold">
           {ar.know.ratingsTitle}

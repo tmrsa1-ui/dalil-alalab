@@ -124,7 +124,7 @@ function summarize(lead: string, items: Item[]): string {
 const LEADS: Record<Exclude<PointKey, "sessionPause">, string> = {
   strangerChat: "فيه تواصل مع مستخدمين آخرين، حسب:",
   purchases: "فيه مشتريات داخل اللعبة أو التطبيق، حسب:",
-  content: "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب:",
+  content: "فيه واصفات محتوى رسمية، حسب:",
   ads: "فيه إعلانات، حسب:",
 };
 

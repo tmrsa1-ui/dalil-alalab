@@ -4,6 +4,7 @@ import type { Title } from "@schemas/title";
 import { ConfidenceBadge } from "./ConfidenceBadge";
 import { SourceLink } from "./SourceLink";
 import { BidiText } from "./BidiText";
+import { translateList } from "@/lib/i18n/terms";
 
 type Point = Title["attentionPoints"][PointKey];
 
@@ -32,6 +33,11 @@ export function AttentionPoint({
       : ar.know.status[point.status];
   const unknown = point.status === "unknown" || point.sources.length === 0;
   const headingId = `point-${pointKey}`;
+  // ترجمة واصفات المحتوى الرسمية (الاقتباس الحرفي يبقى تحت «المصادر»).
+  const arabicTerms =
+    pointKey === "content"
+      ? [...new Set(point.sources.flatMap((s) => (s.quote ? (translateList(s.quote) ?? []) : [])))]
+      : [];
   const extras =
     pointKey === "sessionPause" && "hasRecommendationFeed" in point
       ? [
@@ -82,21 +88,37 @@ export function AttentionPoint({
                   ))}
                 </ul>
               ) : null}
+              {arabicTerms.length ? (
+                <p className="mt-1 text-sm" data-testid="point-terms">
+                  <span className="font-semibold">{ar.know.inArabic}: </span>
+                  {arabicTerms.join("، ")}
+                </p>
+              ) : null}
               <div className="mt-2 flex flex-wrap items-center gap-2">
                 <ConfidenceBadge level={point.confidence} isDemo={isDemo} />
               </div>
-              <div className="mt-1 text-sm">
-                <span className="sr-only">{ar.know.sourcesLabel}: </span>
-                {point.sources.map((s) => (
-                  <SourceLink
-                    key={`${s.url}|${s.quote}`}
-                    url={s.url}
-                    label={s.title}
-                    quote={s.quote}
-                    verifiedAt={s.verifiedAt}
-                  />
-                ))}
-              </div>
+              <details className="group mt-1 text-sm" data-testid="point-sources">
+                <summary className="inline-flex min-h-[44px] cursor-pointer items-center gap-1 font-semibold text-brand">
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform group-open:rotate-90 motion-reduce:transition-none"
+                  >
+                    ‹
+                  </span>
+                  {ar.know.sourcesCount(point.sources.length)}
+                </summary>
+                <div className="mt-1 grid gap-1 border-s-2 border-line ps-3">
+                  {point.sources.map((s) => (
+                    <SourceLink
+                      key={`${s.url}|${s.quote}`}
+                      url={s.url}
+                      label={s.title}
+                      quote={s.quote}
+                      verifiedAt={s.verifiedAt}
+                    />
+                  ))}
+                </div>
+              </details>
             </>
           )}
           {unknown ? (

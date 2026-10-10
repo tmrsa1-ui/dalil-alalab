@@ -20,7 +20,6 @@ export function Stepper({ current, onChange }: { current: StepId; onChange: (s: 
                 type="button"
                 onClick={() => onChange(s)}
                 aria-current={state === "current" ? "step" : undefined}
-                aria-label={`${ar.steps.stepOf(i + 1, 4)}: ${ar.steps[s].label}`}
                 className={`flex min-h-[52px] w-full flex-col items-center justify-center rounded-xl border-2 px-1 text-sm font-bold transition-colors ${
                   state === "current"
                     ? "border-brand bg-brand text-brand-ink"
@@ -33,6 +32,7 @@ export function Stepper({ current, onChange }: { current: StepId; onChange: (s: 
                   {state === "done" ? "✓" : i + 1}
                 </span>
                 <span>{ar.steps[s].label}</span>
+                <span className="sr-only">، {ar.steps.stepOf(i + 1, 4)}</span>
               </button>
             </li>
           );

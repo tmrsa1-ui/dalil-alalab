@@ -81,3 +81,20 @@ test("دليل الرقابة الرسمي لـPlayStation بعد الفحص م�
     "PlayStation Family app",
   );
 });
+
+test("«الصورة باختصار» فوق «اعرف»، والمصادر مطوية، والواصفات بالعربي", async ({ page }) => {
+  await page.goto("/title/among-us?age=10");
+  const glance = page.getByTestId("know-glance");
+  await expect(glance.getByTestId("glance-saudi")).toContainText("12");
+  await expect(glance.getByTestId("glance-saudi")).toContainText("أعلى من عمر طفلك");
+  await expect(glance.getByTestId("glance-present")).toContainText("محادثة الغرباء");
+  await expect(glance.getByTestId("glance-unknown")).toContainText("مدة الجلسة والتوقف");
+  const content = page.getByTestId("point-content");
+  await expect(content.getByTestId("point-terms")).toContainText("عنف خيالي");
+  const sources = content.getByTestId("point-sources");
+  await expect(sources.getByTestId("source-link").first()).toBeHidden();
+  await sources.locator("summary").click();
+  await expect(sources.getByTestId("source-link").first()).toBeVisible();
+  await expect(page.getByTestId("rating-esrb")).toContainText("عنف خيالي");
+  await expectNoSeriousA11y(page);
+});

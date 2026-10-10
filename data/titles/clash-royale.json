@@ -88,7 +88,7 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: PEGI.",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: PEGI.",
       "sources": [
         {
           "url": "https://pegi.info/search-pegi?q=Clash%20Royale&op=Search",

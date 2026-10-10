@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.6.0 — 2026-10-10 (حلقة التدقيق — انظر AUDIT.md)
+
+- «الصورة باختصار» فوق «اعرف»، والمصادر مطوية، وترجمة عربية ثابتة للمصطلحات الرسمية.
+- «الممارسات» في Lighthouse 100 (إلغاء JIT في Zod)، CLS ≤ 0.02، حذف وزن خط غير مستخدم.
+
 ## 0.5.0 — 2026-10-10 (ESRB وPEGI من مواقع الجهات)
 
 - ESRB من `www.esrb.org` لـ6 عناوين (Minecraft، Fortnite، Among Us، EA SPORTS FC 27، Genshin Impact، Rocket League) مع الاقتباس الرسمي والمنصات.

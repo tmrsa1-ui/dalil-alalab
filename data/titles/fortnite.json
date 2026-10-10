@@ -132,7 +132,7 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: Xbox، ESRB، PEGI، Google Play.",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: Xbox، ESRB، PEGI، Google Play.",
       "sources": [
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",

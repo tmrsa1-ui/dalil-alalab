@@ -1,4 +1,5 @@
 import { ar } from "@/lib/i18n/ar";
+import { translateList } from "@/lib/i18n/terms";
 
 function hostLabel(url: string) {
   try {
@@ -24,6 +25,7 @@ export function SourceLink({
   className?: string;
 }) {
   const isDemo = hostLabel(url) === "example.org";
+  const translated = quote && !isDemo ? translateList(quote) : null;
   return (
     <span className={`inline-flex flex-wrap items-center gap-x-2 ${className}`}>
       <a
@@ -44,6 +46,11 @@ export function SourceLink({
       {quote && !isDemo ? (
         <span className="w-full text-xs text-muted" data-testid="source-quote">
           {ar.source.quote}: «<bdi dir="ltr">{quote}</bdi>»
+          {translated ? (
+            <span className="block" title={ar.know.translationNote}>
+              {ar.know.inArabic}: {translated.join("، ")}
+            </span>
+          ) : null}
         </span>
       ) : null}
     </span>

@@ -98,7 +98,7 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store، Google Play.",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: App Store، Google Play.",
       "sources": [
         {
           "url": "https://apps.apple.com/sa/app/id1300146617",

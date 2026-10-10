@@ -93,7 +93,7 @@
     },
     "content": {
       "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية (تفاصيلها تحت كل مصدر)، حسب: App Store.",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: App Store.",
       "sources": [
         {
           "url": "https://apps.apple.com/sa/app/id1330123889",
