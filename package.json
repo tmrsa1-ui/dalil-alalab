@@ -59,5 +59,8 @@
     "tsx": "^4.23.15",
     "typescript": "~5.9",
     "vitest": "^3.2.7"
+  },
+  "overrides": {
+    "playwright-core": "1.56.1"
   }
 }

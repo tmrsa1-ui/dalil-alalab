@@ -52,7 +52,7 @@
     {
       "id": "android-searchandstore-6",
       "pointKey": "searchAndStore",
-      "stepAr": "Family Link ← Google Search: فعّل فلتر النتائج الصريحة، و Google Chrome: «Try to block explicit sites».",
+      "stepAr": "Family Link ← Google Search: فعّل فلتر النتائج الصريحة، وفي Google Chrome اختر «Try to block explicit sites».",
       "sourceUrl": "https://example.org/demo/platforms/android/searchAndStore",
       "verifiedAt": null,
       "isDemo": true

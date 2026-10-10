@@ -20,7 +20,7 @@
     {
       "id": "ios-purchases-2",
       "pointKey": "purchases",
-      "stepAr": "Screen Time ← Content & Privacy Restrictions ← iTunes & App Store Purchases ← In-app Purchases: «Don't Allow». وفعّل «Ask to Buy» من Family Sharing.",
+      "stepAr": "Screen Time ← Content & Privacy Restrictions ← iTunes & App Store Purchases ← In-app Purchases: اختر «Don't Allow»، وفعّل «Ask to Buy» من Family Sharing.",
       "sourceUrl": "https://example.org/demo/platforms/ios/purchases",
       "verifiedAt": null,
       "isDemo": true
@@ -52,7 +52,7 @@
     {
       "id": "ios-searchandstore-6",
       "pointKey": "searchAndStore",
-      "stepAr": "Content Restrictions ← Web Content: اختر «Limit Adult Websites»، و App Store: الحد العمري.",
+      "stepAr": "Content Restrictions ← Web Content: اختر «Limit Adult Websites»، واضبط الحد العمري في App Store.",
       "sourceUrl": "https://example.org/demo/platforms/ios/searchAndStore",
       "verifiedAt": null,
       "isDemo": true

@@ -20,7 +20,7 @@
     {
       "id": "pc-purchases-2",
       "pointKey": "purchases",
-      "stepAr": "Steam Families: كل شراء من حساب الطفل يوصل طلب موافقة لولي الأمر.",
+      "stepAr": "في Steam Families كل شراء من حساب الطفل يوصل طلب موافقة لولي الأمر.",
       "sourceUrl": "https://example.org/demo/platforms/pc/purchases",
       "verifiedAt": null,
       "isDemo": true

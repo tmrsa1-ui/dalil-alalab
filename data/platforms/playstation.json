@@ -44,7 +44,7 @@
     {
       "id": "playstation-searchandstore-5",
       "pointKey": "searchAndStore",
-      "stepAr": "Family Management ← Web Browsing: «Restrict».",
+      "stepAr": "Family Management ← Web Browsing: اختر «Restrict».",
       "sourceUrl": "https://example.org/demo/platforms/playstation/searchAndStore",
       "verifiedAt": null,
       "isDemo": true

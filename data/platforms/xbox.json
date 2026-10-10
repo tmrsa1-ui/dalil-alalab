@@ -12,7 +12,7 @@
     {
       "id": "xbox-strangerchat-1",
       "pointKey": "strangerChat",
-      "stepAr": "تطبيق Xbox Family Settings ← حساب الطفل ← Privacy & online: «Communicate with others» على «Friends» أو «Blocked».",
+      "stepAr": "تطبيق Xbox Family Settings ← حساب الطفل ← Privacy & online: اضبط «Communicate with others» على «Friends» أو «Blocked».",
       "sourceUrl": "https://example.org/demo/platforms/xbox/strangerChat",
       "verifiedAt": null,
       "isDemo": true
