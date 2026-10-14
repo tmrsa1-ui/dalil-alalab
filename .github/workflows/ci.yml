@@ -1,8 +1,9 @@
 name: CI
 
 on:
+  # على main بعد الدمج، وعلى كل طلب دمج (بدون تشغيل مكرر للفرع نفسه).
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
 
 concurrency:
