@@ -5,6 +5,7 @@ import { getIndex, getPlatforms } from "@/lib/data/load";
 import { createSearcher } from "@/lib/search";
 import { parseAge } from "@/lib/age";
 import { isAiCardsEnabled } from "@/lib/ai-flag";
+import { isRequestStorageEnabled } from "@/lib/storage-flag";
 import { RequestTitle } from "@/components/RequestTitle";
 import { SourceLink } from "@/components/SourceLink";
 
@@ -48,7 +49,12 @@ export default async function RequestPage({
         </section>
       ) : null}
 
-      <RequestTitle query={q} aiEnabled={isAiCardsEnabled()} age={age} />
+      <RequestTitle
+        query={q}
+        aiEnabled={isAiCardsEnabled()}
+        requestsEnabled={isRequestStorageEnabled()}
+        age={age}
+      />
 
       <section aria-labelledby="mean-h" className="card p-4">
         <h2 id="mean-h" className="text-xl font-bold">

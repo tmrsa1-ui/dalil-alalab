@@ -30,7 +30,9 @@
     "audit:shots": "tsx scripts/audit-shots.ts",
     "fetch:guides": "NODE_USE_ENV_PROXY=1 NODE_NO_WARNINGS=1 tsx scripts/guides.ts fetch",
     "apply:guides": "tsx scripts/guides.ts apply",
-    "demo:video": "tsx scripts/demo-video.ts"
+    "demo:video": "tsx scripts/demo-video.ts",
+    "og:image": "tsx scripts/og-image.ts",
+    "review:data": "tsx scripts/review-data.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",
@@ -61,14 +63,15 @@
     "eslint": "^9.39.5",
     "eslint-config-next": "^15.5.27",
     "jsdom": "^26.1.0",
-    "postcss": "^8.5.29",
+    "postcss": "^8.5.30",
     "prettier": "^3.9.9",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",
     "typescript": "~5.9",
-    "vitest": "^3.2.7"
+    "vitest": "^5.0.4"
   },
   "overrides": {
-    "playwright-core": "1.56.1"
+    "playwright-core": "1.56.1",
+    "postcss": "^8.5.30"
   }
 }

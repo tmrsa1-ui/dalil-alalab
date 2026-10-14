@@ -49,7 +49,7 @@ test("التصنيف السعودي (Gmedia) كما يعرضه Google Play في 
   await expect(page.getByTestId("rating-googlePlay")).toContainText("غير متوفر");
 });
 
-test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation (السعودية)، PEGI من Xbox (السعودية)، وESRB من موقعها", async ({
+test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation وXbox (السعودية)، وESRB من موقعها", async ({
   page,
 }) => {
   await page.goto("/title/among-us?age=10");
@@ -57,10 +57,12 @@ test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation (ا�
   await expect(gcam).toContainText("12");
   await expect(gcam).toContainText("يعرضه: PlayStation (السعودية)");
   await expect(gcam).toContainText("التصنيف أعلى من عمر طفلك");
+  // Stumble Guys: متجر Xbox السعودي صار يعرض GAMR 3 (بدل PEGI 3 قبل أيام) ⇐ التصنيف السعودي من Xbox، وPEGI غير متوفر.
   await page.goto("/title/stumble-guys?age=10");
-  const pegi = page.getByTestId("rating-pegi");
-  await expect(pegi).toContainText("3");
-  await expect(pegi).toContainText("يعرضه: Xbox (السعودية)");
+  const sgGcam = page.getByTestId("rating-gcam");
+  await expect(sgGcam).toContainText("3");
+  await expect(sgGcam).toContainText("يعرضه: Xbox (السعودية)");
+  await expect(page.getByTestId("rating-pegi")).toContainText("غير متوفر");
   await page.goto("/title/rocket-league?age=10");
   await expect(page.getByTestId("rating-esrb")).toContainText("Everyone");
   await expect(page.getByTestId("rating-esrb").getByTestId("source-link")).toHaveAttribute(

@@ -74,7 +74,11 @@ function applyAll(dry: boolean) {
     const page = snap[s.sourceUrl];
     const ok = !!page && page.status === 200 && quoteInText(s.quote, page.text);
     const bad = findForbiddenWord(s.stepAr) ?? findForbiddenWord(s.quote, { english: true });
-    const verdict = !ok ? "رُفضت: الاقتباس ما انلقى" : bad ? `رُفضت: كلمة ممنوعة «${bad}»` : "قُبلت";
+    const verdict = !ok
+      ? "رُفضت: الاقتباس ما انلقى"
+      : bad
+        ? `رُفضت: كلمة ممنوعة «${bad}»`
+        : "قُبلت";
     report.push(`| ${s.platform} | ${s.pointKey} | ${verdict} | ${s.quote.replace(/\|/g, "/")} |`);
     if (ok && !bad) byPlatform.set(s.platform, [...(byPlatform.get(s.platform) ?? []), s]);
   }

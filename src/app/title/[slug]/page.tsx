@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ar } from "@/lib/i18n/ar";
+import { allAvailableHuman } from "@/lib/data/review";
 import { getAgreement, getIndex, getPlatforms, getTitle } from "@/lib/data/load";
 import { ShareButton } from "@/components/ShareButton";
 import { TitleJourney } from "@/components/TitleJourney";
@@ -27,12 +28,13 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const title = getTitle(slug);
   if (!title) notFound();
+  // شارة العنوان «راجعها إنسان» فقط لما تكون كل القيم المتوفرة راجعها إنسان (مو جزء منها).
   const statusLevel =
-    title.reviewStatus === "human_reviewed"
+    title.reviewStatus === "human_reviewed" && allAvailableHuman(title)
       ? "human"
-      : title.reviewStatus === "auto_sourced"
-        ? "auto"
-        : "none";
+      : title.reviewStatus === "not_found"
+        ? "none"
+        : "auto";
 
   return (
     <article data-wide>

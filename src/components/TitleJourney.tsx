@@ -13,9 +13,21 @@ import type { Title } from "@schemas/title";
 import { Stepper } from "./Stepper";
 import { STEP_IDS, type StepId } from "@/lib/steps";
 import { KnowStep } from "./KnowStep";
-import { PlatformTabs } from "./PlatformTabs";
-import { TalkStep } from "./TalkStep";
-import { AgreementFlow } from "./AgreementFlow";
+import dynamic from "next/dynamic";
+
+// خطوات «اضبط» و«تحاور» و«اتفق» تنحمل كحزم منفصلة عند أول زيارة لها (ما تثقّل «اعرف»).
+const loading = () => (
+  <p role="status" className="text-muted">
+    {ar.loading}
+  </p>
+);
+const PlatformTabs = dynamic(() => import("./PlatformTabs").then((m) => m.PlatformTabs), {
+  loading,
+});
+const TalkStep = dynamic(() => import("./TalkStep").then((m) => m.TalkStep), { loading });
+const AgreementFlow = dynamic(() => import("./AgreementFlow").then((m) => m.AgreementFlow), {
+  loading,
+});
 import { AgePicker } from "./AgePicker";
 
 export function TitleJourney({
@@ -50,6 +62,11 @@ export function TitleJourney({
   const [age, setAge] = useState<number | null | undefined>(undefined);
   const [pendingAge, setPendingAge] = useState<number | null>(null);
   const [step, setStep] = useState<StepId>("know");
+  // «اتفق» ما ينحمل إلا عند أول زيارة، وبعدها يبقى mounted عشان ما تضيع حالة التسليم.
+  const [agreeVisited, setAgreeVisited] = useState(false);
+  useEffect(() => {
+    if (step === "agree") setAgreeVisited(true);
+  }, [step]);
   const band = typeof age === "number" ? ageBandOf(age) : undefined;
   const [store, setStore] = useState(() => createAgreementStore(agreement, band ?? "7to12"));
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -194,9 +211,9 @@ export function TitleJourney({
             )
           ) : null}
         </div>
-        {/* «اتفق» يبقى mounted عشان ما تضيع حالة التسليم لو تنقّل أحد بين الخطوات. */}
+        {/* «اتفق» يبقى mounted بعد أول زيارة عشان ما تضيع حالة التسليم لو تنقّل أحد بين الخطوات. */}
         <div className="lg:max-w-3xl" hidden={step !== "agree"}>
-          <AgreementFlow store={store} file={agreement} title={title} />
+          {agreeVisited ? <AgreementFlow store={store} file={agreement} title={title} /> : null}
         </div>
       </section>
 

@@ -9,13 +9,16 @@ import { ConfidenceBadge } from "./ConfidenceBadge";
 export function RequestTitle({
   query,
   aiEnabled,
+  requestsEnabled = true,
   age,
 }: {
   query: string;
   aiEnabled: boolean;
+  /** الخادم يعرف إن فيه مكان يحفظ الطلب؛ بدونه ما نعرض زر يوعد بشي ما يصير. */
+  requestsEnabled?: boolean;
   age: number | null;
 }) {
-  const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "unstored" | "failed">("idle");
   const [ai, setAi] = useState<{
     status: "idle" | "loading" | "error";
     message?: string;
@@ -33,9 +36,11 @@ export function RequestTitle({
         body: JSON.stringify({ name: query }),
         credentials: "omit",
       });
-      setState(res.ok ? "sent" : "failed");
+      const json = (await res.json().catch(() => ({}))) as { stored?: boolean };
+      // الخادم يقول بصراحة لو ما انحفظ الطلب (تخزين غير مفعّل) — ما نقول «وصل» وهو ما وصل.
+      setState(!res.ok ? "failed" : json.stored === false ? "unstored" : "sent");
       // حدث مجهول للعدّ فقط (بعد الموافقة)، بدون الاسم.
-      track({ type: "title_requested" });
+      if (res.ok && json.stored !== false) track({ type: "title_requested" });
     } catch {
       setState("failed");
     }
@@ -60,20 +65,32 @@ export function RequestTitle({
 
   return (
     <div className="grid gap-4">
-      <div className="card p-4">
-        <button
-          type="button"
-          className="btn btn-primary w-full"
-          onClick={request}
-          disabled={state === "sending" || state === "sent" || !query}
-        >
-          {ar.request.cta}
-        </button>
-        <p className="mt-2 text-sm text-muted">{ar.request.ctaNote}</p>
-        <p role="status" className="mt-2 font-semibold" data-testid="request-status">
-          {state === "sent" ? ar.request.sent : state === "failed" ? ar.request.failed : ""}
+      {requestsEnabled ? (
+        <div className="card p-4">
+          <button
+            type="button"
+            className="btn btn-primary w-full"
+            onClick={request}
+            disabled={state === "sending" || state === "sent" || !query}
+          >
+            {ar.request.cta}
+          </button>
+          <p className="mt-2 text-sm text-muted">{ar.request.ctaNote}</p>
+          <p role="status" className="mt-2 font-semibold" data-testid="request-status">
+            {state === "sent"
+              ? ar.request.sent
+              : state === "unstored"
+                ? ar.request.notStored
+                : state === "failed"
+                  ? ar.request.failed
+                  : ""}
+          </p>
+        </div>
+      ) : (
+        <p className="card p-4 text-sm text-muted" data-testid="request-disabled">
+          {ar.request.disabled}
         </p>
-      </div>
+      )}
 
       {aiEnabled && query ? (
         <div className="card p-4">

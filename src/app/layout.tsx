@@ -24,7 +24,9 @@ export const metadata: Metadata = {
     description: ar.app.description,
     locale: "ar_SA",
     type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: ar.app.tagline }],
   },
+  twitter: { card: "summary_large_image", title: ar.app.name, description: ar.app.description },
   robots: { index: true, follow: true },
   referrer: "no-referrer",
 };

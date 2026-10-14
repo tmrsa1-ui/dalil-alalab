@@ -174,20 +174,25 @@ test("5) عنوان بلا بيانات ⇐ «غير متوفر/ما لقيت» 
   expect(n).toBeGreaterThan(0);
   await expect(steps.getByTestId("source-quote")).toHaveCount(n);
   await expect(page.locator('[data-testid="control-step"] a[href*="example.org"]')).toHaveCount(0);
+  // PC ما له خطوات رسمية؛ وبما إن هذا عنوان تجريبي تظهر الخطوات التجريبية معلّمة «تجريبي» وروابطها example.org فقط.
   await page.getByRole("tab", { name: "PC" }).click();
-  await expect(page.getByTestId("not-reviewed-note")).toBeVisible();
-  await expect(page.getByTestId("control-step")).toHaveCount(0);
+  const pc = page.getByTestId("control-step");
+  expect(await pc.count()).toBeGreaterThan(0);
+  await expect(pc.getByTestId("demo-badge")).toHaveCount(await pc.count());
+  await expect(
+    page.locator('[data-testid="control-step"] a[href]:not([href*="example.org"])'),
+  ).toHaveCount(0);
 });
 
 test("6) عنوان غير موجود ⇐ طلب إضافة", async ({ page }) => {
   await searchAndStart(page, "لعبة خيالية ما لها وجود", 8);
   await expect(page).toHaveURL(/\/request\?q=/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("ما لقينا هذا العنوان بعد");
-  const req = page.waitForRequest((r) => r.url().includes("/api/request-title"));
-  await page.getByRole("button", { name: "اطلب إضافته" }).click();
-  const body = (await req).postDataJSON();
-  expect(body).toEqual({ name: "لعبة خيالية ما لها وجود" });
-  await expect(page.getByTestId("request-status")).toContainText("وصل طلبك");
+  // بدون تخزين مفعّل (نسخة الاختبار): لا زر يوعد بشي ما يصير، ورسالة صريحة بدل «وصل طلبك».
+  await expect(page.getByTestId("request-disabled")).toBeVisible();
+  await expect(page.getByRole("button", { name: "اطلب إضافته" })).toHaveCount(0);
+  const direct = await page.request.post("/api/request-title", { data: { name: "x" } });
+  expect(await direct.json()).toEqual({ ok: true, stored: false });
   // بدون مفتاح: ما فيه زر بطاقة آلية، والـAPI يرجع 503 عربي
   await expect(page.getByRole("button", { name: /ولّد بطاقة آلية/ })).toHaveCount(0);
   const res = await page.request.post("/api/generate-card", { data: { name: "test" } });

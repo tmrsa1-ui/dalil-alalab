@@ -25,7 +25,7 @@
         "Mild Lyrics"
       ],
       "sourceUrl": "https://www.esrb.org/ratings/10018866/rocket-league/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics.",
       "edition": "Rocket League — PlayStation 4, Xbox One",
       "confidence": "auto"
@@ -33,7 +33,7 @@
     "pegi": {
       "value": "3",
       "sourceUrl": "https://pegi.info/search-pegi?q=Rocket%20League&op=Search",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "This game was rated PEGI 3.",
       "edition": "Rocket League Ultimate Edition — PlayStation 4, Xbox One, Nintendo Switch",
       "confidence": "auto"
@@ -58,7 +58,7 @@
           "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
           "title": "ESRB: Rocket League",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -77,13 +77,13 @@
           "url": "https://www.playstation.com/en-sa/games/rocket-league/",
           "title": "PlayStation (السعودية): Rocket League",
           "quote": "Online",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
           "title": "ESRB: Rocket League",
           "quote": "Mild Lyrics",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -125,9 +125,16 @@
       "sources": []
     },
     "music": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "ESRB يضع واصف «Mild Lyrics» (كلمات أغانٍ) على هذا العنوان — أي فيه موسيقى بكلمات لفتت انتباه جهة التصنيف.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "title": "ESRB: Rocket League",
+          "quote": "Mild Lyrics",
+          "verifiedAt": "2026-10-14"
+        }
+      ]
     }
   },
   "prayerPause": {

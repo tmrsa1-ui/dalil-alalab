@@ -37,7 +37,7 @@
     "appStore": {
       "value": "18+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1287282214",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 18+",
       "confidence": "auto"
     },
@@ -47,7 +47,7 @@
         "Strong Violence"
       ],
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 16+",
       "confidence": "auto"
     }
@@ -61,13 +61,13 @@
           "url": "https://apps.apple.com/sa/app/id1287282214",
           "title": "App Store (السعودية): Call of Duty",
           "quote": "Messaging and Chat",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
           "title": "Google Play (السعودية): Call of Duty",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -80,19 +80,19 @@
           "url": "https://apps.apple.com/sa/app/id1287282214",
           "title": "App Store (السعودية): Call of Duty",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://apps.apple.com/sa/app/id1287282214",
           "title": "App Store (السعودية): Call of Duty",
           "quote": "Loot Boxes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
           "title": "Google Play (السعودية): Call of Duty",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -105,13 +105,13 @@
           "url": "https://apps.apple.com/sa/app/id1287282214",
           "title": "App Store (السعودية): Call of Duty",
           "quote": "Frequent: Realistic Violence, Frequent: Guns or Other Weapons, Infrequent: Cartoon or Fantasy Violence, Infrequent: Profanity or Crude Humour",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
           "title": "Google Play (السعودية): Call of Duty",
           "quote": "Strong Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -124,13 +124,13 @@
           "url": "https://apps.apple.com/sa/app/id1287282214",
           "title": "App Store (السعودية): Call of Duty",
           "quote": "Advertising",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
           "title": "Google Play (السعودية): Call of Duty",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -153,13 +153,13 @@
           "url": "https://apps.apple.com/sa/app/id1287282214",
           "title": "App Store (السعودية): Call of Duty",
           "quote": "Loot Boxes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
           "title": "Google Play (السعودية): Call of Duty",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ]
     },

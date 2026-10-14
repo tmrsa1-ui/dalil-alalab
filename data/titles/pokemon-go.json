@@ -32,7 +32,7 @@
     "pegi": {
       "value": "7",
       "sourceUrl": "https://pegi.info/search-pegi?q=Pok%C3%A9mon%20GO&op=Search",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "This game has been rated PEGI 7 for mild violence against fantasy characters.",
       "edition": "Pokémon GO — Google Play Store",
       "confidence": "auto"
@@ -40,14 +40,14 @@
     "appStore": {
       "value": "9+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1094591345",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 9+",
       "confidence": "auto"
     },
     "googlePlay": {
       "value": "16+",
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 16+",
       "confidence": "auto"
     }
@@ -67,13 +67,13 @@
           "url": "https://apps.apple.com/sa/app/id1094591345",
           "title": "App Store (السعودية): Pokémon GO",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=SA",
           "title": "Google Play (السعودية): Pokémon GO",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -108,7 +108,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=SA",
           "title": "Google Play (السعودية): Pokémon GO",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ]
     },

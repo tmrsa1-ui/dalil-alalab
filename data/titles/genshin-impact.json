@@ -32,26 +32,26 @@
         "Use of Alcohol"
       ],
       "sourceUrl": "https://www.esrb.org/ratings/39201/genshin-impact/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Genshin Impact is rated T for Teen by the ESRB with Fantasy Violence, Mild Language, Mild Suggestive Themes, and Use of Alcohol.",
       "edition": "Genshin Impact — Windows PC",
       "confidence": "auto"
     },
     "pegi": {
-      "value": "12",
+      "value": "16",
       "descriptors": [
         "Violence"
       ],
       "sourceUrl": "https://pegi.info/search-pegi?q=Genshin%20Impact&op=Search",
-      "verifiedAt": "2026-10-10",
-      "quote": "This game has received a PEGI 12 because it features depictions of non-realistic looking violence towards human-like characters.",
+      "verifiedAt": "2026-10-14",
+      "quote": "This game has received a PEGI 16 because it features the ability to purchase loot boxes.",
       "edition": "Genshin Impact — PC, PlayStation 4, PlayStation 5",
       "confidence": "auto"
     },
     "appStore": {
       "value": "13+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1517783697",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 13+",
       "confidence": "auto"
     },
@@ -61,7 +61,7 @@
         "Moderate Violence"
       ],
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 16+",
       "confidence": "auto"
     }
@@ -75,31 +75,31 @@
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "Messaging and Chat",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
           "title": "PlayStation (السعودية): Genshin",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
           "title": "Xbox (السعودية): Genshin Impact",
           "quote": "تفاعل المستخدمين",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/39201/genshin-impact/",
           "title": "ESRB: Genshin Impact",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
           "title": "Google Play (السعودية): Genshin",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -112,43 +112,43 @@
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "Loot Boxes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
           "title": "PlayStation (السعودية): Genshin",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
           "title": "Xbox (السعودية): Genshin Impact",
           "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/39201/genshin-impact/",
           "title": "ESRB: Genshin Impact",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=Genshin%20Impact&op=Search",
           "title": "PEGI: Genshin Impact",
           "quote": "In-game purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
           "title": "Google Play (السعودية): Genshin",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -161,37 +161,37 @@
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "Infrequent: Cartoon or Fantasy Violence, Infrequent: Sexual Content or Nudity, Infrequent: Guns or Other Weapons",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
           "title": "PlayStation (السعودية): Genshin",
           "quote": "Moderate Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
           "title": "Xbox (السعودية): Genshin Impact",
           "quote": "عنف متوسط",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/39201/genshin-impact/",
           "title": "ESRB: Genshin Impact",
           "quote": "Fantasy Violence, Mild Language, Mild Suggestive Themes, Use of Alcohol",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=Genshin%20Impact&op=Search",
           "title": "PEGI: Genshin Impact",
           "quote": "Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
           "title": "Google Play (السعودية): Genshin",
           "quote": "Moderate Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -220,31 +220,37 @@
           "url": "https://apps.apple.com/sa/app/id1517783697",
           "title": "App Store (السعودية): Genshin",
           "quote": "Loot Boxes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
           "title": "Google Play (السعودية): Genshin",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
           "title": "PlayStation (السعودية): Genshin",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
           "title": "Xbox (السعودية): Genshin Impact",
           "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/39201/genshin-impact/",
           "title": "ESRB: Genshin Impact",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://pegi.info/search-pegi?q=Genshin%20Impact&op=Search",
+          "title": "PEGI: Genshin Impact",
+          "quote": "This game has received a PEGI 16 because it features the ability to purchase loot boxes.",
+          "verifiedAt": "2026-10-14"
         }
       ]
     },

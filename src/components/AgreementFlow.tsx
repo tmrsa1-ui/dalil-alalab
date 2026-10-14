@@ -139,7 +139,7 @@ export function AgreementFlow({
     return (
       <HandoffScreen
         testId="handoff-child"
-        icon="📱➡️🧒"
+        icon={<Icon name="handoff" className="h-16 w-16" />}
         title={ar.agree.handoffToChild}
         lead={ar.agree.handoffToChildLead}
         action={ar.agree.handoffReady}
@@ -215,7 +215,7 @@ export function AgreementFlow({
     return (
       <HandoffScreen
         testId="handoff-parent"
-        icon="🧒➡️📱"
+        icon={<Icon name="handoff" className="h-16 w-16 -scale-x-100" />}
         title={ar.agree.handoffToParent}
         lead={ar.agree.handoffToParentLead}
         action={ar.agree.handoffParentReady}

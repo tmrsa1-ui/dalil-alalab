@@ -18,9 +18,12 @@
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "3",
+      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/9N9L211HC9LQ",
+      "verifiedAt": "2026-10-14",
+      "quote": "GAMR 3 — مناسب لعمر 3 فما فوق",
+      "shownOn": "Xbox (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": null,
@@ -28,26 +31,21 @@
       "verifiedAt": null
     },
     "pegi": {
-      "value": "3",
-      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/9N9L211HC9LQ",
-      "verifiedAt": "2026-10-10",
-      "quote": "PEGI 3 — للأعمار من 3 أعوام فأكبر",
-      "shownOn": "Xbox (السعودية)",
-      "confidence": "auto"
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
     },
     "appStore": {
       "value": "9+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1541153375",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 9+",
       "confidence": "auto"
     },
     "googlePlay": {
-      "value": "3+",
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
-      "quote": "Rated for 3+",
-      "confidence": "auto"
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
     }
   },
   "attentionPoints": {
@@ -65,19 +63,19 @@
           "url": "https://apps.apple.com/sa/app/id1541153375",
           "title": "App Store (السعودية): Stumble Guys",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/9N9L211HC9LQ",
           "title": "Xbox (السعودية): Stumble Guys",
-          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
-          "verifiedAt": "2026-10-10"
+          "quote": "عمليات الشراء داخل اللعبة",
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
           "title": "Google Play (السعودية): Stumble Guys",
-          "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "quote": "In-Game Purchases",
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -90,7 +88,7 @@
           "url": "https://apps.apple.com/sa/app/id1541153375",
           "title": "App Store (السعودية): Stumble Guys",
           "quote": "Infrequent: Cartoon or Fantasy Violence, Infrequent: Guns or Other Weapons",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -103,13 +101,13 @@
           "url": "https://apps.apple.com/sa/app/id1541153375",
           "title": "App Store (السعودية): Stumble Guys",
           "quote": "Advertising",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
           "title": "Google Play (السعودية): Stumble Guys",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -125,22 +123,9 @@
   },
   "familyLens": {
     "gambling": {
-      "status": "present",
-      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
-      "sources": [
-        {
-          "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
-          "title": "Google Play (السعودية): Stumble Guys",
-          "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
-        },
-        {
-          "url": "https://www.xbox.com/ar-SA/games/store/_/9N9L211HC9LQ",
-          "title": "Xbox (السعودية): Stumble Guys",
-          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
-          "verifiedAt": "2026-10-10"
-        }
-      ]
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
     },
     "mixedVoiceChat": {
       "status": "unknown",

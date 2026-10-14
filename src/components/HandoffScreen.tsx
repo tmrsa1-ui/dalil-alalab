@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 /** شاشة تسليم الجوال: تخفي كل شي قبلها وتطلب تأكيد صريح. */
 export function HandoffScreen({
@@ -10,7 +10,7 @@ export function HandoffScreen({
   onReady,
   testId,
 }: {
-  icon: string;
+  icon: ReactNode;
   title: string;
   lead: string;
   action: string;
@@ -24,7 +24,10 @@ export function HandoffScreen({
       className="card flex min-h-[60vh] flex-col items-center justify-center gap-4 bg-brand-soft p-6 text-center"
       data-testid={testId}
     >
-      <span aria-hidden="true" className="text-7xl">
+      <span
+        aria-hidden="true"
+        className="flex h-28 w-28 items-center justify-center rounded-full bg-surface text-brand"
+      >
         {icon}
       </span>
       <h3 ref={ref} tabIndex={-1} className="text-2xl font-extrabold">

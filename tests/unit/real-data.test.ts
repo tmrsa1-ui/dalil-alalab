@@ -66,12 +66,8 @@ describe("البيانات الحقيقية (data/titles)", () => {
 });
 
 describe("القيم المستوردة (ملف البحث + المصادر الرسمية)", () => {
-  it("ولا قيمة معلّمة «راجعها إنسان» (الملف ما راجعه إنسان)", () => {
+  it("التصنيف السعودي فقط لو ظهر صراحة في متجر سعودي رسمي (Gmedia/GCAM/GAMR)", () => {
     for (const t of titles) {
-      expect(t.reviewStatus).not.toBe("human_reviewed");
-      for (const k of RATING_KEYS) expect(t.ratings[k].confidence).not.toBe("human");
-      for (const k of POINT_KEYS) expect(t.attentionPoints[k].confidence).not.toBe("human");
-      // التصنيف السعودي فقط لو ظهر صراحة في متجر سعودي رسمي (Gmedia/GCAM/GAMR).
       if (t.ratings.gcam.value !== null) {
         expect(["Google Play (السعودية)", "PlayStation (السعودية)", "Xbox (السعودية)"]).toContain(
           t.ratings.gcam.shownOn,
@@ -80,12 +76,25 @@ describe("القيم المستوردة (ملف البحث + المصادر ال
       }
     }
   });
-  it("كل قيمة مقبولة معلّمة «بحاجة مراجعة بشرية» ومعها رابط وتاريخ", () => {
+  it("القيمة اللي راجعها إنسان (عبر review:data) لازم عنوانها human_reviewed ومعها تاريخ مراجعة", () => {
+    for (const t of titles) {
+      const anyHuman =
+        RATING_KEYS.some((k) => t.ratings[k].confidence === "human") ||
+        POINT_KEYS.some((k) => t.attentionPoints[k].confidence === "human");
+      if (anyHuman) {
+        expect(t.reviewStatus, t.slug).toBe("human_reviewed");
+        expect(t.lastReviewedAt, t.slug).toBeTruthy();
+      }
+    }
+  });
+  it("كل قيمة مقبولة معلّمة «بحاجة مراجعة بشرية» أو «راجعها إنسان» (ما فيه قيمة بلا مستوى ثقة)", () => {
     for (const t of titles) {
       for (const k of RATING_KEYS) {
-        if (t.ratings[k].value) expect(t.ratings[k].confidence, `${t.slug}.${k}`).toBe("auto");
+        if (t.ratings[k].value)
+          expect(t.ratings[k].confidence, `${t.slug}.${k}`).toMatch(/^(auto|human)$/);
       }
-      if (t.controls.officialGuide) expect(t.controls.officialGuide.confidence).toBe("auto");
+      if (t.controls.officialGuide)
+        expect(t.controls.officialGuide.confidence).toMatch(/^(auto|human)$/);
     }
   });
 });

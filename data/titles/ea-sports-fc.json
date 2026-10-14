@@ -24,7 +24,7 @@
     "gcam": {
       "value": "3",
       "sourceUrl": "https://www.playstation.com/en-sa/games/ea-sports-fc-26/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "GMEDIA 3",
       "edition": "EA SPORTS™ FC 26",
       "shownOn": "PlayStation (السعودية)",
@@ -33,7 +33,7 @@
     "esrb": {
       "value": "Everyone",
       "sourceUrl": "https://www.esrb.org/ratings/41462/ea-sports-fctm-27/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "EA SPORTS FC™ 27 is rated E for Everyone by the ESRB.",
       "edition": "EA SPORTS FC™ 27 — Windows PC, PlayStation 4, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Xbox One, Xbox Series",
       "confidence": "auto"
@@ -41,7 +41,7 @@
     "pegi": {
       "value": "16",
       "sourceUrl": "https://pegi.info/search-pegi?q=EA%20SPORTS%20FC&op=Search",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "This game has received a PEGI 16 because it features the ability to purchase loot boxes.",
       "edition": "EA SPORTS FC™ 27 — PC, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, Nintendo Switch, Nintendo Switch 2",
       "confidence": "auto"
@@ -49,14 +49,14 @@
     "appStore": {
       "value": "9+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1094930513",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 9+",
       "confidence": "auto"
     },
     "googlePlay": {
       "value": "16+",
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 16+",
       "confidence": "auto"
     }
@@ -70,19 +70,19 @@
           "url": "https://apps.apple.com/sa/app/id1094930513",
           "title": "App Store (السعودية): FC",
           "quote": "Messaging and Chat",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/41462/ea-sports-fctm-27/",
           "title": "ESRB: EA SPORTS FC™ 27",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
           "title": "Google Play (السعودية): FC",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -95,31 +95,31 @@
           "url": "https://apps.apple.com/sa/app/id1094930513",
           "title": "App Store (السعودية): FC",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://apps.apple.com/sa/app/id1094930513",
           "title": "App Store (السعودية): FC",
           "quote": "Loot Boxes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/41462/ea-sports-fctm-27/",
           "title": "ESRB: EA SPORTS FC™ 27",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=EA%20SPORTS%20FC&op=Search",
           "title": "PEGI: EA SPORTS FC™ 27",
           "quote": "In-game purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
           "title": "Google Play (السعودية): FC",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -138,13 +138,13 @@
           "url": "https://apps.apple.com/sa/app/id1094930513",
           "title": "App Store (السعودية): FC",
           "quote": "Advertising",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
           "title": "Google Play (السعودية): FC",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -167,25 +167,25 @@
           "url": "https://apps.apple.com/sa/app/id1094930513",
           "title": "App Store (السعودية): FC",
           "quote": "Loot Boxes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
           "title": "Google Play (السعودية): FC",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/41462/ea-sports-fctm-27/",
           "title": "ESRB: EA SPORTS FC™ 27",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=EA%20SPORTS%20FC&op=Search",
           "title": "PEGI: EA SPORTS FC™ 27",
           "quote": "This game has received a PEGI 16 because it features the ability to purchase loot boxes.",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ]
     },

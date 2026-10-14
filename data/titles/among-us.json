@@ -23,7 +23,7 @@
     "gcam": {
       "value": "12",
       "sourceUrl": "https://www.playstation.com/en-sa/games/among-us/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "GCAM 12",
       "shownOn": "PlayStation (السعودية)",
       "confidence": "auto"
@@ -35,7 +35,7 @@
         "Mild Blood"
       ],
       "sourceUrl": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Among Us - Crewmate Edition is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence and Mild Blood.",
       "edition": "Among Us - Crewmate Edition — Windows PC, PlayStation 4, PlayStation 5, Nintendo Switch, Xbox One, Xbox Series",
       "confidence": "auto"
@@ -46,7 +46,7 @@
         "Violence"
       ],
       "sourceUrl": "https://pegi.info/search-pegi?q=Among%20Us&op=Search",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "This game has received a PEGI 7 because it features mild violence.",
       "edition": "Among Us – Crewmate Edition — Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, PC",
       "confidence": "auto"
@@ -54,7 +54,7 @@
     "appStore": {
       "value": "9+",
       "sourceUrl": "https://apps.apple.com/sa/app/id1351168404",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 9+",
       "confidence": "auto"
     },
@@ -64,7 +64,7 @@
         "Mild Violence"
       ],
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 7+",
       "confidence": "auto"
     }
@@ -78,13 +78,13 @@
           "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
           "title": "ESRB: Among Us - Crewmate Edition",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
           "title": "Google Play (السعودية): Among Us",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -97,25 +97,25 @@
           "url": "https://apps.apple.com/sa/app/id1351168404",
           "title": "App Store (السعودية): Among Us",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
           "title": "ESRB: Among Us - Crewmate Edition",
           "quote": "In-Game Purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=Among%20Us&op=Search",
           "title": "PEGI: Among Us – Crewmate Edition",
           "quote": "In-game purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
           "title": "Google Play (السعودية): Among Us",
           "quote": "Digital Purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -128,19 +128,19 @@
           "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
           "title": "ESRB: Among Us - Crewmate Edition",
           "quote": "Fantasy Violence, Mild Blood",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=Among%20Us&op=Search",
           "title": "PEGI: Among Us – Crewmate Edition",
           "quote": "Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
           "title": "Google Play (السعودية): Among Us",
           "quote": "Mild Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -153,7 +153,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
           "title": "Google Play (السعودية): Among Us",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"

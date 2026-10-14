@@ -54,6 +54,16 @@ const PATHS = {
       <path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" />
     </>
   ),
+  // تسليم الجوال: جوال ← سهم ← شخص (يُقلب بالاتجاه حسب الخطوة).
+  handoff: (
+    <>
+      <rect x="2.5" y="5" width="7" height="14" rx="1.5" />
+      <path d="M5 16.5h2" />
+      <path d="M11 12h4m0 0-1.5-1.5M15 12l-1.5 1.5" />
+      <circle cx="19" cy="8.5" r="2" />
+      <path d="M16 19v-2.5a3 3 0 0 1 6 0V19" />
+    </>
+  ),
 } as const;
 
 export type IconName = keyof typeof PATHS;

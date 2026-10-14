@@ -478,6 +478,18 @@ export function applyOfficial(
     );
   }
 
+  // «الموسيقى»: واصف ESRB الرسمي «Lyrics / Mild Lyrics» = موسيقى بكلمات لفتت انتباه جهة التصنيف.
+  const esrbLyrics = esrbDescriptors.find((x) => /Lyrics/i.test(x));
+  if (esrb && esrbLyrics && t.familyLens.music.status !== "present") {
+    const src = fromBoard(esrb, "ESRB", esrbLyrics);
+    t.familyLens.music = {
+      status: "present",
+      noteAr: `ESRB يضع واصف «${esrbLyrics}» (كلمات أغانٍ) على هذا العنوان — أي فيه موسيقى بكلمات لفتت انتباه جهة التصنيف.`,
+      sources: [{ url: src.url, title: src.title, quote: src.quote, verifiedAt: src.verifiedAt }],
+    };
+    log("familyLens.music", "set", `ESRB: ${esrbLyrics}`);
+  }
+
   if (!t.publisher && as?.provider) {
     t.publisher = { name: as.provider, url: null };
     log("publisher", "set", `${as.provider} (مزوّد التطبيق في App Store)`);

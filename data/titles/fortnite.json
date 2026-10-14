@@ -20,7 +20,7 @@
     "gcam": {
       "value": "12",
       "sourceUrl": "https://www.playstation.com/en-sa/games/fortnite/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "GMEDIA 12",
       "shownOn": "PlayStation (السعودية)",
       "confidence": "auto"
@@ -33,7 +33,7 @@
         "Violence"
       ],
       "sourceUrl": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Fortnite Battle Royale is rated T for Teen by the ESRB with Lyrics, Suggestive Themes, and Violence.",
       "edition": "Fortnite Battle Royale — Windows PC, PlayStation 4, PlayStation 5, Nintendo Switch, Nintendo Switch 2, Xbox One, Xbox Series",
       "confidence": "auto"
@@ -44,7 +44,7 @@
         "Violence"
       ],
       "sourceUrl": "https://pegi.info/search-pegi?q=Fortnite&op=Search",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "This game has received a PEGI 12 because it features moderate violence.",
       "edition": "Fortnite Battle Royale",
       "confidence": "auto"
@@ -52,7 +52,7 @@
     "appStore": {
       "value": "13+",
       "sourceUrl": "https://apps.apple.com/sa/app/id6483539426",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 13+",
       "confidence": "auto"
     },
@@ -62,7 +62,7 @@
         "Parental Guidance Recommended"
       ],
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 12+",
       "confidence": "auto"
     }
@@ -76,19 +76,19 @@
           "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
           "title": "Xbox (السعودية): Fortnite",
           "quote": "تفاعل المستخدمين",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite Battle Royale",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
           "title": "Google Play (السعودية): Fortnite",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -101,31 +101,31 @@
           "url": "https://apps.apple.com/sa/app/id6483539426",
           "title": "App Store (السعودية): Fortnite",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
           "title": "Xbox (السعودية): Fortnite",
           "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite Battle Royale",
           "quote": "In-Game Purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=Fortnite&op=Search",
           "title": "PEGI: Fortnite Battle Royale",
           "quote": "In-game purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
           "title": "Google Play (السعودية): Fortnite",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -138,25 +138,25 @@
           "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
           "title": "Xbox (السعودية): Fortnite",
           "quote": "الإرشاد الأبوي المستحسن",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
           "title": "ESRB: Fortnite Battle Royale",
           "quote": "Lyrics, Suggestive Themes, Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://pegi.info/search-pegi?q=Fortnite&op=Search",
           "title": "PEGI: Fortnite Battle Royale",
           "quote": "Violence",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
           "title": "Google Play (السعودية): Fortnite",
           "quote": "Parental Guidance Recommended",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -185,13 +185,13 @@
           "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
           "title": "Google Play (السعودية): Fortnite",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
           "title": "Xbox (السعودية): Fortnite",
           "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ]
     },
@@ -211,9 +211,16 @@
       "sources": []
     },
     "music": {
-      "status": "unknown",
-      "noteAr": "",
-      "sources": []
+      "status": "present",
+      "noteAr": "ESRB يضع واصف «Lyrics» (كلمات أغانٍ) على هذا العنوان — أي فيه موسيقى بكلمات لفتت انتباه جهة التصنيف.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+          "title": "ESRB: Fortnite Battle Royale",
+          "quote": "Lyrics",
+          "verifiedAt": "2026-10-14"
+        }
+      ]
     }
   },
   "prayerPause": {

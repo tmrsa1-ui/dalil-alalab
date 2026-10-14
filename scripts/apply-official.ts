@@ -14,6 +14,7 @@ import {
   type OfficialDecision,
   type SnapshotEntry,
 } from "../src/lib/data/official-apply";
+import { pruneStale, snapshotTextByUrl } from "../src/lib/data/stale";
 
 const dry = process.argv.includes("--dry");
 type GuideSnap = {
@@ -33,11 +34,17 @@ const snap = JSON.parse(fs.readFileSync("research/official_snapshot.json", "utf8
 
 const all: OfficialDecision[] = [];
 let failed = 0;
+// نص كل صفحة جُلبت اليوم: القيم اللي ما عاد اقتباسها في صفحتها تُمسح قبل التطبيق (معالجة التغيّر).
+const textByUrl = snapshotTextByUrl(
+  snap as unknown as { titles: Record<string, Record<string, unknown>> },
+);
 for (const [slug, entry] of Object.entries(snap.titles)) {
   const file = path.resolve("data/titles", `${slug}.json`);
   if (!fs.existsSync(file)) continue;
-  const current = titleSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
-  const { title, decisions } = applyOfficial(current, entry);
+  const loaded = titleSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
+  const pruned = pruneStale(loaded, textByUrl);
+  all.push(...pruned.decisions);
+  const { title, decisions } = applyOfficial(pruned.title, entry);
   const r = titleSchema.safeParse(title);
   if (!r.success) {
     failed++;
@@ -109,7 +116,8 @@ const report = `# تقرير التحقق من المصادر الرسمية
 - تاريخ الجلب: ${snap.fetchedAt}
 - المصادر: App Store السعودي (\`apps.apple.com/sa\`)، Google Play بمنطقة السعودية (\`gl=SA\`)، صفحات الألعاب في PlayStation السعودية (\`playstation.com/en-sa\`)، ومتجر Xbox السعودي (\`xbox.com/ar-SA\`)، وأدلة الرقابة الأبوية الرسمية للأجهزة.
 - كل القيم مكتوبة بحالة **«بحاجة مراجعة بشرية»**: قُرئت آليًا من الصفحة الرسمية مع اقتباس حرفي ورابط وتاريخ، وما راجعها إنسان.
-- ما قدرنا نوصل (رفض من بوابة الشبكة): \`www.esrb.org\`، \`pegi.info\`، \`gcam.gov.sa\`، \`gmedia.gov.sa\`، \`www.nintendo.com\`، وأغلب مواقع الناشرين. قيم ESRB الموجودة جاية من ملف البحث (بحاجة مراجعة بشرية) وما تحققنا منها بأنفسنا.
+- ESRB من \`www.esrb.org\` وPEGI من \`pegi.info\` (موقع الجهة نفسها، مقدّم على ما تعرضه المتاجر). ما قدرنا نوصل: \`gcam.gov.sa\`/\`gmedia.gov.sa\` (الخادم ما يرد) وأغلب مواقع الناشرين.
+- **معالجة التغيّر:** قبل التطبيق، أي قيمة آلية ما عاد اقتباسها موجودًا في صفحتها (الصفحة جُلبت بنجاح اليوم) تُمسح وتُسجّل هنا «قديمة»، ثم يُكتب ما تعرضه الصفحة اليوم.
 - التصنيف السعودي (GCAM/Gmedia/GAMR) كما يعرضه: PlayStation (السعودية) بـ\`authority: GCAM\`، أو Xbox (السعودية) بلوحة \`GAMR\`، أو شارة Gmedia في Google Play (السعودية). يُكتب بجانبه «يعرضه: …».\n- تصنيف IARC العام اللي يعرضه PlayStation لبعض العناوين ما له خانة من الجهات الخمس، فما انكتب.
 - ${dry ? "**تجربة (--dry): ما انكتب شي.**" : "انكتبت التعديلات في data/titles."}
 - الملخص: ${(Object.keys(ACTION) as Array<keyof typeof ACTION>).map((a) => `${ACTION[a]} ${counts[a]}`).join("، ")}${failed ? `، فشل ${failed}` : ""}.
@@ -120,5 +128,11 @@ ${all.map(row).join("\n")}
 `;
 if (!dry) fs.writeFileSync("research/official-report.md", report);
 console.log(report.split("\n").slice(0, 12).join("\n"));
+if (dry) {
+  const changes = all.filter((d) => d.action !== "keep");
+  console.log(`\nالتغييرات لو طُبّق (${changes.length}):`);
+  for (const d of changes)
+    console.log(`  ${d.slug} · ${d.field} · ${d.action}: ${d.detail.slice(0, 140)}`);
+}
 console.log(`${failed ? "✗" : "✓"} apply:official — ${all.length} قرار${dry ? " (تجربة)" : ""}`);
 if (failed) process.exit(1);

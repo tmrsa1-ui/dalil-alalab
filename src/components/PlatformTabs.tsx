@@ -51,16 +51,6 @@ export function PlatformTabs({
 
   useEffect(() => setDone(getDoneSteps(title.slug)), [title.slug]);
 
-  function stepsFor(tab: TabId): StepView[] {
-    if (tab === "inGame") {
-      return title.controls.inGame.map((s) => ({ ...s, isDemo: title.isDemo })).sort(byKey);
-    }
-    const override = title.controls.platformOverrides[tab];
-    if (override?.length) return override.map((s) => ({ ...s, isDemo: title.isDemo })).sort(byKey);
-    const p = platforms.find((x) => x.id === tab);
-    return (p?.steps ?? []).slice().sort(byKey);
-  }
-
   function onKey(e: React.KeyboardEvent, i: number) {
     // RTL: السهم الأيسر = التالي.
     const delta = e.key === "ArrowLeft" ? 1 : e.key === "ArrowRight" ? -1 : 0;
@@ -78,8 +68,6 @@ export function PlatformTabs({
 
   const label = (t: TabId) => (t === "inGame" ? ar.setup.inGame : ar.setup.platforms[t]);
   const platform = active === "inGame" ? null : platforms.find((p) => p.id === active);
-  // خطوات الجهاز العامة من دليله الرسمي (مو خاصة بالعنوان) تظهر لكل العناوين.
-  // الخطوات الخاصة بالعنوان أو التجريبية تظهر بس للعناوين اللي راجعها إنسان.
   // النقاط الموجودة في هذا العنوان (من «اعرف») ⇐ خطواتها تطلع أول ومعلّمة «مهم لهذي اللعبة».
   const presentKeys = new Set<string>(
     (Object.keys(title.attentionPoints) as Array<keyof Title["attentionPoints"]>).filter(
@@ -91,14 +79,20 @@ export function PlatformTabs({
   );
   const byRelevance = (a: StepView, b: StepView) =>
     Number(presentKeys.has(b.pointKey)) - Number(presentKeys.has(a.pointKey)) || byKey(a, b);
-  const generic =
-    !reviewed && platform
-      ? platform.steps
-          .filter((s) => !s.isDemo)
-          .slice()
-          .sort(byRelevance)
-      : [];
-  const steps = reviewed ? stepsFor(active) : generic;
+  // الخطوات الخاصة بالعنوان تظهر فقط لو راجعه إنسان (هي من كاتب البطاقة، مو من دليل الجهاز).
+  const ownSource = !reviewed
+    ? []
+    : active === "inGame"
+      ? title.controls.inGame
+      : (title.controls.platformOverrides[active] ?? []);
+  const own: StepView[] = ownSource.map((s) => ({ ...s, isDemo: title.isDemo })).sort(byRelevance);
+  const ownKeys = new Set(own.map((s) => s.pointKey));
+  // الخطوات العامة من دليل الجهاز الرسمي تظهر لكل العناوين (ما عدا النقاط اللي غطّتها خطوات العنوان).
+  // الخطوات التجريبية (example.org) تظهر فقط لعنوان تجريبي — أبدًا لعنوان حقيقي.
+  const generic: StepView[] = (platform?.steps ?? [])
+    .filter((s) => (title.isDemo || !s.isDemo) && !ownKeys.has(s.pointKey))
+    .sort(byRelevance);
+  const steps = [...own, ...generic];
   const doneCount = steps.filter((s) => done.includes(s.id)).length;
 
   return (
@@ -188,44 +182,40 @@ export function PlatformTabs({
           </div>
         ) : null}
 
-        {!reviewed && generic.length ? (
+        {generic.length && platform ? (
           <p className="mb-2 text-sm text-muted" data-testid="generic-steps-note">
-            {ar.setup.genericSteps(platform!.nameAr)}
+            {ar.setup.genericSteps(platform.nameAr)}
           </p>
         ) : null}
-        {reviewed || generic.length ? (
-          steps.length ? (
-            <>
-              <p className="num mb-2 text-sm font-semibold" role="status" data-testid="done-count">
-                {ar.setup.doneCount(doneCount, steps.length)}
-              </p>
-              <ol className="grid gap-2">
-                {steps.map((s, i) => (
-                  <ControlStep
-                    key={s.id}
-                    n={i + 1}
-                    {...s}
-                    relevant={!reviewed && presentKeys.has(s.pointKey)}
-                    done={done.includes(s.id)}
-                    onToggle={(v) => {
-                      setDone(setStepDone(title.slug, s.id, v));
-                      if (v) {
-                        track({
-                          type: "control_step_done",
-                          titleSlug: title.slug,
-                          ageBand,
-                          platform: active === "inGame" ? undefined : active,
-                          controlKey: s.pointKey,
-                        });
-                      }
-                    }}
-                  />
-                ))}
-              </ol>
-            </>
-          ) : (
-            <p className="text-muted">{ar.setup.guideUnavailable}</p>
-          )
+        {steps.length ? (
+          <>
+            <p className="num mb-2 text-sm font-semibold" role="status" data-testid="done-count">
+              {ar.setup.doneCount(doneCount, steps.length)}
+            </p>
+            <ol className="grid gap-2">
+              {steps.map((s, i) => (
+                <ControlStep
+                  key={s.id}
+                  n={i + 1}
+                  {...s}
+                  relevant={presentKeys.has(s.pointKey)}
+                  done={done.includes(s.id)}
+                  onToggle={(v) => {
+                    setDone(setStepDone(title.slug, s.id, v));
+                    if (v) {
+                      track({
+                        type: "control_step_done",
+                        titleSlug: title.slug,
+                        ageBand,
+                        platform: active === "inGame" ? undefined : active,
+                        controlKey: s.pointKey,
+                      });
+                    }
+                  }}
+                />
+              ))}
+            </ol>
+          </>
         ) : (
           <p className="rounded-xl bg-surface-2 p-3 text-sm" data-testid="not-reviewed-note">
             {ar.setup.noStepsReviewed}

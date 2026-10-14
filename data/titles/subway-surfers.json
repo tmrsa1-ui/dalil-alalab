@@ -19,9 +19,12 @@
   "lastReviewedAt": null,
   "ratings": {
     "gcam": {
-      "value": null,
-      "sourceUrl": null,
-      "verifiedAt": null
+      "value": "7",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
+      "verifiedAt": "2026-10-14",
+      "quote": "Gmedia_7_272.png — 7",
+      "shownOn": "Google Play (السعودية)",
+      "confidence": "auto"
     },
     "esrb": {
       "value": null,
@@ -31,7 +34,7 @@
     "pegi": {
       "value": "3",
       "sourceUrl": "https://pegi.info/search-pegi?q=Subway%20Surfers&op=Search",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "This game has been rated PEGI 3 and contains no pertinent content.",
       "edition": "Subway Surfers — Google Play Store",
       "confidence": "auto"
@@ -39,19 +42,14 @@
     "appStore": {
       "value": "9+",
       "sourceUrl": "https://apps.apple.com/sa/app/id512939461",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 9+",
       "confidence": "auto"
     },
     "googlePlay": {
-      "value": "7+",
-      "descriptors": [
-        "Mild Violence"
-      ],
-      "sourceUrl": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
-      "quote": "Rated for 7+",
-      "confidence": "auto"
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
     }
   },
   "attentionPoints": {
@@ -69,29 +67,22 @@
           "url": "https://apps.apple.com/sa/app/id512939461",
           "title": "App Store (السعودية): Subway Surfers",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
           "title": "Google Play (السعودية): Subway Surfers",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
     },
     "content": {
-      "status": "present",
-      "summaryAr": "فيه واصفات محتوى رسمية، حسب: Google Play.",
-      "sources": [
-        {
-          "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
-          "title": "Google Play (السعودية): Subway Surfers",
-          "quote": "Mild Violence",
-          "verifiedAt": "2026-10-10"
-        }
-      ],
-      "confidence": "auto"
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
     },
     "ads": {
       "status": "present",
@@ -101,7 +92,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
           "title": "Google Play (السعودية): Subway Surfers",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -124,7 +115,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
           "title": "Google Play (السعودية): Subway Surfers",
           "quote": "In-Game Purchases (Includes Random Items)",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ]
     },

@@ -1,12 +1,12 @@
 {
-  "fetchedAt": "2026-10-10",
+  "fetchedAt": "2026-10-14",
   "method": "fetch-official.ts",
   "titles": {
     "roblox": {
       "expect": "Roblox",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id431946152",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Roblox App - App Store",
         "provider": "Roblox Corporation",
@@ -16,7 +16,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Roblox",
         "developer": "Roblox Corporation",
@@ -32,7 +32,7 @@
       },
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/roblox/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Roblox - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
         "authority": "Generic",
@@ -49,7 +49,7 @@
       "psExpect": "Roblox",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Roblox - Xbox",
         "boardName": "PEGI",
@@ -66,7 +66,7 @@
       "xboxExpect": "Roblox - Xbox",
       "esrb": {
         "url": "https://www.esrb.org/search/?searchKeyword=Roblox",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
@@ -74,7 +74,7 @@
       "guides": [
         {
           "url": "https://about.roblox.com/parental-controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://about.roblox.com/parental-controls",
           "metaDescription": null,
@@ -84,7 +84,7 @@
         },
         {
           "url": "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ",
           "metaDescription": null,
@@ -98,7 +98,7 @@
       "expect": "Minecraft",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id479516143",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Minecraft: Dream it, Build it! App - App Store",
         "provider": "Mojang AB",
@@ -108,7 +108,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Minecraft: Dream it, Build it!",
         "developer": "Mojang",
@@ -124,7 +124,7 @@
       },
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/minecraft/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Minecraft - PS4 Games | PlayStation (Saudi Arabia)",
         "authority": "GCAM",
@@ -136,7 +136,7 @@
       "psExpect": "Minecraft",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/9MVXMVT8ZKWC",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Minecraft",
         "boardName": "GAMR",
@@ -159,14 +159,14 @@
           "In-Game Purchases"
         ],
         "synopsis": "Minecraft is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence. Also includes Users Interact and In-Game Purchases. This is a sandbox adventure game in which players explore and mine/harvest cube-shaped materials. From a first-person perspective, players traverse pixilated open-world landscapes, avoid hazards, build structures, and craft potions and weapons (e.g., swords, axes, bows, magic staffs). Players are occasionally prompted to defend against enemies (e.g., zombies, skeletons, wizards/mages) by striking them repeatedly until they collapse. Players can also use weapons against animals and villagers, though these acts are not encouraged. Fighting is highlighted by short cries/grunts of pain, impact sounds, and occasional explosions.",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Minecraft",
         "quote": "Minecraft is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence."
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Minecraft&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": [
           "Minecraft Dungeons II",
@@ -182,7 +182,7 @@
       "guides": [
         {
           "url": "https://www.minecraft.net/en-us/article/parental-controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://www.minecraft.net/en-us/article/parental-controls",
           "metaDescription": null,
@@ -192,7 +192,7 @@
         },
         {
           "url": "https://help.minecraft.net/en-us/article/parental-controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://help.minecraft.net/en-us/article/parental-controls",
           "metaDescription": null,
@@ -202,7 +202,7 @@
         },
         {
           "url": "https://www.xbox.com/en-US/family-hub",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 200,
           "finalUrl": "https://www.xbox.com/en-US/family-hub",
           "metaDescription": "Help make gaming safe and enjoyable for your family. Define what’s okay for your family with privacy, safety, and more XBOX family settings.",
@@ -216,7 +216,7 @@
       "expect": "Fortnite",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id6483539426",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Fortnite App - App Store",
         "provider": "Epic Games Sweden AB",
@@ -226,7 +226,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Fortnite",
         "developer": "Epic Games, Inc",
@@ -242,7 +242,7 @@
       },
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/fortnite/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Fortnite - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
         "authority": "GCAM",
@@ -254,7 +254,7 @@
       "psExpect": "Fortnite",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/BT5P2X999VH2",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Fortnite",
         "boardName": "PEGI",
@@ -284,14 +284,14 @@
           "In-Game Purchases"
         ],
         "synopsis": "Fortnite Battle Royale is rated T for Teen by the ESRB with Lyrics, Suggestive Themes, and Violence. Also includes Users Interact and In-Game Purchases. This is a survival action game in which players compete in battle royale-style competitions to be the last person or team standing. From a third-person perspective, players gather supplies, build forts, and battle enemies on a shrinking battlefield. Players use pistols, shotguns, sniper rifles, machine guns, and melee weapons (e.g., axes, swords) to fight opposing players in ranged and close-quarter combat. Battles are fast-paced, highlighted by realistic gunfire and impact sounds. Some sequences allow players to enter a first-person view of combat (e.g., aiming through a scope). Defeated enemies typically burst into colorful light effects before disappearing. Players can encounter a female character depicted with deep inner cleavage and lower breast exposure. Some accompanying song lyrics contain the words “sh*t,” \"b*tch,\" and \"a*s\"; other song lyrics contain references to marijuana.",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Fortnite Battle Royale",
         "quote": "Fortnite Battle Royale is rated T for Teen by the ESRB with Lyrics, Suggestive Themes, and Violence."
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Fortnite&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Fortnite Battle Royale",
         "title": "Fortnite Battle Royale",
@@ -310,7 +310,7 @@
       "guides": [
         {
           "url": "https://www.epicgames.com/site/en-US/parental-controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://www.epicgames.com/site/en-US/parental-controls",
           "metaDescription": null,
@@ -320,7 +320,7 @@
         },
         {
           "url": "https://safety.epicgames.com/parental-controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://safety.epicgames.com/parental-controls",
           "metaDescription": null,
@@ -330,7 +330,7 @@
         },
         {
           "url": "https://www.epicgames.com/fortnite/en-US/parental-controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://www.epicgames.com/fortnite/en-US/parental-controls",
           "metaDescription": null,
@@ -344,7 +344,7 @@
       "expect": "Among Us",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1351168404",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Among Us! App - App Store",
         "provider": "InnerSloth LLC",
@@ -354,7 +354,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Among Us",
         "developer": "Innersloth LLC",
@@ -370,7 +370,7 @@
       },
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/among-us/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Among Us - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
         "authority": "GCAM",
@@ -382,7 +382,7 @@
       "psExpect": "Among Us",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/9NG07QJNK38J",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Among Us",
         "boardName": "GAMR",
@@ -406,14 +406,14 @@
           "In-Game Purchases"
         ],
         "synopsis": "Among Us - Crewmate Edition is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence and Mild Blood. Also includes Users Interact and In-Game Purchases. This is a multiplayer social deduction game in which players control either crewmates or imposters on a mysterious spaceship. From a pulled back perspective, players solve puzzles, complete tasks, and discover who the imposters are through deduction. Along the way, players can attack other characters by using various weapons (e.g., knives, pistols, spikes); brief animations depict characters eliminating each other (e.g., getting impaled, stabbed, shot), leaving behind a cartoony corpse for others to discover.",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Among Us - Crewmate Edition",
         "quote": "Among Us - Crewmate Edition is rated E10+ for Everyone 10+ by the ESRB with Fantasy Violence and Mild Blood."
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Among%20Us&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Among Us – Crewmate Edition",
         "title": "Among Us – Crewmate Edition",
@@ -450,7 +450,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "PUBG MOBILE",
         "developer": "Level Infinite",
@@ -470,7 +470,7 @@
       "esrb": null,
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=PUBG%20MOBILE&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
@@ -480,7 +480,7 @@
       "expect": "Free Fire",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1300146617",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Free Fire x NARUTO SHIPPUDEN App - App Store",
         "provider": "GARENA INTERNATIONAL I PRIVATE LIMITED",
@@ -490,7 +490,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.dts.freefireth&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Free Fire x NARUTO SHIPPUDEN",
         "developer": "GARENA INTERNATIONAL I",
@@ -511,7 +511,7 @@
       "esrb": null,
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Free%20Fire&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
@@ -521,7 +521,7 @@
       "expect": "Brawl Stars",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1229016807",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Brawl Stars App - App Store",
         "provider": "Supercell Oy",
@@ -531,7 +531,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Brawl Stars",
         "developer": "Supercell",
@@ -549,14 +549,14 @@
       "esrb": null,
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Brawl%20Stars&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
       "guides": [
         {
           "url": "https://supercell.com/en/parents/",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 200,
           "finalUrl": "https://supercell.com/en/parents/",
           "metaDescription": null,
@@ -570,7 +570,7 @@
       "expect": "Clash Royale",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1053012308",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Clash Royale App - App Store",
         "provider": "Supercell Oy",
@@ -580,7 +580,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.supercell.clashroyale&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Clash Royale",
         "developer": "Supercell",
@@ -600,7 +600,7 @@
       "esrb": null,
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Clash%20Royale&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Clash Royale",
         "title": "Clash Royale",
@@ -618,7 +618,7 @@
       "guides": [
         {
           "url": "https://supercell.com/en/parents/",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 200,
           "finalUrl": "https://supercell.com/en/parents/",
           "metaDescription": null,
@@ -632,7 +632,7 @@
       "expect": "TikTok",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id835599320",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎TikTok - Videos, Music & LIVE App - App Store",
         "provider": "TIKTOK PTE. LTD.",
@@ -642,7 +642,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "TikTok",
         "developer": "TikTok Pte. Ltd.",
@@ -665,7 +665,7 @@
       "guides": [
         {
           "url": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
           "metaDescription": null,
@@ -675,7 +675,7 @@
         },
         {
           "url": "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide",
           "metaDescription": null,
@@ -689,7 +689,7 @@
       "expect": "Snapchat",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id447188370",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Snapchat: Chat with friends App - App Store",
         "provider": "Snap, Inc.",
@@ -699,7 +699,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Snapchat",
         "developer": "Snap Inc",
@@ -722,7 +722,7 @@
       "guides": [
         {
           "url": "https://values.snap.com/safety/family-center",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://values.snap.com/safety/family-center",
           "metaDescription": null,
@@ -732,7 +732,7 @@
         },
         {
           "url": "https://parents.snapchat.com/family-center",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://parents.snapchat.com/family-center",
           "metaDescription": null,
@@ -746,7 +746,7 @@
       "expect": "YouTube Kids",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id936971630",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎YouTube Kids App - App Store",
         "provider": "Google LLC",
@@ -756,7 +756,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "YouTube Kids",
         "developer": "Google LLC",
@@ -776,7 +776,7 @@
       "guides": [
         {
           "url": "https://support.google.com/youtubekids/?hl=ar",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 200,
           "finalUrl": "https://support.google.com/youtubekids/?hl=ar",
           "metaDescription": "مركز مساعدة المساعدة بشأن \"YouTube للعائلات\" الرسمي حيث يمكنك العثور على نصائح وبرامج تعليمية حول استخدام المنتج وأجوبة أخرى للأسئلة الشائعة.",
@@ -786,7 +786,7 @@
         },
         {
           "url": "https://support.google.com/youtubekids/answer/6172308?hl=en",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 200,
           "finalUrl": "https://support.google.com/youtubekids/answer/6172308?hl=en",
           "metaDescription": "YouTube Kids offer a safer and simpler experience for kids. There are various controls and settings for you to guide their viewing journey.",
@@ -800,7 +800,7 @@
       "expect": "Pokémon GO",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1094591345",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Pokémon GO App - App Store",
         "provider": "Scopely Explore, Inc.",
@@ -810,7 +810,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Pokémon GO",
         "developer": "Scopely Explore, Inc.",
@@ -829,7 +829,7 @@
       "xboxExpect": "Pokémon GO",
       "esrb": {
         "url": "https://www.esrb.org/search/?searchKeyword=Pokemon%20GO",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": [
           "Pokémon Gold Version"
@@ -837,7 +837,7 @@
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Pok%C3%A9mon%20GO&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Pokémon GO",
         "title": "Pokémon GO",
@@ -856,7 +856,7 @@
       "expect": "FC",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1094930513",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎EA SPORTS FC™ Football Mobile App - App Store",
         "provider": "EA Swiss Sarl",
@@ -866,7 +866,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "EA SPORTS FC Soccer Mobile 27",
         "developer": "ELECTRONIC ARTS",
@@ -881,7 +881,7 @@
       },
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/ea-sports-fc-26/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "EA SPORTS™ FC 26 - PS4 & PS5 Games | PlayStation (Saudi Arabia)",
         "authority": "GCAM",
@@ -893,7 +893,7 @@
       "psExpect": "FC 26",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/9NJ2N85T2ZGS",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "EA SPORTS FC™ 27 XBOX Series X|S",
         "boardName": "GAMR",
@@ -916,14 +916,14 @@
           "In-Game Purchases (Includes Random Items)"
         ],
         "synopsis": "EA SPORTS FC™ 27 is rated E for Everyone by the ESRB. Also includes Users Interact and In-Game Purchases (Includes Random Items). This is a sports simulation game in which players engage in matches of realistic soccer. Players can participate in tournaments, skill games, and several modes of street soccer.",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "EA SPORTS FC™ 27",
         "quote": "EA SPORTS FC™ 27 is rated E for Everyone by the ESRB."
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=EA%20SPORTS%20FC&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "EA SPORTS FC™ 27",
         "title": "EA SPORTS FC™ 27",
@@ -947,7 +947,7 @@
       "guides": [
         {
           "url": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
           "metaDescription": null,
@@ -957,7 +957,7 @@
         },
         {
           "url": "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/",
           "metaDescription": null,
@@ -971,7 +971,7 @@
       "expect": "Call of Duty",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1287282214",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Call of Duty®: Mobile App - App Store",
         "provider": "Activision Publishing, Inc.",
@@ -981,7 +981,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Call of Duty®: Mobile",
         "developer": "Activision Publishing, Inc.",
@@ -1001,13 +1001,13 @@
       "xboxExpect": "Call of Duty",
       "esrb": {
         "url": "https://www.esrb.org/search/?searchKeyword=Call%20of%20Duty%20Mobile",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Call%20of%20Duty%20Mobile&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
@@ -1017,7 +1017,7 @@
       "expect": "Subway Surfers",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id512939461",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Subway Surfers App - App Store",
         "provider": "Sybo Games ApS",
@@ -1027,15 +1027,14 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Subway Surfers",
         "developer": "SYBO Games",
-        "ratingBody": "IARC",
-        "badgeSrc": "https://play-lh.googleusercontent.com/JTT-ImEkrbWzIL7w0fP8fQhVmpexdfh7u0P59PJtyJywmQBVolJjunMal6B5dUM6uiFiKnmtHtBbVvcWBMU=s38",
-        "ratedFor": "Rated for 7+",
+        "ratingBody": "Gmedia",
+        "badgeSrc": "https://play-apps-features.googleusercontent.com/png/Gmedia_7_272.png",
+        "ratedFor": "7",
         "ratingLines": [
-          "Mild Violence",
           "In-Game Purchases (Includes Random Items)"
         ],
         "containsAds": true,
@@ -1048,7 +1047,7 @@
       "esrb": null,
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Subway%20Surfers&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Subway Surfers",
         "title": "Subway Surfers",
@@ -1067,7 +1066,7 @@
       "expect": "Genshin",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1517783697",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Genshin Impact 6th Anniversary App - App Store",
         "provider": "COGNOSPHERE PTE. LTD.",
@@ -1077,7 +1076,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Genshin Impact 6th Anniversary",
         "developer": "COGNOSPHERE PTE. LTD.",
@@ -1093,7 +1092,7 @@
       },
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/genshin-impact/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Genshin Impact - PS5 Games | PlayStation (Saudi Arabia)",
         "authority": "Generic",
@@ -1110,12 +1109,12 @@
       "psExpect": "Genshin",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/9N7TFFRRZCC9",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Genshin Impact",
         "boardName": "PEGI",
-        "rating": "PEGI 12",
-        "ratingDescription": "للأعمار من 12 عاماً فأكبر",
+        "rating": "PEGI 16",
+        "ratingDescription": "للأعمار من 16 عاماً فأكبر",
         "descriptors": [
           "عنف متوسط"
         ],
@@ -1141,19 +1140,19 @@
           "In-Game Purchases (Includes Random Items)"
         ],
         "synopsis": "Genshin Impact is rated T for Teen by the ESRB with Fantasy Violence, Mild Language, Mild Suggestive Themes, and Use of Alcohol. Also includes Users Interact and In-Game Purchases (Includes Random Items). This is a role-playing game in which players assume the role of a character searching for a lost sibling in a fantasy world. From a third-person perspective, players explore an open-world environment, interact with characters, complete missions, and battle fantastical creatures (e.g., rock golems, slime creatures, goblins, insects). Players use swords and ranged attacks to fight enemies in frenetic melee-style combat. Combat is highlighted by frequent impact sounds, light effects, and explosions. The game contains some suggestive material: female characters designed with revealing outfits and camera angles (e.g., deep cleavage, close-ups, exaggerated proportions); innuendo in the dialogue/text (e.g. \"...[U]se your strong hand to stir it with a persistent rhythm…Keep going until the juices start to come out…Okay, okay, I get it…”; “Are you ready to please me?...What did you say?”). One sequence depicts characters engaging in a drinking game, resulting in drunken characters with slurred speech. The words “bastard” and “a*s” appear in the game.",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Genshin Impact",
         "quote": "Genshin Impact is rated T for Teen by the ESRB with Fantasy Violence, Mild Language, Mild Suggestive Themes, and Use of Alcohol."
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Genshin%20Impact&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Genshin Impact",
         "title": "Genshin Impact",
         "publisher": "miHoYo Limited",
-        "rating": "12",
+        "rating": "16",
         "descriptors": [
           "Violence",
           "In-game purchases"
@@ -1163,8 +1162,8 @@
           "PlayStation 4 - 28/09/2020",
           "PlayStation 5 - 30/06/2021"
         ],
-        "advice": "This game has received a PEGI 12 because it features depictions of non-realistic looking violence towards human-like characters. Not suitable for persons under 12 years of age.",
-        "quote": "This game has received a PEGI 12 because it features depictions of non-realistic looking violence towards human-like characters."
+        "advice": "This game has received a PEGI 16 because it features the ability to purchase loot boxes. Not suitable for persons under 16 years of age. It also features depictions of non-realistic looking violence towards human-like characters.",
+        "quote": "This game has received a PEGI 16 because it features the ability to purchase loot boxes."
       },
       "guides": []
     },
@@ -1172,7 +1171,7 @@
       "expect": "Stumble Guys",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id1541153375",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Stumble Guys App - App Store",
         "provider": "Scopely, Inc.",
@@ -1182,15 +1181,15 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Stumble Guys",
         "developer": "Scopely",
-        "ratingBody": "IARC",
-        "badgeSrc": "https://play-lh.googleusercontent.com/_re6mcALPaqotePA0WkgYeOQ6TighHRUS62FRmREPEhyZPdGM3QmRjcSpiMt6Pz1O-WZyvEIy4mtGHj9zw=s38",
-        "ratedFor": "Rated for 3+",
+        "ratingBody": "Gmedia",
+        "badgeSrc": "https://play-apps-features.googleusercontent.com/png/Gmedia_3_272.png",
+        "ratedFor": "3",
         "ratingLines": [
-          "In-Game Purchases (Includes Random Items)"
+          "In-Game Purchases"
         ],
         "containsAds": true,
         "inAppPurchasesLabel": true
@@ -1199,27 +1198,27 @@
       "psExpect": "Stumble Guys",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/9N9L211HC9LQ",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Stumble Guys",
-        "boardName": "PEGI",
-        "rating": "PEGI 3",
-        "ratingDescription": "للأعمار من 3 أعوام فأكبر",
+        "boardName": "GAMR",
+        "rating": "3",
+        "ratingDescription": "مناسب لعمر 3 فما فوق",
         "descriptors": [],
         "interactive": [
-          "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)"
+          "عمليات الشراء داخل اللعبة"
         ]
       },
       "xboxExpect": "Stumble Guys",
       "esrb": {
         "url": "https://www.esrb.org/search/?searchKeyword=Stumble%20Guys",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Stumble%20Guys&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 404,
         "candidates": []
       },
@@ -1229,7 +1228,7 @@
       "expect": "Discord",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id985746746",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Discord – Talk, Play, Hang Out App - App Store",
         "provider": "Discord Inc.",
@@ -1239,7 +1238,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.discord&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Discord - Talk, Play, Hang Out",
         "developer": "Discord Inc.",
@@ -1262,7 +1261,7 @@
       "guides": [
         {
           "url": "https://discord.com/safety-family-center",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://discord.com/safety-family-center",
           "metaDescription": null,
@@ -1272,7 +1271,7 @@
         },
         {
           "url": "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
           "metaDescription": null,
@@ -1286,7 +1285,7 @@
       "expect": "Instagram",
       "appStore": {
         "url": "https://apps.apple.com/sa/app/id389801252",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "‎Instagram App - App Store",
         "provider": "Instagram, Inc.",
@@ -1296,7 +1295,7 @@
       },
       "googlePlay": {
         "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Instagram",
         "developer": "Instagram",
@@ -1319,7 +1318,7 @@
       "guides": [
         {
           "url": "https://help.instagram.com/995996839195964",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://help.instagram.com/995996839195964",
           "metaDescription": null,
@@ -1329,7 +1328,7 @@
         },
         {
           "url": "https://familycenter.meta.com/",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://familycenter.meta.com/",
           "metaDescription": null,
@@ -1345,7 +1344,7 @@
       "googlePlay": null,
       "playstation": {
         "url": "https://www.playstation.com/en-sa/games/rocket-league/",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Rocket League - PS4 Games | PlayStation (Saudi Arabia)",
         "authority": "PEGI",
@@ -1359,7 +1358,7 @@
       "psExpect": "Rocket League",
       "xbox": {
         "url": "https://www.xbox.com/ar-SA/games/store/_/C125W9BG2K0V",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Rocket League®",
         "boardName": "PEGI",
@@ -1381,14 +1380,14 @@
           "Users Interact"
         ],
         "synopsis": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics.",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Rocket League",
         "quote": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics."
       },
       "pegi": {
         "url": "https://pegi.info/search-pegi?q=Rocket%20League&op=Search",
-        "fetchedAt": "2026-10-10",
+        "fetchedAt": "2026-10-14",
         "status": 200,
         "pageTitle": "Rocket League Ultimate Edition",
         "title": "Rocket League Ultimate Edition",
@@ -1406,7 +1405,7 @@
       "guides": [
         {
           "url": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
           "metaDescription": null,
@@ -1416,7 +1415,7 @@
         },
         {
           "url": "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031",
-          "fetchedAt": "2026-10-10",
+          "fetchedAt": "2026-10-14",
           "status": 0,
           "finalUrl": "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031",
           "metaDescription": null,
@@ -1430,7 +1429,7 @@
   "platformGuides": {
     "playstation": {
       "url": "https://www.playstation.com/en-sa/parental-controls/",
-      "fetchedAt": "2026-10-10",
+      "fetchedAt": "2026-10-14",
       "status": 200,
       "finalUrl": "https://www.playstation.com/en-sa/ps-family-app/",
       "metaDescription": "Stay informed about and involved in your child's gameplay by managing playtime, spending, messaging and more with the free PlayStation Family app. Keep track of your child's gaming at-a-glance with intuitive activity reports, simple parental controls and real-time info direct to your phone.",
@@ -1440,7 +1439,7 @@
     },
     "xbox": {
       "url": "https://www.xbox.com/ar-SA/family-hub",
-      "fetchedAt": "2026-10-10",
+      "fetchedAt": "2026-10-14",
       "status": 200,
       "finalUrl": "https://www.xbox.com/ar-SA/family-hub",
       "metaDescription": "Help make gaming safe and enjoyable for your family. Define what’s okay for your family with privacy, safety and more XBOX family settings.",
@@ -1450,7 +1449,7 @@
     },
     "pc": {
       "url": "https://store.steampowered.com/families",
-      "fetchedAt": "2026-10-10",
+      "fetchedAt": "2026-10-14",
       "status": 200,
       "finalUrl": "https://store.steampowered.com/news/app/593110/view/4605582245626919823",
       "metaDescription": null,
@@ -1460,7 +1459,7 @@
     },
     "switch": {
       "url": "https://www.nintendo.com/us/switch/parental-controls/",
-      "fetchedAt": "2026-10-10",
+      "fetchedAt": "2026-10-14",
       "status": 200,
       "finalUrl": "https://www.nintendo.com/us/mobile-apps/parental-controls/",
       "metaDescription": "Learn all about the Nintendo Switch Parental Controls app for your smart device to help manage your Nintendo Switch and Nintendo Switch 2 systems.",
@@ -1470,7 +1469,7 @@
     },
     "ios": {
       "url": "https://support.apple.com/ar-sa/105121",
-      "fetchedAt": "2026-10-10",
+      "fetchedAt": "2026-10-14",
       "status": 200,
       "finalUrl": "https://support.apple.com/ar-sa/105121",
       "metaDescription": "تأتي ميزة \"مدة استخدام الجهاز\" مزودةً بإشراف عائلي يمكن أن يساعدك في إدارة التطبيقات ومواقع الويب التي يمكن لطفلك الوصول إليها، والأشخاص الذين يتواصل معهم، ومتى يستخدم أجهزته، وغير ذلك الكثير.",
@@ -1480,7 +1479,7 @@
     },
     "android": {
       "url": "https://families.google/familylink/",
-      "fetchedAt": "2026-10-10",
+      "fetchedAt": "2026-10-14",
       "status": 200,
       "finalUrl": "https://families.google/familylink/",
       "metaDescription": "Family Link gives parents the tools they need to create a safer online experience for their kids and empower them to build healthy digital habits together.",

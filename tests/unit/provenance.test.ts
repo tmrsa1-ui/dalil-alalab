@@ -5,6 +5,7 @@
  */
 import { readFileSync, readdirSync } from "node:fs";
 import { normalizeQuote } from "@/lib/data/guide-text";
+import { quoteTraced, snapshotTextByUrl } from "@/lib/data/stale";
 
 type Src = { url: string; quote?: string };
 const snapshot = JSON.parse(readFileSync("research/official_snapshot.json", "utf8")) as {
@@ -14,35 +15,14 @@ const seedText = normalizeQuote(readFileSync("research/seed_titles_verified.json
   /\\"/g,
   '"',
 );
-
-// نص كل رابط في اللقطة (كل الحقول المحفوظة من الصفحة).
-const byUrl = new Map<string, string>();
-for (const entry of Object.values(snapshot.titles)) {
-  for (const part of Object.values(entry)) {
-    if (part && typeof part === "object" && "url" in part) {
-      const url = (part as { url: string }).url;
-      byUrl.set(
-        url,
-        normalizeQuote(JSON.stringify(part).replace(/\\n/g, " ").replace(/\\"/g, '"')),
-      );
-    }
-  }
-}
-
-// تسميات القوالب اللي يضيفها apply:official حول القيمة الحرفية.
-const LABELS = /^(Age Rating|In-App Purchases|Frequent|Infrequent|GAMR|GCAM|PEGI|Contains ads)$/;
-const parts = (q: string) =>
-  normalizeQuote(q)
-    .split(/,\s*|\s+—\s+|:\s+/)
-    .map((p) => p.trim().replace(/^(Age Rating|GAMR|GCAM|PEGI)\s+/, ""))
-    .filter((p) => p && !LABELS.test(p));
+// نص كل رابط في اللقطة (الصفحات اللي جُلبت بنجاح).
+const byUrl = snapshotTextByUrl(snapshot);
 
 function traced(src: Src): boolean {
   const text = byUrl.get(src.url);
-  const q = src.quote ?? "";
-  if (text && parts(q).every((p) => text.includes(p))) return true;
+  if (text && quoteTraced(text, src.quote)) return true;
   // ملف البحث: الرابط موجود فيه، والاقتباس (لو فيه) موجود حرفيًا.
-  return seedText.includes(src.url) && (!q || seedText.includes(normalizeQuote(q)));
+  return seedText.includes(src.url) && (!src.quote || seedText.includes(normalizeQuote(src.quote)));
 }
 
 const all: Array<{ where: string; src: Src }> = [];

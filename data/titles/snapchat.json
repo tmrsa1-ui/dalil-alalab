@@ -36,7 +36,7 @@
     "appStore": {
       "value": "13+",
       "sourceUrl": "https://apps.apple.com/sa/app/id447188370",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 13+",
       "confidence": "auto"
     },
@@ -46,7 +46,7 @@
         "Parental Guidance Recommended"
       ],
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 12+",
       "confidence": "auto"
     }
@@ -60,7 +60,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Snapchat",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -73,13 +73,13 @@
           "url": "https://apps.apple.com/sa/app/id447188370",
           "title": "App Store (السعودية): Snapchat",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Snapchat",
           "quote": "In-App Purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -92,7 +92,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Snapchat",
           "quote": "Parental Guidance Recommended",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -105,7 +105,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Snapchat",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"

@@ -37,7 +37,7 @@
     "appStore": {
       "value": "13+",
       "sourceUrl": "https://apps.apple.com/sa/app/id389801252",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Age Rating 13+",
       "confidence": "auto"
     },
@@ -47,7 +47,7 @@
         "Parental Guidance Recommended"
       ],
       "sourceUrl": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
-      "verifiedAt": "2026-10-10",
+      "verifiedAt": "2026-10-14",
       "quote": "Rated for 12+",
       "confidence": "auto"
     }
@@ -61,7 +61,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Instagram",
           "quote": "Users Interact",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -74,13 +74,13 @@
           "url": "https://apps.apple.com/sa/app/id389801252",
           "title": "App Store (السعودية): Instagram",
           "quote": "In-App Purchases: Yes",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         },
         {
           "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Instagram",
           "quote": "In-App Purchases",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -93,7 +93,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Instagram",
           "quote": "Parental Guidance Recommended",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
@@ -106,7 +106,7 @@
           "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=SA",
           "title": "Google Play (السعودية): Instagram",
           "quote": "Contains ads",
-          "verifiedAt": "2026-10-10"
+          "verifiedAt": "2026-10-14"
         }
       ],
       "confidence": "auto"
