@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "xbox",
+  "nameAr": "إكس بوكس",
+  "nameEn": "Xbox",
+  "toolNameEn": "Xbox Family Settings",
+  "officialGuideUrl": "https://www.xbox.com/ar-SA/family-hub",
+  "officialGuideTitle": "XBOX family settings: peace of mind for parents | XBOX",
+  "verifiedAt": null,
+  "linkCheckedAt": "2026-10-14",
+  "guideQuote": "XBOX family settings: peace of mind for parents | XBOX",
+  "steps": [
+    {
+      "id": "xbox-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "تطبيق Xbox Family Settings: اسمح أو امنع اللعب الجماعي وإضافة الأصدقاء والمحادثة.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "Allow or block your child’s ability to join multiplayer online games, create and join clubs, broadcast their gameplay, add friends and chat.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "xbox-purchases-1",
+      "pointKey": "purchases",
+      "stepAr": "فعّل «Ask a Parent» عشان يوصلك طلب قبل ما يشتري لعبة أو تطبيق.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "With Ask a Parent, you’ll receive an email when your kids want to purchase a game or app and need your help to fund the purchase.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "xbox-content-1",
+      "pointKey": "content",
+      "stepAr": "تطبيق Xbox Family Settings: فلتر الألعاب والتطبيقات حسب عمر طفلك.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "Parents can filter or allow games, apps and websites based on the age of their children",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "xbox-sessionpause-1",
+      "pointKey": "sessionPause",
+      "stepAr": "حساب Microsoft العائلي: حدد وقت للعبة نفسها أو للجهاز كل يوم.",
+      "sourceUrl": "https://www.xbox.com/ar-SA/family-hub",
+      "verifiedAt": "2026-10-10",
+      "quote": "Set a time limit for a specific game or app in your Microsoft family group account.",
+      "confidence": "auto",
+      "isDemo": false
+    }
+  ]
+}

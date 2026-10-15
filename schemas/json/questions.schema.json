@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "ageBand": {
+        "type": "string",
+        "enum": [
+          "under7",
+          "7to12",
+          "13plus"
+        ]
+      },
+      "pointKey": {
+        "anyOf": [
+          {
+            "type": "string",
+            "enum": [
+              "strangerChat",
+              "purchases",
+              "content",
+              "ads",
+              "sessionPause"
+            ]
+          },
+          {
+            "type": "string",
+            "const": "friends"
+          }
+        ]
+      },
+      "textAr": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 160
+      },
+      "whyAr": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 200
+      },
+      "ifTheySayAr": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 260
+      }
+    },
+    "required": [
+      "id",
+      "ageBand",
+      "pointKey",
+      "textAr",
+      "whyAr",
+      "ifTheySayAr"
+    ],
+    "additionalProperties": false
+  }
+}

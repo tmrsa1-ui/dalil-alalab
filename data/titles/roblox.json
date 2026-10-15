@@ -1,0 +1,220 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "roblox",
+  "nameAr": "روبلوكس",
+  "nameEn": "Roblox",
+  "aliases": [
+    "روبلكس",
+    "روبلس",
+    "roblox"
+  ],
+  "kind": "game",
+  "platforms": [],
+  "publisher": {
+    "name": "Roblox Corporation",
+    "url": null
+  },
+  "isDemo": false,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": "الإرشاد الأبوي المستحسن",
+      "descriptors": [
+        "الإرشاد الأبوي المستحسن"
+      ],
+      "sourceUrl": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+      "verifiedAt": "2026-10-14",
+      "quote": "الإرشاد الأبوي المستحسن",
+      "edition": "Roblox - Xbox",
+      "shownOn": "Xbox (السعودية)",
+      "confidence": "auto"
+    },
+    "appStore": {
+      "value": "13+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id431946152",
+      "verifiedAt": "2026-10-14",
+      "quote": "Age Rating 13+",
+      "confidence": "auto"
+    },
+    "googlePlay": {
+      "value": "12+",
+      "descriptors": [
+        "Parental Guidance Recommended"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
+      "verifiedAt": "2026-10-14",
+      "quote": "Rated for 12+",
+      "confidence": "auto"
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: PlayStation، Xbox، Google Play.",
+      "sources": [
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "تفاعل المستخدمين",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Roblox",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، PlayStation، Xbox، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id431946152",
+          "title": "App Store (السعودية): Roblox",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Roblox",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: PlayStation، Xbox، Google Play.",
+      "sources": [
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "Parental Guidance Recommended",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "الإرشاد الأبوي المستحسن",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Roblox",
+          "quote": "Parental Guidance Recommended",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "ads": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Roblox",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.playstation.com/en-sa/games/roblox/",
+          "title": "PlayStation (السعودية): Roblox",
+          "quote": "In-Game Purchases (Includes Random Items)",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.xbox.com/ar-SA/games/store/_/BQ1TN1T79V9K",
+          "title": "Xbox (السعودية): Roblox - Xbox",
+          "quote": "عمليات شراء داخل اللعبة (تتضمن عناصر عشوائية)",
+          "verifiedAt": "2026-10-14"
+        }
+      ]
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {},
+    "officialGuide": {
+      "url": "https://about.roblox.com/parental-controls",
+      "labelAr": "صفحة الرقابة الأبوية الرسمية من Roblox",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
+    }
+  },
+  "conversationTags": []
+}

@@ -1,0 +1,165 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "snapchat",
+  "nameAr": "سناب شات",
+  "nameEn": "Snapchat",
+  "aliases": [
+    "سناب",
+    "سنابشات",
+    "snap"
+  ],
+  "kind": "app",
+  "platforms": [],
+  "publisher": {
+    "name": "Snap, Inc.",
+    "url": null
+  },
+  "isDemo": false,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "appStore": {
+      "value": "13+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id447188370",
+      "verifiedAt": "2026-10-14",
+      "quote": "Age Rating 13+",
+      "confidence": "auto"
+    },
+    "googlePlay": {
+      "value": "12+",
+      "descriptors": [
+        "Parental Guidance Recommended"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
+      "verifiedAt": "2026-10-14",
+      "quote": "Rated for 12+",
+      "confidence": "auto"
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Snapchat",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id447188370",
+          "title": "App Store (السعودية): Snapchat",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Snapchat",
+          "quote": "In-App Purchases",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Snapchat",
+          "quote": "Parental Guidance Recommended",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "ads": {
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&hl=en&gl=SA",
+          "title": "Google Play (السعودية): Snapchat",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {},
+    "officialGuide": {
+      "url": "https://values.snap.com/safety/family-center",
+      "labelAr": "«Family Center» الرسمي من Snapchat",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
+    }
+  },
+  "conversationTags": []
+}

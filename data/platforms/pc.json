@@ -1,0 +1,46 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "pc",
+  "nameAr": "كمبيوتر / Steam",
+  "nameEn": "PC / Steam",
+  "toolNameEn": "Steam Families",
+  "officialGuideUrl": "https://store.steampowered.com/news/app/593110/view/4605582245626919823",
+  "officialGuideTitle": "Steam News - Steam Families is here - Steam News",
+  "verifiedAt": null,
+  "linkCheckedAt": "2026-10-14",
+  "guideQuote": "Steam News - Steam Families is here - Steam News",
+  "steps": [
+    {
+      "id": "pc-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "Steam Families ← حساب الطفل ← Community: اقفل Chat و Community content.",
+      "sourceUrl": "https://example.org/demo/platforms/pc/strangerChat",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "pc-purchases-2",
+      "pointKey": "purchases",
+      "stepAr": "في Steam Families كل شراء من حساب الطفل يوصل طلب موافقة لولي الأمر.",
+      "sourceUrl": "https://example.org/demo/platforms/pc/purchases",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "pc-content-3",
+      "pointKey": "content",
+      "stepAr": "Steam Families ← Library: اختر الألعاب المسموحة من مكتبة العائلة.",
+      "sourceUrl": "https://example.org/demo/platforms/pc/content",
+      "verifiedAt": null,
+      "isDemo": true
+    },
+    {
+      "id": "pc-sessionpause-4",
+      "pointKey": "sessionPause",
+      "stepAr": "Steam Families ← Playtime: حدد ساعات اللعب اليومية والأوقات المسموحة.",
+      "sourceUrl": "https://example.org/demo/platforms/pc/sessionPause",
+      "verifiedAt": null,
+      "isDemo": true
+    }
+  ]
+}

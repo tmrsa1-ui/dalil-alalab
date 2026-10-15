@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "questions": {
+      "minItems": 3,
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "when",
+              "talk",
+              "purchases"
+            ]
+          },
+          "textParentAr": {
+            "type": "string",
+            "minLength": 1
+          },
+          "textChildAr": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "minItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                },
+                "labelAr": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "childLabelAr": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "clauseAr": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "icon": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rank": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "id",
+                "labelAr",
+                "childLabelAr",
+                "clauseAr",
+                "icon",
+                "rank"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "textParentAr",
+          "textChildAr",
+          "options"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "midpointRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "questionId": {
+            "type": "string",
+            "enum": [
+              "when",
+              "talk",
+              "purchases"
+            ]
+          },
+          "between": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "clauseAr": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "questionId",
+          "between",
+          "clauseAr"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "parentCommitments": {
+      "minItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "labelAr": {
+            "type": "string",
+            "minLength": 1
+          },
+          "icon": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "labelAr"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "teenSuggestions": {
+      "minItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "labelAr": {
+            "type": "string",
+            "minLength": 1
+          },
+          "icon": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "labelAr"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "questions",
+    "midpointRules",
+    "parentCommitments",
+    "teenSuggestions"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "search",
+        "card_viewed",
+        "step_viewed",
+        "control_step_done",
+        "conversation_viewed",
+        "agreement_completed",
+        "agreement_printed",
+        "title_requested",
+        "feedback"
+      ]
+    },
+    "titleSlug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "ageBand": {
+      "type": "string",
+      "enum": [
+        "under7",
+        "7to12",
+        "13plus"
+      ]
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "ios",
+        "android",
+        "playstation",
+        "xbox",
+        "switch",
+        "pc"
+      ]
+    },
+    "step": {
+      "type": "string",
+      "enum": [
+        "know",
+        "setup",
+        "talk",
+        "agree"
+      ]
+    },
+    "controlKey": {
+      "type": "string",
+      "enum": [
+        "strangerChat",
+        "purchases",
+        "content",
+        "ads",
+        "sessionPause",
+        "searchAndStore"
+      ]
+    },
+    "found": {
+      "type": "boolean"
+    },
+    "requestedName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "feedback": {
+      "type": "object",
+      "properties": {
+        "useful": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "somewhat",
+            "no"
+          ]
+        },
+        "talked": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "planned",
+            "no"
+          ]
+        },
+        "willUseAgain": {
+          "type": "string",
+          "enum": [
+            "yes",
+            "maybe",
+            "no"
+          ]
+        },
+        "parentNote": {
+          "type": "string",
+          "maxLength": 500
+        }
+      },
+      "required": [
+        "useful",
+        "talked",
+        "willUseAgain"
+      ],
+      "additionalProperties": false
+    },
+    "ts": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "sessionId": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-8][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}|00000000-0000-0000-0000-000000000000|ffffffff-ffff-ffff-ffff-ffffffffffff)$"
+    }
+  },
+  "required": [
+    "type",
+    "ts",
+    "sessionId"
+  ],
+  "additionalProperties": false
+}

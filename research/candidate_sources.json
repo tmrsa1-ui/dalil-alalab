@@ -1,0 +1,864 @@
+{
+  "_note": "روابط مرشّحة من نتائج بحث عام مقيّدة بنطاقات رسمية — غير متحقق منها. لا تُستخدم في التطبيق. على المراجع فتح كل رابط والتحقق يدويًا.",
+  "collectedAt": "2026-10-10",
+  "method": "WebSearch restricted to official domains; URLs copied from results only",
+  "generalCandidates": [
+    {
+      "category": "gcam",
+      "url": "https://gmedia.gov.sa/ar/age-classification",
+      "resultTitle": "الهيئة العامة لتنظيم الإعلام"
+    },
+    {
+      "category": "gcam",
+      "url": "https://www.gcam.gov.sa/pages/32",
+      "resultTitle": "التصنيف العمري"
+    },
+    {
+      "category": "gcam",
+      "url": "https://eservices.gcam.gov.sa/user/services/65",
+      "resultTitle": "التصنيف العمري للألعاب الإلكترونية"
+    },
+    {
+      "category": "gcam",
+      "url": "https://www.gcam.gov.sa/pages/3",
+      "resultTitle": "الأسئلة الشائعة"
+    },
+    {
+      "category": "pegi",
+      "url": "https://pegi.info/page/pegi-age-ratings",
+      "resultTitle": "PEGI age ratings"
+    },
+    {
+      "category": "pegi",
+      "url": "https://pegi.info/what-do-the-labels-mean",
+      "resultTitle": "PEGI 12 rating"
+    },
+    {
+      "category": "pegi",
+      "url": "https://pegi.info/news/pegi-expands-age-rating-criteria-interactive-risk-categories",
+      "resultTitle": "PEGI expands age rating criteria with interactive risk categories"
+    },
+    {
+      "category": "pegi",
+      "url": "https://pegi.info/page/how-we-rate-games",
+      "resultTitle": "How we rate games"
+    }
+  ],
+  "titles": [
+    {
+      "slug": "roblox",
+      "nameEn": "Roblox",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/blog/what-parents-need-to-know-about-roblox-2/",
+          "resultTitle": "What Parents Need To Know About Roblox"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/blog/level-up-with-esrb-roblox-and-diverse-content/",
+          "resultTitle": "Level Up with ESRB: Talkin' Ratings - Roblox and Diverse Content"
+        },
+        {
+          "category": "pegi",
+          "url": "https://pegi.info/news/pegi-changes-rating-advice-roblox",
+          "resultTitle": "PEGI Changes Rating Advice for Roblox"
+        },
+        {
+          "category": "pegi",
+          "url": "https://pegi.info/search-pegi?q=roblox&op=Search&page=1&form_build_id=form-L-Z2VKJDaG5gD4zo8J3nBiW3IHWSUNKh2W7qIHARtWQ&form_id=pegi_search_form",
+          "resultTitle": "Search"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/roblox/id431946152",
+          "resultTitle": "Roblox - App Store - Apple"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/ae/app/roblox/id431946152?see-all=reviews&platform=iphone",
+          "resultTitle": "Ratings & Reviews - Roblox - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.roblox.client&hl=en_US",
+          "resultTitle": "Roblox - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://about.roblox.com/parental-controls",
+          "resultTitle": "Parental Controls"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://en.help.roblox.com/hc/en-us/articles/30428248050068-Parental-Controls-FAQ",
+          "resultTitle": "Parental Controls FAQ"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://en.help.roblox.com/hc/en-us/articles/30428328969492-Managing-Screen-Time",
+          "resultTitle": "Managing Screen Time"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://en.help.roblox.com/hc/en-us/articles/8863284850196-Content-Maturity-FAQ",
+          "resultTitle": "Content Maturity FAQ"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://about.roblox.com/safety",
+          "resultTitle": "Roblox Safety Center - Safety Policies & Resources"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://about.roblox.com/newsroom/2026/05/what-families-should-know-roblox-kids-select",
+          "resultTitle": "What Families Need to Know About Roblox’s New Age-Based Protections"
+        }
+      ]
+    },
+    {
+      "slug": "minecraft",
+      "nameEn": "Minecraft",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/35148/minecraft/",
+          "resultTitle": "Minecraft - ESRB"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/39862/minecraft/",
+          "resultTitle": "Minecraft - Game Ratings"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/38140/minecraft-java-edition/",
+          "resultTitle": "Minecraft: Java Edition - ESRB"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/blog/what-parents-need-to-know-about-minecraft/",
+          "resultTitle": "What Parents Need to Know About Minecraft"
+        },
+        {
+          "category": "pegi",
+          "url": "https://pegi.info/search-pegi?q=minecraft",
+          "resultTitle": "Search"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en_US",
+          "resultTitle": "Minecraft: Dream it, Build it! - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.minecraft.net/en-us/article/parental-controls",
+          "resultTitle": "Parental Controls in Minecraft"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://help.minecraft.net/en-us/article/parental-controls",
+          "resultTitle": "Parental Controls in Minecraft"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://help.minecraft.net/hc/en-us/articles/6985971367309-Managing-Child-Account-Social-Settings-Using-Xbox-Settings-Online",
+          "resultTitle": "Managing Child Account Social Settings Using Xbox Settings Online"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.minecraft.net/en-us/article/parents--guide-minecraft",
+          "resultTitle": "Minecraft Parents’ Guide"
+        }
+      ]
+    },
+    {
+      "slug": "fortnite",
+      "nameEn": "Fortnite",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/",
+          "resultTitle": "Fortnite Battle Royale - ESRB"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/39689/fortnite-save-the-world/",
+          "resultTitle": "Fortnite Save The World - Game Ratings"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/blog/a-parents-guide-to-fortnite/",
+          "resultTitle": "A Parents' Guide to Fortnite"
+        },
+        {
+          "category": "pegi",
+          "url": "https://pegi.info/search-pegi?q=fortnite",
+          "resultTitle": "https://pegi.info/search-pegi?q=fortnite"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/fortnite/id6483539426",
+          "resultTitle": "Fortnite - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite&hl=en_US",
+          "resultTitle": "Fortnite - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.epicgames.com/fortnite/en-US/parental-controls",
+          "resultTitle": "Parental Controls"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://safety.epicgames.com/parental-controls",
+          "resultTitle": "Parental Controls"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.epicgames.com/help/c-34254770/c-39122868/how-do-i-set-up-parental-controls-for-fortnite-a18778792",
+          "resultTitle": "How do I set up Parental Controls for Fortnite? - Fortnite Battle Royale Support"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.epicgames.com/help/en-US/c-202300000001636/c-202300000001724/how-to-set-up-time-limit-controls-for-fortnite-and-uefn-a202300000012861",
+          "resultTitle": "How to set up Time Limit Controls for Fortnite and UEFN? - Fortnite Battle Royale Support"
+        }
+      ]
+    },
+    {
+      "slug": "among-us",
+      "nameEn": "Among Us",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/blog/what-parents-need-to-know-about-among-us/",
+          "resultTitle": "What Parents Need to Know About Among Us"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/",
+          "resultTitle": "Among Us - Crewmate Edition - ESRB"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/among-us/id1351168404",
+          "resultTitle": "Among Us - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=en_US",
+          "resultTitle": "Among Us - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.innersloth.com/faq/",
+          "resultTitle": "FAQ"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.innersloth.com/info-on-accounts/",
+          "resultTitle": "Info on Accounts"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.innersloth.com/code-of-conduct/",
+          "resultTitle": "Code of Conduct"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.innersloth.com/privacy-policy/",
+          "resultTitle": "Privacy Policy and Notice at Collection"
+        }
+      ]
+    },
+    {
+      "slug": "pubg-mobile",
+      "nameEn": "PUBG MOBILE",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/pubg-mobile/id1330123889",
+          "resultTitle": "PUBG Mobile - App Store - Apple"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/om/app/pubg-mobile/id1330123889",
+          "resultTitle": "PUBG MOBILE App - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en_US",
+          "resultTitle": "PUBG MOBILE - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.pubgmobile.com/PK/terms.shtml",
+          "resultTitle": "PLAYERUNKNOWN'S BATTLEGROUNDS MOBILE!"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.pubgmobile.com/privacy/en.html",
+          "resultTitle": "Pubgmobile"
+        }
+      ]
+    },
+    {
+      "slug": "free-fire",
+      "nameEn": "Free Fire",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/free-fire-9th-anniversary/id1300146617",
+          "resultTitle": "Free Fire: 9th Anniversary App - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.dts.freefireth&hl=en_US",
+          "resultTitle": "Free Fire x NARUTO SHIPPUDEN - Aplikasi di Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://ffsupport.garena.com/hc/en-us/articles/4412920989466-Information-for-Parents-and-Guardians",
+          "resultTitle": "Information for Parents and Guardians"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://support-freefirena.garena.com/na/articles/na_information_for_parents_and_guardians",
+          "resultTitle": "Information for Parents and Guardians - Garena Free Fire Support"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://ffsupportsg.garena.com/hc/en-us/articles/4411731962650-Information-for-Parents-and-Guardians",
+          "resultTitle": "Information for Parents and Guardians - Free Fire SG - Garena"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://ff.garena.com/en/faq/",
+          "resultTitle": "Garena Free Fire. Best survival Battle Royale on mobile!"
+        }
+      ]
+    },
+    {
+      "slug": "brawl-stars",
+      "nameEn": "Brawl Stars",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/brawl-stars/id1229016807",
+          "resultTitle": "Brawl Stars App - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=en",
+          "resultTitle": "Brawl Stars - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://supercell.com/en/parents/",
+          "resultTitle": "Parent's Guide × Supercell"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://supercell.com/en/for-children/",
+          "resultTitle": "Children’s Guide: 5 Things to Do for Safer Gameplay on Supercell × Supercell"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://supercell.com/en/safe-and-fair-play/",
+          "resultTitle": "Safe and Fair Policy × Supercell"
+        }
+      ]
+    },
+    {
+      "slug": "clash-royale",
+      "nameEn": "Clash Royale",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/clash-royale/id1053012308",
+          "resultTitle": "Clash Royale - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.supercell.clashroyale&hl=en_US",
+          "resultTitle": "Clash Royale - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://supercell.com/en/parents/",
+          "resultTitle": "Parent's Guide × Supercell"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://supercell.com/en/for-teens/",
+          "resultTitle": "Teen's Guide: Your Safety on Supercell × Supercell"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://supercell.com/en/safe-and-fair-play/",
+          "resultTitle": "Safe and Fair Policy × Supercell"
+        }
+      ]
+    },
+    {
+      "slug": "tiktok",
+      "nameEn": "TikTok",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/tiktok-videos-shop-live/id835599320",
+          "resultTitle": "TikTok - Videos, Shop & LIVE - App Store - Apple"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/sa/app/tiktok-videos-music-live/id835599320",
+          "resultTitle": "TikTok - Videos, Music & LIVE - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.trill&hl=en_IN&gl=MY",
+          "resultTitle": "TikTok"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.tiktok.com/safety/en/tools-and-guides/guardians-guide",
+          "resultTitle": "Guardian's Guide"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://newsroom.tiktok.com/en-us/supporting-families-with-new-family-pairing-features",
+          "resultTitle": "Supporting families with new Family Pairing features - Newsroom"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://newsroom.tiktok.com/en-us/new-ways-we-are-supporting-parents-and-helping-teens-build-balanced-digital-habits",
+          "resultTitle": "New ways we're supporting parents and helping teens build balanced digital habits - Newsroom"
+        }
+      ]
+    },
+    {
+      "slug": "snapchat",
+      "nameEn": "Snapchat",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/snapchat/id447188370",
+          "resultTitle": "Snapchat - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.snapchat.android&gl=ai&hl=en&hl=en",
+          "resultTitle": "Snapchat: Chat with Friends - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://parents.snapchat.com/family-center",
+          "resultTitle": "Parents - Family Center"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://help.snapchat.com/hc/en-us/articles/7121384944788-What-is-Family-Center",
+          "resultTitle": "What is Family Center?"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://parents.snapchat.com/",
+          "resultTitle": "Parents - Homepage - Snapchat"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://parents.snapchat.com/snapchat-family-safety-faq",
+          "resultTitle": "Parents - Frequently Asked Questions"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://values.snap.com/news/introducing-content-controls-on-family-center",
+          "resultTitle": "Introducing Content Controls on Family Center - Snapchat"
+        }
+      ]
+    },
+    {
+      "slug": "youtube-kids",
+      "nameEn": "YouTube Kids",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/youtube-kids/id936971630",
+          "resultTitle": "YouTube Kids - App Store - Apple"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/eg/app/youtube-kids/id936971630",
+          "resultTitle": "YouTube Kids - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en_US",
+          "resultTitle": "YouTube Kids - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://support.google.com/youtubekids/answer/6172308?hl=en",
+          "resultTitle": "Parental controls for YouTube Kids profiles - Computer - YouTube For Families Help"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://support.google.com/youtubekids/answer/7554371?hl=en",
+          "resultTitle": "Manage YouTube Kids profile settings - YouTube For Families Help"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://support.google.com/youtubekids/answer/6130561?hl=en",
+          "resultTitle": "Important info for parents about YouTube Kids - YouTube For Families Help"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.youtube.com/intl/ALL_au/kids/parent-resources/",
+          "resultTitle": "Resources, tools and control settings for parents"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.youtube.com/myfamily/",
+          "resultTitle": "More Choices for Kids and Teens from YouTube"
+        }
+      ]
+    },
+    {
+      "slug": "pokemon-go",
+      "nameEn": "Pokémon GO",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/pok%C3%A9mon-go/id1094591345",
+          "resultTitle": "Pokémon GO - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=en_US",
+          "resultTitle": "Pokémon GO - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/5080-niantic-kids-child-account-parental-control-guide/",
+          "resultTitle": "Niantic Kids: Child Account & Parental Control Guide — Pokémon GO Help Center"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/5082-pokemon-trainer-central-child-account-parent-control-guide/?l=en",
+          "resultTitle": "Pokemon Trainer Central: Child Account & Parent Control Guide — Pokémon GO Help Center"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/4111-niantic-kids-frequently-asked-questions/",
+          "resultTitle": "Niantic Kids Frequently Asked Questions — Pokémon GO Help Center"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/114-safety-faqs/",
+          "resultTitle": "Safety FAQs — Pokémon GO Help Center"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://nianticlabs.com/parents/safety-tips",
+          "resultTitle": "Safety Tips, Tools, and Resources"
+        }
+      ]
+    },
+    {
+      "slug": "ea-sports-fc",
+      "nameEn": "EA SPORTS FC",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/40731/ea-sports-fctm-26/",
+          "resultTitle": "EA SPORTS FC™ 26 - ESRB"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/39519/ea-sports-fctm-24/",
+          "resultTitle": "EA SPORTS FC™ 24 - ESRB"
+        },
+        {
+          "category": "pegi",
+          "url": "https://pegi.info/search-pegi?q=EA+Sports+FC&op=Search&age%5B%5D=&descriptor%5B%5D=&publisher=&platform%5B%5D=&release_year%5B%5D=&page=1&form_build_id=form-RVw-TljNl8eyoLv9n-pIYkknZ4QUs-JieIRBK1Vgf3Q&form_id=pegi_search_form",
+          "resultTitle": "EA Sports FC"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/ea-sports-fc-mobile-soccer/id1094930513",
+          "resultTitle": "EA SPORTS FC Soccer Mobile 27 App - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile&hl=en",
+          "resultTitle": "EA SPORTS FC Soccer Mobile 27 - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.ea.com/commitments/positive-play/player-and-parental-tools",
+          "resultTitle": "EA - Player and Parental Tools - Electronic Arts Official Site"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://help.ea.com/en/articles/ea-account/family-and-teen-accounts-ea-app/",
+          "resultTitle": "How to set parental controls in the EA app"
+        }
+      ]
+    },
+    {
+      "slug": "call-of-duty-mobile",
+      "nameEn": "Call of Duty: Mobile",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/call-of-duty-mobile/id1287282214",
+          "resultTitle": "Call of Duty®: Mobile App - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=en_US",
+          "resultTitle": "Call of Duty®: Mobile - Apps on Google Play"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.garena.game.codm&hl=en_US",
+          "resultTitle": "Call of Duty®: Mobile - Garena - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.activision.com/legal/online-safety-guide",
+          "resultTitle": "Activision"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.activision.com/legal/privacy-young-people",
+          "resultTitle": "Activision"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.activision.com/games/call-of-duty/call-of-duty-mobile",
+          "resultTitle": "Call of Duty®: Mobile"
+        }
+      ]
+    },
+    {
+      "slug": "subway-surfers",
+      "nameEn": "Subway Surfers",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/subway-surfers/id512939461",
+          "resultTitle": "Subway Surfers - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf&hl=en",
+          "resultTitle": "Subway Surfers - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://sybogames.com/privacy-policy/",
+          "resultTitle": "SYBO - Privacy Policy"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://sybogames.com/terms-of-service/",
+          "resultTitle": "SYBO - Terms Of Service"
+        }
+      ]
+    },
+    {
+      "slug": "genshin-impact",
+      "nameEn": "Genshin Impact",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/37211/genshin-impact/",
+          "resultTitle": "Genshin Impact - Game Ratings"
+        },
+        {
+          "category": "pegi",
+          "url": "https://pegi.info/search-pegi?q=Genshin+Impact",
+          "resultTitle": "Search"
+        },
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/genshin-impact/id1517783697",
+          "resultTitle": "Genshin Impact 6th Anniversary App - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en_US&gl=US",
+          "resultTitle": "Genshin Impact - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://genshin.hoyoverse.com/en/news/detail/155805",
+          "resultTitle": "Age Verification Process for US Players - Genshin Impact"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.hoyoverse.com/en-us/news/127581",
+          "resultTitle": "Cognosphere Statement on U.S. FTC Settlement"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://genshin.hoyoverse.com/en/company/terms",
+          "resultTitle": "Genshin Impact"
+        }
+      ]
+    },
+    {
+      "slug": "stumble-guys",
+      "nameEn": "Stumble Guys",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/stumble-guys/id1541153375",
+          "resultTitle": "Stumble Guys - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.kitkagames.fallbuddies&hl=en_US",
+          "resultTitle": "Stumble Guys - Apps on Google Play"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.stumbleguys.com/privacy-policy",
+          "resultTitle": "Privacy Policy - Stumble Guys"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.stumbleguys.com/terms-of-service",
+          "resultTitle": "Terms of Service - Stumble Guys"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.scopely.com/en/games/stumble-guys",
+          "resultTitle": "Stumble Guys - Fun Multiplayer Party Royale"
+        }
+      ]
+    },
+    {
+      "slug": "discord",
+      "nameEn": "Discord",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/discord-talk-play-hang-out/id985746746?platform=ipad",
+          "resultTitle": "Discord - Talk, Play, Hang Out App - App Store"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details/?id=com.discord&hl=en-IN",
+          "resultTitle": "Discord"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://support.discord.com/hc/en-us/articles/14155043715735-Family-Center-for-Parents-and-Guardians",
+          "resultTitle": "Family Center for Parents and Guardians"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://discord.com/safety-family-center",
+          "resultTitle": "Family Center"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://discord.com/safety-parents",
+          "resultTitle": "Parent Hub"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://discord.com/safety/360044149331-What-is-Discord",
+          "resultTitle": "What is Discord: A Guide for Parents and Educators"
+        }
+      ]
+    },
+    {
+      "slug": "instagram",
+      "nameEn": "Instagram",
+      "candidates": [
+        {
+          "category": "appStore",
+          "url": "https://apps.apple.com/us/app/instagram/id389801252",
+          "resultTitle": "Instagram - App Store - Apple"
+        },
+        {
+          "category": "googlePlay",
+          "url": "https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_CA",
+          "resultTitle": "Instagram - Apps on Google Play"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://help.instagram.com/995996839195964",
+          "resultTitle": "About Instagram Teen Accounts"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://help.instagram.com/455298907304715",
+          "resultTitle": "Manage your Teen Account settings"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://familycenter.meta.com/",
+          "resultTitle": "Family Center"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://about.instagram.com/blog/announcements/instagram-teen-accounts",
+          "resultTitle": "Teen Accounts: Protections for Teens, Peace of Mind for Parents"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://about.instagram.com/blog/announcements/updates-to-teen-accounts/",
+          "resultTitle": "New Restrictions for Teen Accounts"
+        }
+      ]
+    },
+    {
+      "slug": "rocket-league",
+      "nameEn": "Rocket League",
+      "candidates": [
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/35706/rocket-leaguer/",
+          "resultTitle": "Rocket League® - ESRB"
+        },
+        {
+          "category": "esrb",
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "resultTitle": "Rocket League - ESRB"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://support.rocketleague.com/hc/en-us/articles/5601581547163-Rocket-League-Parental-Controls",
+          "resultTitle": "Rocket League Parental Controls"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.epicgames.com/help/en-US/rocket-league-c182/c190/rocket-league-parental-controls-a11031",
+          "resultTitle": "Rocket League Parental Controls - Rocket League Support"
+        },
+        {
+          "category": "parentalControls",
+          "url": "https://www.epicgames.com/help/en-US/rocket-league-c5719357623323/accounts-c19291367986971/platform-parental-controls-for-rocket-league-a6131849745435",
+          "resultTitle": "What are platform Parental Controls? - Rocket League Support"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.rocketleague.com/news/cabined-accounts-come-to-rocket-league",
+          "resultTitle": "Cabined Accounts Come to Rocket League"
+        },
+        {
+          "category": "publisherSupport",
+          "url": "https://www.rocketleague.com/voice-and-text-reporting-faqs",
+          "resultTitle": "Voice and Text Reporting in Rocket League"
+        }
+      ]
+    }
+  ]
+}

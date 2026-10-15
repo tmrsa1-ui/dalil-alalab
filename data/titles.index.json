@@ -1,0 +1,249 @@
+[
+  {
+    "slug": "among-us",
+    "nameAr": "أمونق أس",
+    "nameEn": "Among Us",
+    "aliases": [
+      "امونج اس",
+      "أمونغ أس",
+      "امنق اس",
+      "امونق اس",
+      "أمونج أس"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "brawl-stars",
+    "nameAr": "براول ستارز",
+    "nameEn": "Brawl Stars",
+    "aliases": [
+      "براول",
+      "براول ستار",
+      "brawlstars"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "call-of-duty-mobile",
+    "nameAr": "كول أوف ديوتي موبايل",
+    "nameEn": "Call of Duty: Mobile",
+    "aliases": [
+      "كود موبايل",
+      "كول اوف ديوتي",
+      "cod mobile",
+      "codm"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "clash-royale",
+    "nameAr": "كلاش رويال",
+    "nameEn": "Clash Royale",
+    "aliases": [
+      "كلاش رويل",
+      "كلاش رويالي"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "discord",
+    "nameAr": "ديسكورد",
+    "nameEn": "Discord",
+    "aliases": [
+      "دسكورد",
+      "ديسكورد"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "ea-sports-fc",
+    "nameAr": "إي إيه سبورتس إف سي",
+    "nameEn": "EA SPORTS FC",
+    "aliases": [
+      "فيفا",
+      "فيفا موبايل",
+      "fifa",
+      "ea fc",
+      "fc mobile",
+      "اف سي"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "fortnite",
+    "nameAr": "فورتنايت",
+    "nameEn": "Fortnite",
+    "aliases": [
+      "فورت نايت",
+      "فورت"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "free-fire",
+    "nameAr": "فري فاير",
+    "nameEn": "Free Fire",
+    "aliases": [
+      "فريفاير",
+      "garena free fire",
+      "freefire"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "genshin-impact",
+    "nameAr": "قنشن إمباكت",
+    "nameEn": "Genshin Impact",
+    "aliases": [
+      "قنشن",
+      "جنشن",
+      "genshin"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "instagram",
+    "nameAr": "إنستقرام",
+    "nameEn": "Instagram",
+    "aliases": [
+      "انستا",
+      "انستغرام",
+      "انستجرام",
+      "insta"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "minecraft",
+    "nameAr": "ماين كرافت",
+    "nameEn": "Minecraft",
+    "aliases": [
+      "ماينكرافت",
+      "ماين",
+      "minecraft pe",
+      "mc"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "pokemon-go",
+    "nameAr": "بوكيمون قو",
+    "nameEn": "Pokémon GO",
+    "aliases": [
+      "بوكيمون جو",
+      "بوكيمون",
+      "pokemon go",
+      "pokemongo"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "pubg-mobile",
+    "nameAr": "ببجي موبايل",
+    "nameEn": "PUBG MOBILE",
+    "aliases": [
+      "ببجي",
+      "ببجى",
+      "بابجي",
+      "pubg",
+      "pubgm",
+      "بوبجي"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "roblox",
+    "nameAr": "روبلوكس",
+    "nameEn": "Roblox",
+    "aliases": [
+      "روبلكس",
+      "روبلس",
+      "roblox"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "rocket-league",
+    "nameAr": "روكيت ليق",
+    "nameEn": "Rocket League",
+    "aliases": [
+      "روكت ليق",
+      "روكيت ليج"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "snapchat",
+    "nameAr": "سناب شات",
+    "nameEn": "Snapchat",
+    "aliases": [
+      "سناب",
+      "سنابشات",
+      "snap"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "stumble-guys",
+    "nameAr": "ستمبل قايز",
+    "nameEn": "Stumble Guys",
+    "aliases": [
+      "ستامبل قايز",
+      "ستمبل"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "subway-surfers",
+    "nameAr": "صب واي سيرفرس",
+    "nameEn": "Subway Surfers",
+    "aliases": [
+      "صب واي",
+      "سبواي",
+      "سب واي سيرفر"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "tiktok",
+    "nameAr": "تيك توك",
+    "nameEn": "TikTok",
+    "aliases": [
+      "تيكتوك",
+      "تك توك",
+      "tik tok"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  },
+  {
+    "slug": "youtube-kids",
+    "nameAr": "يوتيوب كيدز",
+    "nameEn": "YouTube Kids",
+    "aliases": [
+      "يوتيوب للأطفال",
+      "youtubekids",
+      "يوتيوب اطفال"
+    ],
+    "isDemo": false,
+    "reviewStatus": "auto_sourced"
+  }
+]

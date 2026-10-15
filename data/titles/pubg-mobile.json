@@ -1,0 +1,173 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "pubg-mobile",
+  "nameAr": "ببجي موبايل",
+  "nameEn": "PUBG MOBILE",
+  "aliases": [
+    "ببجي",
+    "ببجى",
+    "بابجي",
+    "pubg",
+    "pubgm",
+    "بوبجي"
+  ],
+  "kind": "game",
+  "platforms": [],
+  "publisher": {
+    "name": "Tencent Mobile International Limited",
+    "url": null
+  },
+  "isDemo": false,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": "12",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+      "verifiedAt": "2026-10-14",
+      "quote": "Gmedia_12_272.png — 12",
+      "shownOn": "Google Play (السعودية)",
+      "confidence": "auto"
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "appStore": {
+      "value": "13+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id1330123889",
+      "verifiedAt": "2026-10-10",
+      "quote": "Age Rating 13+",
+      "confidence": "auto"
+    },
+    "googlePlay": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Messaging and Chat",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+          "title": "Google Play (السعودية): PUBG",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-10"
+        },
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Loot Boxes",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: App Store.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Frequent: Guns or Other Weapons, Infrequent: Realistic Violence",
+          "verifiedAt": "2026-10-10"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "ads": {
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en&gl=SA",
+          "title": "Google Play (السعودية): PUBG",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "present",
+      "noteAr": "المتجر يذكر مشتريات بعناصر عشوائية (صناديق حظ).",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id1330123889",
+          "title": "App Store (السعودية): PUBG",
+          "quote": "Loot Boxes",
+          "verifiedAt": "2026-10-10"
+        }
+      ]
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {}
+  },
+  "conversationTags": []
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "android",
+  "nameAr": "أندرويد",
+  "nameEn": "Android",
+  "toolNameEn": "Google Family Link",
+  "officialGuideUrl": "https://families.google/familylink/",
+  "officialGuideTitle": "Google Family Link لأجهزة أندرويد",
+  "verifiedAt": null,
+  "linkCheckedAt": "2026-10-14",
+  "steps": [
+    {
+      "id": "android-content-1",
+      "pointKey": "content",
+      "stepAr": "تطبيق Family Link: فعّل رقابة الأهل على Play وYouTube وChrome و«بحث Google».",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "يمكنك إعداد أدوات رقابة الأهل على خدمات Google، مثل Chrome وPlay وYouTube و\"بحث Google\".",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "android-sessionpause-1",
+      "pointKey": "sessionPause",
+      "stepAr": "تطبيق Family Link: اضبط حد يومي، وحدد «دوام المدرسة» و«فترة التوقّف».",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "يتيح لك تطبيق Family Link ضبط حدود يومية، وتحديد \"دوام المدرسة\" و\"فترة التوقّف\"",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "android-sessionpause-2",
+      "pointKey": "sessionPause",
+      "stepAr": "تطبيق Family Link: حدد مدة قصوى للعبة نفسها.",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "فيمكنك ضبط مدة قصوى لاستخدام كل تطبيق",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "android-searchandstore-1",
+      "pointKey": "searchAndStore",
+      "stepAr": "تطبيق Family Link: خلّ تثبيت أي تطبيق جديد يحتاج موافقتك.",
+      "sourceUrl": "https://families.google/familylink/",
+      "verifiedAt": "2026-10-10",
+      "quote": "وفرض الحصول على الموافقة قبل تثبيت التطبيقات الجديدة",
+      "confidence": "auto",
+      "isDemo": false
+    }
+  ]
+}

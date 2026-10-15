@@ -1,0 +1,74 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "ios",
+  "nameAr": "آيفون وآيباد",
+  "nameEn": "iPhone / iPad",
+  "toolNameEn": "Screen Time",
+  "officialGuideUrl": "https://support.apple.com/ar-sa/105121",
+  "officialGuideTitle": "إعداد الإشراف العائلي لإدارة iPhone أو iPad الخاص بطفلك - Apple دعم (SA)",
+  "verifiedAt": null,
+  "linkCheckedAt": "2026-10-14",
+  "guideQuote": "تأتي ميزة \"مدة استخدام الجهاز\" مزودةً بإشراف عائلي يمكن أن يساعدك في إدارة التطبيقات ومواقع الويب التي يمكن لطفلك الوصول إليها، والأشخاص الذين يتواصل معهم، ومتى يستخدم أجهزته، وغير ذلك الكثير.",
+  "steps": [
+    {
+      "id": "ios-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← التطبيقات ومواقع الويب ← القيود ← Game Center: خلّ «التواصل مع الأصدقاء» و«المراسلة الخاصة» على «محظور» أو «مسموح به» حسب اتفاقكم.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"القيود\"، ثم مرر لأسفل إلى قسم Game Center. اختر إعدادًا مثل \"التواصل مع الأصدقاء\" أو \"المراسلة الخاصة\". اختر \"مسموح به\" أو \"محظور\".",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "ios-purchases-1",
+      "pointKey": "purchases",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← التطبيقات ومواقع الويب ← القيود ← الموافقة على الشراء: شغّل «طلب الموافقة على الشراء».",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"الموافقة على الشراء\"، ثم قم بتشغيل \"طلب الموافقة على الشراء\".",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "ios-content-1",
+      "pointKey": "content",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← قيود المحتوى والخصوصية: تحت «قيود المحتوى» اختر تصنيف عمري يناسب طفلك.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "حدد نوع المحتوى ضمن \"قيود المحتوى\"، ثم اختر إعدادًا مثل \"عدم السماح\" أو \"غير مصنف\" أو \"السماح بالكل\" أو تصنيف عمري محدد.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "ios-sessionpause-1",
+      "pointKey": "sessionPause",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← مخصصات الوقت ← إضافة: حدد وقت يومي لفئة الألعاب.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"مخصصات الوقت\"، واضغط على زر \"إضافة\"، ثم اتبع التعليمات التي تظهر على الشاشة.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "ios-sessionpause-2",
+      "pointKey": "sessionPause",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← جدول مدة استخدام الجهاز: شغّل «الجدول» وأضف الأوقات اللي تبون فيها الجهاز يتوقف.",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على \"جدول مدة استخدام الجهاز\"، ثم قم بتشغيل \"الجدول\". مرِّر لأسفل واضغط على \"إضافة جدول\".",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "ios-searchandstore-1",
+      "pointKey": "searchAndStore",
+      "stepAr": "الإعدادات ← العائلة ← اسم طفلك ← التطبيقات ومواقع الويب ← App Store: اختر «تثبيت التطبيقات» ثم «مسموح به» أو «محظور».",
+      "sourceUrl": "https://support.apple.com/ar-sa/105121",
+      "verifiedAt": "2026-10-10",
+      "quote": "اضغط على App Store، ثم اختر إعدادًا مثل \"تثبيت التطبيقات\" أو \"مقاطع التطبيقات\". اختر \"مسموح به\" أو \"محظور\".",
+      "confidence": "auto",
+      "isDemo": false
+    }
+  ]
+}

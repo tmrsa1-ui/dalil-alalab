@@ -1,0 +1,43 @@
+/* طباعة نظيفة: صفحة A4 وحدة للاتفاق */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 11.5pt;
+  }
+  [data-theme="dark"] {
+    color-scheme: light;
+  }
+  .no-print {
+    display: none !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .print-sheet {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    max-height: 270mm;
+    overflow: hidden;
+  }
+  .print-sheet * {
+    color: #000 !important;
+    background: transparent !important;
+  }
+  .print-sign-line {
+    border-bottom: 1.5px solid #000 !important;
+  }
+  a {
+    text-decoration: none;
+  }
+}

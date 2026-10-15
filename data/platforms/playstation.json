@@ -1,0 +1,54 @@
+{
+  "$schema": "../../schemas/json/platform.schema.json",
+  "id": "playstation",
+  "nameAr": "بلايستيشن",
+  "nameEn": "PlayStation",
+  "toolNameEn": "PlayStation Family Management",
+  "officialGuideUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+  "officialGuideTitle": "PlayStation Family App | Manage children's play time, spending, messaging and more (Saudi Arabia)",
+  "verifiedAt": null,
+  "linkCheckedAt": "2026-10-14",
+  "guideQuote": "Stay informed about and involved in your child's gameplay by managing playtime, spending, messaging and more with the free PlayStation Family app. Keep track of your child's gaming at-a-glance with intuitive activity reports, simple parental controls and real-time info direct to your phone.",
+  "steps": [
+    {
+      "id": "playstation-strangerchat-1",
+      "pointKey": "strangerChat",
+      "stepAr": "تطبيق PlayStation Family: لما يطلب طفلك يستخدم المحادثة داخل اللعبة، توافق أو ترفض من جوالك.",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "When your child requests extra playtime, access to a restricted game, or permission to use in-game communication features, you can approve or decline directly from your phone.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "playstation-purchases-1",
+      "pointKey": "purchases",
+      "stepAr": "تطبيق PlayStation Family: حط حد شهري للصرف في PlayStation Store.",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "Manage spending activity by adding funds, viewing balances, and setting a monthly spending limit for a child to buy content from the PlayStation Store.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "playstation-content-1",
+      "pointKey": "content",
+      "stepAr": "تطبيق PlayStation Family: اختر إعدادات العمر الجاهزة أو خصّصها لطفلك.",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "Choose from presets that automatically apply recommended settings for different age groups or customise the settings to best suit each child.",
+      "confidence": "auto",
+      "isDemo": false
+    },
+    {
+      "id": "playstation-sessionpause-1",
+      "pointKey": "sessionPause",
+      "stepAr": "تطبيق PlayStation Family: حدد وقت اللعب، واختر وش يصير لما يخلص الوقت (تذكير أو إيقاف).",
+      "sourceUrl": "https://www.playstation.com/en-sa/ps-family-app/",
+      "verifiedAt": "2026-10-10",
+      "quote": "You can set when and for how long your child can play. You can also choose what happens when their playtime ends–either send them a reminder or block further play.",
+      "confidence": "auto",
+      "isDemo": false
+    }
+  ]
+}

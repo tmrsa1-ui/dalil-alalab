@@ -1,0 +1,165 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "tiktok",
+  "nameAr": "تيك توك",
+  "nameEn": "TikTok",
+  "aliases": [
+    "تيكتوك",
+    "تك توك",
+    "tik tok"
+  ],
+  "kind": "app",
+  "platforms": [],
+  "publisher": {
+    "name": "TIKTOK PTE. LTD.",
+    "url": null
+  },
+  "isDemo": false,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "appStore": {
+      "value": "13+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id835599320",
+      "verifiedAt": "2026-10-14",
+      "quote": "Age Rating 13+",
+      "confidence": "auto"
+    },
+    "googlePlay": {
+      "value": "12+",
+      "descriptors": [
+        "Parental Guidance Recommended"
+      ],
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
+      "verifiedAt": "2026-10-14",
+      "quote": "Rated for 12+",
+      "confidence": "auto"
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
+          "title": "Google Play (السعودية): TikTok",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "purchases": {
+      "status": "present",
+      "summaryAr": "فيه مشتريات داخل اللعبة أو التطبيق، حسب: App Store، Google Play.",
+      "sources": [
+        {
+          "url": "https://apps.apple.com/sa/app/id835599320",
+          "title": "App Store (السعودية): TikTok",
+          "quote": "In-App Purchases: Yes",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
+          "title": "Google Play (السعودية): TikTok",
+          "quote": "In-App Purchases",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
+          "title": "Google Play (السعودية): TikTok",
+          "quote": "Parental Guidance Recommended",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "ads": {
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically&hl=en&gl=SA",
+          "title": "Google Play (السعودية): TikTok",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {},
+    "officialGuide": {
+      "url": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
+      "labelAr": "ميزة «Family Pairing» الرسمية من TikTok",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
+    }
+  },
+  "conversationTags": []
+}

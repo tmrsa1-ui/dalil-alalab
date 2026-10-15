@@ -1,0 +1,135 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "youtube-kids",
+  "nameAr": "يوتيوب كيدز",
+  "nameEn": "YouTube Kids",
+  "aliases": [
+    "يوتيوب للأطفال",
+    "youtubekids",
+    "يوتيوب اطفال"
+  ],
+  "kind": "app",
+  "platforms": [],
+  "publisher": {
+    "name": "Google LLC",
+    "url": null
+  },
+  "isDemo": false,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "pegi": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "appStore": {
+      "value": "4+",
+      "sourceUrl": "https://apps.apple.com/sa/app/id936971630",
+      "verifiedAt": "2026-10-14",
+      "quote": "Age Rating 4+",
+      "confidence": "auto"
+    },
+    "googlePlay": {
+      "value": "3+",
+      "sourceUrl": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en&gl=SA",
+      "verifiedAt": "2026-10-14",
+      "quote": "Rated for 3+",
+      "confidence": "auto"
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "purchases": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "content": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "ads": {
+      "status": "present",
+      "summaryAr": "فيه إعلانات، حسب: Google Play.",
+      "sources": [
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.kids&hl=en&gl=SA",
+          "title": "Google Play (السعودية): YouTube Kids",
+          "quote": "Contains ads",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {},
+    "officialGuide": {
+      "url": "https://support.google.com/youtubekids/?hl=ar",
+      "labelAr": "مركز مساعدة YouTube Kids (عربي)",
+      "verifiedAt": "2026-10-10",
+      "confidence": "auto"
+    }
+  },
+  "conversationTags": []
+}

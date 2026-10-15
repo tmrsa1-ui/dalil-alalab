@@ -1,0 +1,150 @@
+{
+  "$schema": "../../schemas/json/title.schema.json",
+  "slug": "rocket-league",
+  "nameAr": "روكيت ليق",
+  "nameEn": "Rocket League",
+  "aliases": [
+    "روكت ليق",
+    "روكيت ليج"
+  ],
+  "kind": "game",
+  "platforms": [],
+  "publisher": null,
+  "isDemo": false,
+  "reviewStatus": "auto_sourced",
+  "lastReviewedAt": null,
+  "ratings": {
+    "gcam": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "esrb": {
+      "value": "Everyone",
+      "descriptors": [
+        "Mild Lyrics"
+      ],
+      "sourceUrl": "https://www.esrb.org/ratings/10018866/rocket-league/",
+      "verifiedAt": "2026-10-14",
+      "quote": "Rocket League is rated E for Everyone by the ESRB with Mild Lyrics.",
+      "edition": "Rocket League — PlayStation 4, Xbox One",
+      "confidence": "auto"
+    },
+    "pegi": {
+      "value": "3",
+      "sourceUrl": "https://pegi.info/search-pegi?q=Rocket%20League&op=Search",
+      "verifiedAt": "2026-10-14",
+      "quote": "This game was rated PEGI 3.",
+      "edition": "Rocket League Ultimate Edition — PlayStation 4, Xbox One, Nintendo Switch",
+      "confidence": "auto"
+    },
+    "appStore": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    },
+    "googlePlay": {
+      "value": null,
+      "sourceUrl": null,
+      "verifiedAt": null
+    }
+  },
+  "attentionPoints": {
+    "strangerChat": {
+      "status": "present",
+      "summaryAr": "فيه تواصل مع مستخدمين آخرين، حسب: ESRB.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "title": "ESRB: Rocket League",
+          "quote": "Users Interact",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "purchases": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "content": {
+      "status": "present",
+      "summaryAr": "فيه واصفات محتوى رسمية، حسب: PlayStation، ESRB.",
+      "sources": [
+        {
+          "url": "https://www.playstation.com/en-sa/games/rocket-league/",
+          "title": "PlayStation (السعودية): Rocket League",
+          "quote": "Online",
+          "verifiedAt": "2026-10-14"
+        },
+        {
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "title": "ESRB: Rocket League",
+          "quote": "Mild Lyrics",
+          "verifiedAt": "2026-10-14"
+        }
+      ],
+      "confidence": "auto"
+    },
+    "ads": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none"
+    },
+    "sessionPause": {
+      "status": "unknown",
+      "summaryAr": "",
+      "sources": [],
+      "confidence": "none",
+      "hasRecommendationFeed": null,
+      "autoplay": null
+    }
+  },
+  "familyLens": {
+    "gambling": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "mixedVoiceChat": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "magic": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "clothing": {
+      "status": "unknown",
+      "noteAr": "",
+      "sources": []
+    },
+    "music": {
+      "status": "present",
+      "noteAr": "ESRB يضع واصف «Mild Lyrics» (كلمات أغانٍ) على هذا العنوان — أي فيه موسيقى بكلمات لفتت انتباه جهة التصنيف.",
+      "sources": [
+        {
+          "url": "https://www.esrb.org/ratings/10018866/rocket-league/",
+          "title": "ESRB: Rocket League",
+          "quote": "Mild Lyrics",
+          "verifiedAt": "2026-10-14"
+        }
+      ]
+    }
+  },
+  "prayerPause": {
+    "status": "unknown",
+    "noteAr": "",
+    "sources": []
+  },
+  "controls": {
+    "inGame": [],
+    "platformOverrides": {}
+  },
+  "conversationTags": []
+}

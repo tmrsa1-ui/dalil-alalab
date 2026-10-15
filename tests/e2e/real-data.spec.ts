@@ -1,0 +1,160 @@
+import { expect, test } from "@playwright/test";
+import { expectNoSeriousA11y, setConsent } from "./helpers";
+
+test.beforeEach(async ({ page }) => setConsent(page, "denied"));
+
+test("عنوان حقيقي مستورد: القيم «بحاجة مراجعة بشرية» والناقص «غير متوفر/ما لقيت»", async ({
+  page,
+}) => {
+  await page.goto("/title/among-us?age=9");
+  await expect(page.getByTestId("demo-badge")).toHaveCount(0);
+  await expect(page.getByTestId("rating-esrb")).toContainText("Everyone 10+");
+  await expect(page.getByTestId("rating-esrb")).toContainText("بحاجة مراجعة بشرية");
+  await expect(page.getByTestId("rating-esrb")).toContainText("Crewmate Edition");
+  await expect(page.getByTestId("rating-appStore")).toContainText("9+");
+  await expect(page.getByTestId("rating-gcam")).toContainText("PlayStation (السعودية)");
+  await expect(page.getByTestId("rating-pegi")).toContainText("7");
+  await expect(page.getByTestId("rating-pegi").getByTestId("source-link")).toHaveAttribute(
+    "href",
+    /^https:\/\/pegi\.info\//,
+  );
+  await expect(page.getByTestId("point-strangerChat")).toContainText("Users Interact");
+  await expect(page.getByTestId("point-ads")).toContainText("Contains ads");
+  await expect(page.getByTestId("rating-googlePlay")).toContainText("7+");
+  await expect(page.getByTestId("point-sessionPause").getByTestId("not-found")).toBeVisible();
+  await expectNoSeriousA11y(page);
+});
+
+test("رابط الرقابة الأبوية الرسمي من الناشر يظهر في «داخل اللعبة» بدون خطوات مخترعة", async ({
+  page,
+}) => {
+  await page.goto("/title/snapchat?age=14&step=setup");
+  await page.getByRole("tab", { name: "داخل اللعبة" }).click();
+  const guide = page.getByTestId("publisher-guide");
+  await expect(guide.getByTestId("source-link")).toHaveAttribute(
+    "href",
+    "https://values.snap.com/safety/family-center",
+  );
+  await expect(guide).toContainText("بحاجة مراجعة بشرية");
+  await expect(page.getByTestId("control-step")).toHaveCount(0);
+});
+
+test("التصنيف السعودي (Gmedia) كما يعرضه Google Play في السعودية", async ({ page }) => {
+  await page.goto("/title/brawl-stars?age=9");
+  await expect(page.getByTestId("demo-badge")).toHaveCount(0);
+  const gcam = page.getByTestId("rating-gcam");
+  await expect(gcam).toContainText("7");
+  await expect(gcam).toContainText("يعرضه: Google Play (السعودية)");
+  await expect(gcam).toContainText("بحاجة مراجعة بشرية");
+  await expect(page.getByTestId("rating-googlePlay")).toContainText("غير متوفر");
+});
+
+test("تصنيفات الأجهزة المنزلية: GCAM من PlayStation وXbox (السعودية)، وESRB من موقعها", async ({
+  page,
+}) => {
+  await page.goto("/title/among-us?age=10");
+  const gcam = page.getByTestId("rating-gcam");
+  await expect(gcam).toContainText("12");
+  await expect(gcam).toContainText("يعرضه: PlayStation (السعودية)");
+  await expect(gcam).toContainText("التصنيف أعلى من عمر طفلك");
+  // Stumble Guys: متجر Xbox السعودي صار يعرض GAMR 3 (بدل PEGI 3 قبل أيام) ⇐ التصنيف السعودي من Xbox، وPEGI غير متوفر.
+  await page.goto("/title/stumble-guys?age=10");
+  const sgGcam = page.getByTestId("rating-gcam");
+  await expect(sgGcam).toContainText("3");
+  await expect(sgGcam).toContainText("يعرضه: Xbox (السعودية)");
+  await expect(page.getByTestId("rating-pegi")).toContainText("غير متوفر");
+  await page.goto("/title/rocket-league?age=10");
+  await expect(page.getByTestId("rating-esrb")).toContainText("Everyone");
+  await expect(page.getByTestId("rating-esrb").getByTestId("source-link")).toHaveAttribute(
+    "href",
+    "https://www.esrb.org/ratings/10018866/rocket-league/",
+  );
+  await expect(page.getByTestId("rating-appStore")).toContainText("غير متوفر");
+  await expect(page.getByTestId("point-ads").getByTestId("not-found")).toBeVisible();
+  await expect(page.getByTestId("point-sessionPause").getByTestId("not-found")).toBeVisible();
+});
+
+test("دليل الرقابة الرسمي لـPlayStation بعد الفحص معه تاريخ واقتباس", async ({ page }) => {
+  await page.goto("/title/among-us?age=10&step=setup");
+  await page.getByRole("tab", { name: "PlayStation" }).click();
+  const link = page.getByRole("tabpanel").getByTestId("source-link").first();
+  await expect(link).toHaveAttribute("href", "https://www.playstation.com/en-sa/ps-family-app/");
+  await expect(page.getByRole("tabpanel").getByTestId("source-quote").first()).toContainText(
+    "PlayStation Family app",
+  );
+});
+
+test("«الصورة باختصار» فوق «اعرف»، والمصادر مطوية، والواصفات بالعربي", async ({ page }) => {
+  await page.goto("/title/among-us?age=10");
+  const glance = page.getByTestId("know-glance");
+  await expect(glance.getByTestId("glance-saudi")).toContainText("12");
+  await expect(glance.getByTestId("glance-saudi")).toContainText("أعلى من عمر طفلك");
+  await expect(glance.getByTestId("glance-present")).toContainText("محادثة الغرباء");
+  await expect(glance.getByTestId("glance-unknown")).toContainText("مدة الجلسة والتوقف");
+  const content = page.getByTestId("point-content");
+  await content.locator("summary").first().click();
+  await expect(content.getByTestId("point-terms")).toContainText("عنف خيالي");
+  const sources = content.getByTestId("point-sources");
+  await expect(sources.getByTestId("source-link").first()).toBeHidden();
+  await sources.locator("summary").click();
+  await expect(sources.getByTestId("source-link").first()).toBeVisible();
+  await expect(page.getByTestId("rating-esrb")).toContainText("عنف خيالي");
+  await expectNoSeriousA11y(page);
+});
+
+test("«اضبط» لعنوان حقيقي: خطوات الجهاز من دليله الرسمي باقتباس حرفي وحالة «بحاجة مراجعة بشرية»", async ({
+  page,
+}) => {
+  await page.goto("/title/among-us?age=10&step=setup");
+  await page.getByRole("tab", { name: "iPhone / iPad" }).click();
+  await expect(page.getByTestId("generic-steps-note")).toBeVisible();
+  const steps = page.getByTestId("control-step");
+  expect(await steps.count()).toBeGreaterThanOrEqual(5);
+  const purchase = steps.filter({ hasText: "طلب الموافقة على الشراء" }).first();
+  await expect(purchase.getByTestId("source-link")).toHaveAttribute(
+    "href",
+    "https://support.apple.com/ar-sa/105121",
+  );
+  await expect(purchase.getByTestId("source-quote")).toContainText("الموافقة على الشراء");
+  await expect(purchase).toContainText("بحاجة مراجعة بشرية");
+  await purchase.getByRole("checkbox", { name: "سويتها" }).check();
+  await expect(page.getByTestId("done-count")).toContainText("سويت 1 من");
+  await page.getByRole("tab", { name: "PC" }).click();
+  await expect(page.getByTestId("not-reviewed-note")).toBeVisible();
+  await expectNoSeriousA11y(page);
+});
+
+test("خطوات «اضبط» المهمة لهذي اللعبة تطلع أول، و«وقت الصلاة» يدل على أداة التوقف في كل جهاز", async ({
+  page,
+}) => {
+  await page.goto("/title/among-us?age=10");
+  const tools = page.getByTestId("prayer-tools");
+  await tools.locator("summary").click();
+  await expect(tools.locator("li")).toHaveCount(5);
+  await expect(tools).toContainText("جدول مدة استخدام الجهاز");
+  await expect(tools.getByTestId("source-quote").first()).toBeVisible();
+  await page.goto("/title/among-us?age=10&step=setup");
+  await page.getByRole("tab", { name: "iPhone / iPad" }).click();
+  const first = page.getByTestId("control-step").first();
+  await expect(first.getByTestId("step-relevant")).toBeVisible();
+  // App Store/المتجر ما هي نقطة انتباه ⇐ آخر خطوة بدون علامة
+  await expect(page.getByTestId("control-step").last().getByTestId("step-relevant")).toHaveCount(0);
+});
+
+test("نقاط الانتباه مطوية بحالتها، وزر المشاركة ينسخ رابط بدون عمر الطفل", async ({
+  page,
+  context,
+}) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.addInitScript(() => Object.defineProperty(navigator, "share", { value: undefined }));
+  await page.goto("/title/among-us?age=10");
+  const chat = page.getByTestId("point-strangerChat");
+  await expect(chat).toContainText("موجود");
+  await expect(chat.getByTestId("source-link").first()).toBeHidden();
+  await chat.locator("summary").first().click();
+  await expect(chat).toContainText("فيه تواصل مع مستخدمين آخرين");
+  await page.getByTestId("share").click();
+  await expect(page.getByText("تم نسخ الرابط")).toBeVisible();
+  const copied = await page.evaluate(() => navigator.clipboard.readText());
+  expect(copied).toMatch(/\/title\/among-us$/);
+});

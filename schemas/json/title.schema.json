@@ -1,0 +1,1431 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "nameAr": {
+      "type": "string",
+      "minLength": 1
+    },
+    "nameEn": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "kind": {
+      "default": "game",
+      "type": "string",
+      "enum": [
+        "game",
+        "app"
+      ]
+    },
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ios",
+          "android",
+          "playstation",
+          "xbox",
+          "switch",
+          "pc"
+        ]
+      }
+    },
+    "publisher": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "url": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "url"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "isDemo": {
+      "type": "boolean"
+    },
+    "reviewStatus": {
+      "type": "string",
+      "enum": [
+        "human_reviewed",
+        "auto_sourced",
+        "not_found"
+      ]
+    },
+    "lastReviewedAt": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "ratings": {
+      "type": "object",
+      "properties": {
+        "gcam": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "descriptors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "sourceUrl": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verifiedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "value",
+            "sourceUrl",
+            "verifiedAt"
+          ],
+          "additionalProperties": false
+        },
+        "esrb": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "descriptors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "sourceUrl": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verifiedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "value",
+            "sourceUrl",
+            "verifiedAt"
+          ],
+          "additionalProperties": false
+        },
+        "pegi": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "descriptors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "sourceUrl": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verifiedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "value",
+            "sourceUrl",
+            "verifiedAt"
+          ],
+          "additionalProperties": false
+        },
+        "appStore": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "descriptors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "sourceUrl": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verifiedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "value",
+            "sourceUrl",
+            "verifiedAt"
+          ],
+          "additionalProperties": false
+        },
+        "googlePlay": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "descriptors": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "sourceUrl": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "uri"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "verifiedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "quote": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "value",
+            "sourceUrl",
+            "verifiedAt"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "gcam",
+        "esrb",
+        "pegi",
+        "appStore",
+        "googlePlay"
+      ],
+      "additionalProperties": false
+    },
+    "attentionPoints": {
+      "type": "object",
+      "properties": {
+        "strangerChat": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "configurable",
+                "unknown"
+              ]
+            },
+            "summaryAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "human",
+                "auto",
+                "none"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "summaryAr",
+            "sources",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        "purchases": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "configurable",
+                "unknown"
+              ]
+            },
+            "summaryAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "human",
+                "auto",
+                "none"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "summaryAr",
+            "sources",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "configurable",
+                "unknown"
+              ]
+            },
+            "summaryAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "human",
+                "auto",
+                "none"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "summaryAr",
+            "sources",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        "ads": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "configurable",
+                "unknown"
+              ]
+            },
+            "summaryAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "human",
+                "auto",
+                "none"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "summaryAr",
+            "sources",
+            "confidence"
+          ],
+          "additionalProperties": false
+        },
+        "sessionPause": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "configurable",
+                "unknown"
+              ]
+            },
+            "summaryAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "human",
+                "auto",
+                "none"
+              ]
+            },
+            "hasRecommendationFeed": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "autoplay": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "summaryAr",
+            "sources",
+            "confidence",
+            "hasRecommendationFeed",
+            "autoplay"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "strangerChat",
+        "purchases",
+        "content",
+        "ads",
+        "sessionPause"
+      ],
+      "additionalProperties": false
+    },
+    "familyLens": {
+      "type": "object",
+      "properties": {
+        "gambling": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "unknown"
+              ]
+            },
+            "noteAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "status",
+            "noteAr",
+            "sources"
+          ],
+          "additionalProperties": false
+        },
+        "mixedVoiceChat": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "unknown"
+              ]
+            },
+            "noteAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "status",
+            "noteAr",
+            "sources"
+          ],
+          "additionalProperties": false
+        },
+        "magic": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "unknown"
+              ]
+            },
+            "noteAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "status",
+            "noteAr",
+            "sources"
+          ],
+          "additionalProperties": false
+        },
+        "clothing": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "unknown"
+              ]
+            },
+            "noteAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "status",
+            "noteAr",
+            "sources"
+          ],
+          "additionalProperties": false
+        },
+        "music": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "present",
+                "absent",
+                "unknown"
+              ]
+            },
+            "noteAr": {
+              "type": "string",
+              "maxLength": 220
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "quote": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "url",
+                  "title",
+                  "quote",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "status",
+            "noteAr",
+            "sources"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "gambling",
+        "mixedVoiceChat",
+        "magic",
+        "clothing",
+        "music"
+      ],
+      "additionalProperties": false
+    },
+    "prayerPause": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "pausable",
+            "not_pausable_in_match",
+            "unknown"
+          ]
+        },
+        "noteAr": {
+          "type": "string",
+          "maxLength": 220
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "quote": {
+                "type": "string",
+                "minLength": 1
+              },
+              "verifiedAt": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              }
+            },
+            "required": [
+              "url",
+              "title",
+              "quote",
+              "verifiedAt"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "status",
+        "noteAr",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "controls": {
+      "type": "object",
+      "properties": {
+        "inGame": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$"
+              },
+              "pointKey": {
+                "type": "string",
+                "enum": [
+                  "strangerChat",
+                  "purchases",
+                  "content",
+                  "ads",
+                  "sessionPause",
+                  "searchAndStore"
+                ]
+              },
+              "stepAr": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 220
+              },
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "verifiedAt": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              }
+            },
+            "required": [
+              "id",
+              "pointKey",
+              "stepAr",
+              "sourceUrl",
+              "verifiedAt"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "platformOverrides": {
+          "type": "object",
+          "properties": {
+            "ios": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  },
+                  "pointKey": {
+                    "type": "string",
+                    "enum": [
+                      "strangerChat",
+                      "purchases",
+                      "content",
+                      "ads",
+                      "sessionPause",
+                      "searchAndStore"
+                    ]
+                  },
+                  "stepAr": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 220
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pointKey",
+                  "stepAr",
+                  "sourceUrl",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "android": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  },
+                  "pointKey": {
+                    "type": "string",
+                    "enum": [
+                      "strangerChat",
+                      "purchases",
+                      "content",
+                      "ads",
+                      "sessionPause",
+                      "searchAndStore"
+                    ]
+                  },
+                  "stepAr": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 220
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pointKey",
+                  "stepAr",
+                  "sourceUrl",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "playstation": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  },
+                  "pointKey": {
+                    "type": "string",
+                    "enum": [
+                      "strangerChat",
+                      "purchases",
+                      "content",
+                      "ads",
+                      "sessionPause",
+                      "searchAndStore"
+                    ]
+                  },
+                  "stepAr": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 220
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pointKey",
+                  "stepAr",
+                  "sourceUrl",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "xbox": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  },
+                  "pointKey": {
+                    "type": "string",
+                    "enum": [
+                      "strangerChat",
+                      "purchases",
+                      "content",
+                      "ads",
+                      "sessionPause",
+                      "searchAndStore"
+                    ]
+                  },
+                  "stepAr": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 220
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pointKey",
+                  "stepAr",
+                  "sourceUrl",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "switch": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  },
+                  "pointKey": {
+                    "type": "string",
+                    "enum": [
+                      "strangerChat",
+                      "purchases",
+                      "content",
+                      "ads",
+                      "sessionPause",
+                      "searchAndStore"
+                    ]
+                  },
+                  "stepAr": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 220
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pointKey",
+                  "stepAr",
+                  "sourceUrl",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "pc": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9-]+$"
+                  },
+                  "pointKey": {
+                    "type": "string",
+                    "enum": [
+                      "strangerChat",
+                      "purchases",
+                      "content",
+                      "ads",
+                      "sessionPause",
+                      "searchAndStore"
+                    ]
+                  },
+                  "stepAr": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 220
+                  },
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "verifiedAt": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  }
+                },
+                "required": [
+                  "id",
+                  "pointKey",
+                  "stepAr",
+                  "sourceUrl",
+                  "verifiedAt"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "inGame",
+        "platformOverrides"
+      ],
+      "additionalProperties": false
+    },
+    "conversationTags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "strangerChat",
+          "purchases",
+          "content",
+          "ads",
+          "sessionPause"
+        ]
+      }
+    }
+  },
+  "required": [
+    "slug",
+    "nameAr",
+    "nameEn",
+    "aliases",
+    "platforms",
+    "publisher",
+    "isDemo",
+    "reviewStatus",
+    "lastReviewedAt",
+    "ratings",
+    "attentionPoints",
+    "familyLens",
+    "prayerPause",
+    "controls",
+    "conversationTags"
+  ],
+  "additionalProperties": false
+}

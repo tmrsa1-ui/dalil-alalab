@@ -1,0 +1,286 @@
+{
+  "_meta": {
+    "status": "تجريبي",
+    "verified_on": "2026-10-10",
+    "method": "App Store (متجر السعودية) قُرئ آليًا من صفحة التطبيق الرسمية (حقل Age Rating). تصنيفات ESRB قُرئت من صفحة التصنيف الرسمية. لم يراجعها إنسان بعد.",
+    "saudi_rating_note": "لم نجد قاعدة بيانات عامة قابلة للبحث لتصنيف الهيئة العامة لتنظيم الإعلام (Gmedia) لكل لعبة. صفحة Xbox السعودية لـFortnite تعرض تصنيف PEGI وليس Gmedia. لذلك خانة التصنيف السعودي = «ما لقيت» حتى يتأكد إنسان.",
+    "saudi_rating_scale_source": "https://www.xbox.com/ar-SA/games/gameratings"
+  },
+  "titles": [
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "aliases": ["روبلوكس", "روبلكس"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id431946152"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": {
+        "url": "https://about.roblox.com/parental-controls",
+        "label": "صفحة الرقابة الأبوية الرسمية من Roblox"
+      }
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft",
+      "aliases": ["ماينكرافت", "ماين كرافت"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "9+",
+          "url": "https://apps.apple.com/sa/app/id479516143"
+        },
+        {
+          "system": "ESRB",
+          "value": "Everyone 10+",
+          "url": "https://www.esrb.org/ratings/39862/minecraft/"
+        }
+      ],
+      "watch": {
+        "chat": {
+          "text": "ESRB تذكر «Users Interact»: اللاعبون يتواصلون مع بعض.",
+          "url": "https://www.esrb.org/ratings/39862/minecraft/"
+        },
+        "purchases": {
+          "text": "ESRB تذكر «In-Game Purchases»: فيها مشتريات داخل اللعبة.",
+          "url": "https://www.esrb.org/ratings/39862/minecraft/"
+        },
+        "content": {
+          "text": "ESRB: «Fantasy Violence» عنف خيالي (ضرب الوحوش حتى تسقط).",
+          "url": "https://www.esrb.org/ratings/39862/minecraft/"
+        },
+        "ads": null,
+        "session": null
+      },
+      "controls": {
+        "url": "https://www.xbox.com/en-US/family-hub",
+        "label": "إعدادات العائلة في Xbox (حساب Microsoft) تتحكم في اللعب الجماعي والمشتريات"
+      }
+    },
+    {
+      "id": "fortnite",
+      "name": "Fortnite",
+      "aliases": ["فورتنايت", "فورت نايت"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id6483539426"
+        },
+        {
+          "system": "ESRB (Battle Royale)",
+          "value": "Teen",
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/"
+        }
+      ],
+      "watch": {
+        "chat": {
+          "text": "ESRB تذكر «Users Interact»: تواصل مع لاعبين آخرين.",
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/"
+        },
+        "purchases": {
+          "text": "ESRB تذكر «In-Game Purchases».",
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/"
+        },
+        "content": {
+          "text": "ESRB: «Violence, Suggestive Themes, Lyrics» أسلحة نارية، وشخصية نسائية بلبس كاشف، وكلمات أغاني فيها ألفاظ وإشارات للمخدرات.",
+          "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/"
+        },
+        "ads": null,
+        "session": null
+      },
+      "lens": {
+        "text": "اللبس والموسيقى: حسب وصف ESRB أعلاه.",
+        "url": "https://www.esrb.org/ratings/40278/fortnite-battle-royale/"
+      },
+      "controls": {
+        "url": "https://www.epicgames.com/site/en-US/parental-controls",
+        "label": "الرقابة الأبوية في Epic (الرابط يحجب الفحص الآلي، يحتاج تأكيد يدوي)"
+      }
+    },
+    {
+      "id": "among-us",
+      "name": "Among Us",
+      "aliases": ["امونق اس", "أمونج أس", "امونج اس"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "9+",
+          "url": "https://apps.apple.com/sa/app/id1351168404"
+        },
+        {
+          "system": "ESRB (Crewmate Edition – نسخة الأجهزة)",
+          "value": "Everyone 10+",
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/"
+        }
+      ],
+      "watch": {
+        "chat": {
+          "text": "ESRB تذكر «Users Interact».",
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/"
+        },
+        "purchases": {
+          "text": "ESRB تذكر «In-Game Purchases».",
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/"
+        },
+        "content": {
+          "text": "ESRB: «Fantasy Violence, Mild Blood» إقصاء الشخصيات بالطعن أو الإطلاق بشكل كرتوني.",
+          "url": "https://www.esrb.org/ratings/37959/among-us-crewmate-edition/"
+        },
+        "ads": null,
+        "session": null
+      },
+      "controls": null
+    },
+    {
+      "id": "pubg-mobile",
+      "name": "PUBG MOBILE",
+      "aliases": ["ببجي", "بوبجي"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id1330123889"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": null
+    },
+    {
+      "id": "free-fire",
+      "name": "Free Fire",
+      "aliases": ["فري فاير"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id1300146617"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": null
+    },
+    {
+      "id": "brawl-stars",
+      "name": "Brawl Stars",
+      "aliases": ["براول ستارز"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id1229016807"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": {
+        "url": "https://supercell.com/en/parents/",
+        "label": "دليل الأهالي الرسمي من Supercell"
+      }
+    },
+    {
+      "id": "clash-royale",
+      "name": "Clash Royale",
+      "aliases": ["كلاش رويال"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "9+",
+          "url": "https://apps.apple.com/sa/app/id1053012308"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": {
+        "url": "https://supercell.com/en/parents/",
+        "label": "دليل الأهالي الرسمي من Supercell"
+      }
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "aliases": ["تيك توك", "تك توك"],
+      "type": "تطبيق",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id835599320"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": {
+        "url": "https://support.tiktok.com/en/account-and-privacy/account-privacy-settings/family-pairing",
+        "label": "ميزة «Family Pairing» الرسمية من TikTok"
+      }
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "aliases": ["سناب", "سناب شات"],
+      "type": "تطبيق",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "13+",
+          "url": "https://apps.apple.com/sa/app/id447188370"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": {
+        "url": "https://values.snap.com/safety/family-center",
+        "label": "«Family Center» الرسمي من Snapchat"
+      }
+    },
+    {
+      "id": "youtube-kids",
+      "name": "YouTube Kids",
+      "aliases": ["يوتيوب كيدز", "يوتيوب اطفال"],
+      "type": "تطبيق",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "4+",
+          "url": "https://apps.apple.com/sa/app/id936971630"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": {
+        "url": "https://support.google.com/youtubekids/?hl=ar",
+        "label": "مركز مساعدة YouTube Kids (عربي)"
+      }
+    },
+    {
+      "id": "pokemon-go",
+      "name": "Pokémon GO",
+      "aliases": ["بوكيمون قو", "بوكيمون جو"],
+      "type": "لعبة",
+      "ratings": [
+        {
+          "system": "App Store (السعودية)",
+          "value": "9+",
+          "url": "https://apps.apple.com/sa/app/id1094591345"
+        }
+      ],
+      "watch": { "chat": null, "purchases": null, "content": null, "ads": null, "session": null },
+      "controls": null
+    }
+  ],
+  "device_controls": [
+    {
+      "label": "مدة استخدام الجهاز في iPhone/iPad (Apple، عربي)",
+      "url": "https://support.apple.com/ar-sa/105121"
+    },
+    { "label": "Google Family Link لأجهزة أندرويد", "url": "https://families.google/familylink/" }
+  ]
+}
