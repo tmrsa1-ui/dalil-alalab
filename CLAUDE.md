@@ -93,11 +93,12 @@ public/          manifest.webmanifest, icons/, sw.js
 - `isDemo: false` يتطلب روابط من allowlist (`src/lib/agent/allowlist.ts`) أو نطاق الناشر.
 - Playwright يستخدم Chromium المثبت مسبقًا (`/opt/pw-browsers`) — لا تشغّل `playwright install`.
 
-## الحالة الحالية (2026-10-14)
+## الحالة الحالية (2026-10-15)
 
 - كل الـcheckpoints مكتملة. lint · typecheck · validate:data · 153 unit/component · build · 88 e2e (موبايل + ديسكتوب، axe) كلها تمر، وCI على GitHub Actions يشغّلها على كل push. `npm audit --omit=dev` صفر ثغرات.
 - Lighthouse محلي (وسيط 3، موبايل): الأداء 94–98، الوصولية/الممارسات/SEO 100؛ بتقييد devtools: LCP 1.6–1.8s، CLS 0. التدقيق الكامل في `AUDIT.md` (6 جولات، المتوسط 9.32/10 على 11 محور؛ الطريق إلى 9.5 في آخر جدول فيه)؛ لإعادته: `npm run build && npx next start -p 3300` ثم `AUDIT_URL=http://localhost:3300 npm run audit:shots -- rN` و`npm run demo:video`.
 - `data/titles`: 20 عنوان حقيقي. القيم من App Store السعودي وGoogle Play وPlayStation وXbox (كلها نسخ السعودية) وموقع ESRB وموقع PEGI، كلها `confidence: auto` = «بحاجة مراجعة بشرية» (التصنيف السعودي لـ8 عناوين). الناقص «غير متوفر/ما لقيت». `apply:official` يمسح أي قيمة ما عاد اقتباسها في صفحتها (معالجة التغيّر) قبل ما يكتب الجديد؛ `review:data` للمراجعة البشرية. البطاقات التجريبية في `data/demo/titles` وتظهر فقط مع `DALIL_DEMO=1` (الـe2e يضبطه تلقائيًا، فـminecraft/fortnite/roblox/pubg-mobile/tiktok في الـe2e تجريبية).
 - الشبكة: App Store وGoogle Play وplaystation.com وxbox.com وsteampowered.com و`www.esrb.org` و`pegi.info` (بترويسات متصفح) و`www.nintendo.com` مفتوحة؛ `gcam.gov.sa`/`gmedia.gov.sa` ترجع 502، ومواقع أغلب الناشرين مرفوضة. Node يحتاج `NODE_USE_ENV_PROXY=1` (مضبوط في `fetch:official`).
+- README الجذر مكتوب للجنة التحكيم (عربي، لقطات حقيقية في `docs/screenshots/` عبر `npm run readme:shots` بعد `npm run build && npx next start -p 3300`). تاريخ git مفحوص: لا أسرار ولا ملفات `.env`. `main` هو النسخة الكاملة بعد دمج PR #1.
 - المطلوب بشريًا: `npm run review:data` (يحوّل القيم لـ`human`)، النشر بخطوات `docs/DEPLOY.md`، موقع GCAM، ورابط Epic.
 - ملاحظة بيئة: `pkill -f next-server` يقتل الـshell نفسه في هذه البيئة؛ استخدم `ps aux | grep -E "next-serve[r]" | awk '{print $2}' | xargs -r kill`.

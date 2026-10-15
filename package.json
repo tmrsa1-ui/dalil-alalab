@@ -32,7 +32,8 @@
     "apply:guides": "tsx scripts/guides.ts apply",
     "demo:video": "tsx scripts/demo-video.ts",
     "og:image": "tsx scripts/og-image.ts",
-    "review:data": "tsx scripts/review-data.ts"
+    "review:data": "tsx scripts/review-data.ts",
+    "readme:shots": "tsx scripts/readme-shots.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",
